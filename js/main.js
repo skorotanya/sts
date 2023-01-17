@@ -16,11 +16,40 @@ $(document).ready(function () {
         scrollY: '500px',
         scrollX: true,
         scrollCollapse: true,
+        stateSave: true,
         paging: false,
         info: false,
         select: true,
         buttons: [
-            'colvis','searchBuilder'
+            'colvis','searchBuilder',
+            {
+            	extend: 'collection',
+            	text: '...',
+            	className: 'bttn bttn-color',
+            	buttons: [
+            		{
+            			extend: 'selectedSingle',
+            			text: 'Удалить',
+            			action: function ( e, dt, node, config ) {
+		                    alert( 'Удалить строку' );
+		                }
+
+            		},
+            		{
+            			extend: 'selectedSingle',
+            			text: 'Редактировать',
+            			action: function ( e, dt, node, config ) {
+		                    alert( 'Редактировать строку' );
+		                }
+            		},
+            		{
+            			text: 'Добавить',
+            			action: function ( e, dt, node, config ) {
+		                    alert( 'Добавить строку' );
+		                }
+            		}
+            	]
+            }
         ],
         dom: 'Brt'
         
