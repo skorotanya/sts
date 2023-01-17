@@ -546,6 +546,10 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 	right: 4px;
 }
 
+table.dataTable.display tbody > tr.selected > *, table.dataTable.display > tbody > tr.odd.selected > *, table.dataTable.display > tbody > tr.odd.selected > .sorting_1, table.dataTable.hover > tbody > tr.selected:hover > *, table.dataTable.display > tbody > tr.selected:hover > *, table.dataTable.display > tbody > tr.even.selected > .sorting_1  {
+	box-shadow: inset 0 0 0 9999px var(--active-color);
+}
+
 /* Table summary */
 .tableblock-summary {
 	padding-top: 20px;
