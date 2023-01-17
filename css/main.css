@@ -416,6 +416,10 @@ border-left: 6px solid var(--action-color);
 
 /* ColVis into checkboxes*/
 
+button.dt-button span.dt-down-arrow {
+	display: none;
+}
+
 div.dt-button-collection {
 	border-radius: 6px;
 	width: unset;
