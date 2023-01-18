@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Система теплоснабжения</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+	<!--link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/searchbuilder/1.4.0/css/searchBuilder.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.3.2/css/buttons.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.5.0/css/select.dataTables.min.css"-->
+
+	<!--link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.13.1/datatables.min.css"/-->
+
+	<link rel="stylesheet" type="text/css" href="css/datatables.min.css">
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	
+	<div class="main-container d-flex">
+		<div class="sidebar offcanvas offcanvas-start" id="offcanvas-sidebar" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1">
+			<div href="#" class="user d-flex">
+				<img src="images/user-logo.png" title="Пользователь" alt="Логотип">
+				<a class="user-name ref-white flex-grow-1" role="button" data-bs-toggle="modal" data-bs-target="#infoUser" href="#"><span>Фамилия</span> Имя Отчество</a>
+				<a class="ref-white" href="#" role="button" data-bs-toggle="modal" data-bs-target="#exitUser"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 512 512"><title>Выход</title><path d="M304 336v40a40 40 0 01-40 40H104a40 40 0 01-40-40V136a40 40 0 0140-40h152c22.09 0 48 17.91 48 40v40M368 336l80-80-80-80M176 256h256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg></a>
+			</div>
+			<div class="sidebar-params">
+				
+				<div class="param-group">
+					<label for="paramCity" class="form-label">Город/ поселение</label>
+					<select class="form-select form-item param-city" id="paramCity" value="1">
+					  <option value="1">Москва</option>
+					  <option value="2">Санкт-Петербург</option>
+					  <option value="3">Самара</option>
+					  <option value="4">Химки</option>
+					</select>
+					<button class="bttn bttn-color bttn-add-city" type="button">+</button>
+				</div>
+				<div class="param-group">
+					<label for="paramYear" class="form-label">Базовый год</label>
+					<select class="form-select form-item param-year" id="paramYear" value="2022">
+					  <option value="2020">2020</option>
+					  <option value="2021">2021</option>
+					  <option value="2022">2022</option>
+					  <option value="2023">2023</option>
+					</select>
+				</div>
+				<p class="schema-name">Краткое наименование схемы</p>
+				<p class="schema-approve">Решение об утверждении схемы</p>
+			</div>
+			<nav class="navbar">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-column list-unstyled">
+			        <li class="nav-item">
+			          <a class="nav-link btn-toggle collapsed" href="#" role="button" data-bs-toggle="collapse" data-bs-target="#tso_menu" aria-expanded="false">
+			            Теплоснабжающие организации
+			          </a>
+			          	<ul class="subnav collapse list-unstyled" id="tso_menu">
+				            <li><a class="subnav-item nav-link active" href="#">Перечень организаций</a></li>
+				            <li><a class="subnav-item nav-link" href="#">Объекты в обслуживании</a></li>
+				            <li><a class="subnav-item nav-link" href="#">Тепловой баланс</a></li>
+				            <li><a class="subnav-item nav-link" href="#">Затраты и цены</a></li>
+				            <li><a class="subnav-item nav-link" href="#">Тарифы и плата за подключение</a></li>
+				            <li><a class="subnav-item nav-link" href="#">Экологические показатели</a></li>
+				        </ul>
+			        </li>
+
+			        <li class="nav-item">
+			          <a class="nav-link btn-toggle collapsed" href="#" role="button" data-bs-toggle="collapse" data-bs-target="#ite_menu" aria-expanded="false">
+			            Источники тепловой энергии
+			          </a>
+			          	<ul class="subnav collapse list-unstyled" id="ite_menu">
+				            <li><a class="subnav-item nav-link" href="#">Перечень источников</a></li>
+				            <li><a class="subnav-item nav-link" href="#">Оборудование</a></li>
+				            <li><a class="subnav-item nav-link" href="#">Ресурсоснабжение</a></li>
+				            <li><a class="subnav-item nav-link" href="#">Выдача тепловой мощности</a></li>
+				            <li><a class="subnav-item nav-link" href="#">Технико-экономические показатели</a></li>
+				            <li><a class="subnav-item nav-link" href="#">Статистика отказов</a></li>
+				            <li><a class="subnav-item nav-link" href="#">Мероприятия по развитию</a></li>
+				            <li><a class="subnav-item nav-link" href="#">Калькуляция себестоимости</a></li>
+				            <li><a class="subnav-item nav-link" href="#">Экологические показатели</a></li>
+				        </ul>
+			        </li>
+
+			        <li class="nav-item">
+			          <a class="nav-link btn-toggle collapsed" href="#" role="button" data-bs-toggle="collapse" data-bs-target="#tsio_menu" aria-expanded="false">
+			            Тепловые сети и объекты
+			          </a>
+			          	<ul class="subnav collapse list-unstyled" id="tsio_menu">
+				            <li><a class="subnav-item nav-link" href="#">Участки тепловых сетей</a></li>
+				            <li><a class="subnav-item nav-link" href="#">НПС и ДНС</a></li>
+				            <li><a class="subnav-item nav-link" href="#">Камеры и павильоны</a></li>
+				        </ul>
+			        </li>
+
+			        <li class="nav-item">
+			          <a class="nav-link btn-toggle collapsed" href="#" role="button" data-bs-toggle="collapse" data-bs-target="#tpip_menu" aria-expanded="false">
+			            Тепловые пункты и потребители
+			          </a>
+			          <ul class="subnav collapse list-unstyled" id="tpip_menu">
+			            <li><a class="subnav-item nav-link" href="#">Тепловые пункты</a></li>
+			            <li><a class="subnav-item nav-link" href="#">Потребители</a></li>
+			          </ul>
+			        </li>
+
+			        <li class="nav-item">
+			          <a class="nav-link btn-toggle collapsed" href="#" role="button" data-bs-toggle="collapse" data-bs-target="#st_menu" aria-expanded="false">
+			            Справочные таблицы
+			          </a>
+			          <ul class="subnav collapse list-unstyled" id="st_menu">
+			            <li><a class="subnav-item nav-link" href="#">Организации</a></li>
+			            <li><a class="subnav-item nav-link" href="#">Территориальное деление</a></li>
+			            <li><a class="subnav-item nav-link" href="#">Тарифные зоны</a></li>
+			            <li><a class="subnav-item nav-link" href="#">Зоны деятельности ЕТО</a></li>
+			            <li><a class="subnav-item nav-link" href="#">Системы теплоснабжения</a></li>
+			            <li><a class="subnav-item nav-link" href="#">Договора на теплоснабжение</a></li>
+			            <li><a class="subnav-item nav-link" href="#">Нормы расхода тепла</a></li>
+			            <li><a class="subnav-item nav-link" href="#">Программы развития города (поселения)</a></li>
+			            <li><a class="subnav-item nav-link" href="#">Оборудование</a></li>
+			            <li><a class="subnav-item nav-link" href="#">Топливо</a></li>
+			            <li><a class="subnav-item nav-link" href="#">Программы развития энергообъектов</a></li>
+			            <li><a class="subnav-item nav-link" href="#">Типы схем тепловых пунктов</a></li>
+			            <li><a class="subnav-item nav-link" href="#">Реестр слоев электронной модели</a></li>
+			            <li><a class="subnav-item nav-link" href="#">Температурные графики/удельные расходы</a></li>
+			            <li><a class="subnav-item nav-link" href="#">Головные выводы источников</a></li>
+			            <li><a class="subnav-item nav-link" href="#">Условные диаметры</a></li>
+			            <li><a class="subnav-item nav-link" href="#">Тепловая изоляция тепловых сетей</a></li>
+			            <li><a class="subnav-item nav-link" href="#">Удельные нормативные потери тепла в т/с</a></li>
+			            <li><a class="subnav-item nav-link" href="#">Удельные капитальные вложения</a></li>
+			            <li><a class="subnav-item nav-link" href="#">Коэффициенты инфляции</a></li>
+			            <li><a class="subnav-item nav-link" href="#">Поправочные коэффициенты на климат</a></li>
+			          </ul>
+			        </li>
+
+			        <li class="nav-item">
+			          <a class="nav-link">Выходные формы</a>
+			        </li>
+
+			        <li class="nav-item">
+			          <a class="nav-link">Расчёты</a>
+			        </li>
+
+			        <li class="nav-item">
+			          <a class="nav-link">Плагины и скрипты</a>
+			        </li>
+
+			        <li class="nav-item">
+			          <a class="nav-link">Письма</a>
+			        </li>
+			     </ul>
+				
+			</nav>
+			<div class="sidebar-close">
+				<a class="ref-white" data-bs-toggle="offcanvas" data-bs-dismiss="offcanvas-sidebar" aria-label="Close" href="#" role="button" aria-controls="offcanvas-sidebar">
+					<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" stroke="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+					  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+					</svg>
+				</a>
+			</div>
+		</div>
+		<div class="sidebar-open">
+			<a class="ref-white" data-bs-toggle="offcanvas" href="#offcanvas-sidebar" role="button" aria-controls="offcanvas-sidebar">
+				<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" stroke="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+				  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+				</svg>
+			</a>
+		</div>
+		<div class="workspace">
+			<div class="main-content">
+				
+				<ul class="breadcrumb">
+					<li class="breadcrumb-item"><a class="ref-color" href="#">Главная</a></li>
+					<li class="breadcrumb-item"><a class="ref-color" href="#">Теплоснабжающие организации</a></li>
+					<li class="breadcrumb-item">Перечень организаций</li>
+				</ul>
+
+				<h1 class="title">Теплоснабжающие и теплосетевые организации</h1>
+				<ul class="nav nav-tabs" id="myTab" role="tablist">
+				  <li class="nav-item" role="presentation">
+				    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Таблица 1</button>
+				  </li>
+				  <li class="nav-item" role="presentation">
+				    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Таблица 2</button>
+				  </li>
+				  <li class="nav-item" role="presentation">
+				    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Таблица 3</button>
+				  </li>
+				</ul>
+				<div class="tab-content" id="myTabContent">
+				  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+				  	<div class="tableblock">
+						<div class="table-params">
+							<div class="param-group">
+								<label for="paramCalcYear" class="form-label">Расчётный год схемы</label>
+								<select class="form-select form-item param-calc-year" id="paramCalcYear" value="2022">
+								  <option value="2020">2020</option>
+								  <option value="2021">2021</option>
+								  <option value="2022">2022</option>
+								  <option value="2023">2023</option>
+								</select>
+								<button class="bttn bttn-color bttn-edit-calc-year" type="button">Добавить</button>
+								<button class="bttn bttn-color bttn-load-data" type="button">Загрузить данные</button>
+							</div>
+						</div>
+
+						<table id="tso_table" class="tableblock-table display nowrap" style="width:100%">
+						    <thead>
+						        <tr>
+						            <th>Номер</th>
+						            <th>Наименование</th>
+						            <th>Адрес</th>
+						            <th>Дата</th>
+						            <th>Тип</th>
+						            <th>Округ</th>
+						            <th>Состояние</th>
+						            <th>Полезная энергия</th>
+						            <th>Тепловая энергия</th>
+						            <th>Источники</th>
+						        </tr>
+						    </thead>
+						    <tbody>
+						        <tr>
+						            <td>1</td>
+						            <td>ТСО 1</td>
+						            <td>Row 1 Data 3</td>
+						            <td>Row 1 Data 4</td>
+						            <td>Row 1 Data 5</td>
+						            <td>Row 1 Data 6</td>
+						            <td>Row 1 Data 7</td>
+						            <td>Row 1 Data 8</td>
+						            <td>Row 1 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>2</td>
+						            <td>ТСО 2</td>
+						            <td>Row 2 Data 3</td>
+						            <td>Row 2 Data 4</td>
+						            <td>Row 2 Data 5</td>
+						            <td>Row 2 Data 6</td>
+						            <td>Row 2 Data 7</td>
+						            <td>Row 2 Data 8</td>
+						            <td>Row 2 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>3</td>
+						            <td>ТСО 3</td>
+						            <td>Row 3 Data 3</td>
+						            <td>Row 3 Data 4</td>
+						            <td>Row 3 Data 5</td>
+						            <td>Row 3 Data 6</td>
+						            <td>Row 3 Data 7</td>
+						            <td>Row 3 Data 8</td>
+						            <td>Row 3 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>4</td>
+						            <td>ТСО 4</td>
+						            <td>Row 4 Data 3</td>
+						            <td>Row 4 Data 4</td>
+						            <td>Row 4 Data 5</td>
+						            <td>Row 4 Data 6</td>
+						            <td>Row 4 Data 7</td>
+						            <td>Row 4 Data 8</td>
+						            <td>Row 4 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>5</td>
+						            <td>ТСО 5</td>
+						            <td>Row 5 Data 3</td>
+						            <td>Row 5 Data 4</td>
+						            <td>Row 5 Data 5</td>
+						            <td>Row 5 Data 6</td>
+						            <td>Row 5 Data 7</td>
+						            <td>Row 5 Data 8</td>
+						            <td>Row 5 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>6</td>
+						            <td>ТСО 6</td>
+						            <td>Row 6 Data 3</td>
+						            <td>Row 6 Data 4</td>
+						            <td>Row 6 Data 5</td>
+						            <td>Row 6 Data 6</td>
+						            <td>Row 6 Data 7</td>
+						            <td>Row 6 Data 8</td>
+						            <td>Row 6 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>7</td>
+						            <td>ТСО 7</td>
+						            <td>Row 7 Data 3</td>
+						            <td>Row 7 Data 4</td>
+						            <td>Row 7 Data 5</td>
+						            <td>Row 7 Data 6</td>
+						            <td>Row 7 Data 7</td>
+						            <td>Row 7 Data 8</td>
+						            <td>Row 7 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>8</td>
+						            <td>ТСО 8</td>
+						            <td>Row 8 Data 3</td>
+						            <td>Row 8 Data 4</td>
+						            <td>Row 8 Data 5</td>
+						            <td>Row 8 Data 6</td>
+						            <td>Row 8 Data 7</td>
+						            <td>Row 8 Data 8</td>
+						            <td>Row 8 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>9</td>
+						            <td>ТСО 9</td>
+						            <td>Row 9 Data 3</td>
+						            <td>Row 9 Data 4</td>
+						            <td>Row 9 Data 5</td>
+						            <td>Row 9 Data 6</td>
+						            <td>Row 9 Data 7</td>
+						            <td>Row 9 Data 8</td>
+						            <td>Row 9 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>10</td>
+						            <td>ТСО 10</td>
+						            <td>Row 10 Data 3</td>
+						            <td>Row 10 Data 4</td>
+						            <td>Row 10 Data 5</td>
+						            <td>Row 10 Data 6</td>
+						            <td>Row 10 Data 7</td>
+						            <td>Row 10 Data 8</td>
+						            <td>Row 10 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>1</td>
+						            <td>ТСО 1</td>
+						            <td>Row 1 Data 3</td>
+						            <td>Row 1 Data 4</td>
+						            <td>Row 1 Data 5</td>
+						            <td>Row 1 Data 6</td>
+						            <td>Row 1 Data 7</td>
+						            <td>Row 1 Data 8</td>
+						            <td>Row 1 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>2</td>
+						            <td>ТСО 2</td>
+						            <td>Row 2 Data 3</td>
+						            <td>Row 2 Data 4</td>
+						            <td>Row 2 Data 5</td>
+						            <td>Row 2 Data 6</td>
+						            <td>Row 2 Data 7</td>
+						            <td>Row 2 Data 8</td>
+						            <td>Row 2 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>3</td>
+						            <td>ТСО 3</td>
+						            <td>Row 3 Data 3</td>
+						            <td>Row 3 Data 4</td>
+						            <td>Row 3 Data 5</td>
+						            <td>Row 3 Data 6</td>
+						            <td>Row 3 Data 7</td>
+						            <td>Row 3 Data 8</td>
+						            <td>Row 3 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>4</td>
+						            <td>ТСО 4</td>
+						            <td>Row 4 Data 3</td>
+						            <td>Row 4 Data 4</td>
+						            <td>Row 4 Data 5</td>
+						            <td>Row 4 Data 6</td>
+						            <td>Row 4 Data 7</td>
+						            <td>Row 4 Data 8</td>
+						            <td>Row 4 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>5</td>
+						            <td>ТСО 5</td>
+						            <td>Row 5 Data 3</td>
+						            <td>Row 5 Data 4</td>
+						            <td>Row 5 Data 5</td>
+						            <td>Row 5 Data 6</td>
+						            <td>Row 5 Data 7</td>
+						            <td>Row 5 Data 8</td>
+						            <td>Row 5 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>6</td>
+						            <td>ТСО 6</td>
+						            <td>Row 6 Data 3</td>
+						            <td>Row 6 Data 4</td>
+						            <td>Row 6 Data 5</td>
+						            <td>Row 6 Data 6</td>
+						            <td>Row 6 Data 7</td>
+						            <td>Row 6 Data 8</td>
+						            <td>Row 6 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>7</td>
+						            <td>ТСО 7</td>
+						            <td>Row 7 Data 3</td>
+						            <td>Row 7 Data 4</td>
+						            <td>Row 7 Data 5</td>
+						            <td>Row 7 Data 6</td>
+						            <td>Row 7 Data 7</td>
+						            <td>Row 7 Data 8</td>
+						            <td>Row 7 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>8</td>
+						            <td>ТСО 8</td>
+						            <td>Row 8 Data 3</td>
+						            <td>Row 8 Data 4</td>
+						            <td>Row 8 Data 5</td>
+						            <td>Row 8 Data 6</td>
+						            <td>Row 8 Data 7</td>
+						            <td>Row 8 Data 8</td>
+						            <td>Row 8 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>9</td>
+						            <td>ТСО 9</td>
+						            <td>Row 9 Data 3</td>
+						            <td>Row 9 Data 4</td>
+						            <td>Row 9 Data 5</td>
+						            <td>Row 9 Data 6</td>
+						            <td>Row 9 Data 7</td>
+						            <td>Row 9 Data 8</td>
+						            <td>Row 9 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>10</td>
+						            <td>ТСО 10</td>
+						            <td>Row 10 Data 3</td>
+						            <td>Row 10 Data 4</td>
+						            <td>Row 10 Data 5</td>
+						            <td>Row 10 Data 6</td>
+						            <td>Row 10 Data 7</td>
+						            <td>Row 10 Data 8</td>
+						            <td>Row 10 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						    </tbody>
+						</table>
+
+						<div class="tableblock-summary">
+							<p>Всего записей: <span class="mark-color">10</span></p>
+							<p>в том числе регулируемые ТСО: <span class="mark-color">4</span></p>
+							<p>Отпуск тепловой энергии с коллекторов: план - <span class="mark-color">10</span> Гкал/год</p>
+							<p>Отпуск тепловой энергии с коллекторов: факт - <span class="mark-color">10</span> Гкал/год</p>
+							<p>Полезный отпуск тепловой энергии: план - <span class="mark-color">10</span> Гкал/год</p>
+							<p>Полезный отпуск тепловой энергии: факт - <span class="mark-color">10</span> Гкал/год</p>
+						</div>
+					</div>
+				  </div>
+				  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+				  	<table id="tso2_table" class="tableblock-table display nowrap" style="width:100%">
+						    <thead>
+						        <tr>
+						            <th>Номер</th>
+						            <th>Наименование</th>
+						            <th>Адрес</th>
+						            <th>Дата</th>
+						            <th>Тип</th>
+						            <th>Округ</th>
+						            <th>Состояние</th>
+						            <th>Полезная энергия</th>
+						            <th>Тепловая энергия</th>
+						            <th>Источники</th>
+						        </tr>
+						    </thead>
+						    <tbody>
+						        <tr>
+						            <td>1</td>
+						            <td>ТСО 1</td>
+						            <td>Row 1 Data 3</td>
+						            <td>Row 1 Data 4</td>
+						            <td>Row 1 Data 5</td>
+						            <td>Row 1 Data 6</td>
+						            <td>Row 1 Data 7</td>
+						            <td>Row 1 Data 8</td>
+						            <td>Row 1 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>2</td>
+						            <td>ТСО 2</td>
+						            <td>Row 2 Data 3</td>
+						            <td>Row 2 Data 4</td>
+						            <td>Row 2 Data 5</td>
+						            <td>Row 2 Data 6</td>
+						            <td>Row 2 Data 7</td>
+						            <td>Row 2 Data 8</td>
+						            <td>Row 2 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>3</td>
+						            <td>ТСО 3</td>
+						            <td>Row 3 Data 3</td>
+						            <td>Row 3 Data 4</td>
+						            <td>Row 3 Data 5</td>
+						            <td>Row 3 Data 6</td>
+						            <td>Row 3 Data 7</td>
+						            <td>Row 3 Data 8</td>
+						            <td>Row 3 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>4</td>
+						            <td>ТСО 4</td>
+						            <td>Row 4 Data 3</td>
+						            <td>Row 4 Data 4</td>
+						            <td>Row 4 Data 5</td>
+						            <td>Row 4 Data 6</td>
+						            <td>Row 4 Data 7</td>
+						            <td>Row 4 Data 8</td>
+						            <td>Row 4 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>5</td>
+						            <td>ТСО 5</td>
+						            <td>Row 5 Data 3</td>
+						            <td>Row 5 Data 4</td>
+						            <td>Row 5 Data 5</td>
+						            <td>Row 5 Data 6</td>
+						            <td>Row 5 Data 7</td>
+						            <td>Row 5 Data 8</td>
+						            <td>Row 5 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>6</td>
+						            <td>ТСО 6</td>
+						            <td>Row 6 Data 3</td>
+						            <td>Row 6 Data 4</td>
+						            <td>Row 6 Data 5</td>
+						            <td>Row 6 Data 6</td>
+						            <td>Row 6 Data 7</td>
+						            <td>Row 6 Data 8</td>
+						            <td>Row 6 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>7</td>
+						            <td>ТСО 7</td>
+						            <td>Row 7 Data 3</td>
+						            <td>Row 7 Data 4</td>
+						            <td>Row 7 Data 5</td>
+						            <td>Row 7 Data 6</td>
+						            <td>Row 7 Data 7</td>
+						            <td>Row 7 Data 8</td>
+						            <td>Row 7 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>8</td>
+						            <td>ТСО 8</td>
+						            <td>Row 8 Data 3</td>
+						            <td>Row 8 Data 4</td>
+						            <td>Row 8 Data 5</td>
+						            <td>Row 8 Data 6</td>
+						            <td>Row 8 Data 7</td>
+						            <td>Row 8 Data 8</td>
+						            <td>Row 8 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>9</td>
+						            <td>ТСО 9</td>
+						            <td>Row 9 Data 3</td>
+						            <td>Row 9 Data 4</td>
+						            <td>Row 9 Data 5</td>
+						            <td>Row 9 Data 6</td>
+						            <td>Row 9 Data 7</td>
+						            <td>Row 9 Data 8</td>
+						            <td>Row 9 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						        <tr>
+						            <td>10</td>
+						            <td>ТСО 10</td>
+						            <td>Row 10 Data 3</td>
+						            <td>Row 10 Data 4</td>
+						            <td>Row 10 Data 5</td>
+						            <td>Row 10 Data 6</td>
+						            <td>Row 10 Data 7</td>
+						            <td>Row 10 Data 8</td>
+						            <td>Row 10 Data 9</td>
+						            <td><a href="#">>></a></td>
+						        </tr>
+						    </tbody>
+						</table>
+
+						<div class="tableblock-summary"></div>
+				  </div>
+				  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+				</div>
+				
+
+				
+			</div>
+		</div>
+	</div>
+
+	<footer></footer>
+	<!-- Modal infoUser -->
+	<div class="modal fade" id="infoUser" tabindex="-1" aria-labelledby="infoUserLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="infoUserLabel">Информация о пользователе</h5>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body">
+	        Фамилия Имя Отчество
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Закрыть</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- Modal exitUser -->
+	<div class="modal fade" id="exitUser" tabindex="-1" aria-labelledby="exitUserLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exitUserLabel">Предупреждение</h5>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body">
+	        Вы уверены, что хотите выйти из системы?
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
+	        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Да</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+	<!--script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/searchbuilder/1.4.0/js/dataTables.searchBuilder.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.2/js/dataTables.buttons.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.colVis.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/select/1.5.0/js/dataTables.select.min.js"></script-->
+
+ 	<!-- cdn link for DataTables Library -->
+	<!--script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.13.1/b-2.3.3/b-colvis-2.3.3/fh-3.3.1/r-2.4.0/sc-2.0.7/sb-1.4.0/sl-1.5.0/sr-1.2.0/datatables.min.js"></script-->
+
+	<!-- direct link for DataTables Library's File -->
+	<script type="text/javascript" src="js/datatables.min.js"></script>
+	<script type="text/json" src="https://cdn.datatables.net/plug-ins/1.13.1/i18n/ru.json"></script>
+	
+
+	<script type="text/javascript" charset="utf8" src="js/main.js"></script>
+</body>
+</html>
