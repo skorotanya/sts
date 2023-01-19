@@ -111,10 +111,4 @@ $(document).ready(function () {
         let data1 = table1.row(this).data();
         alert('You clicked on ' + data1[0] + " row");
     });
-
-
-    // привязка события выгрузки данных таблицы в excel на кнопку с классом bttn-excel-export
-    $('.bttn-excel-export').click(() => {
-        $('#tso_table').DataTable().buttons('.buttons-excelHtml5').trigger();
-    })
 });
