@@ -154,7 +154,7 @@ button.dt-button:hover:not(.disabled||.buttons-columnVisibility), div.dtsb-searc
 
 /* Form elements */
 
-select.form-item, .dtsb-data, .dtsb-value, .dtsb-condition {
+select.form-item, .form-control, .dtsb-data, .dtsb-value, .dtsb-condition {
 	height: 31px;
 	padding: 0.2rem 2.25rem 0.2rem 0.5rem;
 }
@@ -741,3 +741,43 @@ table.dataTable.display tbody > tr.selected > *, table.dataTable.display > tbody
 	}
 }
 
+
+#loadData .modal-dialog {
+	max-width: 90%;
+	width: 90%;
+}
+
+.load-status {
+	
+    padding: 0.5rem 2rem;
+    border: 1px solid;
+    border-radius: 6px;
+    text-transform: uppercase;
+    cursor: default;
+    margin-right: auto;
+    transition: all ease-in 300ms;
+}
+
+.load-status.wait {
+	background: #f1f1f1;
+    border-color: #cfcfcf;
+    color: #727272;
+}
+
+.load-status.process {
+	background: #d9cff3;
+    border-color: #ac95ed;
+    color: #957ae1;
+}
+
+.load-status.success {
+	background: #d6f3cf;
+    border-color: #84ef97;
+    color: #22bd3c;
+}
+
+.load-status.fault {
+	background: #fde6ef;
+    border-color: #edb4cb;
+    color: #bd225b;
+}
