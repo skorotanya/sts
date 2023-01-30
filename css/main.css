@@ -174,7 +174,8 @@ button.dt-button:active:not(.disabled), button.dt-button:active:not(.disabled):h
 }
 
 .bttn-square {
-	width: 40px;
+	width: 31px;
+	height: 31px;
 	padding: 0;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -207,6 +208,11 @@ button:disabled, .bttn.disabled{
 	border-bottom-right-radius: 0;
 }
 
+.bttn-filter {
+	height: 31px !important;
+	padding: 0 10px !important;
+}
+
 
 /* Form elements */
 
@@ -221,9 +227,18 @@ input.form-control, .dtsb-data, .dtsb-value, .dtsb-condition {
 	box-shadow: unset;
 }
 
-input.form-control:focus {
+.filter-row input {
+	height: 31px;
+	border-radius: 6px;
+	padding: 0.2rem 0.5rem;
+	border: 1px solid var(--bs-border-color);
+	width: 100%;
+}
+
+input.form-control:focus, .filter-row>th>input:focus, .filter-row>th>input:focus-visible {
 	border-color: var(--action-color);
 	box-shadow: none;
+	outline: none;
 }
 
 .form-check-input[type=checkbox] {
@@ -603,7 +618,7 @@ border-left: 6px solid var(--action-color);
 }
 
 .param-calc-year {
-	width: 100px;
+	width: 180px;
 }
 
 .table-params .form-item {
@@ -624,6 +639,7 @@ div.dt-buttons {
 
 .dt-button.buttons-colvis {
 	padding: 0px;
+	height: 31px;
 }
 
 .buttons-colvis.dt-button span.dt-down-arrow {
@@ -774,6 +790,12 @@ table.dataTable.display tbody > tr.selected > *, table.dataTable.display > tbody
 
 table.dataTable thead tr>.dtfc-fixed-left {
 	background-color: #e0d8f3;
+	
+}
+
+td.dtfc-fixed-left{
+	font-weight: 600;
+	color: var(--active-color);
 }
 
 /* Table summary */
@@ -855,7 +877,7 @@ table.dataTable thead tr>.dtfc-fixed-left {
 
 /* data edit modal window */
 
-#editData .modal-dialog {
+.form-data-edit .modal-dialog {
 	max-width: 90%;
 	width: 90%;
 }
@@ -916,7 +938,13 @@ table.dataTable thead tr>.dtfc-fixed-left {
 	
 }
 
-.year-table, .resp-table, .static-block {
+.static-block {
+	    background-color: var(--light-color);
+	    border-radius: 6px;
+	    padding-top:10px;
+}
+
+.year-table, .resp-table,  {
 	border: 1px solid var(--bs-border-color);
 	border-radius: 6px;
 	padding: 10px;

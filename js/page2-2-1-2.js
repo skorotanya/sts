@@ -37,6 +37,7 @@ $(document).ready(function () {
 
     // init main table
     initDataTable('loadTable', 'full');
+    loadFilterFromState('loadTable');
     adjustColumns('loadTable');
 });
 

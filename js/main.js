@@ -24,10 +24,7 @@ const showPreloader = () => {
 };
 
 
-// preloader on load page
-window.onload = () => {
-    hidePreloader();
-};
+
 
 /* POPUP (MODAL) WINDOW */
 
@@ -67,8 +64,8 @@ $.extend( $.fn.dataTable.defaults, {
                 _: 'Конструктор поиска (%d)'
             },
             button: {
-                0: '<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 512 512"><path d="M35.4 87.12l168.65 196.44A16.07 16.07 0 01208 294v119.32a7.93 7.93 0 005.39 7.59l80.15 26.67A7.94 7.94 0 00304 440V294a16.07 16.07 0 014-10.44L476.6 87.12A14 14 0 00466 64H46.05A14 14 0 0035.4 87.12z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>',
-                _: '<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 512 512"><path d="M35.4 87.12l168.65 196.44A16.07 16.07 0 01208 294v119.32a7.93 7.93 0 005.39 7.59l80.15 26.67A7.94 7.94 0 00304 440V294a16.07 16.07 0 014-10.44L476.6 87.12A14 14 0 00466 64H46.05A14 14 0 0035.4 87.12z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg><span class="filter-num">(%d)</span>'
+                0: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path d="M35.4 87.12l168.65 196.44A16.07 16.07 0 01208 294v119.32a7.93 7.93 0 005.39 7.59l80.15 26.67A7.94 7.94 0 00304 440V294a16.07 16.07 0 014-10.44L476.6 87.12A14 14 0 00466 64H46.05A14 14 0 0035.4 87.12z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>',
+                _: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path d="M35.4 87.12l168.65 196.44A16.07 16.07 0 01208 294v119.32a7.93 7.93 0 005.39 7.59l80.15 26.67A7.94 7.94 0 00304 440V294a16.07 16.07 0 014-10.44L476.6 87.12A14 14 0 00466 64H46.05A14 14 0 0035.4 87.12z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg><span class="filter-num">(%d)</span>'
             }
         }
     },
@@ -76,13 +73,14 @@ $.extend( $.fn.dataTable.defaults, {
     buttons: [
         {
             extend:'colvis',
-            text:'<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 512 512"><path d="M255.66 112c-77.94 0-157.89 45.11-220.83 135.33a16 16 0 00-.27 17.77C82.92 340.8 161.8 400 255.66 400c92.84 0 173.34-59.38 221.79-135.25a16.14 16.14 0 000-17.47C428.89 172.28 347.8 112 255.66 112z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><circle cx="256" cy="256" r="80" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg>',
+            text:'<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path d="M255.66 112c-77.94 0-157.89 45.11-220.83 135.33a16 16 0 00-.27 17.77C82.92 340.8 161.8 400 255.66 400c92.84 0 173.34-59.38 221.79-135.25a16.14 16.14 0 000-17.47C428.89 172.28 347.8 112 255.66 112z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><circle cx="256" cy="256" r="80" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg>',
             titleAttr: 'Видимость столбцов',
             className: 'bttn-square'
         },
         {
             extend: 'searchBuilder',
             titleAttr: 'Конструктор поиска',
+            className: 'bttn-filter',
             config: {
                 depthLimit: 1
             }
@@ -92,7 +90,7 @@ $.extend( $.fn.dataTable.defaults, {
 
 // init table as DataTable by table id and named options set
 // Available values of oType: 'simple-scroll', 'full', ...
-const initDataTable = (tId, oType) => {
+const initDataTable = (tId, oType, colsDefs) => {
     let table;
     switch (oType) {
         case 'simple-scroll' : // simple table with scrolling
@@ -106,13 +104,44 @@ const initDataTable = (tId, oType) => {
                 scrollY: '500px',
                 stateSave: true,
                 select: true,
+                orderCellsTop: true,
                 fixedColumns: true,
-                dom: 'Brt'
+                dom: 'Brt',
+                initComplete: function () {
+                    // Apply the search
+                    this.api()
+                        .columns()
+                        .every(function () {
+                            var that = this;
+         
+                            $('.filter-col-' + this.index()).on('keyup change clear', function () {
+                                if (that.search() !== this.value) {
+                                    that.search(this.value).draw();
+                                }
+                            });
+                        });
+                }
                 
             });
 
             table.buttons().container().appendTo('.'+tId + '-buttons');
             break;
+    }
+};
+
+const loadFilterFromState = (tId) => {
+    let table = $('#'+tId).DataTable();
+    let state = table.state.loaded();
+    if(state) {
+        table.columns().every( function (colIdx) {
+            let colSearch = state.columns[colIdx].search;
+            if (colSearch.search) {
+                let filter = colSearch.search.replace(/[\^\$]/g,'');
+                $('.filter-col-'+colIdx).val(filter);
+            }
+        });   
+ 
+        table.draw();
     }
 };
 
@@ -125,6 +154,12 @@ const adjustColumns = (tId) => {
 
 
 /* COMMON EVENT LISTENERS FOR ALL PAGES */
+
+// preloader on load page
+window.onload = () => {
+    hidePreloader();
+};
+
 
 // show popup information about user with preloader
 document.querySelector('.user-name').addEventListener('click', (e) => { 

@@ -5,8 +5,23 @@ $(document).ready(function () {
 
 
      // init dataTables on current page
+
+  /*  const tsoCols = [
+    { "width": "5%" },
+    { "width": "10%" },
+    { "width": "15%" },
+    { "width": "10%" },
+   { "width": "10%" },
+   { "width": "10%" },
+   { "width": "10%" },
+   { "width": "10%" },
+   { "width": "10%" },
+   { "width": "10%" }
+  ];*/
     initDataTable('tsoTable', 'full');
     adjustColumns('tsoTable');
+    loadFilterFromState('tsoTable');
+
     initDataTable('yearParamTable', 'simple-scroll');
     initDataTable('responseTable', 'simple-scroll');
 
