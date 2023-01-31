@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5{
 }
 
 h1{
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 }
 h3 {
 	font-size: 1.25rem;
@@ -101,7 +101,7 @@ h4 {
 }
 h5 {
 	color: var(--text-color);
-	font-size: 0.8rem;
+	font-size: 0.9rem;
 }
 
 /* Buttons */
@@ -588,7 +588,7 @@ border-left: 6px solid var(--action-color);
 }
 
 .tab-content {
-	padding-top: 30px;
+	padding-top: 15px;
 }
 
 /* Table parameters */
@@ -631,6 +631,17 @@ border-left: 6px solid var(--action-color);
 
 div.dt-buttons {
 	display: flex;
+}
+
+.note {
+	padding: 0.2rem 0.8rem;
+    padding-left: 2.25rem;
+    border: 1px solid #22bd3c;
+    border-radius: 6px;
+    background-image: url(../images/alert-circle.svg);
+    background-repeat: no-repeat;
+    background-position: 0.5rem center;
+    font-weight: 600;
 }
 
 /*.dt-buttons {margin-bottom: 5px;}*/
@@ -795,38 +806,31 @@ table.dataTable thead tr>.dtfc-fixed-left {
 
 td.dtfc-fixed-left{
 	font-weight: 600;
-	color: var(--active-color);
 }
 
 /* Table summary */
 .tableblock-summary {
 	padding-top: 20px;
 	display: flex;
-	justify-content: space-between;
 	flex-wrap: wrap;
+	align-items: baseline;
 }
 .summary-block {
 	padding-right: 25px;
     padding-left: 25px;
     border-right: 1px solid var(--light-color);
     display: flex;
-    justify-content: space-between;
     align-items: baseline;
-    align-content: flex-start;
-    flex-wrap: wrap;
+	flex-wrap: wrap;
+	gap:25px;
 }
 
 .summary-item {
  	margin-bottom: 0.1rem;
- 	font-size: 14px;
+ 	font-size: 0.9rem;
  	line-height:20px;
- 	text-align: right;
  	white-space: nowrap;
     
-}
-
-.summary-block:first-child{
-	text-align: left;
 }
 
 .summary-items {
@@ -918,8 +922,8 @@ td.dtfc-fixed-left{
 	margin-bottom: 0;
 }
 
-.scroll-block > .row{
-	--bs-gutter-x: 1rem;
+.scroll-block .row{
+	--bs-gutter-x: 0.8rem;
     --bs-gutter-y: 1rem;
     margin: auto;
 }
@@ -934,7 +938,7 @@ td.dtfc-fixed-left{
 }
 
 .scroll-block {
-	overflow-y: hidden;
+	overflow: hidden;
 	
 }
 
@@ -944,7 +948,7 @@ td.dtfc-fixed-left{
 	    padding-top:10px;
 }
 
-.year-table, .resp-table,  {
+.year-table, .resp-table {
 	border: 1px solid var(--bs-border-color);
 	border-radius: 6px;
 	padding: 10px;

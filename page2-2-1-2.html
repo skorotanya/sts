@@ -60,21 +60,22 @@
 				
 				<div class="param-group">
 					<label for="paramCity" class="form-label">Город/ поселение</label>
-					<select class="selectpicker param-city" data-width="180px" id="paramCity" value="1" data-live-search="true">
+					<div class="input-group">
+					<select class="selectpicker param-city" data-width="205px" id="paramCity" value="1" data-live-search="true">
 					  <option value="1">Москва</option>
 					  <option value="2">Санкт-Петербург</option>
 					  <option value="3">Самара</option>
 					  <option value="4">Химки</option>
 					</select>
-					<button class="bttn bttn-color bttn-add-city" type="button">+</button>
+					<button class="bttn bttn-square bttn-icon-add bttn-add-city" type="button"></button></div>
 				</div>
 				<div class="param-group">
 					<label for="paramYear" class="form-label">Базовый год</label>
-					<select class="selectpicker param-year" data-width="100px" id="paramYear" value="2022">
-					  <option value="2020">2020</option>
-					  <option value="2021">2021</option>
-					  <option value="2022">2022</option>
-					  <option value="2023">2023</option>
+					<select class="selectpicker param-year" data-width="140px" id="paramYear" value="2022">
+					  <option value="2020">01.01.2021</option>
+					  <option value="2021">01.01.2022</option>
+					  <option value="2022">01.01.2023</option>
+					  <option value="2023">01.01.2024</option>
 					</select>
 				</div>
 				<p class="schema-name">Краткое наименование схемы: <span>Самая наилучшая схема из всех схем</span></p>
@@ -201,8 +202,7 @@
 				
 				<ul class="breadcrumb">
 					<li class="breadcrumb-item"><a class="ref-color" href="#">Главная</a></li>
-					<li class="breadcrumb-item">Теплоснабжающие организации</li>
-					<li class="breadcrumb-item"><a class="ref-color" href="index.html">Перечень организаций</a></li>
+					<li class="breadcrumb-item"><a class="ref-color" href="index.html">Теплоснабжающие организации - Перечень организаций</a></li>
 					<li class="breadcrumb-item">Загрузка данных</li>
 				</ul>
 
@@ -212,17 +212,20 @@
 				  	<div class="tableblock load-table">
 						<div class="table-params">
 							<div class="param-group">
+								<div class="note">Базовый год - <span class="note-base-year">2022 (01.01.2023)</span>; следующие года - перспективные.</div>
+							</div>
+							<div class="param-group">
 								<div class="param-group-item">
 									<label class="form-label">Файл загрузки</label>
 								  	<input class="form-control" type="file" id="formFile">
 								</div>
 								<div class="param-group-item">
 									<label for="paramCalcYear" class="form-label">Год схемы, на который загружаются данные</label>
-									<select class="selectpicker param-calc-year" data-width="100px" id="paramCalcYear" value="2022">
-									  <option value="2020">2020</option>
-									  <option value="2021">2021</option>
-									  <option value="2022">2022</option>
-									  <option value="2023">2023</option>
+									<select class="selectpicker param-calc-year" data-width="140px" id="paramCalcYear" value="2022">
+									  <option value="2020">01.01.2021</option>
+									  <option value="2021">01.01.2022</option>
+									  <option value="2022">01.01.2023</option>
+									  <option value="2023">01.01.2024</option>
 									</select>
 								</div>
 								<div class="param-group-item buttons-right loadTable-buttons"></div>
@@ -242,6 +245,18 @@
 						            <th>Полезная энергия</th>
 						            <th>Тепловая энергия</th>
 						            <th>Источники</th>
+						        </tr>
+						        <tr class="filter-row ">
+					            <th class="dtfc-fixed-left" style="left:0; position:sticky;"><input type="text" class="filter-col-0"/></th>
+						            <th><input type="text" class="filter-col-1"/></th>
+						            <th><input type="text" class="filter-col-2"/></th>
+						            <th><input type="text" class="filter-col-3"/></th>
+						            <th><input type="text" class="filter-col-4"/></th>
+						            <th><input type="text" class="filter-col-5"/></th>
+						            <th><input type="text" class="filter-col-6"/></th>
+						            <th><input type="text" class="filter-col-7"/></th>
+						            <th><input type="text" class="filter-col-8"/></th>
+						            <th><input type="text" class="filter-col-9"/></th>
 						        </tr>
 						    </thead>
 						    <tbody>

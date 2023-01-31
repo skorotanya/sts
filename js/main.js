@@ -101,7 +101,7 @@ const initDataTable = (tId, oType, colsDefs) => {
             break;
         case 'full' :
             table = $('#'+ tId).DataTable({
-                scrollY: '500px',
+                scrollY: '420px',
                 stateSave: true,
                 select: true,
                 orderCellsTop: true,
@@ -151,6 +151,20 @@ const adjustColumns = (tId) => {
     let table = $('#'+tId).DataTable();
     table.columns.adjust().draw();
 };
+
+
+//init tabs on page
+/*const initTabs = () => {
+    const triggerTabList = document.querySelectorAll('.nav-tabs button')
+    triggerTabList.forEach(triggerEl => {
+      const tabTrigger = new bootstrap.Tab(triggerEl);
+
+      triggerEl.addEventListener('click', event => {
+        
+      });
+    });
+};*/
+
 
 
 /* COMMON EVENT LISTENERS FOR ALL PAGES */

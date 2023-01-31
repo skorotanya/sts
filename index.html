@@ -73,10 +73,10 @@
 				<div class="param-group">
 					<label for="paramYear" class="form-label">Базовый год</label>
 					<select class="selectpicker param-year" data-width="140px" id="paramYear" value="2022">
-					  <option value="2020">10.01.2020</option>
-					  <option value="2021">10.01.2021</option>
-					  <option value="2022">10.01.2022</option>
-					  <option value="2023">10.01.2023</option>
+					  <option value="2020">01.01.2021</option>
+					  <option value="2021">01.01.2022</option>
+					  <option value="2022">01.01.2023</option>
+					  <option value="2023">01.01.2024</option>
 					</select>
 				</div>
 				<p class="schema-name">Краткое наименование схемы: <span>Самая наилучшая схема из всех схем</span></p>
@@ -90,7 +90,7 @@
 			          </a>
 			          	<ul class="subnav collapse list-unstyled show" id="tso_menu">
 				            <li><a class="subnav-item nav-link active" href="#">Перечень организаций</a></li>
-				            <li><a class="subnav-item nav-link" href="#">Объекты в обслуживании</a></li>
+				            <li><a class="subnav-item nav-link" href="page2-2-2.html">Объекты в обслуживании</a></li>
 				            <li><a class="subnav-item nav-link" href="#">Тепловой баланс</a></li>
 				            <li><a class="subnav-item nav-link" href="#">Затраты и цены</a></li>
 				            <li><a class="subnav-item nav-link" href="#">Тарифы и плата за подключение</a></li>
@@ -203,8 +203,7 @@
 				<div class="title-block">
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a class="ref-color" href="#">Главная</a></li>
-						<li class="breadcrumb-item">Теплоснабжающие организации</li>
-						<li class="breadcrumb-item">Перечень организаций</li>
+						<li class="breadcrumb-item">Теплоснабжающие организации - Перечень организаций</li>
 					</ul>
 					<h1 class="title">Теплоснабжающие и теплосетевые организации</h1>
 				</div>
@@ -212,19 +211,23 @@
 			  	<div class="tableblock main-table">
 					<div class="table-params">
 						<div class="param-group">
+							<div class="note">Базовый год - <span class="note-base-year">2022 (01.01.2023)</span>; следующие года - перспективные.</div>
+						</div>
+						<div class="param-group">
 							<div class="param-group-item">
-								<label for="paramCalcYear" class="form-label">Расчётный год схемы</label>
+								<label for="paramCalcYear" class="form-label">Выберите год:</label>
 								<select class="selectpicker param-calc-year" data-width="140px" id="paramCalcYear" value="2022">
-								  <option value="2020">10.01.2020</option>
-								  <option value="2021">10.01.2021</option>
-								  <option value="2022">10.01.2022</option>
-								  <option value="2023">10.01.2023</option>
+								  <option value="2020">01.01.2021</option>
+								  <option value="2021">01.01.2022</option>
+								  <option value="2022">01.01.2023</option>
+								  <option value="2023">01.01.2024</option>
 								</select>
 							</div>
 							<div class="param-group-item">
 								<button class="bttn bttn-color bttn-edit-data" type="button">Добавить/Удалить</button>
 								<a class="bttn bttn-color bttn-load-data" type="button" href="page2-2-1-2.html">Загрузить данные</a>
 								<button class="bttn bttn-color bttn-excel-export" type="button">Выгрузить в Excel</button>
+								
 							</div>
 						</div>
 						<div class="param-group">
@@ -255,7 +258,8 @@
 					            <th>Источники</th>
 					        </tr>
 					        <tr class="filter-row ">
-					            <th class="dtfc-fixed-left" style="left:0; position:sticky;"><input type="text" class="filter-col-1"/></th>
+					            <th class="dtfc-fixed-left" style="left:0; position:sticky;"><input type="text" class="filter-col-0"/></th>
+					            <th><input type="text" class="filter-col-1"/></th>
 					            <th><input type="text" class="filter-col-2"/></th>
 					            <th><input type="text" class="filter-col-3"/></th>
 					            <th><input type="text" class="filter-col-4"/></th>
@@ -264,7 +268,6 @@
 					            <th><input type="text" class="filter-col-7"/></th>
 					            <th><input type="text" class="filter-col-8"/></th>
 					            <th><input type="text" class="filter-col-9"/></th>
-					            <th><input type="text" class="filter-col-10"/></th>
 					        </tr>
 					    </thead>
 					    <tbody>
@@ -517,16 +520,16 @@
 							<p class="summary-item"><span class="mark-color">10</span></p>
 						</div>
 						<div class="summary-block">
-							<h5 class="summary-title">Количество организаций:</h5>
 							<div class="summary-items">
+								<h5 class="summary-title">Количество организаций:</h5>
 								<p class="summary-item">регулируемые - <span class="mark-color">10</span> шт.</p>
 								<p class="summary-item">нерегулируемые - <span class="mark-color">10</span> шт.</p>
 								<p class="summary-item">договор поставки - <span class="mark-color">10</span> шт.</p>
 							</div>
 						</div>
 						<div class="summary-block">
-							<h5 class="summary-title">В том числе по видам деятельности:</h5>
 							<div class="summary-items">
+								<h5 class="summary-title">В том числе по видам деятельности:</h5>
 								<p class="summary-item">комбинированное производство, более 25 МВт - <span class="mark-color">4</span> шт.</p>
 								<p class="summary-item">комбинированное производство менее 25 МВт - <span class="mark-color">10</span> шт.</p>
 								<p class="summary-item">некомбинированное производство - <span class="mark-color">10</span> шт.</p>
@@ -579,7 +582,7 @@
 	</div>
 	
 	<!-- Modal Load Data -->
-	<div class="form-data-edit modal fade show" id="editData" tabindex="-1" aria-labelledby="loadDataLabel" aria-hidden="true">
+	<div class="form-data-edit modal fade show" id="editData" data-bs-backdrop="static" tabindex="-1" aria-labelledby="loadDataLabel" aria-hidden="true">
 	  	<div class="modal-dialog modal-dialog-centered">
 	    	<div class="modal-content">
 	      		<div class="modal-header"> 
@@ -592,7 +595,7 @@
 		      				<div class="param-group-item">
 		      					<label class="form-label">Уникальный номер ТСО</label>
 		      					<div class="input-group">
-								  	<select class="selectpicker" id="paramNumberTso" data-width="98%" multiple data-live-search="true">
+								  	<select class="selectpicker" id="paramNumberTso" data-width="98%" data-live-search="true">
 									  	<option value="2020">2020</option>
 									  	<option value="2021">2021</option>
 									  	<option value="2022">2022</option>
@@ -604,6 +607,7 @@
 		      		</div>
 		      		<div class="scroll-block-wrapper">
 			      		<div class="scroll-block">
+			      			<form>
 			      			<div class="row">
 			      				<div class="param-group col-8">
 									<div class="param-group-item">
@@ -653,7 +657,7 @@
 									</div>
 									<div class="param-group-item">
 										<label class="form-label">Размер собственного капитала</label>
-										<div class="input-group"><input type="text" class="form-control" name=""><span class="input-group-text"> т.р.</span></div>
+										<div class="input-group"><input type="text" class="form-control" name=""><span class="input-group-text"> тыс.р.</span></div>
 									</div>
 									<div class="param-group-item">
 										<label class="form-label">по состоянию на</label>
@@ -720,13 +724,16 @@
 									</div>
 								</div>
 							</div>
+						</form>
 							<div class="row">
 								<div class="col-12 col-xxl-6">
 									<div class="tableblock year-table">
+										<h4>Параметры ТСО по годам расчетного периода схемы</h4>
 										<div class="table-params">
+
 											<div class="param-group">
 												<div class="param-group-item">
-													<h4>Параметры ТСО по годам расчетного периода схемы</h4>
+													<div class="note">Базовый год - <span class="note-base-year">2022 (01.01.2023)</span>.</div>
 													<button class="bttn bttn-square bttn-icon-save ms-auto" type="button" title="Сохранить">
 													</button>
 												</div>
@@ -743,7 +750,7 @@
 										    </thead>
 										    <tbody>
 										    	<tr>
-										    		<td>2022</td>
+										    		<td>01.01.2022</td>
 										    		<td>
 										    			<select class="table-item selectpicker " data-width="100%" value="1" >
 														  <option value="1">Действует</option>
@@ -762,7 +769,7 @@
 										    		</td>
 										    	</tr>
 										    	<tr>
-										    		<td>2023</td>
+										    		<td>01.01.2023</td>
 										    		<td>
 										    			<select class="table-item selectpicker " data-width="100%" value="1" >
 														  <option value="1">Действует</option>
@@ -781,7 +788,7 @@
 										    		</td>
 										    	</tr>
 										    	<tr>
-										    		<td>2024</td>
+										    		<td>01.01.2024</td>
 										    		<td>
 										    			<select class="table-item selectpicker " data-width="100%"v value="1" >
 														  <option value="1">Действует</option>
@@ -800,7 +807,7 @@
 										    		</td>
 										    	</tr>
 										    	<tr>
-										    		<td>2025</td>
+										    		<td>01.01.2025</td>
 										    		<td>
 										    			<select class="table-item selectpicker " data-width="100%" value="1" >
 														  <option value="1">Действует</option>
@@ -819,7 +826,7 @@
 										    		</td>
 										    	</tr>
 										    	<tr>
-										    		<td>2026</td>
+										    		<td>01.01.2026</td>
 										    		<td>
 										    			<select class="table-item selectpicker " data-width="100%" value="1" >
 														  <option value="1">Действует</option>
