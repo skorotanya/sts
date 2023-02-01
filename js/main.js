@@ -114,7 +114,7 @@ const initDataTable = (tId, oType, colsDefs) => {
                         .every(function () {
                             var that = this;
          
-                            $('.filter-col-' + this.index()).on('keyup change clear', function () {
+                            $('#' + tId +'_wrapper .filter-col-' + this.index()).on('keyup change clear', function () {
                                 if (that.search() !== this.value) {
                                     that.search(this.value).draw();
                                 }
@@ -137,7 +137,7 @@ const loadFilterFromState = (tId) => {
             let colSearch = state.columns[colIdx].search;
             if (colSearch.search) {
                 let filter = colSearch.search.replace(/[\^\$]/g,'');
-                $('.filter-col-'+colIdx).val(filter);
+                $('#' + tId +'_wrapper .filter-col-'+colIdx).val(filter);
             }
         });   
  

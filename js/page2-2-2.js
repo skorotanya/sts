@@ -23,19 +23,36 @@ $(document).ready(function () {
     loadFilterFromState('tsoServTable');
 
     initDataTable('srcListTable', 'full');
+    loadFilterFromState('srcListTable');
 
     initDataTable('heatPointTable', 'full');
+    loadFilterFromState('heatPointTable');
 
     initDataTable('extraDataTable', 'full');
+    loadFilterFromState('extraDataTable');
 
 
     // event listeners on current page
 
-    // adjust table columns after showing modal window for edit data
-    const editDataModal = document.getElementById('editData');
-    editDataModal.addEventListener('shown.bs.modal', event => {
-      adjustColumns('yearParamTable');
-      adjustColumns('responseTable');
+    // adjust table columns after showing tab for edit data
+    const tsoServTab = document.querySelector('button[data-bs-target="#tsoServTab"');
+    tsoServTab.addEventListener('shown.bs.tab', event => {
+      adjustColumns('tsoServTable');
+    })
+  
+    const srcListTab = document.querySelector('button[data-bs-target="#srcListTab"');
+    srcListTab.addEventListener('shown.bs.tab', event => {
+      adjustColumns('srcListTable');
+    })
+
+    const heatPointTab = document.querySelector('button[data-bs-target="#heatPointTab"');
+    heatPointTab.addEventListener('shown.bs.tab', event => {
+      adjustColumns('heatPointTable');
+    })
+
+    const extraDataTab = document.querySelector('button[data-bs-target="#extraDataTab"');
+    extraDataTab.addEventListener('shown.bs.tab', event => {
+      adjustColumns('extraDataTable');
     })
 
 

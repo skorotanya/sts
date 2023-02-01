@@ -89,12 +89,12 @@
 			            Теплоснабжающие организации
 			          </a>
 			          	<ul class="subnav collapse list-unstyled show" id="tso_menu">
-				            <li><a class="subnav-item nav-link active" href="#">Перечень организаций</a></li>
+				            <li><a class="subnav-item nav-link" href="index.html">Перечень организаций</a></li>
 				            <li><a class="subnav-item nav-link" href="page2-2-2.html">Объекты в обслуживании</a></li>
 				            <li><a class="subnav-item nav-link" href="page2-2-3.html">Тепловой баланс</a></li>
 				            <li><a class="subnav-item nav-link" href="page2-2-4.html">Затраты и цены</a></li>
 				            <li><a class="subnav-item nav-link" href="page2-2-5.html">Тарифы и плата за подключение</a></li>
-				            <li><a class="subnav-item nav-link" href="page2-2-6.html">Экологические показатели</a></li>
+				            <li><a class="subnav-item nav-link active" href="#">Экологические показатели</a></li>
 				        </ul>
 			        </li>
 
@@ -203,9 +203,9 @@
 				<div class="title-block">
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a class="ref-color" href="#">Главная</a></li>
-						<li class="breadcrumb-item">Теплоснабжающие организации - Перечень организаций</li>
+						<li class="breadcrumb-item">Теплоснабжающие организации - Экологические показатели</li>
 					</ul>
-					<h1 class="title">Теплоснабжающие и теплосетевые организации</h1>
+					<h1 class="title">Экологические показатели</h1>
 				</div>
 				
 			  	<div class="tableblock main-table">
@@ -224,26 +224,14 @@
 								</select>
 							</div>
 							<div class="param-group-item">
-								<button class="bttn bttn-color bttn-edit-data" type="button">Добавить/Удалить</button>
 								<a class="bttn bttn-color bttn-load-data" type="button" href="page2-2-1-2.html">Загрузить данные</a>
 								<button class="bttn bttn-color bttn-excel-export" type="button">Выгрузить в Excel</button>
-								
 							</div>
-						</div>
-						<div class="param-group">
-							<div class="param-group-item">
-								<input type="checkbox" name="check1" class="form-check-input">
-								<label for="paramCalcYear" class="form-label">Только регулируемые и договор поставки</label>
-							</div>
-							<div class="param-group-item">
-								<input type="checkbox" name="check2" class="form-check-input">
-								<label for="paramCalcYear" class="form-label">Показать ликвидированные</label>
-							</div>
-							<div class="param-group-item buttons-right tsoTable-buttons"></div>
+							<div class="param-group-item buttons-right ecoTable-buttons"></div>
 						</div>
 					</div>
 
-					<table id="tsoTable" class="tableblock-table display nowrap" style="width:100%">
+					<table id="ecoTable" class="tableblock-table display nowrap" style="width:100%">
 					    <thead>
 					        <tr>
 					            <th>Номер</th>
@@ -521,22 +509,15 @@
 						</div>
 						<div class="summary-block">
 							<div class="summary-items">
-								<h5 class="summary-title">Количество организаций:</h5>
-								<p class="summary-item">регулируемые - <span class="mark-color">10</span> шт.</p>
-								<p class="summary-item">нерегулируемые - <span class="mark-color">10</span> шт.</p>
-								<p class="summary-item">договор поставки - <span class="mark-color">10</span> шт.</p>
+								<p class="summary-item">Суммарные валовые выбросы в атмосферу: <span class="mark-color">10</span> т/год</p>
+								<p class="summary-item">Разрешенные валовые выбросы в атмосферу: <span class="mark-color">10</span> т/год</p>
+								<p class="summary-item">Парниковые газы от объектов энергетики: <span class="mark-color">10</span> т/год</p>
 							</div>
 						</div>
 						<div class="summary-block">
 							<div class="summary-items">
-								<h5 class="summary-title">В том числе по видам деятельности:</h5>
-								<p class="summary-item">комбинированное производство, более 25 МВт - <span class="mark-color">4</span> шт.</p>
-								<p class="summary-item">комбинированное производство менее 25 МВт - <span class="mark-color">10</span> шт.</p>
-								<p class="summary-item">некомбинированное производство - <span class="mark-color">10</span> шт.</p>
-							</div>
-							<div class="summary-items">
-								<p class="summary-item">передача - <span class="mark-color">10</span> шт.</p>
-								<p class="summary-item">сбыт - <span class="mark-color">10</span> шт.</p>
+								<p class="summary-item">Количество источников выбросов в атмосферу: <span class="mark-color">4</span> шт.</p>
+								<p class="summary-item">Плата за негативное воздействие на окружающую среду: <span class="mark-color">10</span> тыс.руб.</p>
 							</div>
 						</div>
 					</div>
@@ -580,335 +561,6 @@
 	    </div>
 	  </div>
 	</div>
-	
-	<!-- Modal Load Data -->
-	<div class="form-data-edit modal fade show" id="editData" data-bs-backdrop="static" tabindex="-1" aria-labelledby="loadDataLabel" aria-hidden="true">
-	  	<div class="modal-dialog modal-dialog-centered">
-	    	<div class="modal-content">
-	      		<div class="modal-header"> 
-			        <h3 class="modal-title" id="editDataLabel">Редактирование ТСО</h3>
-			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			     </div>
-			     <div class="modal-body ">
-		      		<div class="static-block">
-		      			<div class="param-group col-12">
-		      				<div class="param-group-item">
-		      					<label class="form-label">Уникальный номер ТСО</label>
-		      					<div class="input-group">
-								  	<select class="selectpicker" id="paramNumberTso" data-width="98%" data-live-search="true">
-									  	<option value="2020">2020</option>
-									  	<option value="2021">2021</option>
-									  	<option value="2022">2022</option>
-									  	<option value="2023">2023</option>
-									</select>
-								</div>
-							</div>
-		      			</div>	
-		      		</div>
-		      		<div class="scroll-block-wrapper">
-			      		<div class="scroll-block">
-			      			<form>
-			      			<div class="row">
-			      				<div class="param-group col-8">
-									<div class="param-group-item">
-										<label class="form-label">Наименование ТСО: <span class="sublable">краткое</span></label>
-										<input type="text" class=" form-control" name="">
-
-									</div>
-								</div>
-								<div class="param-group col-4">	
-									<div class="param-group-item">
-										<label class="form-label">Код ТСО</label>
-										<input type="text" class=" form-control" name="">
-									</div>
-								</div>
-			      			</div>
-				      		<div class="row">
-				      			<div class="param-group col-12">
-					      			<div class="param-group-item">
-										<label class="form-label"><span class="sublable">полное</span></label>
-										<textarea class="form-control"></textarea>
-									</div>
-								</div>
-				      		</div>
-								
-							<div class="row">
-								<div class="params-group col-12 col-lg-6">
-									
-									<div class="param-group-item">
-										<label class="form-label">Организация является структурным подразделением</label>
-										<input type="checkbox" class="form-check-input">
-									</div>
-									<div class="param-group-item">
-										<label class="form-label">Организация является плательщиком НДС</label>
-										<input type="checkbox" class="form-check-input">
-									</div>
-									<div class="param-group-item">
-										<label class="form-label">ИНН</label>
-										<input type="text" class="form-control" name="">
-									</div>
-									<div class="param-group-item">
-										<label class="form-label">ОГРН</label>
-										<input type="text" class="form-control" name="">
-									</div>
-									<div class="param-group-item">
-										<label class="form-label">КПП</label>
-										<input type="text" class="form-control" name="">
-									</div>
-									<div class="param-group-item">
-										<label class="form-label">Размер собственного капитала</label>
-										<div class="input-group"><input type="text" class="form-control" name=""><span class="input-group-text"> тыс.р.</span></div>
-									</div>
-									<div class="param-group-item">
-										<label class="form-label">по состоянию на</label>
-										<input type="date" class="form-control" name="">
-									</div>
-									<div class="param-group-item">
-										<label class="form-label">Вид собственности</label>
-									  	<select class="selectpicker" id="paramPropertyType" value="1" data-live-search="true" data-width="100%">
-										  	<option value="1">частная</option>
-										  	<option value="2">государственная</option>
-										</select>
-									</div>
-									<div class="param-group-item">
-										<label class="form-label">Способ отправки писем</label>
-									  	<select class="form-item selectpicker " id="paramPostMethod" value="1" data-live-search="true" data-width="100%">
-										  	<option value="1">частная</option>
-										  	<option value="2">государственная</option>
-										</select>
-									</div>
-								</div>
-								<div class="params-group col-12 col-lg-6">
-									<div class="param-group-item">
-										<label class="form-label"><span class="">Руководитель:</span> должность</label>
-										<input type="text" class="form-control" name="">
-									</div>
-									<div class="param-group-item">
-										<label class="form-label">Фамилия</label>
-										<input type="text" class="form-control" name="">
-									</div>
-									<div class="param-group-item">
-										<label class="form-label">Имя</label>
-										<input type="text" class="form-control" name="">
-									</div>
-									<div class="param-group-item">
-										<label class="form-label">Отчество</label>
-										<input type="text" class="form-control" name="">
-									</div>
-									<div class="param-group-item">
-										<label class="form-label">Контактный телефон</label>
-										<input type="tel" class="form-control" name="">
-									</div>
-									<div class="param-group-item">
-										<label class="form-label">Эл. почта</label>
-										<input type="email" class="form-control" name="">
-									</div>
-									
-									<div class="param-group-item">
-										<label class="form-label">Организация действует в зоне(нах) ЕТО</label>
-										<div class="input-group">
-										  	<select class="form-item selectpicker" id="paramEtoZone" multiple data-live-search="true" data-width="100%">
-											  	<option value="1">частная</option>
-											  	<option value="2">государственная</option>
-											</select>
-										</div>
-									</div>
-									<div class="param-group-item">
-										<label class="form-label">Статус ЕТО</label>
-										<div class="input-group">
-										  	<select class="form-item selectpicker " id="paramEtoStatus" data-width="100%" value="1">
-											  	<option value="1">частная</option>
-											  	<option value="2">государственная</option>
-											</select>
-										</div>
-									</div>
-								</div>
-							</div>
-						</form>
-							<div class="row">
-								<div class="col-12 col-xxl-6">
-									<div class="tableblock year-table">
-										<h4>Параметры ТСО по годам расчетного периода схемы</h4>
-										<div class="table-params">
-
-											<div class="param-group">
-												<div class="param-group-item">
-													<div class="note">Базовый год - <span class="note-base-year">2022 (01.01.2023)</span>.</div>
-													<button class="bttn bttn-square bttn-icon-save ms-auto" type="button" title="Сохранить">
-													</button>
-												</div>
-											</div>
-										</div>
-										<table id="yearParamTable" class="tableblock-table display nowrap compact" style="width:100%">
-										    <thead>
-										        <tr>
-										            <th>Год схемы</th>
-										            <th>Статус организации</th>
-										            <th>Тип организации</th>
-										            <th>Тарифные зоны</th>
-										        </tr>
-										    </thead>
-										    <tbody>
-										    	<tr>
-										    		<td>01.01.2022</td>
-										    		<td>
-										    			<select class="table-item selectpicker " data-width="100%" value="1" >
-														  <option value="1">Действует</option>
-														  <option value="2">Ликвидированная</option>
-														</select>
-										    		</td>
-										    		<td>
-										    			<select class="table-item selectpicker " data-width="100%" value="1" >
-														  <option value="1">Регулируемая</option>
-														  <option value="2">Договор поставки</option>
-														  <option value="3">Не регулируемая</option>
-														</select>
-										    		</td>
-										    		<td>
-										    			3.1; 3.2
-										    		</td>
-										    	</tr>
-										    	<tr>
-										    		<td>01.01.2023</td>
-										    		<td>
-										    			<select class="table-item selectpicker " data-width="100%" value="1" >
-														  <option value="1">Действует</option>
-														  <option value="2">Ликвидированная</option>
-														</select>
-										    		</td>
-										    		<td>
-										    			<select class="table-item selectpicker " data-width="100%" value="1" >
-														  <option value="1">Регулируемая</option>
-														  <option value="2">Договор поставки</option>
-														  <option value="3">Не регулируемая</option>
-														</select>
-										    		</td>
-										    		<td>
-										    			3.1; 3.2
-										    		</td>
-										    	</tr>
-										    	<tr>
-										    		<td>01.01.2024</td>
-										    		<td>
-										    			<select class="table-item selectpicker " data-width="100%"v value="1" >
-														  <option value="1">Действует</option>
-														  <option value="2">Ликвидированная</option>
-														</select>
-										    		</td>
-										    		<td>
-										    			<select class="table-item selectpicker " data-width="100%" value="1" >
-														  <option value="1">Регулируемая</option>
-														  <option value="2">Договор поставки</option>
-														  <option value="3">Не регулируемая</option>
-														</select>
-										    		</td>
-										    		<td>
-										    			3.1; 3.2
-										    		</td>
-										    	</tr>
-										    	<tr>
-										    		<td>01.01.2025</td>
-										    		<td>
-										    			<select class="table-item selectpicker " data-width="100%" value="1" >
-														  <option value="1">Действует</option>
-														  <option value="2">Ликвидированная</option>
-														</select>
-										    		</td>
-										    		<td>
-										    			<select class="table-item selectpicker " data-width="100%" value="1" >
-														  <option value="1">Регулируемая</option>
-														  <option value="2">Договор поставки</option>
-														  <option value="3">Не регулируемая</option>
-														</select>
-										    		</td>
-										    		<td>
-										    			3.1; 3.2
-										    		</td>
-										    	</tr>
-										    	<tr>
-										    		<td>01.01.2026</td>
-										    		<td>
-										    			<select class="table-item selectpicker " data-width="100%" value="1" >
-														  <option value="1">Действует</option>
-														  <option value="2">Ликвидированная</option>
-														</select>
-										    		</td>
-										    		<td>
-										    			<select class="table-item selectpicker " data-width="100%" value="1" >
-														  <option value="1">Регулируемая</option>
-														  <option value="2">Договор поставки</option>
-														  <option value="3">Не регулируемая</option>
-														</select>
-										    		</td>
-										    		<td>
-										    			3.1; 3.2
-										    		</td>
-										    	</tr>
-										    </tbody>
-										</table>
-									</div>
-								</div>
-								<div class="col-12 col-xxl-6">
-									<div class="tableblock resp-table">
-										
-										<div class="table-params">
-											<div class="param-group">
-												<div class="param-group-item">
-													<h4>Ответственное лицо за подготовку данных по схеме</h4>
-												</div>
-											</div>
-										</div>
-										<table id="responseTable" class="tableblock-table display nowrap compact" style="width:100%">
-										    <thead>
-										        <tr>
-										            <th>Должность</th>
-										            <th>Фамилия</th>
-										            <th>Имя</th>
-										            <th>Отчество</th>
-										            <th>Телефон</th>
-										            <th>Адрес эл. почты</th>
-										            <th></th>
-										        </tr>
-										    </thead>
-										    <tbody>
-										    	<tr>
-										    		<td><input type="text" class="table-item form-control" value="Главный инженер"></td>
-										    		<td><input type="text" class="table-item form-control" value="Иванов"></td>
-										    		<td><input type="text" class="table-item form-control" value="Иван"></td>
-										    		<td><input type="text" class="table-item form-control" value="Иванович"></td>
-										    		<td><input type="tel" class="table-item form-control" value="+7(945)456-65-78"></td>
-										    		<td><input type="email" class="table-item form-control" value="ivanov@mail.ru"></td>
-										    		<td><button class="bttn bttn-square bttn-icon-save" type="button" title="Сохранить">
-													</button><button class="bttn bttn-square bttn-icon-del" type="button" title="Удалить">
-													</button></td>
-										    	</tr>
-										    	<tr class="add-row">
-										    		<td><input type="text" class="table-item form-control" value=""></td>
-										    		<td><input type="text" class="table-item form-control" value=""></td>
-										    		<td><input type="text" class="table-item form-control" value=""></td>
-										    		<td><input type="text" class="table-item form-control" value=""></td>
-										    		<td><input type="tel" class="table-item form-control" value=""></td>
-										    		<td><input type="email" class="table-item form-control" value=""></td>
-										    		<td><button class="bttn bttn-square bttn-icon-save" type="button" title="Сохранить">
-													</button><button class="bttn bttn-square bttn-icon-del" type="button" title="Удалить">
-													</button></td>
-										    	</tr>
-										    </tbody>
-										</table>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-			     </div>
-			     <div class="modal-footer">
-			      	<button type="button" class="bttn bttn-color">Сохранить</button>
-			      	<button type="button" class="bttn bttn-color">Создать копию</button>
-			      	<button type="button" class="bttn bttn-color">Удалить</button>
-			     </div>
-	    	</div>
-	    </div>
-	</div>
 
 	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
@@ -926,9 +578,9 @@
 	<script type="text/javascript" src="https://cdn.datatables.net/fixedcolumns/4.2.1/js/dataTables.fixedColumns.min.js"></script>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
-	
+
 	<script type="text/javascript" charset="utf8" src="js/main.js"></script>
-	<script type="text/javascript" charset="utf8" src="js/page2-2-1.js"></script>
+	<script type="text/javascript" charset="utf8" src="js/page2-2-6.js"></script>
 	
 	
 </body>
