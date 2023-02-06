@@ -25,7 +25,6 @@ const showPreloader = () => {
 
 
 
-
 /* POPUP (MODAL) WINDOW */
 
 // show modal
@@ -43,6 +42,26 @@ const hideModal = (modalName) => {
     let modal = bootstrap.Modal.getOrCreateInstance(modalDiv);
     modal.hide();
 };
+
+
+/* TABS */
+/*
+const triggerTabList = document.querySelectorAll('button[data-bs-toggle="tab"]');
+triggerTabList.forEach(triggerEl => {
+  const tabTrigger = new bootstrap.Tab(triggerEl);
+
+  triggerEl.addEventListener('click', event => {
+    event.preventDefault();
+    showTab(tabTrigger);
+
+  })
+});
+
+
+const showTab = (tabObj) => {
+    console.log(tabObj)
+    tabObj.show();
+}*/
 
 
 /* DATATABLES  */
@@ -152,18 +171,44 @@ const adjustColumns = (tId) => {
     table.columns.adjust().draw();
 };
 
-
-//init tabs on page
-/*const initTabs = () => {
-    const triggerTabList = document.querySelectorAll('.nav-tabs button')
-    triggerTabList.forEach(triggerEl => {
-      const tabTrigger = new bootstrap.Tab(triggerEl);
-
-      triggerEl.addEventListener('click', event => {
-        
-      });
-    });
-};*/
+// execution all functions and addind eventListeners to page tables, defining in the 'pageTables' object
+/*
+    const pageTables = [
+    {
+      name: '<table id without "Table">', for example for table 'tsoTable' name equals 'tso',
+      type: 'full' or 'simple-scroll'
+      columns: [],
+      modal: '<modal window id>',
+      tab: true or false
+      firstTab: true or false
+    },...]
+*/
+const initPageTables = (pageTables) => {
+    pageTables.forEach(tbl => { 
+        let tblId = tbl.name + 'Table';
+        initDataTable(tblId, tbl.type);
+        if(tbl.type=='full') {
+            loadFilterFromState(tblId);
+        };
+        if(tbl.modal =='' && tbl.firstTab) {
+            adjustColumns(tblId);
+        };
+        if(tbl.tab) {
+            // adjust table columns after showing tab for edit data
+            let tabEl = document.querySelector('button[data-bs-target="#' + tbl.name + 'Tab"');
+            tabEl.addEventListener('shown.bs.tab', event => {
+                adjustColumns(tblId);
+            });
+        };
+        if(tbl.modal !='' && tbl.firstTab) {
+            // adjust table columns after showing modal window for edit data
+            let mdlEl = document.getElementById(tbl.modal);
+            mdlEl.addEventListener('shown.bs.modal', event => {
+                adjustColumns(tblId);
+            });
+      };
+    })
+  }
 
 
 
