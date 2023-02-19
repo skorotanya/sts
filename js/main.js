@@ -84,7 +84,7 @@ $.extend( $.fn.dataTable.defaults, {
             },
             button: {
                 0: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path d="M35.4 87.12l168.65 196.44A16.07 16.07 0 01208 294v119.32a7.93 7.93 0 005.39 7.59l80.15 26.67A7.94 7.94 0 00304 440V294a16.07 16.07 0 014-10.44L476.6 87.12A14 14 0 00466 64H46.05A14 14 0 0035.4 87.12z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>',
-                _: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path d="M35.4 87.12l168.65 196.44A16.07 16.07 0 01208 294v119.32a7.93 7.93 0 005.39 7.59l80.15 26.67A7.94 7.94 0 00304 440V294a16.07 16.07 0 014-10.44L476.6 87.12A14 14 0 00466 64H46.05A14 14 0 0035.4 87.12z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg><span class="filter-num">(%d)</span>'
+                _: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path d="M35.4 87.12l168.65 196.44A16.07 16.07 0 01208 294v119.32a7.93 7.93 0 005.39 7.59l80.15 26.67A7.94 7.94 0 00304 440V294a16.07 16.07 0 014-10.44L476.6 87.12A14 14 0 00466 64H46.05A14 14 0 0035.4 87.12z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg><span class="filter-num">%d</span>'
             }
         }
     },
@@ -109,18 +109,20 @@ $.extend( $.fn.dataTable.defaults, {
 
 // init table as DataTable by table id and named options set
 // Available values of oType: 'simple-scroll', 'full', ...
-const initDataTable = (tId, oType, colsDefs) => {
+const initDataTable = (tId, oType, height = '550px', colsDefs) => {
     let table;
+
     switch (oType) {
         case 'simple-scroll' : // simple table with scrolling
             table = $('#'+ tId).DataTable({
+                scrollY: height,
                 ordering: false,
                 searching: false
             });
             break;
         case 'full' :
             table = $('#'+ tId).DataTable({
-                scrollY: '420px',
+                scrollY: height,
                 stateSave: true,
                 select: true,
                 orderCellsTop: true,
@@ -186,7 +188,7 @@ const adjustColumns = (tId) => {
 const initPageTables = (pageTables) => {
     pageTables.forEach(tbl => { 
         let tblId = tbl.name + 'Table';
-        initDataTable(tblId, tbl.type);
+        initDataTable(tblId, tbl.type, tbl.height);
         if(tbl.type=='full') {
             loadFilterFromState(tblId);
         };

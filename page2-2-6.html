@@ -7,7 +7,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	
-	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
 	<!--link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
@@ -57,27 +57,19 @@
 				<a class="user-name ref-white flex-grow-1" role="button" href="#"><span>Фамилия</span> Имя Отчество</a>
 				<a class="user__exit ref-white" href="#" role="button" ><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 512 512"><title>Выход</title><path d="M304 336v40a40 40 0 01-40 40H104a40 40 0 01-40-40V136a40 40 0 0140-40h152c22.09 0 48 17.91 48 40v40M368 336l80-80-80-80M176 256h256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg></a>
 			</div>
-			<div class="sidebar-params">
+			<div class="data-block sidebar-params">
 				
-				<div class="param-group">
-					<label for="paramCity" class="form-label">Город/ поселение</label>
+				<div class="data-item">
+					<label for="paramCity" class="data-label">Город/ поселение</label>
 					<div class="input-group">
-					<select class="selectpicker param-city" data-width="205px" id="paramCity" data-live-search="true">
-					  <option value="1" selected>Москва</option>
-					  <option value="2">Санкт-Петербург</option>
-					  <option value="3">Самара</option>
-					  <option value="4">Химки</option>
-					</select>
-					<button class="bttn bttn-square bttn-icon-add bttn-add-city" type="button"></button></div>
-				</div>
-				<div class="param-group">
-					<label for="paramYear" class="form-label">Базовый год</label>
-					<select class="selectpicker param-year" data-width="140px" id="paramYear" >
-					  <option value="2020">01.01.2021</option>
-					  <option value="2021">01.01.2022</option>
-					  <option value="2022" selected>01.01.2023</option>
-					  <option value="2023">01.01.2024</option>
-					</select>
+						<select class="selectpicker param-city" data-width="205px" id="paramCity" value="1" data-live-search="true">
+						  <option value="1">Москва</option>
+						  <option value="2">Санкт-Петербург</option>
+						  <option value="3">Самара</option>
+						  <option value="4">Химки</option>
+						</select>
+						<button class="bttn bttn-square bttn-icon-add bttn-add-city" type="button"></button>
+					</div>
 				</div>
 				<p class="schema-name">Краткое наименование схемы: <span>Самая наилучшая схема из всех схем</span></p>
 				<p class="schema-approve">Решение об утверждении схемы: <span>Решение №456 от 27.04.2017</span></p>
@@ -198,40 +190,51 @@
 				</svg>
 			</a>
 		</div>
-		<div class="workspace">
+		<div class="data-block workspace">
 
-				<div class="title-block">
+			<div class="data-block title-block">
+				<div class="data-row">
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a class="ref-color" href="#">Главная</a></li>
 						<li class="breadcrumb-item">Теплоснабжающие организации - Экологические показатели</li>
 					</ul>
-					<h1 class="title">Экологические показатели</h1>
+					<div class="data-item data-item-right">
+						<label for="paramYear" class="data-label">Базовый год</label>
+						<select class="selectpicker param-year" data-width="140px" id="paramYear" >
+						  <option value="2020">01.01.2021</option>
+						  <option value="2021">01.01.2022</option>
+						  <option value="2022" selected>01.01.2023</option>
+						  <option value="2023">01.01.2024</option>
+						</select>
+					</div>
 				</div>
-				
-			  	<div class="tableblock main-table">
-					<div class="table-params">
-						<div class="param-group">
-							<div class="note">Базовый год - <span class="note-base-year">2022 (01.01.2023)</span>; следующие года - перспективные.</div>
-						</div>
-						<div class="param-group">
-							<div class="param-group-item">
-								<label for="paramCalcYear" class="form-label">Выберите год:</label>
-								<select class="selectpicker param-calc-year" data-width="140px" id="paramCalcYear" >
-								  <option value="2020">01.01.2021</option>
-								  <option value="2021">01.01.2022</option>
-								  <option value="2022" selected>01.01.2023</option>
-								  <option value="2023">01.01.2024</option>
-								</select>
-							</div>
-							<div class="param-group-item">
-								<a class="bttn bttn-color bttn-load-data" type="button" href="page2-2-1-2.html">Загрузить данные</a>
-								<button class="bttn bttn-color bttn-excel-export" type="button">Выгрузить в Excel</button>
-							</div>
-							<div class="param-group-item buttons-right ecoTable-buttons"></div>
-						</div>
+				<h1 class="title">Экологические показатели</h1>
+			</div>
+			
+		  	<div class="data-block main-content">
+				<div class="data-row table-params">
+					<div class="data-item">
+						<label for="paramCalcYear" class="data-label">Выберите год:</label>
+						<select class="selectpicker param-calc-year" data-width="140px" id="paramCalcYear" value="2022">
+						  <option value="2020">01.01.2021</option>
+						  <option value="2021">01.01.2022</option>
+						  <option value="2022" selected>01.01.2023</option>
+						  <option value="2023">01.01.2024</option>
+						</select>
+					</div>
+					<div class="data-item">
+						<div class="note">Базовый год - <span class="note-base-year">2022 (01.01.2023)</span>; следующие года - перспективные.</div>
+					</div>
+					
+					<div class="data-item">
+						<a class="bttn bttn-color bttn-load-data" type="button" href="page2-2-1-2.html">Загрузить данные</a>
+						<button class="bttn bttn-color bttn-excel-export" type="button">Выгрузить в Excel</button>
 					</div>
 
-					<table id="ecoTable" class="tableblock-table display nowrap" style="width:100%">
+				</div>
+				<div class="table-block">
+					<div class="table-buttons ecoTable-buttons"></div>
+					<table id="ecoTable" class="display compact" style="width:100%">
 					    <thead>
 					        <tr>
 					            <th>Номер</th>
@@ -501,31 +504,27 @@
 					        </tr>
 					    </tbody>
 					</table>
-
-					<div class="tableblock-summary">
-						<div class="summary-block rows-count">
-							<h5 class="summary-title">Всего записей:</h5>
-							<p class="summary-item"><span class="mark-color">10</span></p>
-						</div>
-						<div class="summary-block">
-							<div class="summary-items">
-								<p class="summary-item">Суммарные валовые выбросы в атмосферу: <span class="mark-color">10</span> т/год</p>
-								<p class="summary-item">Разрешенные валовые выбросы в атмосферу: <span class="mark-color">10</span> т/год</p>
-								<p class="summary-item">Парниковые газы от объектов энергетики: <span class="mark-color">10</span> т/год</p>
-							</div>
-						</div>
-						<div class="summary-block">
-							<div class="summary-items">
-								<p class="summary-item">Количество источников выбросов в атмосферу: <span class="mark-color">4</span> шт.</p>
-								<p class="summary-item">Плата за негативное воздействие на окружающую среду: <span class="mark-color">10</span> тыс.руб.</p>
-							</div>
-						</div>
+				</div>
+				<div class="data-row table-summary">
+					<div class="data-item rows-count">
+						<h5>Всего записей:</h5>
+						<p><span class="mark-color">10</span></p>
+					</div>
+					<div class="data-block">
+						<p class="data-item">Суммарные валовые выбросы в атмосферу: <span class="mark-color">10</span><span class="data-unit"> т/год</span></p>
+						<p class="data-item">Разрешенные валовые выбросы в атмосферу: <span class="mark-color">10</span><span class="data-unit"> т/год</span></p>
+						<p class="data-item">Парниковые газы от объектов энергетики: <span class="mark-color">10</span><span class="data-unit"> т/год</span></p>
+					</div>
+					<div class="data-block">
+						<p class="data-item">Количество источников выбросов в атмосферу: <span class="mark-color">4</span><span class="data-unit"> шт.</span></p>
+						<p class="data-item">Плата за негативное воздействие на окружающую среду: <span class="mark-color">10</span><span class="data-unit"> тыс.руб.</span></p>
 					</div>
 				</div>
+
+			</div>
 		</div>
 	</div>
 
-	<footer></footer>
 	<!-- Modal infoUser -->
 	<div class="modal fade" id="infoUser" tabindex="-1" aria-labelledby="infoUserLabel" aria-hidden="true">
 	  <div class="modal-dialog">

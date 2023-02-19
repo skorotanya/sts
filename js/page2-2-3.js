@@ -18,25 +18,75 @@ $(document).ready(function () {
    { "width": "10%" },
    { "width": "10%" }
   ];*/
-    initDataTable('hpProductionTable', 'full');
-    adjustColumns('hpProductionTable');
-    loadFilterFromState('hpProductionTable');
 
-    initDataTable('hpTransferTable', 'full');
-    loadFilterFromState('hpTransferTable');
+  const pageTables = [
+    {
+      name: 'hpProduction',
+      type: 'full',
+      columns: [],
+      modal: '',
+      tab: true,
+      firstTab: true
+    },
+    {
+      name: 'hpTransfer',
+      type: 'full',
+      columns: [],
+      modal: '',
+      tab: true,
+      firstTab: false
+    },
+    {
+      name: 'balanceProductionTZ',
+      type: 'simple-scroll',
+      height: "1090px",
+      columns: [],
+      modal: 'editProductionData',
+      tab: false,
+      firstTab: true
+    },
+    {
+      name: 'balanceTransferTZ',
+      type: 'simple-scroll',
+      height: "300px",
+      columns: [],
+      modal: 'editTransferData',
+      tab: false,
+      firstTab: true
+    }
+  ];
 
-    // event listeners on current page
+  initPageTables(pageTables);
 
-    // adjust table columns after showing tab for edit data
-    const hpProductionTab = document.querySelector('button[data-bs-target="#hpProductionTab"');
-    hpProductionTab.addEventListener('shown.bs.tab', event => {
-      adjustColumns('hpProductionTable');
-    })
-    // adjust table columns after showing tab for edit data
-    const hpTransferTab = document.querySelector('button[data-bs-target="#hpTransferTab"');
-    hpTransferTab.addEventListener('shown.bs.tab', event => {
-      adjustColumns('hpTransferTable');
-    })
+
+      /* Double click on row hpProductionTable */
+    $('#hpProductionTable tbody').on('dblclick', 'tr', function () {
+      showModal('editProductionData');
+    } );
+
+     /* Double click on row hpTransferTable */
+    $('#hpTransferTable tbody').on('dblclick', 'tr', function () {
+      showModal('editTransferData');
+    } );
+
+      /* Click on Add button */
+     $('.bttn-edit-data').on('click', (e) => {
+      let activeTabId = $('.tab-pane.active').attr('id');
+      console.log(activeTabId);
+      if (activeTabId == 'hpProductionTab') {showModal('editProductionData');}
+      else if (activeTabId == 'hpTransferTab') {showModal('editTransferData');}
+      
+    } );
+
+    /* Double click on row hpProductionTable */
+    $('#outputProductionTable tbody').on('dblclick', 'tr', function () {
+      showModal('editOutputProductionData');
+    } );
+
+     /* Double click on row hpProductionTable */
+    $('#transferTZTable tbody').on('dblclick', 'tr', function () {
+      showModal('editTransferTZData');
+    } );
 
 });
 

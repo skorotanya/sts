@@ -19,9 +19,6 @@ $(document).ready(function () {
    { "width": "10%" }
   ];
 
-
-
-
   */
 
 
@@ -94,90 +91,25 @@ $(document).ready(function () {
   
   initPageTables(pageTables);
 
-  /*
-
-    initDataTable('tsoServTable', 'full');
-    adjustColumns('tsoServTable');
-    loadFilterFromState('tsoServTable');
-
-    initDataTable('srcListTable', 'full');
-    loadFilterFromState('srcListTable');
-
-    initDataTable('heatPointTable', 'full');
-    loadFilterFromState('heatPointTable');
-
-    initDataTable('extraDataTable', 'full');
-    loadFilterFromState('extraDataTable');
-
-
-    initDataTable('zoneSrcListTable', 'full');
-    loadFilterFromState('zoneSrcListTable');
-
-    initDataTable('zoneNetPartsTable', 'full');
-    loadFilterFromState('zoneNetPartsTable');
-
-    initDataTable('zoneNPSTable', 'full');
-    loadFilterFromState('zoneNPSTable');
-
-    initDataTable('zoneHeatPointTable', 'full');
-    loadFilterFromState('zoneHeatPointTable');
-
-    // event listeners on current page
-    // adjust table columns after showing tab for edit data
-    const tsoServTab = document.querySelector('button[data-bs-target="#tsoServTab"');
-    tsoServTab.addEventListener('shown.bs.tab', event => {
-      adjustColumns('tsoServTable');
-    });
-  
-    const srcListTab = document.querySelector('button[data-bs-target="#srcListTab"');
-    srcListTab.addEventListener('shown.bs.tab', event => {
-      adjustColumns('srcListTable');
-    });
-
-    const heatPointTab = document.querySelector('button[data-bs-target="#heatPointTab"');
-    heatPointTab.addEventListener('shown.bs.tab', event => {
-      adjustColumns('heatPointTable');
-    });
-
-    const extraDataTab = document.querySelector('button[data-bs-target="#extraDataTab"');
-    extraDataTab.addEventListener('shown.bs.tab', event => {
-      adjustColumns('extraDataTable');
-    });
-
-
-    const zoneSrcListTab = document.querySelector('button[data-bs-target="#zoneSrcListTab"');
-    zoneSrcListTab.addEventListener('shown.bs.tab', event => {
-      adjustColumns('zoneSrcListTable');
-    });
-  
-    const zoneNetPartsTab = document.querySelector('button[data-bs-target="#zoneNetPartsTab"');
-    zoneNetPartsTab.addEventListener('shown.bs.tab', event => {
-      adjustColumns('zoneNetPartsTable');
-    });
-
-    const zoneNPSTab = document.querySelector('button[data-bs-target="#zoneNPSTab"');
-    zoneNPSTab.addEventListener('shown.bs.tab', event => {
-      adjustColumns('zoneNPSTable');
-    });
-
-    const zoneHeatPointTab = document.querySelector('button[data-bs-target="#zoneHeatPointTab"');
-    zoneHeatPointTab.addEventListener('shown.bs.tab', event => {
-      adjustColumns('zoneHeatPointTable');
-    });
-
-    // adjust table columns after showing modal window for edit data
-    const editDataModal = document.getElementById('editData');
-    editDataModal.addEventListener('shown.bs.modal', event => {
-      adjustColumns('zoneSrcListTable');
-    });
-    */
-
 
     /* Double click on row tsoServTable */
-    //const tsoServTable = $('#tsoServTable').DataTable();
     $('#tsoServTable tbody').on('dblclick', 'tr', function () {
-    //let data = tsoServTable.row(this ).data();
       showModal('editData');
+    } );
+
+    /* Double click on row srcListTable */
+    $('#srcListTable tbody').on('dblclick', 'tr', function () {
+      showModal('editData');
+    } );
+
+    /* Double click on row heatPointTable */
+    $('#heatPointTable tbody').on('dblclick', 'tr', function () {
+      showModal('editData');
+    } );
+
+    /* Double click on row extraDataTable */
+    $('#extraDataTable tbody').on('dblclick', 'tr', function () {
+      showModal('editExtraData');
     } );
 
 });

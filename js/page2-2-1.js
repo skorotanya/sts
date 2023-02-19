@@ -18,27 +18,47 @@ $(document).ready(function () {
    { "width": "10%" },
    { "width": "10%" }
   ];*/
-    initDataTable('tsoTable', 'full');
-    adjustColumns('tsoTable');
-    loadFilterFromState('tsoTable');
 
-    initDataTable('yearParamTable', 'simple-scroll');
-    initDataTable('responseTable', 'simple-scroll');
+    const pageTables = [
+    {
+      name: 'tso',
+      type: 'full',
+      columns: [],
+      modal: '',
+      tab: false,
+      firstTab: false
+    },
+    {
+      name: 'yearParam',
+      type: 'simple-scroll',
+      height: '170px',
+      columns: [],
+      modal: 'editData',
+      tab: false,
+      firstTab: true
+    },
+    {
+      name: 'response',
+      type: 'simple-scroll',
+      height: '210px',
+      columns: [],
+      modal: 'editData',
+      tab: false,
+      firstTab: true
+    },
+  ];
 
-
-    // event listeners on current page
-
-    // adjust table columns after showing modal window for edit data
-    const editDataModal = document.getElementById('editData');
-    editDataModal.addEventListener('shown.bs.modal', event => {
-      adjustColumns('yearParamTable');
-      adjustColumns('responseTable');
-    })
+  initPageTables(pageTables);
 
     // show modal window for edit data
-    document.querySelector('.bttn-edit-data').addEventListener('click', (e) => {
+    $('.bttn-edit-data').addEventListener('click', (e) => {
         showModal('editData');
     });
+
+    /* Double click on row tsoServTable */
+    $('#tsoTable tbody').on('dblclick', 'tr', function () {
+      showModal('editData');
+    } );
 
 });
 

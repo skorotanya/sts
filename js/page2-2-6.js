@@ -18,10 +18,20 @@ $(document).ready(function () {
    { "width": "10%" },
    { "width": "10%" }
   ];*/
-    initDataTable('ecoTable', 'full');
-    adjustColumns('ecoTable');
-    loadFilterFromState('ecoTable');
 
+    const pageTables = [
+    {
+      name: 'eco',
+      type: 'full',
+      columns: [],
+      modal: '',
+      tab: false,
+      firstTab: false
+    }
+  ];
+
+  initPageTables(pageTables);
+ 
 
     // event listeners on current page
 
