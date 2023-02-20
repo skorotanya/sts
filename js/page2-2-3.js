@@ -72,7 +72,6 @@ $(document).ready(function () {
       /* Click on Add button */
      $('.bttn-edit-data').on('click', (e) => {
       let activeTabId = $('.tab-pane.active').attr('id');
-      console.log(activeTabId);
       if (activeTabId == 'hpProductionTab') {showModal('editProductionData');}
       else if (activeTabId == 'hpTransferTab') {showModal('editTransferData');}
       

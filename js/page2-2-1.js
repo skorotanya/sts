@@ -45,13 +45,13 @@ $(document).ready(function () {
       modal: 'editData',
       tab: false,
       firstTab: true
-    },
+    }
   ];
 
   initPageTables(pageTables);
 
     // show modal window for edit data
-    $('.bttn-edit-data').addEventListener('click', (e) => {
+    $('.bttn-edit-data').on('click', (e) => {
         showModal('editData');
     });
 
