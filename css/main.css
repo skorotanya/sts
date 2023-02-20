@@ -590,6 +590,7 @@ padding: 20px;
 	width: 90px;
 	margin-bottom: 0px;
 	line-height: 20px;
+	text-align: left;
 }
 
 .sidebar-params .input-group {
@@ -607,9 +608,6 @@ padding: 20px;
     box-shadow: 2px 2px 6px #ffffff80;
     border-color: var(--light-color);
 }
-
-.param-city {width: 205px;}
-.param-year {width: 100px;}
 
 .sidebar-params p {
 	line-height: 20px;
