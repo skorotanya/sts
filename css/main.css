@@ -367,18 +367,14 @@ button:disabled, .bttn.disabled{
 
 /* Form elements */
 
-input, textarea, .bootstrap-select .btn {
+input, textarea, .bootstrap-select .btn, .dtsb-data, .dtsb-value, .dtsb-condition {
 	font-weight: 300;
 	height: 31px;
 	border-radius: 6px;
 	border: 1px solid var(--bs-border-color);
 	min-width: 80px;
+	padding-left: 0.5rem;
 }
-
-input.form-control, .dtsb-data, .dtsb-value, .dtsb-condition {
-	
-}
-
 
 
 .dtsb-data:focus, .dtsb-value:focus, .dtsb-condition:focus {
@@ -412,6 +408,7 @@ input.data-value:focus, .filter-row>th>input:focus, .filter-row>th>input:focus-v
     justify-content: center;
     align-items: center;
     color: var(--action-color);
+    cursor: pointer;
 }
 
 .form-check-input[type=checkbox]:hover {
@@ -437,6 +434,18 @@ input.data-value:focus, .filter-row>th>input:focus, .filter-row>th>input:focus-v
 	height: 31px;
 	background: #fff;
 	opacity: 0.5;
+}
+
+input[disabled], .form-check-input[type=checkbox][disabled], .bootstrap-select > .btn.dropdown-toggle.disabled {
+	opacity: .5;
+	border-color: var(--active-color);
+	background-color: transparent;
+	cursor: default;
+	pointer-events: none;
+}
+
+.bootstrap-select.disabled {
+	cursor: default;
 }
 
 
@@ -779,6 +788,21 @@ div.dt-buttons {
 	font-weight: 300;
 }
 
+.info {
+	width: 20px;
+	height: 20px;
+	background-image: url(../images/info-circle.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	display: inline-block;
+	margin-bottom: -0.3rem;
+}
+
+.info-tooltip {
+	--bs-tooltip-bg: var(--active-color);
+
+}
+
 
 
 .table-block:has(.table-buttons) {
@@ -797,6 +821,10 @@ div.dt-buttons {
 .table-buttons .dt-button-collection:not(.dtb-collection-closeable) {
 	margin-left: -100px;
 }
+
+.table-clicked > tbody > tr {
+	cursor: pointer;
+} 
 
 
 
@@ -997,8 +1025,37 @@ td.dtfc-fixed-left{
 }
 
 .table-summary .data-block {
-	gap:0;
+	gap: 0;
 }
+
+.table-summary .data-block:not(:has(.data-row)) {
+	display: table;
+}
+
+
+.table-summary .data-item:not(:is(.rows-count)) {
+	display: table-row;
+	text-align: end;
+}
+
+.table-summary .data-unit, .table-summary .mark-color {
+	display: table-cell;
+}
+
+.table-summary .data-unit {
+	text-align: start;
+}
+
+.table-summary .mark-color {
+	padding: 0 0.5rem;
+}
+
+
+
+
+
+
+
 
 /*.table-summary .data-unit {
 	width: 100px;

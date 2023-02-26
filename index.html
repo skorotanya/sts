@@ -249,14 +249,14 @@
 				
 				<div class="table-block">
 					<div class="table-buttons tsoTable-buttons"></div>
-					<table id="tsoTable" class="display compact" style="width:100%">
+					<table id="tsoTable" class="display compact table-clicked" style="width:100%" >
 					    <thead>
 					        <tr>
 					            <th>Номер</th>
 					            <th>Наименование</th>
 					            <th>Адрес</th>
 					            <th>Дата</th>
-					            <th>Тип</th>
+					            <th>Тип <a href="#" class="info" data-bs-toggle="tooltip" data-bs-custom-class="info-tooltip" data-bs-html="true" data-bs-title="<ul class='list-unstyled'><li>ЗК - замкнутый контур</li><li>ПЛ - подземная линия</li><li>ТЛ - транзитная линия</li></ul>"></a></th>
 					            <th>Округ</th>
 					            <th>Состояние</th>
 					            <th>Полезная энергия</th>
@@ -276,7 +276,7 @@
 					            <th><input type="text" class="filter-col-9"/></th>
 					        </tr>
 					    </thead>
-					    <tbody>
+					    <tbody title="Двойной клик открывает форму редактирования">
 					        <tr>
 					            <td>1</td>
 					            <td>ТСО 1</td>
@@ -612,6 +612,9 @@
 		      					</div>
 							  	
 							</div>	
+							<div class="data-item">
+								<div class="note">Базовый год - <span class="note-base-year">2022 (01.01.2023)</span>.</div>
+							</div>
 			      		</div>
 			      		<div class="scroll-block-wrapper">
 				      		<div class="data-block scroll-block">
@@ -774,23 +777,15 @@
 														</div>
 													</div>
 												</div>
-												
-												
-												
-											</div>
-											
+											</div>	
 										</div>
 									</div>
 								</form>
 								<div class="data-row">
 									<div class="col-xxl-6 col-12">
 										<div class="data-block border-block me-1">
-											<h4>Параметры ТСО по годам расчетного периода схемы</h4>
 											<div class="data-row">
-												<div class="data-item">
-													<div class="note">Базовый год - <span class="note-base-year">2022 (01.01.2023)</span>.</div>
-													
-												</div>
+												<h4>Параметры ТСО по годам расчетного периода схемы</h4>
 												<button class="bttn bttn-square bttn-icon-save ms-auto" type="button" title="Сохранить"></button>
 											</div>
 											<table id="yearParamTable" class="tableblock-table display nowrap compact" style="width:100%">
@@ -905,7 +900,9 @@
 									</div>
 									<div class="col-xxl-6 col-12">
 										<div class="data-block border-block ms-1">
-											<h4>Ответственное лицо за подготовку данных по схеме</h4>
+											<div class="data-row pb-1 mt-1">
+												<h4>Ответственное лицо за подготовку данных по схеме</h4>
+											</div>
 											<table id="responseTable" class="tableblock-table display nowrap compact" style="width:100%">
 											    <thead>
 											        <tr>
