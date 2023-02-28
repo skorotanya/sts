@@ -256,7 +256,7 @@
 					            <th>Наименование</th>
 					            <th>Адрес</th>
 					            <th>Дата</th>
-					            <th>Тип <a href="#" class="info" data-bs-toggle="tooltip" data-bs-custom-class="info-tooltip" data-bs-html="true" data-bs-title="<ul class='list-unstyled'><li>ЗК - замкнутый контур</li><li>ПЛ - подземная линия</li><li>ТЛ - транзитная линия</li></ul>"></a></th>
+					            <th title="Тип">Тип <a class="info" data-bs-toggle="tooltip" data-bs-custom-class="info-tooltip" data-bs-html="true" data-bs-title='<ul class="list-unstyled"><li>ЗК - замкнутый контур</li><li>ПЛ - подземная линия</li><li>ТЛ - транзитная линия</li></ul>'></a></th>
 					            <th>Округ</th>
 					            <th>Состояние</th>
 					            <th>Полезная энергия</th>
@@ -633,17 +633,23 @@
 						      							</div>
 						      							<div class="col-3">
 						      								<div class="data-item ms-3">
-															<label class="data-label">Код ТСО</label>
-															<input type="text" class="data-value tso-code" name="">
-														</div>
+																<label class="data-label">Код ТСО</label>
+																<input type="text" class="data-value tso-code" name="">
+															</div>
 						      							</div>
 														
 						      						</div>
-							  
-													<div class="data-item">
-														<label class="data-label"><span class="sublable">полное</span></label>
-														<textarea class="data-value stretch"></textarea>
-													</div>
+							  						<div class="data-row">
+							  							<div class="data-item stretch">
+															<label class="data-label"><span class="sublable">полное</span></label>
+															<textarea class="data-value stretch"></textarea>
+														</div>
+														<div class="data-item stretch">
+															<label class="data-label">Примечание</label>
+															<textarea class="data-value stretch"></textarea>
+														</div>
+							  						</div>
+													
 													<div class="data-row">
 						      							<div class="data-item">
 															<label class="data-label">Организация является структурным подразделением</label>
