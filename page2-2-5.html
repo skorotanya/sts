@@ -227,6 +227,7 @@
 					</div>
 					
 					<div class="data-item">
+						<button class="bttn bttn-color bttn-edit-data" type="button">Добавить</button>
 						<a class="bttn bttn-color bttn-load-data" type="button" href="page2-2-1-2.html">Загрузить данные</a>
 						<button class="bttn bttn-color bttn-excel-export" type="button">Выгрузить в Excel</button>
 					</div>
@@ -237,7 +238,10 @@
 				    	<button class="nav-link active" data-bs-toggle="tab" data-bs-target="#ratesTab" type="button" role="tab" aria-controls="ratesTab" aria-selected="true">Тарифы</button>
 				  	</li>
 				  	<li class="nav-item" role="presentation">
-				    	<button class="nav-link" data-bs-toggle="tab" data-bs-target="#tpFeeTab" type="button" role="tab" aria-controls="tpFeeTab" aria-selected="false">Плата за ТП</button>
+				    	<button class="nav-link" data-bs-toggle="tab" data-bs-target="#tpPersonalFeeTab" type="button" role="tab" aria-controls="tpFeeTab" aria-selected="false">Индивидуальная плата ТП</button>
+				  	</li>
+				  	<li class="nav-item" role="presentation">
+				    	<button class="nav-link" data-bs-toggle="tab" data-bs-target="#tpStandartFeeTab" type="button" role="tab" aria-controls="tpFeeTab" aria-selected="false">Стандартизированные ставки ТП</button>
 				  	</li>
 				  	<li class="nav-item" role="presentation">
 				    	<button class="nav-link" data-bs-toggle="tab" data-bs-target="#reserveFeeTab" type="button" role="tab" aria-controls="reserveFeeTab" aria-selected="false">Плата за резерв</button>
@@ -248,7 +252,7 @@
 				  		<div class="data-block">
 				  			<div class="table-block">
 								<div class="table-buttons ratesTable-buttons"></div>
-						  		<table id="ratesTable" class="display compact" style="width:100%">
+						  		<table id="ratesTable" class="display compact table-clicked" style="width:100%">
 								    <thead>
 								        <tr>
 								            <th>УНОМ ТЗ</th>
@@ -537,11 +541,11 @@
 							</div>
 						</div>
 					</div>
-				  	<div class="tab-pane fade" id="tpFeeTab" role="tabpanel" >
+				  	<div class="tab-pane fade" id="tpPersonalFeeTab" role="tabpanel" >
 				  		<div class="data-block">
 				  			<div class="table-block">
-								<div class="table-buttons tpFeeTable-buttons"></div>
-						  		<table id="tpFeeTable" class="display compact" style="width:100%">
+								<div class="table-buttons tpPersonalFeeTable-buttons"></div>
+						  		<table id="tpPersonalFeeTable" class="display compact table-clicked" style="width:100%">
 								    <thead>
 								        <tr>
 								            <th>УНОМ ТЗ</th>
@@ -817,19 +821,299 @@
 									<h5>Всего записей:</h5>
 									<p><span class="mark-color">10</span></p>
 								</div>
-								<div class="data-block">
-									<p class="data-item">Средневзвешенная плата за подключение стандартизированные ставки (г.в.): <span class="mark-color">10</span><span class="data-unit"> руб./(Гкал/ч) без НДС</span></p>
-									<p class="data-item">Средневзвешенная плата за подключение индивидуальный порядок (г.в.): <span class="mark-color">10</span><span class="data-unit"> руб./(Гкал/ч) без НДС</span></p>
-								</div>
+								<p class="data-item">Средневзвешенная плата за подключение индивидуальный порядок (г.в.): <span class="mark-color">10</span><span class="data-unit"> руб./(Гкал/ч) без НДС</span></p>
 							</div>
 						</div>
 					</div>
-				  	
+				  	<div class="tab-pane fade" id="tpStandartFeeTab" role="tabpanel" >
+				  		<div class="data-block">
+				  			<div class="table-block">
+								<div class="table-buttons tpStandartFeeTable-buttons"></div>
+						  		<table id="tpStandartFeeTable" class="display compact table-clicked" style="width:100%">
+								    <thead>
+								        <tr>
+								            <th>УНОМ ТЗ</th>
+								            <th>УНОМ ИСТ</th>
+								            <th>Адрес</th>
+								            <th>Дата</th>
+								            <th>Тип</th>
+								            <th>Округ</th>
+								            <th>Состояние</th>
+								            <th>Полезная энергия</th>
+								            <th>Тепловая энергия</th>
+								            <th>Источники</th>
+								        </tr>
+								        <tr class="filter-row ">
+								            <th class="dtfc-fixed-left" style="left:0; position:sticky;"><input type="text" class="filter-col-0"/></th>
+								            <th><input type="text" class="filter-col-1"/></th>
+								            <th><input type="text" class="filter-col-2"/></th>
+								            <th><input type="text" class="filter-col-3"/></th>
+								            <th><input type="text" class="filter-col-4"/></th>
+								            <th><input type="text" class="filter-col-5"/></th>
+								            <th><input type="text" class="filter-col-6"/></th>
+								            <th><input type="text" class="filter-col-7"/></th>
+								            <th><input type="text" class="filter-col-8"/></th>
+								            <th><input type="text" class="filter-col-9"/></th>
+								        </tr>
+								    </thead>
+								    <tbody>
+								        <tr>
+								            <td>1</td>
+								            <td>ТСО 1</td>
+								            <td>Row 1 Data 3</td>
+								            <td>Row 1 Data 4</td>
+								            <td>Row 1 Data 5</td>
+								            <td>Row 1 Data 6</td>
+								            <td>Row 1 Data 7</td>
+								            <td>Row 1 Data 8</td>
+								            <td>Row 1 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>2</td>
+								            <td>ТСО 2</td>
+								            <td>Row 2 Data 3</td>
+								            <td>Row 2 Data 4</td>
+								            <td>Row 2 Data 5</td>
+								            <td>Row 2 Data 6</td>
+								            <td>Row 2 Data 7</td>
+								            <td>Row 2 Data 8</td>
+								            <td>Row 2 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>3</td>
+								            <td>ТСО 3</td>
+								            <td>Row 3 Data 3</td>
+								            <td>Row 3 Data 4</td>
+								            <td>Row 3 Data 5</td>
+								            <td>Row 3 Data 6</td>
+								            <td>Row 3 Data 7</td>
+								            <td>Row 3 Data 8</td>
+								            <td>Row 3 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>4</td>
+								            <td>ТСО 4</td>
+								            <td>Row 4 Data 3</td>
+								            <td>Row 4 Data 4</td>
+								            <td>Row 4 Data 5</td>
+								            <td>Row 4 Data 6</td>
+								            <td>Row 4 Data 7</td>
+								            <td>Row 4 Data 8</td>
+								            <td>Row 4 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>5</td>
+								            <td>ТСО 5</td>
+								            <td>Row 5 Data 3</td>
+								            <td>Row 5 Data 4</td>
+								            <td>Row 5 Data 5</td>
+								            <td>Row 5 Data 6</td>
+								            <td>Row 5 Data 7</td>
+								            <td>Row 5 Data 8</td>
+								            <td>Row 5 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>6</td>
+								            <td>ТСО 6</td>
+								            <td>Row 6 Data 3</td>
+								            <td>Row 6 Data 4</td>
+								            <td>Row 6 Data 5</td>
+								            <td>Row 6 Data 6</td>
+								            <td>Row 6 Data 7</td>
+								            <td>Row 6 Data 8</td>
+								            <td>Row 6 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>7</td>
+								            <td>ТСО 7</td>
+								            <td>Row 7 Data 3</td>
+								            <td>Row 7 Data 4</td>
+								            <td>Row 7 Data 5</td>
+								            <td>Row 7 Data 6</td>
+								            <td>Row 7 Data 7</td>
+								            <td>Row 7 Data 8</td>
+								            <td>Row 7 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>8</td>
+								            <td>ТСО 8</td>
+								            <td>Row 8 Data 3</td>
+								            <td>Row 8 Data 4</td>
+								            <td>Row 8 Data 5</td>
+								            <td>Row 8 Data 6</td>
+								            <td>Row 8 Data 7</td>
+								            <td>Row 8 Data 8</td>
+								            <td>Row 8 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>9</td>
+								            <td>ТСО 9</td>
+								            <td>Row 9 Data 3</td>
+								            <td>Row 9 Data 4</td>
+								            <td>Row 9 Data 5</td>
+								            <td>Row 9 Data 6</td>
+								            <td>Row 9 Data 7</td>
+								            <td>Row 9 Data 8</td>
+								            <td>Row 9 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>10</td>
+								            <td>ТСО 10</td>
+								            <td>Row 10 Data 3</td>
+								            <td>Row 10 Data 4</td>
+								            <td>Row 10 Data 5</td>
+								            <td>Row 10 Data 6</td>
+								            <td>Row 10 Data 7</td>
+								            <td>Row 10 Data 8</td>
+								            <td>Row 10 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>1</td>
+								            <td>ТСО 1</td>
+								            <td>Row 1 Data 3</td>
+								            <td>Row 1 Data 4</td>
+								            <td>Row 1 Data 5</td>
+								            <td>Row 1 Data 6</td>
+								            <td>Row 1 Data 7</td>
+								            <td>Row 1 Data 8</td>
+								            <td>Row 1 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>2</td>
+								            <td>ТСО 2</td>
+								            <td>Row 2 Data 3</td>
+								            <td>Row 2 Data 4</td>
+								            <td>Row 2 Data 5</td>
+								            <td>Row 2 Data 6</td>
+								            <td>Row 2 Data 7</td>
+								            <td>Row 2 Data 8</td>
+								            <td>Row 2 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>3</td>
+								            <td>ТСО 3</td>
+								            <td>Row 3 Data 3</td>
+								            <td>Row 3 Data 4</td>
+								            <td>Row 3 Data 5</td>
+								            <td>Row 3 Data 6</td>
+								            <td>Row 3 Data 7</td>
+								            <td>Row 3 Data 8</td>
+								            <td>Row 3 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>4</td>
+								            <td>ТСО 4</td>
+								            <td>Row 4 Data 3</td>
+								            <td>Row 4 Data 4</td>
+								            <td>Row 4 Data 5</td>
+								            <td>Row 4 Data 6</td>
+								            <td>Row 4 Data 7</td>
+								            <td>Row 4 Data 8</td>
+								            <td>Row 4 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>5</td>
+								            <td>ТСО 5</td>
+								            <td>Row 5 Data 3</td>
+								            <td>Row 5 Data 4</td>
+								            <td>Row 5 Data 5</td>
+								            <td>Row 5 Data 6</td>
+								            <td>Row 5 Data 7</td>
+								            <td>Row 5 Data 8</td>
+								            <td>Row 5 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>6</td>
+								            <td>ТСО 6</td>
+								            <td>Row 6 Data 3</td>
+								            <td>Row 6 Data 4</td>
+								            <td>Row 6 Data 5</td>
+								            <td>Row 6 Data 6</td>
+								            <td>Row 6 Data 7</td>
+								            <td>Row 6 Data 8</td>
+								            <td>Row 6 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>7</td>
+								            <td>ТСО 7</td>
+								            <td>Row 7 Data 3</td>
+								            <td>Row 7 Data 4</td>
+								            <td>Row 7 Data 5</td>
+								            <td>Row 7 Data 6</td>
+								            <td>Row 7 Data 7</td>
+								            <td>Row 7 Data 8</td>
+								            <td>Row 7 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>8</td>
+								            <td>ТСО 8</td>
+								            <td>Row 8 Data 3</td>
+								            <td>Row 8 Data 4</td>
+								            <td>Row 8 Data 5</td>
+								            <td>Row 8 Data 6</td>
+								            <td>Row 8 Data 7</td>
+								            <td>Row 8 Data 8</td>
+								            <td>Row 8 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>9</td>
+								            <td>ТСО 9</td>
+								            <td>Row 9 Data 3</td>
+								            <td>Row 9 Data 4</td>
+								            <td>Row 9 Data 5</td>
+								            <td>Row 9 Data 6</td>
+								            <td>Row 9 Data 7</td>
+								            <td>Row 9 Data 8</td>
+								            <td>Row 9 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>10</td>
+								            <td>ТСО 10</td>
+								            <td>Row 10 Data 3</td>
+								            <td>Row 10 Data 4</td>
+								            <td>Row 10 Data 5</td>
+								            <td>Row 10 Data 6</td>
+								            <td>Row 10 Data 7</td>
+								            <td>Row 10 Data 8</td>
+								            <td>Row 10 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								    </tbody>
+								</table>
+							</div>
+							<div class="data-row table-summary">
+								<div class="data-item rows-count">
+									<h5>Всего записей:</h5>
+									<p><span class="mark-color">10</span></p>
+								</div>
+								<p class="data-item">Средневзвешенная плата за подключение стандартизированные ставки с учетом всех Д<sub>у</sub> и видов прокладок: <span class="mark-color">10</span><span class="data-unit"> руб./(Гкал/ч) без НДС</span></p>
+							</div>
+						</div>
+					</div>
 				  	<div class="tab-pane fade" id="reserveFeeTab" role="tabpanel">
 				  		<div class="data-block">
 				  			<div class="table-block">
 								<div class="table-buttons reserveFeeTable-buttons"></div>
-						  		<table id="reserveFeeTable" class="display compact" style="width:100%">
+						  		<table id="reserveFeeTable" class="display compact table-clicked" style="width:100%">
 								    <thead>
 								        <tr>
 								            <th>УНОМ ТЗ</th>
@@ -1105,9 +1389,7 @@
 									<h5>Всего записей:</h5>
 									<p><span class="mark-color">10</span></p>
 								</div>
-								<div class="data-block">
-									<p class="data-item">Средневзвешенная плата за поддержание резерва тепловой мощности: <span class="mark-color">4</span><span class="data-unit"> руб./(Гкал/ч) в месяц без НДС</span></p>
-								</div>
+								<p class="data-item">Средневзвешенная плата за поддержание резерва тепловой мощности: <span class="mark-color">4</span><span class="data-unit"> руб./(Гкал/ч) в месяц без НДС</span></p>
 							</div>
 						</div>
 					</div>
@@ -1151,8 +1433,429 @@
 	    </div>
 	  </div>
 	</div>
+
+		<!-- Modal Load Data -->
+	<div class="modal fade show" id="editRatesData" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
+	  	<div class="modal-dialog modal-dialog-centered">
+	    	<div class="modal-content">
+	      		<div class="modal-header"> 
+			        <h3 class="modal-title" id="editDataLabel">Тарифы за подключение</h3>
+			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			     </div>
+			     <div class="modal-body">
+	      			<div class="data-block static-block data-params">
+	      				<div class="data-row">
+	      					<div class="data-item">
+		      					<label class="data-label">Наименование ТСО</label>
+							  	<select class="selectpicker" id="paramNumberTso" data-live-search="true" data-width="650px" placeholder="УНОМ ТСО - Наименование">
+								  	<option value="2020">2020</option>
+								  	<option value="2021">2021</option>
+								  	<option value="2022" selected>2022</option>
+								  	<option value="2023">2023</option>
+								</select>
+							</div>
+							<div class="data-item">
+								<label for="paramCalcYear" class="data-label">Расчётный год:</label>
+								<select class="selectpicker param-calc-year" data-width="140px" id="paramCalcYear" value="2022">
+								  <option value="2020">01.01.2021</option>
+								  <option value="2021">01.01.2022</option>
+								  <option value="2022" selected>01.01.2023</option>
+								  <option value="2023">01.01.2024</option>
+								</select>
+							</div>
+							<div class="data-item">
+								<div class="note">Базовый год - <span class="note-base-year">2022 (01.01.2023)</span>.</div>
+							</div>
+	      				</div>
+	      				<div class="data-row">
+	      					<div class="col-9">
+	      						<div class="data-block">
+	      							<div class="data-item">
+				      					<label class="data-label">Территория действия ТЗ</label>
+									  	<input type="text" name="" class="data-value stretch">
+									</div>
+									<div class="data-row">
+										<div class="data-item">
+											<label class="data-label">без дифференциации</label>
+											<input type="checkbox" class="form-check-input">
+										</div>
+										<div class="data-item">
+											<label class="data-label">до тепловых пунктов</label>
+											<input type="checkbox" class="form-check-input">
+										</div>
+										<div class="data-item">
+											<label class="data-label">после тепловых пунктов</label>
+											<input type="checkbox" class="form-check-input">
+										</div>
+									</div>
+									<div class="data-row">
+										<div class="data-item justify-content-start">
+				      						<label class="data-label">Решение от</label>
+				      						<input class="data-value">
+				      					</div>
+				      					<div class="data-item justify-content-start">
+				      						<label class="data-label">№</label>
+				      						<input class="data-value">
+				      					</div>
+				      					<div class="data-item justify-content-start">
+				      						<label class="data-label">Протокол от</label>
+				      						<input class="data-value">
+				      					</div>
+				      					<div class="data-item justify-content-start">
+				      						<label class="data-label">№</label>
+				      						<input class="data-value">
+				      					</div>
+									</div>
+	      						</div>
+	      					</div>
+	      					<div class="col-3">
+	      						<div class="data-block">
+	      							<div class="data-item">
+										<label class="data-label">Комбинированное производство, более 25 МВт</label>
+										<input type="checkbox" class="form-check-input">
+									</div>
+									<div class="data-item">
+										<label class="data-label">Комбинированное производство, менее 25 МВт</label>
+										<input type="checkbox" class="form-check-input">
+									</div>
+									<div class="data-item">
+										<label class="data-label">Некомбинированное производство</label>
+										<input type="checkbox" class="form-check-input">
+									</div>
+									<div class="data-row">
+										<div class="data-item">
+											<label class="data-label">Договор поставки</label>
+											<input type="checkbox" class="form-check-input">
+										</div>
+										<div class="data-item">
+											<label class="data-label">Передача</label>
+											<input type="checkbox" class="form-check-input">
+										</div>
+										<div class="data-item">
+											<label class="data-label">Сбыт</label>
+											<input type="checkbox" class="form-check-input">
+										</div>
+									</div>
+	      						</div>
+	      					</div>
+	      				</div>
+		      		</div>
+      				<div class="data-block">
+      					
+      				</div>
+	    		</div>
+	    		 <div class="modal-footer">
+			        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
+			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Сохранить</button>
+			      </div>
+	    	</div>
+	    </div>
+	</div>
 	
-	
+		<!-- Modal Load Data -->
+	<div class="modal fade show" id="editPersonalData" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
+	  	<div class="modal-dialog modal-dialog-centered">
+	    	<div class="modal-content">
+	      		<div class="modal-header"> 
+			        <h3 class="modal-title" id="editDataLabel">Плата в индивидуальном порядке</h3>
+			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			     </div>
+			     <div class="modal-body">
+	      			<div class="data-row static-block data-params">
+	      			
+      					<div class="data-item">
+	      					<label class="data-label">Наименование ТСО</label>
+						  	<select class="selectpicker" id="paramNumberTso" data-live-search="true" data-width="650px" placeholder="УНОМ ТСО - Наименование">
+							  	<option value="2020">2020</option>
+							  	<option value="2021">2021</option>
+							  	<option value="2022" selected>2022</option>
+							  	<option value="2023">2023</option>
+							</select>
+						</div>
+		      		</div>
+	      			<form>
+	      				<div class="data-block">
+	      					<div class="data-item justify-content-start">
+	      						<label class="data-label">Уникальный номер перспективного потребителя</label>
+	      						<select class="selectpicker" id="paramNumberTso" data-live-search="true" placeholder="УНОМ ТСО - Наименование">
+								  	<option value="2020">2020</option>
+								  	<option value="2021">2021</option>
+								  	<option value="2022" selected>2022</option>
+								  	<option value="2023">2023</option>
+								</select>
+	      					</div>
+	      					<div class="data-item justify-content-start">
+	      						<label class="data-label">Наименование заявителя</label>
+	      						<input class="data-value stretch">
+	      					</div>
+					      	<div class="data-item justify-content-start">
+	      						<label class="data-label">Заявленная тепловая нагрузка (всего с учетом ГВСmax)</label>
+	      						<input class="data-value">
+	      						<span class="data-unit">тыс. руб. без НДС</span>
+	      					</div>
+	      					<div class="data-item justify-content-start">
+	      						<label class="data-label"></label>
+	      						<input class="data-value">
+	      						<span class="data-unit">руб./(Гкал/ч) без НДС</span>
+	      					</div>
+	      					<div class="data-row">
+	      						<div class="data-item justify-content-start">
+		      						<label class="data-label">Решение от</label>
+		      						<input class="data-value">
+		      					</div>
+		      					<div class="data-item justify-content-start">
+		      						<label class="data-label">№</label>
+		      						<input class="data-value">
+		      					</div>
+	      					</div>
+	      					
+	      					
+	      				</div>
+					</form>
+	    		</div>
+	    		 <div class="modal-footer">
+			        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
+			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Сохранить</button>
+			      </div>
+	    	</div>
+	    </div>
+	</div>
+
+		<!-- Modal Load Data -->
+	<div class="modal fade show" id="editStandartData" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
+	  	<div class="modal-dialog modal-dialog-centered">
+	    	<div class="modal-content">
+	      		<div class="modal-header"> 
+			        <h3 class="modal-title" id="editDataLabel">Утвержденные стандартизированные ставки</h3>
+			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			     </div>
+			     <div class="modal-body">
+	      			<div class="data-row static-block data-params">
+	      			
+      					<div class="data-item">
+	      					<label class="data-label">Наименование ТСО</label>
+						  	<select class="selectpicker" id="paramNumberTso" data-width="650px" data-live-search="true" placeholder="УНОМ ТСО - Наименование">
+							  	<option value="2020">2020</option>
+							  	<option value="2021">2021</option>
+							  	<option value="2022" selected>2022</option>
+							  	<option value="2023">2023</option>
+							</select>
+						</div>
+						<div class="data-item">
+							<label class="data-label">на</label>
+							<select class="selectpicker" id="paramNumberTso" placeholder="Расчётный год">
+							  	<option value="2020">2020</option>
+							  	<option value="2021">2021</option>
+							  	<option value="2022" selected>2022</option>
+							  	<option value="2023">2023</option>
+							</select>
+						</div>
+							
+		      		</div>
+	      			<form>
+	      				<div class="data-block">
+	      					<div class="data-row">
+	      						<div class="data-item justify-content-start">
+		      						<label class="data-label">Решение от</label>
+		      						<input class="data-value">
+		      					</div>
+		      					<div class="data-item justify-content-start">
+		      						<label class="data-label">№</label>
+		      						<input class="data-value">
+		      					</div>
+		      					<div class="data-item justify-content-start">
+		      						<label class="data-label">Протокол от</label>
+		      						<input class="data-value">
+		      					</div>
+		      					<div class="data-item justify-content-start">
+		      						<label class="data-label">№</label>
+		      						<input class="data-value">
+		      					</div>
+	      					</div>
+	      					<div class="data-item justify-content-start">
+	      						<label class="data-label">Расходы на проведение мероприятий по подключению</label>
+	      						<input class="data-value">
+	      						<span class="data-unit">руб. /(Гкал/ч) без НДС</span>
+	      					</div>
+	      					<div class="data-block">
+	      						<h5>Расходы на создание (реконструкцию) тепловых сетей:</h5>
+	      						<table style="width: auto;">
+	      							<thead>
+	      								<tr>
+	      									<th>1. Подземная прокладка Ду:</th>
+	      									<th>1.1. Канальная прокладка:</th>
+	      									<th>1.2. Бесканальная прокладка:</th>
+	      									<th></th>
+	      								</tr>
+	      							</thead>
+	      							<tbody>
+	      								<tr>
+	      									<td>до 250 мм</td>
+	      									<td><input class="data-value"></td>
+	      									<td><input class="data-value"></td>
+	      									<td><span class="data-unit">руб. /(Гкал/ч) без НДС</span></td>
+	      								</tr>
+	      								<tr>
+	      									<td>251-400 мм</td>
+	      									<td><input class="data-value"></td>
+	      									<td><input class="data-value"></td>
+	      									<td><span class="data-unit">руб. /(Гкал/ч) без НДС</span></td>
+	      								</tr>
+	      								<tr>
+	      									<td>401-550 мм</td>
+	      									<td><input class="data-value"></td>
+	      									<td><input class="data-value"></td>
+	      									<td><span class="data-unit">руб. /(Гкал/ч) без НДС</span></td>
+	      								</tr>
+	      								<tr>
+	      									<td>551-700 мм</td>
+	      									<td><input class="data-value"></td>
+	      									<td><input class="data-value"></td>
+	      									<td><span class="data-unit">руб. /(Гкал/ч) без НДС</span></td>
+	      								</tr>
+	      								<tr>
+	      									<td>701 и выше мм</td>
+	      									<td><input class="data-value"></td>
+	      									<td><input class="data-value"></td>
+	      									<td><span class="data-unit">руб. /(Гкал/ч) без НДС</span></td>
+	      								</tr>
+	      							</tbody>
+	      						</table>
+	      						<table style="width: auto;">
+	      							<thead>
+	      								<tr>
+	      									<th>2. Надземная прокладка Ду</th>
+	      									<th></th>
+	      									<th></th>
+	      								</tr>
+	      							</thead>
+	      							<tbody>
+	      								<tr>
+	      									<td>до 250 мм</td>
+	      									<td><input class="data-value"></td>
+	      									<td><span class="data-unit">руб. /(Гкал/ч) без НДС</span></td>
+	      								</tr>
+	      								<tr>
+	      									<td>251-400 мм</td>
+	      									<td><input class="data-value"></td>
+	      									<td><span class="data-unit">руб. /(Гкал/ч) без НДС</span></td>
+	      								</tr>
+	      								<tr>
+	      									<td>401-550 мм</td>
+	      									<td><input class="data-value"></td>
+	      									<td><span class="data-unit">руб. /(Гкал/ч) без НДС</span></td>
+	      								</tr>
+	      								<tr>
+	      									<td>551-700 мм</td>
+	      									<td><input class="data-value"></td>
+	      									<td><span class="data-unit">руб. /(Гкал/ч) без НДС</span></td>
+	      								</tr>
+	      								<tr>
+	      									<td>701 и выше мм</td>
+	      									<td><input class="data-value"></td>
+	      									<td><span class="data-unit">руб. /(Гкал/ч) без НДС</span></td>
+	      								</tr>
+	      							</tbody>
+	      						</table>
+	      					</div>
+	      					<div class="data-item justify-content-start">
+	      						<label class="data-label">Расходы на создание (реконструкцию) тепловых пунктов</label>
+	      						<input class="data-value">
+	      						<span class="data-unit">руб. /(Гкал/ч) без НДС</span>
+	      					</div>
+	      					<div class="data-item justify-content-start">
+	      						<label class="data-label">Налог на прибыль</label>
+	      						<input class="data-value">
+	      						<span class="data-unit">руб. /(Гкал/ч) без НДС</span>
+	      					</div>
+	      					
+	      					
+	      				</div>
+					</form>
+	    		</div>
+	    		 <div class="modal-footer">
+			        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
+			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Сохранить</button>
+			      </div>
+	    	</div>
+	    </div>
+	</div>
+
+		<!-- Modal Load Data -->
+	<div class="modal fade show" id="editReserveData" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
+	  	<div class="modal-dialog modal-dialog-centered">
+	    	<div class="modal-content">
+	      		<div class="modal-header"> 
+			        <h3 class="modal-title" id="editDataLabel">Плата за резерв мощности</h3>
+			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			     </div>
+			     <div class="modal-body">
+	      			<div class="data-row static-block data-params">
+	      			
+      					<div class="data-item">
+	      					<label class="data-label">Наименование ТСО</label>
+						  	<select class="selectpicker" id="paramNumberTso" data-width="650px" data-live-search="true" placeholder="УНОМ ТСО - Наименование">
+							  	<option value="2020">2020</option>
+							  	<option value="2021">2021</option>
+							  	<option value="2022" selected>2022</option>
+							  	<option value="2023">2023</option>
+							</select>
+						</div>
+						<div class="data-item">
+							<label class="data-label">на</label>
+							<select class="selectpicker" id="paramNumberTso" placeholder="Расчётный год">
+							  	<option value="2020">2020</option>
+							  	<option value="2021">2021</option>
+							  	<option value="2022" selected>2022</option>
+							  	<option value="2023">2023</option>
+							</select>
+						</div>
+							
+		      		</div>
+	      			<form>
+	      				<div class="data-block">
+	      					<h5>Плата за услуги по поддержанию резервной тепловой мощности</h5>
+	      					<div class="data-item justify-content-start">
+	      						<label class="data-label">до тепловых пунктов</label>
+	      						<input class="data-value">
+	      						<span class="data-unit">руб./(Гкал/ч) в месяц</span>
+	      					</div>
+	      					<div class="data-item justify-content-start">
+	      						<label class="data-label">после тепловых пунктов</label>
+	      						<input class="data-value">
+	      						<span class="data-unit">руб./(Гкал/ч) в месяц</span>
+	      					</div>
+	      					<div class="data-row">
+	      						<div class="data-item justify-content-start">
+		      						<label class="data-label">Решение от</label>
+		      						<input class="data-value">
+		      					</div>
+		      					<div class="data-item justify-content-start">
+		      						<label class="data-label">№</label>
+		      						<input class="data-value">
+		      					</div>
+	      					</div>
+	      					<div class="data-row">
+	      						<div class="data-item justify-content-start">
+		      						<label class="data-label">Протокол от</label>
+		      						<input class="data-value">
+		      					</div>
+		      					<div class="data-item justify-content-start">
+		      						<label class="data-label">№</label>
+		      						<input class="data-value">
+		      					</div>
+	      					</div>
+	      					
+	      				</div>
+					</form>
+	    		</div>
+	    		 <div class="modal-footer">
+			        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
+			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Сохранить</button>
+			      </div>
+	    	</div>
+	    </div>
+	</div>
 
 	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>

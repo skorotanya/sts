@@ -22,7 +22,8 @@ $(document).ready(function () {
     adjustColumns('ratesTable');
     loadFilterFromState('ratesTable');
 
-    initDataTable('tpFeeTable', 'full');
+    initDataTable('tpPersonalFeeTable', 'full');
+    initDataTable('tpStandartFeeTable', 'full');
 
     initDataTable('reserveFeeTable', 'full');
 
@@ -35,15 +36,58 @@ $(document).ready(function () {
       adjustColumns('ratesTable');
     })
   
-    const tpFeeTab = document.querySelector('button[data-bs-target="#tpFeeTab"');
-    tpFeeTab.addEventListener('shown.bs.tab', event => {
-      adjustColumns('tpFeeTable');
+    const tpPersonalFeeTab = document.querySelector('button[data-bs-target="#tpPersonalFeeTab"');
+    tpPersonalFeeTab.addEventListener('shown.bs.tab', event => {
+      adjustColumns('tpPersonalFeeTable');
+    })
+
+     const tpStandartFeeTab = document.querySelector('button[data-bs-target="#tpStandartFeeTab"');
+    tpStandartFeeTab.addEventListener('shown.bs.tab', event => {
+      adjustColumns('tpStandartFeeTable');
     })
 
     const reserveFeeTab = document.querySelector('button[data-bs-target="#reserveFeeTab"');
     reserveFeeTab.addEventListener('shown.bs.tab', event => {
       adjustColumns('reserveFeeTable');
     })
+
+
+    /* Double click on row ratesTable */
+    $('#ratesTable tbody').on('dblclick', 'tr', function () {
+      showModal('editRatesData');
+    } );
+
+    /* Double click on row tpPersonalFeeTable */
+    $('#tpPersonalFeeTable tbody').on('dblclick', 'tr', function () {
+      showModal('editPersonalData');
+    } );
+
+    /* Double click on row tpStandartFeeTable */
+    $('#tpStandartFeeTable tbody').on('dblclick', 'tr', function () {
+      showModal('editStandartData');
+    } );
+
+    /* Double click on row reserveFeeTable */
+    $('#reserveFeeTable tbody').on('dblclick', 'tr', function () {
+      showModal('editReserveData');
+    } );
+
+
+    /* Click on Add button */
+     $('.bttn-edit-data').on('click', (e) => {
+      let activeTabId = $('.tab-pane.active').attr('id');
+      switch (activeTabId) {
+        case 'ratesTab' : showModal('editRatesData');
+                          break;
+        case 'tpPersonalFeeTab' : showModal('editPersonalData');
+                                  break;
+        case 'tpStandartFeeTab' : showModal('editStandartData');
+                                  break;
+        case 'reserveFeeTab' : showModal('editReserveData');
+                                break;
+      }
+      
+    } );
 
 
 });
