@@ -528,20 +528,22 @@
 						<p><span class="mark-color">10</span></p>
 					</div>
 					<div class="data-block">
-						<h5 >Количество организаций:</h5>	
-						<p class="data-item">регулируемые - <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
-						<p class="data-item">нерегулируемые - <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
-						<p class="data-item">договор поставки - <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
+						<h5 >Количество организаций:</h5>
+						<div class="data-table-block">
+							<p class="data-item">регулируемые - <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
+							<p class="data-item">нерегулируемые - <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
+							<p class="data-item">договор поставки - <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
+						</div>
 					</div>
 					<div class="data-block">
 						<h5>В том числе по видам деятельности:</h5>
 						<div class="data-row">
-							<div class="data-block">
+							<div class="data-table-block">
 								<p class="data-item">комбинированное производство, более 25 МВт - <span class="mark-color">4</span><span class="data-unit">шт.</span></p>
 								<p class="data-item">комбинированное производство менее 25 МВт - <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
 								<p class="data-item">некомбинированное производство - <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
 							</div>
-							<div class="data-block">
+							<div class="data-table-block">
 								<p class="data-item">передача - <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
 								<p class="data-item">сбыт - <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
 							</div>
@@ -622,64 +624,60 @@
 					      			<div class="data-block border-block">
 					      				<h4>Общие сведения об организации:</h4>
 					      				<div class="data-row">
-					      					<div class="col-9">
-					      						<div class="data-block me-3">
-						      						<div class="data-row">
-						      							<div class="col-9">
-						      								<div class="data-item me-3">
-																<label class="data-label">Наименование ТСО: <span class="sublable">краткое</span></label>
-																<input type="text" class="data-value stretch" name="">
-															</div>
-						      							</div>
-						      							<div class="col-3">
-						      								<div class="data-item ms-3">
-																<label class="data-label">Код ТСО</label>
-																<input type="text" class="data-value tso-code" name="">
-															</div>
-						      							</div>
-														
-						      						</div>
-							  						<div class="data-row">
-							  							<div class="data-item stretch">
-															<label class="data-label"><span class="sublable">полное</span></label>
-															<textarea class="data-value stretch"></textarea>
+				      						<div class="data-block stretch me-3">
+					      						<div class="data-row">
+					      							<div class="col-9">
+					      								<div class="data-item me-3">
+															<label class="data-label">Наименование ТСО: <span class="sublable">краткое</span></label>
+															<input type="text" class="data-value stretch" name="">
 														</div>
-														<div class="data-item stretch">
-															<label class="data-label">Примечание</label>
-															<textarea class="data-value stretch"></textarea>
+					      							</div>
+					      							<div class="col-3">
+					      								<div class="data-item ms-3">
+															<label class="data-label">Код ТСО</label>
+															<input type="text" class="data-value tso-code" name="">
 														</div>
-							  						</div>
+					      							</div>
 													
-													<div class="data-row">
-						      							<div class="data-item">
-															<label class="data-label">Организация является структурным подразделением</label>
-															<input type="checkbox" class="form-check-input">
-														</div>
-														<div class="data-item">
-															<label class="data-label">Организация является плательщиком НДС</label>
-															<input type="checkbox" class="form-check-input">
-														</div>
-						      						</div>
-							      				</div>
-					      					</div>
-					      					<div class="col-3">
-					      						<div class="data-block ms-3 fix-80">
-						      					
-													<div class="data-item">
-														<label class="data-label">ИНН</label>
-														<input type="text" class="data-value stretch" name="">
+					      						</div>
+						  						<div class="data-row">
+						  							<div class="data-item stretch">
+														<label class="data-label"><span class="sublable">полное</span></label>
+														<textarea class="data-value stretch"></textarea>
+													</div>
+													<div class="data-item stretch">
+														<label class="data-label">Примечание</label>
+														<textarea class="data-value stretch"></textarea>
+													</div>
+						  						</div>
+												
+												<div class="data-row">
+					      							<div class="data-item">
+														<label class="data-label">Организация является структурным подразделением</label>
+														<input type="checkbox" class="form-check-input">
 													</div>
 													<div class="data-item">
-														<label class="data-label">ОГРН</label>
-														<input type="text" class="data-value stretch" name="">
+														<label class="data-label">Организация является плательщиком НДС</label>
+														<input type="checkbox" class="form-check-input">
 													</div>
-													<div class="data-item">
-														<label class="data-label">КПП</label>
-														<input type="text" class="data-value stretch" name="">
-													</div>
-							      				</div>
-					      					</div>
-						      				
+					      						</div>
+						      				</div>
+				      					
+				      						<div class="data-table-block ms-3">
+					      					
+												<div class="data-item">
+													<label class="data-label">ИНН</label>
+													<input type="text" class="data-value stretch" name="">
+												</div>
+												<div class="data-item">
+													<label class="data-label">ОГРН</label>
+													<input type="text" class="data-value stretch" name="">
+												</div>
+												<div class="data-item">
+													<label class="data-label">КПП</label>
+													<input type="text" class="data-value stretch" name="">
+												</div>
+						      				</div>
 					      				</div>
 					      			</div>
 										
@@ -794,7 +792,7 @@
 												<h4>Параметры ТСО по годам расчетного периода схемы</h4>
 												<button class="bttn bttn-square bttn-icon-save ms-auto" type="button" title="Сохранить"></button>
 											</div>
-											<table id="yearParamTable" class="tableblock-table display nowrap compact" style="width:100%">
+											<table id="yearParamTable" class="display nowrap compact" style="width:100%">
 											    <thead>
 											        <tr>
 											            <th>Год схемы</th>
@@ -909,7 +907,7 @@
 											<div class="data-row pb-1 mt-1">
 												<h4>Ответственное лицо за подготовку данных по схеме</h4>
 											</div>
-											<table id="responseTable" class="tableblock-table display nowrap compact" style="width:100%">
+											<table id="responseTable" class="display nowrap compact" style="width:100%">
 											    <thead>
 											        <tr>
 											            <th>Должность</th>

@@ -271,7 +271,7 @@ button:disabled, .bttn.disabled{
 	row-gap: 10px;
 }
 
-.data-row > .data-block {
+/*.data-row > .data-block {
 	padding-left: 5px;
 	padding-right: 5px;
 }
@@ -282,7 +282,7 @@ button:disabled, .bttn.disabled{
 
 .data-row > .data-block:last-child {
 	padding-left: 5px;
-}
+}*/
 
 
 .data-block > .data-row, .data-row:has(.data-item)  {
@@ -488,7 +488,6 @@ input[disabled], .form-check-input[disabled], .bootstrap-select > .btn.dropdown-
 .mark-color {
 	color: var(--action-color);
 	font-weight: 600;
-	padding: 0 0.5rem;
 }
 
 
@@ -986,7 +985,7 @@ thead {
 	background-color: var(--light-color);
 }
 
-thead>tr>th {
+thead>tr>th, table.dataTable thead th {
 	text-align: center;
 }
 
@@ -1038,25 +1037,35 @@ td.dtfc-fixed-left{
 	font-size: 0.9rem;
 }
 
-.table-summary .data-block {
-	gap: 0;
+.rows-count, h4 {
+	align-self: start;
 }
 
-.table-summary .data-block:not(:has(.data-row)) {
+.table-summary .data-table-block {
+	border-spacing: 0.3rem 0;
+    margin: 0 -0.3rem;
+}
+
+.data-table-block {
 	display: table;
+	border-spacing: 1rem 0.6rem;
+    margin:-0.6rem -1rem;
+    width: fit-content;
+    align-self: start;
 }
 
-
-.table-summary > .data-block > .data-item:not(:is(.rows-count)) {
+.data-table-block > .data-item, .data-table-block > .data-row {
 	display: table-row;
 	text-align: end;
 }
 
-.table-summary .data-unit, .table-summary .mark-color {
+.data-table-block .data-unit, .data-table-block .mark-color, .data-table-block .data-value, .data-table-block .data-label {
 	display: table-cell;
 }
 
-.table-summary .data-unit {
+.data-table-block input {width: 100%;}
+
+.data-unit {
 	text-align: start;
 }
 
