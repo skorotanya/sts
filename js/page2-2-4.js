@@ -59,6 +59,11 @@ $(document).ready(function () {
       adjustColumns('otherCostsTable');
     })
 
+    /* Double click on row costsCalcTable */
+    $('#costsCalcTable tbody').on('dblclick', 'tr', function () {
+      showModal('editСostsData');
+    } );
+
 
 });
 

@@ -230,6 +230,8 @@ button:disabled, .bttn.disabled{
 }
 
 
+
+
 /* Page structure elements */
 
 .data-block, .data-block > form {
@@ -238,8 +240,7 @@ button:disabled, .bttn.disabled{
 	gap: 10px;
 }
 
-
-.data-block.border-block, .data-row.border-block {
+.border-block {
 	border: 1px solid var(--bs-border-color);
 	border-radius: 6px;
 	padding: 10px;
@@ -357,6 +358,22 @@ button:disabled, .bttn.disabled{
 
 .fix-180.data-label, .fix-180 .data-label {
 	width: 180px;
+}
+
+.table-inp-stretch td:has(.input-cell) {
+	position: relative;
+	min-width: 80px;
+	height: 33px;
+}
+
+.input-cell {
+	position: absolute;
+	left: 0;
+	top:0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
 }
 
 .table-inp-stretch .data-value {
@@ -1169,4 +1186,45 @@ td.dtfc-fixed-left{
 }
 
 
+/* Accordion */
 
+.accordion-body {
+	--bs-accordion-body-padding-x: 0;
+}
+
+.accordion-button {
+	color: var(--action-color);
+	font-weight: 600;
+	background-color: #fff;
+	box-shadow: none;
+	border-width: 0px;
+	padding: 0.5rem 0.3rem;
+}
+.accordion-button:after {
+	background-image: url(../images/chevron-down-dark.svg);
+	background-size: auto;
+	background-position: center;
+	transition: ease 200ms;
+}
+
+.accordion-button:not(.collapsed) {
+	background-color: #fff;
+	color: var(--action-color);
+	border-bottom: 1px solid var(--bs-border-color);
+	padding-bottom: 1.15rem;
+	box-shadow: none;
+}
+
+.accordion-button:not(.collapsed):after {
+	background-image: url(../images/chevron-down-dark.svg);
+	transform: rotate(180deg);
+}
+
+.accordion-button:hover {
+	color: var(--active-color);
+}
+
+.accordion-button:focus, .accordion-button:active, .accordion-button:visited {
+	box-shadow: none;
+	border-color: var(--bs-border-color);
+}
