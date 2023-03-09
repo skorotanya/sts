@@ -108,7 +108,7 @@ h1{
 }
 
 h3 {
-	font-size: 1.2rem;
+	font-size: 1.4rem;
 }
 
 h4 {
@@ -388,7 +388,7 @@ input, textarea, .bootstrap-select .btn, .dtsb-data, .dtsb-value, .dtsb-conditio
 	font-weight: 300;
 	height: 31px;
 	border-radius: 6px;
-	border: 1px solid var(--bs-border-color);
+	border: 1px solid var(--shad-color);
 	min-width: 80px;
 	padding-left: 0.5rem;
 }
@@ -418,7 +418,7 @@ input.data-value:focus, .filter-row>th>input:focus, .filter-row>th>input:focus-v
 	height: 20px;
     width: 20px;
     min-width: 20px;
-    border: 1px solid var(--bs-border-color);
+    border: 1px solid var(--shad-color);
     border-radius: 6px;
     margin-top: 0px;
     display: flex;
@@ -436,13 +436,13 @@ input.data-value:focus, .filter-row>th>input:focus, .filter-row>th>input:focus-v
 .form-check-input[type=checkbox]:checked {
 	background-color: #fff;
 	background-image: url(../images/checkmark.svg);
-	border-color: var(--bs-border-color);
+	border-color: var(--shad-color);
 }
 
 .form-check-input[type=radio]:checked {
 	background-color: #fff;
 	background-image: url(../images/ellipse.svg);
-	border-color: var(--bs-border-color);
+	border-color: var(--shad-color);
 	background-size: auto;
 }
 
@@ -464,7 +464,7 @@ input.data-value:focus, .filter-row>th>input:focus, .filter-row>th>input:focus-v
 input[disabled], .form-check-input[disabled], .bootstrap-select > .btn.dropdown-toggle.disabled {
 	opacity: .5;
 	border-color: var(--active-color);
-	background-color: transparent;
+	background-color: var(--light-color);
 	cursor: default;
 	pointer-events: none;
 }
@@ -481,7 +481,7 @@ input[disabled], .form-check-input[disabled], .bootstrap-select > .btn.dropdown-
 	padding: 0.2rem 0.5rem 0.2rem 0.5rem;
 	background: #fff;
 	color: var(--text-color);
-	border: 1px solid var(--bs-border-color); /* #ced4da;*/
+	border: 1px solid var(--shad-color); /* #ced4da;*/
 }
 
 .bootstrap-select > .btn.dropdown-toggle:after {
@@ -757,6 +757,7 @@ border-left: 6px solid var(--action-color);
 
 .nav-tabs .nav-link {
 	font-weight: 600;
+
 	color: #252525aa;
 	border-color: #00000020;
 	border-bottom-color: var(--action-color);
@@ -768,11 +769,11 @@ border-left: 6px solid var(--action-color);
 	border-bottom-color: var(--active-color);
 }
 
-
 .nav-tabs .nav-link.active {
 	color: var(--action-color);
 	border-color: var(--action-color);
 	border-bottom-color: #fff;
+	font-size: 1.2rem;
 }
 
 .tab-content {
@@ -802,9 +803,6 @@ div.dt-buttons {
     font-weight: 400;
     height: 31px;
 }
-
-
-
 
 .data-unit {
 	opacity: 0.6;
@@ -1087,12 +1085,6 @@ td.dtfc-fixed-left{
 }
 
 
-
-
-
-
-
-
 /*.table-summary .data-unit {
 	width: 100px;
 
@@ -1194,6 +1186,7 @@ td.dtfc-fixed-left{
 
 .accordion-button {
 	color: var(--action-color);
+	font-size: 1.2rem;
 	font-weight: 600;
 	background-color: #fff;
 	box-shadow: none;
@@ -1207,11 +1200,15 @@ td.dtfc-fixed-left{
 	transition: ease 200ms;
 }
 
+.border-block:has(.accordion-button:not(.collapsed)) {
+	border-color: var(--active-color);
+}
+
 .accordion-button:not(.collapsed) {
 	background-color: #fff;
 	color: var(--action-color);
 	border-bottom: 1px solid var(--bs-border-color);
-	padding-bottom: 1.15rem;
+	padding-bottom: 1.1rem;
 	box-shadow: none;
 }
 
