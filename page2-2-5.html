@@ -1435,7 +1435,7 @@
 	</div>
 
 		<!-- Modal Load Data -->
-	<div class="modal wide-modal fade show" id="editRatesData" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
+	<div class="modal fade show" id="editRatesData" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
 	  	<div class="modal-dialog modal-dialog-centered">
 	    	<div class="modal-content">
 	      		<div class="modal-header"> 
@@ -1471,69 +1471,35 @@
 							</div>
 	      				</div>
 	      				<div class="data-row">
-	      					<div class="col-8">
-	      						<div class="data-block me-1">
-	      							<div class="data-item">
-				      					<label class="data-label">Территория действия ТЗ</label>
-									  	<input type="text" name="" class="data-value stretch">
-									</div>
-									<div class="data-row">
-										<h5>Дифференциация тарифов:</h5>
-										<div class="data-item">
-											<label class="data-label">без дифференциации</label>
+	      					<div class="data-block">
+	      						<div class="data-item">
+			      					<label class="data-label">Территория действия ТЗ</label>
+								  	<input type="text" name="" class="data-value stretch">
+								</div>
+	      						<div class="data-row border-block">
+		      						<h5>Виды деятельности в границах ТЗ:</h5>
+		      						<div class="data-block">
+		      							<div class="data-item">
+											<label class="data-label">Комбинированное производство, более 25 МВт</label>
 											<input type="checkbox" class="form-check-input">
 										</div>
 										<div class="data-item">
-											<label class="data-label">до тепловых пунктов</label>
-											<input type="checkbox" class="form-check-input">
-										</div>
-										<div class="data-item">
-											<label class="data-label">после тепловых пунктов</label>
+											<label class="data-label">Комбинированное производство, менее 25 МВт</label>
 											<input type="checkbox" class="form-check-input">
 										</div>
 									</div>
-									<div class="data-row">
-										<div class="data-item justify-content-start">
-				      						<label class="data-label">Решение от</label>
-				      						<input class="data-value">
-				      					</div>
-				      					<div class="data-item justify-content-start">
-				      						<label class="data-label">№</label>
-				      						<input class="data-value">
-				      					</div>
-				      				</div>
-				      				<div class="data-row">
-				      					<div class="data-item justify-content-start">
-				      						<label class="data-label">Протокол от</label>
-				      						<input class="data-value">
-				      					</div>
-				      					<div class="data-item justify-content-start">
-				      						<label class="data-label">№</label>
-				      						<input class="data-value">
-				      					</div>
-									</div>
-	      						</div>
-	      					</div>
-	      					<div class="col-4">
-	      						<div class="data-block border-block ms-1">
-	      							<h5>Виды деятельности:</h5>
-	      							<div class="data-item">
-										<label class="data-label">Комбинированное производство, более 25 МВт</label>
-										<input type="checkbox" class="form-check-input">
-									</div>
-									<div class="data-item">
-										<label class="data-label">Комбинированное производство, менее 25 МВт</label>
-										<input type="checkbox" class="form-check-input">
-									</div>
-									<div class="data-item">
-										<label class="data-label">Некомбинированное производство</label>
-										<input type="checkbox" class="form-check-input">
-									</div>
-									<div class="data-row justify-content-end">
+		      						<div class="data-block">	
 										<div class="data-item">
+											<label class="data-label">Некомбинированное производство</label>
+											<input type="checkbox" class="form-check-input">
+										</div>
+		      						
+		      							<div class="data-item">
 											<label class="data-label">Договор поставки</label>
 											<input type="checkbox" class="form-check-input">
 										</div>
+									</div>
+		      						<div class="data-block">
 										<div class="data-item">
 											<label class="data-label">Передача</label>
 											<input type="checkbox" class="form-check-input">
@@ -1542,9 +1508,43 @@
 											<label class="data-label">Сбыт</label>
 											<input type="checkbox" class="form-check-input">
 										</div>
-									</div>
-	      						</div>
+		      						</div>
+		      					</div>
+		      					<div class="data-row">
+									<div class="data-item justify-content-start">
+			      						<label class="data-label">Решение от</label>
+			      						<input class="data-value">
+			      					</div>
+			      					<div class="data-item justify-content-start">
+			      						<label class="data-label">№</label>
+			      						<input class="data-value">
+			      					</div>
+			      					<div class="data-item justify-content-start">
+			      						<label class="data-label">Протокол от</label>
+			      						<input class="data-value">
+			      					</div>
+			      					<div class="data-item justify-content-start">
+			      						<label class="data-label">№</label>
+			      						<input class="data-value">
+			      					</div>
+			      				</div>
+								
 	      					</div>
+	      					<div class="data-block">
+								<h5>Дифференциация тарифов:</h5>
+								<div class="data-item">
+									<label class="data-label">без дифференциации</label>
+									<input type="checkbox" class="form-check-input">
+								</div>
+								<div class="data-item">
+									<label class="data-label">до тепловых пунктов</label>
+									<input type="checkbox" class="form-check-input">
+								</div>
+								<div class="data-item">
+									<label class="data-label">после тепловых пунктов</label>
+									<input type="checkbox" class="form-check-input">
+								</div>
+							</div>
 	      				</div>
 		      		</div>
       				<div class="data-block">

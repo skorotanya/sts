@@ -227,6 +227,7 @@
 					</div>
 					
 					<div class="data-item">
+						<button class="bttn bttn-color bttn-edit-data" type="button">Добавить</button>
 						<a class="bttn bttn-color bttn-load-data" type="button" href="page2-2-1-2.html">Загрузить данные</a>
 						<button class="bttn bttn-color bttn-excel-export" type="button">Выгрузить в Excel</button>
 					</div>
@@ -4176,6 +4177,1335 @@
 	    	</div>
 	    </div>
 	</div>
+
+		<!-- Modal Load Data -->
+	<div class="modal fade show" id="editNvvData" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
+	  	<div class="modal-dialog modal-dialog-centered">
+	    	<div class="modal-content">
+	      		<div class="modal-header"> 
+			        <h3 class="modal-title" id="editDataLabel">Необходимая валовая выручка (НВВ) организации ТСО</h3>
+			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			     </div>
+			     <div class="modal-body">
+	      			<div class="data-block static-block data-params">
+	      				<div class="data-row">
+	      					<div class="data-item stretch">
+		      					<label class="data-label">Наименование ТСО</label>
+		      					<div class="data-value stretch">
+		      						<select class="selectpicker" id="paramNumberTso" data-width="100%" data-live-search="true" placeholder="УНОМ ТСО - Наименование">
+									  	<option value="2020">2020</option>
+									  	<option value="2021">2021</option>
+									  	<option value="2022" selected>2022</option>
+									  	<option value="2023">2023</option>
+									</select>
+		      					</div>
+							  	
+							</div>
+							<div class="data-item">
+								<label for="paramCalcYear" class="data-label">Расчётный год:</label>
+								<select class="selectpicker param-calc-year" data-width="140px" id="paramCalcYear" value="2022">
+								  <option value="2020">01.01.2021</option>
+								  <option value="2021">01.01.2022</option>
+								  <option value="2022" selected>01.01.2023</option>
+								  <option value="2023">01.01.2024</option>
+								</select>
+							</div>
+							<div class="data-item">
+								<div class="note">Базовый год - <span class="note-base-year">2022 (01.01.2023)</span>.</div>
+							</div>
+	      				</div>
+	      				<div class="data-row">
+	      					<div class="data-block">
+	      						<div class="data-row border-block">
+		      						<h5>Виды деятельности в границах ТЗ:</h5>
+		      						<div class="data-block">
+		      							<div class="data-item">
+											<label class="data-label">Комбинированное производство, более 25 МВт</label>
+											<input type="checkbox" class="form-check-input">
+										</div>
+										<div class="data-item">
+											<label class="data-label">Комбинированное производство, менее 25 МВт</label>
+											<input type="checkbox" class="form-check-input">
+										</div>
+									</div>
+		      						<div class="data-block">	
+										<div class="data-item">
+											<label class="data-label">Некомбинированное производство</label>
+											<input type="checkbox" class="form-check-input">
+										</div>
+		      						
+		      							<div class="data-item">
+											<label class="data-label">Договор поставки</label>
+											<input type="checkbox" class="form-check-input">
+										</div>
+									</div>
+		      						<div class="data-block">
+										<div class="data-item">
+											<label class="data-label">Передача</label>
+											<input type="checkbox" class="form-check-input">
+										</div>
+										<div class="data-item">
+											<label class="data-label">Сбыт</label>
+											<input type="checkbox" class="form-check-input">
+										</div>
+		      						</div>
+		      					</div>
+								<div class="data-item">
+			      					<label class="data-label">Территория действия ТЗ</label>
+								  	<input type="text" name="" class="data-value stretch">
+								</div>
+	      					</div>
+	      					<div class="data-block">
+								<h5>Дифференциация тарифов:</h5>
+								<div class="data-item">
+									<label class="data-label">без дифференциации</label>
+									<input type="checkbox" class="form-check-input">
+								</div>
+								<div class="data-item">
+									<label class="data-label">до тепловых пунктов</label>
+									<input type="checkbox" class="form-check-input">
+								</div>
+								<div class="data-item">
+									<label class="data-label">после тепловых пунктов</label>
+									<input type="checkbox" class="form-check-input">
+								</div>
+							</div>
+	      				</div>
+	      				<div class="data-block border-block">
+	      					<table class="table-inp-stretch" style="width:100%;">
+	      						<tbody>
+	      							<tr>
+	      								<td>Года</td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled value="01.01.2018"></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled value="01.01.2019"></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled value="01.01.2020"></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled value="01.01.2021"></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled value="01.01.2022"></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled value="01.01.2023"></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled value="01.01.2024"></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled value="01.01.2025"></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled value="01.01.2026"></div></td>
+	      							</tr>
+	      							<tr>
+	      								<td>НВВ, <span class="data-unit">тыс. руб.</span></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+	      							</tr>
+	      							<tr>
+	      								<td colspan="6">НВВ по расчёту, <span class="data-unit">тыс. руб.</span></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+	      							</tr>
+	      						</tbody>
+	      					</table>
+	      				</div>
+	      			</div>
+	      			<div class="scroll-block-wrapper" style="max-height: 42vh;">
+	      				<div class="data-block scroll-block">
+					  		<div class="accordion data-block">
+							  	<div class="border-block">
+						      		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel19" aria-expanded="false">Прибыль</button>
+								    <div id="panel19" class="accordion-collapse collapse">
+								      	<div class="accordion-body">
+								      		<div class="data-block">
+					      						<table class="table-inp-stretch" style="width:100%;">
+							      					<thead>
+							      						<tr>
+							      							<th></th>
+							      							<th>I полугодие</th>
+							      							<th>II полугодие</th>
+							      							<th>Год</th>
+							      						</tr>
+							      					</thead>
+							      					<tbody>
+							      						<tr>
+							      							<td>Норма доходности, <span class="data-unit">%</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>Нормативный уровень прибыли, <span class="data-unit">%</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>Нормативный уровень прибыли, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      					</tbody>
+							      				</table>
+							      				<table class="table-inp-stretch" style="width:100%;">
+							      					<thead>
+							      						<tr>
+							      							<th rowspan="2"></th>
+							      							<th colspan="3">Факт</th>
+							      							<th colspan="3">План</th>
+							      						</tr>
+							      						<tr>
+							      							<th>I полугодие</th>
+							      							<th>II полугодие</th>
+							      							<th>Год</th>
+							      							<th>I полугодие</th>
+							      							<th>II полугодие</th>
+							      							<th>Год</th>
+							      						</tr>
+							      					</thead>
+							      					<tbody>
+							      						<tr>
+							      							<td>Прибыль всего, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- на развитие производства (капитальные вложения)</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td colspan="3"></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- на социальное развитие</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td colspan="3"></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- на поощрение</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td colspan="3"></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- на прочие цели</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td colspan="3"></td>
+							      						</tr>
+							      						<tr>
+							      							<td>Расчётная предпринимательская прибыль, <span class="data-unit">тыс. руб.</span></td>
+							      							<td colspan="3"></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>Нормативная прибыль/капитальные вложения/инвестиции, <span class="data-unit">тыс. руб.</span></td>
+							      							<td colspan="3"></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>Средства на возврат займов и кредитов, <span class="data-unit">тыс. руб.</span></td>
+							      							<td colspan="3"></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>Расходы на капитальные вложения (инвестиции), <span class="data-unit">тыс. руб.</span></td>
+							      							<td colspan="3"></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>Экономически обоснованные расходы на выплаты, предусмотренные<br>коллективными договорами, <span class="data-unit">тыс. руб.</span></td>
+							      							<td colspan="3"></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      					</tbody>
+							      				</table>
+							      			</div>
+								      	</div>
+								    </div>
+							  	</div>
+							  	<div class=" border-block">
+					      			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel20" aria-expanded="false">Недополученные доходы / Выпадающие расходы</button>
+							    	<div id="panel20" class="accordion-collapse collapse" >
+							      		<div class="accordion-body">
+							        		<div class="data-block">
+					      						<table class="table-inp-stretch" style="width:100%;">
+							      					<thead>
+							      						<tr>
+							      							<th rowspan="2"></th>
+							      							<th colspan="3">План</th>
+							      						</tr>
+							      						<tr>
+							      							<th>I полугодие</th>
+							      							<th>II полугодие</th>
+							      							<th>Год</th>
+							      						</tr>
+							      					</thead>
+							      					<tbody>
+							      						<tr>
+							      							<td>Всего недополученных доходов и выпадающих расходов, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>1. Недополученные доходы по результатам досудебного рассмотрения споров, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>2. Недополученные доходы по результатам рассмотрения разногласий<span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>3. Экономически обоснованные расходы, не учтённые органом регулирования при<br>установлении тарифов в прошлом периоде, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>4. Расходы, связанные с незапланированным ростом цен на продукцию, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>5. Расходы, связанные с обслуживанием заёмных средств, привлекаемых для покрытия<br>недостатка средств, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>6.  Выпадающие доходы/экономия средств от подключения объектов заявителей,<br>подключаемая нагрузка которых не превышает 0,1 Гкал/ч, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>7. Другие недополученные доходы и выпадающие расходы, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      					</tbody>
+							      				</table>
+							      			</div>
+							     		</div>
+							    	</div>
+							  	</div>
+							  	<div class="border-block">
+					      			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel21" aria-expanded="false" >Избыток средств, полученный за отчётные периоды регулирования</button>
+							    	<div id="panel21" class="accordion-collapse collapse" >
+							      		<div class="accordion-body">
+							        		<div class="data-block">
+					      						<table class="table-inp-stretch" style="width:100%;">
+							      					<thead>
+							      						<tr>
+							      							<th rowspan="2"></th>
+							      							<th colspan="3">План</th>
+							      						</tr>
+							      						<tr>
+							      							<th>I полугодие</th>
+							      							<th>II полугодие</th>
+							      							<th>Год</th>
+							      						</tr>
+							      					</thead>
+							      					<tbody>
+							      						<tr>
+							      							<td>Всего избыток средств, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      					</tbody>
+							      				</table>
+							      			</div>
+							      		</div>
+							    	</div>
+							  	</div>
+							  	<div class="border-block">
+						      		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel22" aria-expanded="false">Объём и финансирование капитальных вложений</button>
+							    	<div id="panel22" class="accordion-collapse collapse">
+							      		<div class="accordion-body">
+							        		<div class="data-block">
+					      						<table class="table-inp-stretch" style="width:100%;">
+							      					<thead>
+							      						<tr>
+							      							<th rowspan="2"></th>
+							      							<th colspan="3">План</th>
+							      						</tr>
+							      						<tr>
+							      							<th>I полугодие</th>
+							      							<th>II полугодие</th>
+							      							<th>Год</th>
+							      						</tr>
+							      					</thead>
+							      					<tbody>
+							      						<tr>
+							      							<td>Капитальные вложения всего, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- на производство электрической энергии</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- на производство тепловой энергии</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- на производство теплоносителя</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- на передачу тепловой энергии</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- прочие</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>Финансирование капитальный вложений всего, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- амортизационные отчисления на полное восстановление основных фондов</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>&nbsp;&nbsp;&nbsp;в т.ч. за счёт переоценки основных средств и нематериальных активов</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- неиспользованные средств на начало года</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- прибыль</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- федеральный бюджет</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- местный бюджет</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- региональный (республиканский, краевой, областной) бюджет</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- прочие источники</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- займы и кредиты</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- средства, полученных от реализации ценных бумаг</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- платы за подключение</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      					</tbody>
+							      				</table>
+							      			</div>
+							      		</div>
+							    	</div>
+							  	</div>
+							  	<div class="border-block">
+						      		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel23" aria-expanded="false">Перекрёстное субсидирование</button>
+							    	<div id="panel23" class="accordion-collapse collapse">
+							      		<div class="accordion-body">
+							      			<div class="data-block">
+					      						<table class="table-inp-stretch" style="width:100%;">
+							      					<thead>
+							      						<tr>
+							      							<th rowspan="2"></th>
+							      							<th colspan="3">План</th>
+							      						</tr>
+							      						<tr>
+							      							<th>I полугодие</th>
+							      							<th>II полугодие</th>
+							      							<th>Год</th>
+							      						</tr>
+							      					</thead>
+							      					<tbody>
+							      						<tr>
+							      							<td>Всего, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>1.  Перекрёстка между видами деятельности (электроэнергия и тепловая энергия), <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>2. Перекрёстка между группами потребителей<span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      					</tbody>
+							      				</table>
+											</div>
+							      		</div>
+							    	</div>
+							  	</div>
+							  	<div class="border-block">
+						      		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel24" aria-expanded="false">Экономия операционных и неподконтрольных расходов</button>
+							    	<div id="panel24" class="accordion-collapse collapse">
+							      		<div class="accordion-body">
+							      			<div class="data-block">
+					      						<table class="table-inp-stretch" style="width:100%;">
+							      					<thead>
+							      						<tr>
+							      							<th rowspan="2"></th>
+							      							<th colspan="3">План (всего)</th>
+							      							<th colspan="3">План (прирост)</th>
+							      						</tr>
+							      						<tr>
+							      							<th>I полугодие</th>
+							      							<th>II полугодие</th>
+							      							<th>Год</th>
+							      							<th>I полугодие</th>
+							      							<th>II полугодие</th>
+							      							<th>Год</th>
+							      						</tr>
+							      					</thead>
+							      					<tbody>
+							      						<tr>
+							      							<td>Экономия операционных расходов, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>Экономия неподконтрольных расходов, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td colspan="3"></td>
+							      						</tr>
+							      						<tr>
+							      							<td>Экономия от снижения потребления тепловой энергии, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>Экономия от снижения потребления электрической энергии, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>Экономия от снижения потребления топлива, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>Экономия от снижения потребления холодного водоснабжения, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>Экономия от снижения водоотведения, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>Экономия от снижения потребления отопления, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>Экономия от снижения потребления горячего водоснабжения, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      					</tbody>
+							      				</table>
+											</div>
+							      		</div>
+							    	</div>
+							  	</div>
+							  	<div class="border-block">
+						      		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel25" aria-expanded="false">Метод индексации / Метод доходности инвестированного капитала / Метод сравнения аналогов</button>
+							    	<div id="panel25" class="accordion-collapse collapse">
+							      		<div class="accordion-body">
+							      			<div class="data-block">
+					      						<table class="table-inp-stretch" style="width:100%;">
+							      					<thead>
+							      						<tr>
+							      							<th></th>
+							      							<th>I полугодие</th>
+							      							<th>II полугодие</th>
+							      							<th>Год</th>
+							      						</tr>
+							      					</thead>
+							      					<tbody>
+							      						<tr>
+							      							<td>Индекс эффективности расходов, <span class="data-unit">%</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>Индекс потребительских цен, <span class="data-unit">%</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>Индекс количества активов, <span class="data-unit">%</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      						</tr>
+							      					</tbody>
+							      				</table>
+							      				<div class="accordion data-block">
+												  	<div class="border-block">
+											      		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel25-1" aria-expanded="false">Метод индексации</button>
+													    <div id="panel25-1" class="accordion-collapse collapse">
+													      	<div class="accordion-body">
+													      		<div class="data-block">
+										      						<table class="table-inp-stretch" style="width:100%;">
+												      					<thead>
+												      						<tr>
+												      							<th rowspan="2"></th>
+												      							<th colspan="3">План</th>
+												      						</tr>
+												      						<tr>
+												      							<th>I полугодие</th>
+												      							<th>II полугодие</th>
+												      							<th>Год</th>
+												      						</tr>
+												      					</thead>
+												      					<tbody>
+												      						<tr>
+												      							<td>Суммарная корректировка НВВ (метод А), <span class="data-unit">тыс. руб.</span></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      						</tr>
+												      						<tr>
+												      							<td>Результаты деятельности до перехода к регулированию цен (тарифов)<br>на основе долгосрочных параметров регулирования, всего, <span class="data-unit">%</span></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      						</tr>
+												      						<tr>
+												      							<td>- экономически обоснованные расходы, понесенные в периоды регулирования</td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      						</tr>
+												      						<tr>
+												      							<td>- доходы регулируемой организации, необоснованно полученные в периоды регулирования</td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      						</tr>
+												      						<tr>
+												      							<td>- экономия от снижения потребления энергетических ресурсов</td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      						</tr>
+												      						<tr>
+												      							<td>Суммарная корректировка НВВ, всего, <span class="data-unit">тыс. руб.</span></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      						</tr>
+												      						<tr>
+												      							<td>- корректировка с целью учёта отклонения фактических значений параметров<br>расчёта тарифов от значений, учтённых при установлении тарифов</td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      						</tr>
+												      						<tr>
+												      							<td>- корректировка с учётом надежности и качества реализуемых товаров, подлежащая учёту в НВВ</td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      						</tr>
+												      						<tr>
+												      							<td>- корректировка НВВ в связи с изменением (неисполнением) инвестиционной программы</td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      						</tr>
+												      						<tr>
+												      							<td>- корректировка, подлежащая учёту в НВВ и учитывающая отклонение фактических показателей<br> энергосбережения и повышения энергетической эффективности от плановых</td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      						</tr>
+												      					</tbody>
+												      				</table>
+												      			</div>
+													      	</div>
+													    </div>
+												  	</div>
+												  	<div class=" border-block">
+										      			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel25-2" aria-expanded="false">Метод доходности инвестированного капитала</button>
+												    	<div id="panel25-2" class="accordion-collapse collapse" >
+												      		<div class="accordion-body">
+												        		<div class="data-block">
+										      						<table class="table-inp-stretch" style="width:100%;">
+												      					<thead>
+												      						<tr>
+												      							<th rowspan="2"></th>
+												      							<th colspan="3">План</th>
+												      						</tr>
+												      						<tr>
+												      							<th>I полугодие</th>
+												      							<th>II полугодие</th>
+												      							<th>Год</th>
+												      						</tr>
+												      					</thead>
+												      					<tbody>
+												      						<tr>
+												      							<td>Суммарная корректировка НВВ (метод Б), <span class="data-unit">тыс. руб.</span></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      						</tr>
+												      						<tr>
+												      							<td>1. Возврат капитала, <span class="data-unit">тыс. руб.</span></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      						</tr>
+												      						<tr>
+												      							<td>Полная величина инвестированного капитала, <span class="data-unit">тыс. руб.</span></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      						</tr>
+												      						<tr>
+												      							<td>Срок возврата инвестированного капитала, <span class="data-unit">лет</span></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      						</tr>
+												      						<tr>
+												      							<td>2. Доход на инвестированный капитал, <span class="data-unit">тыс. руб.</span></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      						</tr>
+												      						<tr>
+												      							<td>Первоначальный размер инвестированного капитала, <span class="data-unit">тыс. руб.</span></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      						</tr>
+												      						<tr>
+												      							<td>Доходность первоначального размера инвестированного капитала, <span class="data-unit">%</span></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      						</tr>
+												      						<tr>
+												      							<td>База инвестированного капитала, <span class="data-unit">тыс. руб.</span></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      						</tr>
+												      						<tr>
+												      							<td>Норматив чистого оборотного капитала, <span class="data-unit">%</span></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      						</tr>
+												      						<tr>
+												      							<td>Норма доходности, <span class="data-unit">%</span></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      						</tr>
+												      						<tr>
+												      							<td>Норма доходности нового капитала, <span class="data-unit">%</span></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      						</tr>
+												      						<tr>
+												      							<td>Норма доходности старого капитала, <span class="data-unit">%</span></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      						</tr>												     <tr>
+												      							<td>3. Амортизация, <span class="data-unit">тыс. руб.</span></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      						</tr>
+												      					</tbody>
+												      				</table>
+												      			</div>
+												     		</div>
+												    	</div>
+												  	</div>
+												  	<div class="border-block">
+										      			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel25-3" aria-expanded="false" >Метод сравнения аналогов</button>
+												    	<div id="panel25-3" class="accordion-collapse collapse" >
+												      		<div class="accordion-body">
+												        		<div class="data-block">
+										      						<table class="table-inp-stretch" style="width:100%;">
+												      					<thead>
+												      						<tr>
+												      							<th rowspan="2"></th>
+												      							<th colspan="3">План</th>
+												      						</tr>
+												      						<tr>
+												      							<th>I полугодие</th>
+												      							<th>II полугодие</th>
+												      							<th>Год</th>
+												      						</tr>
+												      					</thead>
+												      					<tbody>
+												      						<tr>
+												      							<td>Корректировка НВВ с учётом отклонения фактических и плановых значений ИПЦ, <span class="data-unit">тыс. руб.</span></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      						</tr>
+												      						<tr>
+												      							<td>Базовый уровень расходов, связанных с осуществлением регулируемой деятельности, <span class="data-unit">тыс. руб.</span></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+												      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+												      						</tr>
+												      					</tbody>
+												      				</table>
+												      			</div>
+												      		</div>
+												    	</div>
+												  	</div>
+												</div>
+											</div>
+							      		</div>
+							    	</div>
+							  	</div>
+							</div>
+						</div>
+					</div>
+	      		</div>
+	    		<div class="modal-footer">
+			        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
+			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Сохранить</button>
+			    </div>
+	    	</div>
+	    </div>
+	</div>
+
+			<!-- Modal Load Data -->
+	<div class="modal fade show" id="editOtherCostsData" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
+	  	<div class="modal-dialog modal-dialog-centered">
+	    	<div class="modal-content">
+	      		<div class="modal-header"> 
+			        <h3 class="modal-title" id="editDataLabel">Расходы ИП ТС и КС организации ТСО</h3>
+			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			     </div>
+			     <div class="modal-body">
+	      			<div class="data-block static-block data-params">
+	      				<div class="data-row">
+	      					<div class="data-item stretch">
+		      					<label class="data-label">Наименование ТСО</label>
+		      					<div class="data-value stretch">
+		      						<select class="selectpicker" id="paramNumberTso" data-width="100%" data-live-search="true" placeholder="УНОМ ТСО - Наименование">
+									  	<option value="2020">2020</option>
+									  	<option value="2021">2021</option>
+									  	<option value="2022" selected>2022</option>
+									  	<option value="2023">2023</option>
+									</select>
+		      					</div>
+							  	
+							</div>
+							<div class="data-item">
+								<label for="paramCalcYear" class="data-label">Расчётный год:</label>
+								<select class="selectpicker param-calc-year" data-width="140px" id="paramCalcYear" value="2022">
+								  <option value="2020">01.01.2021</option>
+								  <option value="2021">01.01.2022</option>
+								  <option value="2022" selected>01.01.2023</option>
+								  <option value="2023">01.01.2024</option>
+								</select>
+							</div>
+							<div class="data-item">
+								<div class="note">Базовый год - <span class="note-base-year">2022 (01.01.2023)</span>.</div>
+							</div>
+	      				</div>
+	      				<div class="data-row">
+	      					<div class="data-block">
+	      						<div class="data-row border-block">
+		      						<h5>Виды деятельности в границах ТЗ:</h5>
+		      						<div class="data-block">
+		      							<div class="data-item">
+											<label class="data-label">Комбинированное производство, более 25 МВт</label>
+											<input type="checkbox" class="form-check-input">
+										</div>
+										<div class="data-item">
+											<label class="data-label">Комбинированное производство, менее 25 МВт</label>
+											<input type="checkbox" class="form-check-input">
+										</div>
+									</div>
+		      						<div class="data-block">	
+										<div class="data-item">
+											<label class="data-label">Некомбинированное производство</label>
+											<input type="checkbox" class="form-check-input">
+										</div>
+		      						
+		      							<div class="data-item">
+											<label class="data-label">Договор поставки</label>
+											<input type="checkbox" class="form-check-input">
+										</div>
+									</div>
+		      						<div class="data-block">
+										<div class="data-item">
+											<label class="data-label">Передача</label>
+											<input type="checkbox" class="form-check-input">
+										</div>
+										<div class="data-item">
+											<label class="data-label">Сбыт</label>
+											<input type="checkbox" class="form-check-input">
+										</div>
+		      						</div>
+		      					</div>
+								<div class="data-item">
+			      					<label class="data-label">Территория действия ТЗ</label>
+								  	<input type="text" name="" class="data-value stretch">
+								</div>
+	      					</div>
+	      					<div class="data-block">
+								<h5>Дифференциация тарифов:</h5>
+								<div class="data-item">
+									<label class="data-label">без дифференциации</label>
+									<input type="checkbox" class="form-check-input">
+								</div>
+								<div class="data-item">
+									<label class="data-label">до тепловых пунктов</label>
+									<input type="checkbox" class="form-check-input">
+								</div>
+								<div class="data-item">
+									<label class="data-label">после тепловых пунктов</label>
+									<input type="checkbox" class="form-check-input">
+								</div>
+							</div>
+	      				</div>
+	      				<div class="data-block border-block">
+	      					<table class="table-inp-stretch" style="width:100%;">
+	      						<tbody>
+	      							<tr>
+	      								<td>Года</td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled value="01.01.2018"></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled value="01.01.2019"></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled value="01.01.2020"></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled value="01.01.2021"></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled value="01.01.2022"></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled value="01.01.2023"></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled value="01.01.2024"></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled value="01.01.2025"></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled value="01.01.2026"></div></td>
+	      							</tr>
+	      							<tr>
+	      								<td>НВВ, <span class="data-unit">тыс. руб.</span></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+	      							</tr>
+	      							<tr>
+	      								<td colspan="6">НВВ по расчёту, <span class="data-unit">тыс. руб.</span></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+		      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+	      							</tr>
+	      						</tbody>
+	      					</table>
+	      				</div>
+	      			</div>
+	      			<div class="scroll-block-wrapper" style="max-height: 42vh;">
+	      				<div class="data-block scroll-block">
+					  		<div class="accordion data-block">
+							  	<div class="border-block">
+						      		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel26" aria-expanded="false">Фактические расходы на финансирование в соответствии с ИП ТС</button>
+								    <div id="panel26" class="accordion-collapse collapse">
+								      	<div class="accordion-body">
+								      		<div class="data-block">
+					      						<table class="table-inp-stretch" style="width:100%;">
+							      					<thead>
+							      						<tr>
+							      							<th></th>
+							      							<th>I полугодие</th>
+							      							<th>II полугодие</th>
+							      							<th>Год</th>
+							      						</tr>
+							      					</thead>
+							      					<tbody>
+							      						<tr>
+							      							<td>Фактические расходы, всего, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>1. Прибыль (расходы на капитальные вложения (инвестиции) - собственные средства, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>2. Амортизационные отчисления, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"  disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- амортизация на финансирование капитальных вложений</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- амортизационные отчисления, направленные на погашение и обслуживание кредитов и заёмных средств</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>3. Бюджетные средства, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- федеральный бюджет</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- региональный бюджет</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- местный бюджет</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>4. Привлечённые средства (расходы на погашение и обслуживание заёмных средств), <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- кредиты</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- займы</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- прочие привлечённые средства</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- средства, полученные от реализации ценных бумаг</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>5. Плата за подключение, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>6. Прочие средства, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      					</tbody>
+							      				</table>
+							      			</div>
+								      	</div>
+								    </div>
+							  	</div>
+							  	<div class=" border-block">
+					      			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel27" aria-expanded="false">Фактические расходы на финансирование в соответствии с КС</button>
+							    	<div id="panel27" class="accordion-collapse collapse" >
+							      		<div class="accordion-body">
+							        		<div class="data-block">
+					      						<table class="table-inp-stretch" style="width:100%;">
+							      					<thead>
+							      						<tr>
+							      							<th></th>
+							      							<th>I полугодие</th>
+							      							<th>II полугодие</th>
+							      							<th>Год</th>
+							      						</tr>
+							      					</thead>
+							      					<tbody>
+							      						<tr>
+							      							<td>Фактические расходы, всего, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>1. Прибыль (расходы на капитальные вложения (инвестиции) - собственные средства, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>2. Амортизационные отчисления, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"  disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- амортизация на финансирование капитальных вложений</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- амортизационные отчисления, направленные на погашение и обслуживание кредитов и заёмных средств</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>3. Бюджетные средства, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- федеральный бюджет</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- региональный бюджет</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- местный бюджет</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>4. Привлечённые средства (расходы на погашение и обслуживание заёмных средств), <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- кредиты</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- займы</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- прочие привлечённые средства</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>- средства, полученные от реализации ценных бумаг</td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>5. Плата за подключение, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      					</tbody>
+							      				</table>
+							      			</div>
+							     		</div>
+							    	</div>
+							  	</div>
+							  	<div class="border-block">
+					      			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel28" aria-expanded="false">Фактический объем дотаций и полученные доходы сверх реализации по утвержденным тарифам</button>
+							    	<div id="panel28" class="accordion-collapse collapse" >
+							      		<div class="accordion-body">
+							        		<div class="data-block">
+					      						<table class="table-inp-stretch" style="width:100%;">
+							      					<thead>
+							      						<tr>
+							      							<th></th>
+							      							<th>I полугодие</th>
+							      							<th>II полугодие</th>
+							      							<th>Год</th>
+							      						</tr>
+							      					</thead>
+							      					<tbody>
+							      						<tr>
+							      							<td>1. Фактический объём дотаций из всех уровней бюджета, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>2. Фактические доходы, полученные сверх реализации по утверждённым тарифам, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" ></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      					</tbody>
+							      				</table>
+							      			</div>
+							      		</div>
+							    	</div>
+							  	</div>
+							</div>
+						</div>
+					</div>
+	      		</div>
+	    		<div class="modal-footer">
+			        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
+			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Сохранить</button>
+			    </div>
+	    	</div>
+	    </div>
+	</div>
+
 
 	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>

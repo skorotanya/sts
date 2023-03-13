@@ -64,6 +64,30 @@ $(document).ready(function () {
       showModal('editСostsData');
     } );
 
+    /* Double click on row nvvTable */
+    $('#nvvTable tbody').on('dblclick', 'tr', function () {
+      showModal('editNvvData');
+    } );
+
+    /* Double click on row otherCostsTable */
+    $('#otherCostsTable tbody').on('dblclick', 'tr', function () {
+      showModal('editOtherCostsData');
+    } );
+
+    /* Click on Add button */
+     $('.bttn-edit-data').on('click', (e) => {
+      let activeTabId = $('.tab-pane.active').attr('id');
+      switch (activeTabId) {
+        case 'costsCalcTab' : showModal('editСostsData');
+                              break;
+        case 'nvvTab' : showModal('editNvvData');
+                        break;
+        case 'otherCostsTab' : showModal('editOtherCostsData');
+                        break;
+      }
+      
+    } );
+
 
 });
 
