@@ -35,6 +35,11 @@ $(document).ready(function () {
 
     // event listeners on current page
 
+    /* Double click on row ecoTable */
+    $('#ecoTable tbody').on('dblclick', 'tr', function () {
+      showModal('editEcoData');
+    } );
+
 
 });
 

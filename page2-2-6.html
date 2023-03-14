@@ -234,7 +234,7 @@
 				</div>
 				<div class="table-block">
 					<div class="table-buttons ecoTable-buttons"></div>
-					<table id="ecoTable" class="display compact" style="width:100%">
+					<table id="ecoTable" class="display compact table-clicked" style="width:100%">
 					    <thead>
 					        <tr>
 					            <th>Номер</th>
@@ -559,6 +559,516 @@
 	      </div>
 	    </div>
 	  </div>
+	</div>
+
+			<!-- Modal Load Data -->
+	<div class="modal wide-modal fade show" id="editEcoData" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
+	  	<div class="modal-dialog modal-dialog-centered">
+	    	<div class="modal-content">
+	      		<div class="modal-header"> 
+			        <h3 class="modal-title" id="editDataLabel">Экологические показатели организации ТСО</h3>
+			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			     </div>
+			     <div class="modal-body">
+	      			<div class="data-block static-block data-params">
+	      				<div class="data-row">
+	      					<div class="data-item stretch">
+		      					<label class="data-label">Наименование ТСО</label>
+		      					<div class="data-value stretch">
+		      						<select class="selectpicker" id="paramNumberTso" data-width="100%" data-live-search="true" placeholder="УНОМ ТСО - Наименование">
+									  	<option value="2020">2020</option>
+									  	<option value="2021">2021</option>
+									  	<option value="2022" selected>2022</option>
+									  	<option value="2023">2023</option>
+									</select>
+		      					</div>
+							  	
+							</div>
+							<div class="data-item">
+								<label for="paramCalcYear" class="data-label">Расчётный год:</label>
+								<select class="selectpicker param-calc-year" data-width="140px" id="paramCalcYear" value="2022">
+								  <option value="2020">01.01.2021</option>
+								  <option value="2021">01.01.2022</option>
+								  <option value="2022" selected>01.01.2023</option>
+								  <option value="2023">01.01.2024</option>
+								</select>
+							</div>
+							<div class="data-item">
+								<div class="note">Базовый год - <span class="note-base-year">2022 (01.01.2023)</span>.</div>
+							</div>
+	      				</div>
+		      		</div>
+      				<div class="scroll-block-wrapper" style="max-height: 70vh;">
+	      				<div class="data-block scroll-block">
+					  		<div class="accordion data-block">
+							  	<div class="border-block">
+						      		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel1" aria-expanded="false">Выбросы загрязняющих веществ (ЗВ) в атмосферу</button>
+								    <div id="panel1" class="accordion-collapse collapse">
+								      	<div class="accordion-body">
+								      		<div class="data-block">
+					      						<table class="table-inp-stretch" style="width:100%;">
+							      					<thead>
+							      						<tr>
+							      							<th></th>
+							      							<th>оксиды азота (в пересчете на NO2 - 301)</th>
+							      							<th>азота диоксид (0301)</th>
+							      							<th>азота оксид (0304)</th>
+							      							<th>углерода оксид (0337)</th>
+							      							<th>бенз(а)пирен (0703)</th>
+							      							<th>серы диоксид (0330)</th>
+							      							<th>мазутная зола (в пересчете на ванадий – 2904)</th>
+							      							<th>зола углей (3714)</th>
+							      							<th>пыль неорганическая с содержанием SiO2 20-70% (код 2908)</th>
+							      							<th>прочие ЗВ</th>
+							      						</tr>
+							      					</thead>
+							      					<tbody>
+							      						<tr>
+							      							<td>разрешенные, <span class="data-unit">т/год</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>фактические, <span class="data-unit">т/год</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td colspan="2"></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>отличие (разрешенные – факт), <span class="data-unit">т/год</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td colspan="2"></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      					</tbody>
+							      				</table>
+											</div>
+								      	</div>
+								    </div>
+							  	</div>
+							  	<div class=" border-block">
+					      			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel2" aria-expanded="false">Суммарные выбросы парниковых газов</button>
+							    	<div id="panel2" class="accordion-collapse collapse" >
+							      		<div class="accordion-body">
+							        		<div class="data-block">
+					      						<table class="table-inp-stretch" style="width:100%;">
+							      					<thead>
+							      						<tr>
+							      							<th></th>
+							      							<th>Год</th>
+							      						</tr>
+							      					</thead>
+							      					<tbody>
+							      						<tr>
+							      							<td>Выбросы парниковых газов, <span class="data-unit">т/год</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      					</tbody>
+							      				</table>
+							      			</div>
+							     		</div>
+							    	</div>
+							  	</div>
+							  	<div class="border-block">
+					      			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel3" aria-expanded="false" >Сведения о текущих затратах на охрану окружающей среды</button>
+							    	<div id="panel3" class="accordion-collapse collapse" >
+							      		<div class="accordion-body">
+							        		<div class="data-block">
+							      				<div class="accordion data-block">
+												  	<div class="border-block">
+											      		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel3-1" aria-expanded="false"> Природоохранные работы/услуги для собственных нужд организации</button>
+													    <div id="panel3-1" class="accordion-collapse collapse">
+													      	<div class="accordion-body">
+													      		<div class="data-block">
+										      						<table style="width:100%;">
+												      					<thead>
+												      						<tr>
+												      							<th rowspan="2"></th>
+												      							<th rowspan="2">Текущие суммарные затраты за год</th>
+												      							<th rowspan="2">Текущие (эксплуатационные) затраты за год (всего)</th>
+												      							<th colspan="2">включая затраты</th>
+												      							<th rowspan="2">Текущие (эксплуатационные) затраты за год за счет собственных средств</th>
+												      							<th rowspan="2">Оплата услуг природоохранного назначения</th>
+												      							<th rowspan="2">Затраты на капитальный ремонт основных фондов</th>
+												      							<th rowspan="2">Выручка (поступления) от продажи побочной продукции</th>
+												      							<th rowspan="2">Амортизационные отчисления на восстановление основных фондов</th>
+												      						</tr>
+												      						<tr>
+												      							<th>материальные</th>
+												      							<th>оплату труда и отчисления</th>
+												      						</tr>
+												      					</thead>
+												      					<tbody>
+												      						<tr>
+												      							<td>Всего, <span class="data-unit">тыс. руб.</span></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      						</tr>
+												      						<tr>
+												      							<td>в том числе для целей:</td>
+												      							<td colspan="9"></td>
+												      						</tr>
+												      						<tr>
+												      							<td>- на охрану атмосферного воздуха и предотвращение<br>изменения климата</td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      						</tr>
+												      						<tr>
+												      							<td>- на сбор и очистку сточных вод</td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      						</tr>
+												      						<tr>
+												      							<td>- на обращение с отходами</td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      						</tr>
+												      						<tr>
+												      							<td>- на защиту и реабилитацию земель, поверхностных<br>и подземных водобращение с отходами</td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      						</tr>
+												      						<tr>
+												      							<td>- на защиту окружающей среды от шумового,<br>вибрационного и других видов физического<br>воздействия</td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      						</tr>
+												      						<tr>
+												      							<td>- на сохранение биоразнообразия и охрану<br>природных территорий</td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      						</tr>
+												      						<tr>
+												      							<td>- на обеспечение радиационной безопасности<br>окружающей среды</td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      						</tr>
+												      						<tr>
+												      							<td>- на научно-исследовательскую деятельность и<br>разработки по снижению негативных<br>антропогенных воздействий на окружающую среду</td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      						</tr>
+												      						<tr>
+												      							<td>- на другие направления деятельности в сфере<br>охраны окружающей среды</td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      						</tr>
+												      					</tbody>
+												      				</table>
+												      			</div>
+													      	</div>
+													    </div>
+												  	</div>
+												  	<div class=" border-block">
+										      			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel3-2" aria-expanded="false"> Специализированные природоохранные услуги</button>
+												    	<div id="panel3-2" class="accordion-collapse collapse" >
+												      		<div class="accordion-body">
+												        		<div class="data-block">
+										      						<table style="width:100%;">
+												      					<thead>
+												      						<tr>
+												      							<th rowspan="2"></th>
+												      							<th rowspan="2">Текущие суммарные затраты за год</th>
+												      							<th rowspan="2">Текущие (эксплуатационные) затраты за год (всего)</th>
+												      							<th colspan="2">включая затраты</th>
+												      							<th rowspan="2">Текущие (эксплуатационные) затраты за год за счет собственных средств</th>
+												      							<th rowspan="2">Оплата услуг природоохранного назначения</th>
+												      							<th rowspan="2">Затраты на капитальный ремонт основных фондов</th>
+												      							<th rowspan="2">Выручка (поступления) от продажи побочной продукции</th>
+												      							<th rowspan="2">Амортизационные отчисления на восстановление основных фондов</th>
+												      						</tr>
+												      						<tr>
+												      							<th>материальные</th>
+												      							<th>оплату труда и отчисления</th>
+												      						</tr>
+												      					</thead>
+												      					<tbody>
+												      						<tr>
+												      							<td>Всего, <span class="data-unit">тыс. руб.</span></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      						</tr>
+												      						<tr>
+												      							<td>в том числе для целей:</td>
+												      							<td colspan="9"></td>
+												      						</tr>
+												      						<tr>
+												      							<td>- на охрану атмосферного воздуха и предотвращение<br>изменения климата</td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      						</tr>
+												      						<tr>
+												      							<td>- на сбор и очистку сточных вод</td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      						</tr>
+												      						<tr>
+												      							<td>- на обращение с отходами</td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      						</tr>
+												      						<tr>
+												      							<td>- на защиту и реабилитацию земель, поверхностных<br>и подземных водобращение с отходами</td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      						</tr>
+												      						<tr>
+												      							<td>- на защиту окружающей среды от шумового,<br>вибрационного и других видов физического<br>воздействия</td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      						</tr>
+												      						<tr>
+												      							<td>- на сохранение биоразнообразия и охрану<br>природных территорий</td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      						</tr>
+												      						<tr>
+												      							<td>- на обеспечение радиационной безопасности<br>окружающей среды</td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      						</tr>
+												      						<tr>
+												      							<td>- на научно-исследовательскую деятельность и<br>разработки по снижению негативных<br>антропогенных воздействий на окружающую среду</td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      						</tr>
+												      						<tr>
+												      							<td>- на другие направления деятельности в сфере<br>охраны окружающей среды</td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      							<td></td>
+												      						</tr>
+												      					</tbody>
+												      				</table>
+												      			</div>
+												     		</div>
+												    	</div>
+												  	</div>
+												</div>
+							      			</div>
+							      		</div>
+							    	</div>
+							  	</div>
+							  	<div class="border-block">
+						      		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel4" aria-expanded="false">Сведения о плате за негативное воздействие на окружающую среду</button>
+							    	<div id="panel4" class="accordion-collapse collapse">
+							      		<div class="accordion-body">
+							        		<div class="data-block">
+					      						<table class="table-inp-stretch" style="width:100%;">
+							      					<thead>
+							      						<tr>
+							      							<th rowspan="2"></th>
+							      							<th rowspan="2">Всего</th>
+							      							<th colspan="3">в том числе за выбросы / сбросы / отходы</th>
+							      						</tr>
+							      						<tr>
+							      							<th>в пределах предельно допустимых</th>
+							      							<th>в пределах лимитов</th>
+							      							<th>превышающие установленные разрешениями</th>
+							      						</tr>
+							      					</thead>
+							      					<tbody>
+							      						<tr>
+							      							<td>Плата за выбросы загрязняющих веществ в атмосферный воздух, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>Плата за сбросы, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      						</tr>
+							      						<tr>
+							      							<td>Плата за размещение отходов, <span class="data-unit">тыс. руб.</span></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td></td>
+							      						</tr>
+							      					</tbody>
+							      				</table>
+							      				<div class="data-item justify-content-start">
+							      					<label class="data-label">Суммы средств, взысканные за нарушение законодательства в области охраны окружающей среды</label>
+							      					<input type="text" name="" class="data-value" disabled>
+							      					<span class="data-unit">тыс. руб.</span>
+							      				</div>
+							      			</div>
+							      		</div>
+							    	</div>
+							  	</div>
+							</div>
+						</div>
+					</div>
+	    		</div>
+	    		 <div class="modal-footer">
+			        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
+			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Сохранить</button>
+			      </div>
+	    	</div>
+	    </div>
 	</div>
 
 	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
