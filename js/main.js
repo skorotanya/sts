@@ -43,6 +43,20 @@ const hideModal = (modalName) => {
     modal.hide();
 };
 
+//show message window
+// parameters: message - message text
+//             type - message type ['info'(default), 'success', 'fault']
+const showMessage = (message, type = 'info') => {
+    let messageDiv = document.querySelector('#infoMessage .border-block');
+    let messageType = messageDiv.classList[1];
+    if (messageType != type) {
+        messageDiv.classList.remove(messageType);
+        messageDiv.classList.add(type);
+    }
+    let messageText = messageDiv.lastElementChild.innerText = message;
+    showModal('infoMessage');
+}
+
 
 /* TABS */
 /*

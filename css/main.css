@@ -810,7 +810,7 @@ div.dt-buttons {
 	font-weight: 300;
 }
 
-.info {
+a.info {
 	width: 20px;
 	height: 20px;
 	background-image: url(../images/info-circle.svg);
@@ -822,7 +822,6 @@ div.dt-buttons {
 
 .info-tooltip {
 	--bs-tooltip-bg: var(--active-color);
-
 }
 
 
@@ -1224,4 +1223,38 @@ td.dtfc-fixed-left{
 .accordion-button:focus, .accordion-button:active, .accordion-button:visited {
 	box-shadow: none;
 	border-color: var(--bs-border-color);
+}
+
+
+/* Modal Message */
+
+.modal .info {
+	--message-icon-color: var(--action-color);
+	border-color: var(--action-color);
+}
+.modal .success {
+	--message-icon-color: #26a916;
+	border-color: #26a916;
+}
+.modal .fault {
+	--message-icon-color: #e72f73;
+	border-color: #e72f73;
+}
+
+.message-icon {
+	width: 2.5rem;
+	height: 2.5rem;
+	margin: 1rem auto 0.5rem;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	color: var(--message-icon-color);
+}
+
+.message-text {
+	text-align: center;
+	width: 100%;
+	min-width: 500px;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
 }

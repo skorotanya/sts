@@ -60,5 +60,12 @@ $(document).ready(function () {
       showModal('editData');
     } );
 
+        // show message modal window
+    $('.bttn-excel-export').on('click', (e) => {
+       // showMessage('В рабочей версии здесь будет запускаться экспорт в excel.');
+       // showMessage('Файл excel выгружен.', 'success');
+       showMessage('Данные для экспорта ещё не выбраны.', 'fault');
+    });
+
 });
 
