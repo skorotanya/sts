@@ -90,6 +90,50 @@ $.extend( $.fn.dataTable.defaults, {
     language: {
         //url: 'https://cdn.datatables.net/plug-ins/1.13.1/i18n/ru.json',
         searchBuilder: {
+            "conditions": {
+                "string": {
+                    "startsWith": "начинается с",
+                    "contains": "содержит",
+                    "empty": "пусто",
+                    "endsWith": "заканчивается на",
+                    "equals": "равно",
+                    "not": "не",
+                    "notEmpty": "не пусто",
+                    "notContains": "не содержит",
+                    "notStartsWith": "не начинается на",
+                    "notEndsWith": "не заканчивается на"
+                },
+                "date": {
+                    "after": "после",
+                    "before": "до",
+                    "between": "между",
+                    "empty": "пусто",
+                    "equals": "равно",
+                    "not": "не",
+                    "notBetween": "не между",
+                    "notEmpty": "не пусто"
+                },
+                "number": {
+                    "empty": "пусто",
+                    "equals": "равно",
+                    "gt": "больше чем",
+                    "gte": "больше или равно чем",
+                    "lt": "меньше чем",
+                    "lte": "меньше или равно чем",
+                    "not": "не",
+                    "notEmpty": "не пусто",
+                    "between": "между",
+                    "notBetween": "не между"
+                },
+                "array": {
+                    "equals": "равно",
+                    "empty": "пусто",
+                    "contains": "содержит",
+                    "not": "не равно",
+                    "notEmpty": "не пусто",
+                    "without": "не содержит"
+                }
+            },
             title: {
                 0: 'Конструктор поиска',
                 _: 'Конструктор поиска (%d)'
@@ -97,7 +141,16 @@ $.extend( $.fn.dataTable.defaults, {
             button: {
                 0: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path d="M35.4 87.12l168.65 196.44A16.07 16.07 0 01208 294v119.32a7.93 7.93 0 005.39 7.59l80.15 26.67A7.94 7.94 0 00304 440V294a16.07 16.07 0 014-10.44L476.6 87.12A14 14 0 00466 64H46.05A14 14 0 0035.4 87.12z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>',
                 _: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path d="M35.4 87.12l168.65 196.44A16.07 16.07 0 01208 294v119.32a7.93 7.93 0 005.39 7.59l80.15 26.67A7.94 7.94 0 00304 440V294a16.07 16.07 0 014-10.44L476.6 87.12A14 14 0 00466 64H46.05A14 14 0 0035.4 87.12z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg><span class="filter-num">%d</span>'
-            }
+            },
+            add: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><title>Добавить условие</title><path fill="#5f2fe7" d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm80 224h-64v64a16 16 0 01-32 0v-64h-64a16 16 0 010-32h64v-64a16 16 0 0132 0v64h64a16 16 0 010 32z"/></svg>',
+            condition: 'Условие',
+            clearAll: 'Отменить всё',
+            delete: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><title>Удалить условие</title><path fill="#e72f73" d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm75.31 260.69a16 16 0 11-22.62 22.62L256 278.63l-52.69 52.68a16 16 0 01-22.62-22.62L233.37 256l-52.68-52.69a16 16 0 0122.62-22.62L256 233.37l52.69-52.68a16 16 0 0122.62 22.62L278.63 256z"/></svg>',
+            data: 'Столбец',
+            logicAnd: 'и',
+            logicOr: 'или',
+            value: 'Значение',
+            valueJoiner: 'и'
         }
     },
     
@@ -124,7 +177,7 @@ $.extend( $.fn.dataTable.defaults, {
 
 // init table as DataTable by table id and named options set
 // Available values of oType: 'simple-scroll', 'full', ...
-const initDataTable = (tId, oType, height = '550px', colsDefs) => {
+const initDataTable = (tId, oType, height = '55vh', colsDefs) => {
     let table;
 
     switch (oType) {
@@ -234,24 +287,49 @@ const initPageTables = (pageTables) => {
 // preloader on load page
 window.onload = () => {
     hidePreloader();
+
+    // show popup information about user with preloader
+    document.querySelector('.user-name').addEventListener('click', (e) => { 
+        showPreloader();
+        setTimeout(function(){
+            hidePreloader();
+            showModal('infoUser');
+        }, 500);
+    });
+
+    // show popup on user exit
+    document.querySelector('.user__exit').addEventListener('click', (e) => {
+        showModal('exitUser');
+    });
+
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
+
+
+    // ajust placement colVis and searchBuilder dropdown panes
+    document.querySelectorAll('.table-buttons button').forEach((el) => {el.addEventListener('click', (e) => {
+        
+       let pop = document.querySelector('.table-buttons .dt-button-collection');
+       let buttonBox = el.getBoundingClientRect();
+       let availBottom = window.innerHeight - buttonBox.top - el.offsetHeight;
+        pop.style.marginTop = "0px";
+        pop.style.left = buttonBox.right - pop.offsetWidth + "px";
+
+        if(pop.offsetHeight < availBottom) {
+            pop.style.top = buttonBox.bottom + "px";
+        }
+        else {
+            pop.style.top = buttonBox.top - pop.offsetHeight + "px";
+        }
+    })
+    });
+
 };
 
 
-// show popup information about user with preloader
-document.querySelector('.user-name').addEventListener('click', (e) => { 
-    showPreloader();
-    setTimeout(function(){
-        hidePreloader();
-        showModal('infoUser');
-    }, 500);
-});
 
 
-// show popup on user exit
-document.querySelector('.user__exit').addEventListener('click', (e) => {
-    showModal('exitUser');
-});
 
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
 
