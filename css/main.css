@@ -234,8 +234,6 @@ button:disabled, .bttn.disabled{
 }
 
 
-
-
 /* Page structure elements */
 
 .data-block, .data-block > form {
@@ -367,7 +365,7 @@ button:disabled, .bttn.disabled{
 .table-inp-stretch td:has(.input-cell) {
 	position: relative;
 	min-width: 80px;
-	height: 33px;
+	height: 38px;
 }
 
 .input-cell {
@@ -378,6 +376,7 @@ button:disabled, .bttn.disabled{
 	bottom: 0;
 	display: flex;
 	align-items: center;
+	padding: 0.2rem;
 }
 
 .table-inp-stretch .data-value {
@@ -828,8 +827,6 @@ a.info {
 	--bs-tooltip-bg: var(--active-color);
 }
 
-
-
 .table-block:has(.table-buttons) {
 	position: relative;
 	padding-right: 34px;
@@ -850,8 +847,6 @@ a.info {
 .table-clicked > tbody > tr {
 	cursor: pointer;
 } 
-
-
 
 /*.dt-buttons {margin-bottom: 5px;}*/
 
@@ -928,7 +923,6 @@ div.dt-button-collection button.dt-button.buttons-columnVisibility:not(.disabled
 div.dt-button-collection button.dt-button.buttons-columnVisibility.active:not(.disabled):hover:before, div.dt-button-collection button.dt-button.buttons-columnVisibility:not(.disabled):hover:before{
 	background-color: var(--light-color) !important;
 }
-
 
 
 /* Search Builder*/
@@ -1040,6 +1034,7 @@ div.dtb-popover-close:hover {
 
 th, td {
 	border: 1px solid rgba(0, 0, 0, 0.15);
+	padding: 0.2rem 0.3rem;
 }
 
 
@@ -1049,6 +1044,7 @@ thead {
 
 thead>tr>th, table.dataTable thead th {
 	text-align: center;
+	font-weight: 600;
 }
 
 td {
@@ -1064,8 +1060,12 @@ table {
 	border-collapse: collapse;
 }
 
-table.dataTable.display tbody td {
-	transition: box-shadow ease-in 300ms;
+table > tbody > tr:hover > td {
+	box-shadow: inset 0 0 0 9999px rgb(0 0 0 / 4%);
+}
+
+table.dataTable.display tbody td, table tbody td {
+	transition: box-shadow ease-in 100ms;
 }
 
 table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.sorting:before {
@@ -1090,7 +1090,6 @@ td.dtfc-fixed-left{
 
 /* Table summary */
 .table-summary {
-
 	align-items: baseline;
 	font-size: 0.9rem;
 }
@@ -1100,7 +1099,8 @@ td.dtfc-fixed-left{
 }
 
 .rows-count, h4 {
-	align-self: start;
+	align-self: baseline;
+    align-items: baseline;
 }
 
 .table-summary .data-table-block {
