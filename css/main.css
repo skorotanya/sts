@@ -364,7 +364,7 @@ button:disabled, .bttn.disabled{
 
 .table-inp-stretch td:has(.input-cell) {
 	position: relative;
-	min-width: 80px;
+	min-width: 87px;
 	height: 38px;
 }
 
@@ -848,6 +848,21 @@ a.info {
 	cursor: pointer;
 } 
 
+.scroll-table-wrapper {
+	overflow-x: scroll;
+}
+
+.scroll-table-wrapper table tr > *:first-child {
+	position: sticky;
+	left: 0;
+	background: #fff;
+	z-index: 1;
+}
+
+.scroll-table-wrapper table tr > th:first-child {
+	background: var(--light-color);
+}
+
 /*.dt-buttons {margin-bottom: 5px;}*/
 
 /* ColVis into checkboxes*/
@@ -864,8 +879,12 @@ a.info {
 div.dt-button-collection {
 	border-radius: 6px;
 	width: auto !important;
-
     position: fixed;
+    left: auto;
+    overflow: auto !important;
+    max-height: 360px;
+    min-height: 175px;
+    max-width: 700px;
 }
 
 div.dt-button-collection button.dt-button.buttons-columnVisibility:not(.disabled) {
@@ -944,7 +963,7 @@ div.dt-button-collection button.dt-button.buttons-columnVisibility.active:not(.d
     opacity: 0.8;
 }
 
-div.dtsb-searchBuilder { min-width: 900px; }
+/*div.dtsb-searchBuilder { min-width: 900px; }*/
 
 div.dtsb-searchBuilder .dtsb-titleRow {
 	padding-top: 0.5em;
@@ -974,6 +993,10 @@ div.dtsb-searchBuilder div.dtsb-group div.dtsb-logicContainer button.dtsb-clearG
 div.dtsb-searchBuilder div.dtsb-group div.dtsb-logicContainer button.dtsb-logic {
 	border: 2px solid;
     border-radius: 6px;
+}
+
+div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria {
+	flex-wrap: nowrap;
 }
 
 div.dtsb-searchBuilder div.dtsb-group div.dtsb-logicContainer button.dtsb-logic:hover {
@@ -1023,6 +1046,10 @@ div.dtb-popover-close {
 	background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
     border: 0px;
     opacity: .5;
+    position: relative;
+    display: inline-block;
+    float: right;
+    margin-left: 15px;
 }
 
 div.dtb-popover-close:hover {
@@ -1305,4 +1332,16 @@ td.dtfc-fixed-left{
 	min-width: 500px;
     margin-bottom: 1rem;
     font-size: 1.1rem;
+}
+
+.unom-name {
+	min-width: 450px;
+}
+
+@media (max-width: 1400px) {
+	.data-xxl-row {
+		flex-direction: row;
+		align-items: flex-start;
+		flex-wrap: wrap;
+	}
 }

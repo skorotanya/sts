@@ -1500,7 +1500,7 @@
 	      			
       					<div class="data-item stretch">
 	      					<label class="data-label">Уникальный номер тарифной зоны</label>
-	      					<div class="data-value stretch">
+	      					<div class="data-value stretch unom-name">
 	      						<select class="selectpicker" id="paramNumberTso" data-live-search="true" placeholder="УНОМ ТЗ">
 								  	<option value="2020">2020</option>
 								  	<option value="2021">2021</option>
@@ -1526,8 +1526,8 @@
 			      		<div class="data-block scroll-block">
 			      			<form>
 			      				<div class="data-row">
-			      					<div class="col-3">
-			      						<div class="data-block border-block me-1">
+			      					<div class="col-12 col-lg-3">
+			      						<div class="data-block border-block me-lg-1">
 				      						<h4>Территория действия ТЗ</h4>
 				      						<table>
 				      							<thead>
@@ -1553,12 +1553,12 @@
 				      						</table>
 				      					</div>
 			      					</div>
-			      					<div class="col-9">
-			      						<div class="data-block data-params ms-1">
+			      					<div class="col-12 col-lg-9">
+			      						<div class="data-block data-params ms-lg-1">
 
 							      			<div class="data-row border-block">
 							      				<h4>Виды деятельности</h4>
-							      				<div class="data-block">
+							      				<div class="data-block stretch">
 									      			<div class="data-item">
 														<label class="data-label">Комбинированное производство, более 25 МВт:</label>
 														<input type="checkbox" name="" checked class="form-check-input" disabled>
@@ -1569,7 +1569,7 @@
 													</div>
 													
 												</div>
-												<div class="data-block">
+												<div class="data-block stretch">
 													<div class="data-item">
 														<label class="data-label">Некомбинированное производство:</label>
 														<input type="checkbox" name="" class="form-check-input" disabled>
@@ -1579,7 +1579,7 @@
 														<input type="checkbox" name="" class="form-check-input" disabled>
 													</div>
 												</div>
-												<div class="data-block">
+												<div class="data-block stretch">
 													<div class="data-item">
 														<label class="data-label">Передача:</span></label>
 														<input type="checkbox" name="" class="form-check-input" disabled>
@@ -1639,16 +1639,16 @@
 								</div>
 								<ul class="nav nav-tabs" role="tablist">
 								  	<li class="nav-item" role="presentation">
-								    	<button class="nav-link active" data-bs-toggle="tab" data-bs-target="#zoneSrcListTab" type="button" role="tab" aria-controls="zoneSrcListTab" aria-selected="true">Перечень источников</button>
+								    	<button class="nav-link active" data-bs-toggle="tab" data-bs-target="#zoneSrcListTab" type="button" role="tab" aria-controls="zoneSrcListTab" aria-selected="true">Перечень <br class="d-lg-none">источников</button>
 								  	</li>
 								  	<li class="nav-item" role="presentation">
-								    	<button class="nav-link" data-bs-toggle="tab" data-bs-target="#zoneNetPartsTab" type="button" role="tab" aria-controls="zoneNetPartsTab" aria-selected="false">Перечень участков сетей</button>
+								    	<button class="nav-link" data-bs-toggle="tab" data-bs-target="#zoneNetPartsTab" type="button" role="tab" aria-controls="zoneNetPartsTab" aria-selected="false">Перечень <br class="d-lg-none">участков сетей</button>
 								  	</li>
 								  	<li class="nav-item" role="presentation">
-								    	<button class="nav-link" data-bs-toggle="tab" data-bs-target="#zoneNPSTab" type="button" role="tab" aria-controls="zoneNPSTab" aria-selected="false">Перечень НПС</button>
+								    	<button class="nav-link" data-bs-toggle="tab" data-bs-target="#zoneNPSTab" type="button" role="tab" aria-controls="zoneNPSTab" aria-selected="false">Перечень <br class="d-lg-none">НПС</button>
 								  	</li>
 								  	<li class="nav-item" role="presentation">
-								    	<button class="nav-link" data-bs-toggle="tab" data-bs-target="#zoneHeatPointTab" type="button" role="tab" aria-controls="zoneHeatPointTab" aria-selected="false">Перечень ТП</button>
+								    	<button class="nav-link" data-bs-toggle="tab" data-bs-target="#zoneHeatPointTab" type="button" role="tab" aria-controls="zoneHeatPointTab" aria-selected="false">Перечень <br class="d-lg-none">ТП</button>
 								  	</li>
 								</ul>
 								<div class="tab-content">
@@ -2306,14 +2306,16 @@
 			     <div class="modal-body">
 	      			<div class="data-row static-block data-params">
 	      			
-      					<div class="data-item">
+      					<div class="data-item stretch">
 	      					<label class="data-label">Наименование ТСО</label>
-						  	<select class="selectpicker" id="paramNumberTso" data-width="650px" data-live-search="true" placeholder="УНОМ ТСО - Наименование">
-							  	<option value="2020">2020</option>
-							  	<option value="2021">2021</option>
-							  	<option value="2022" selected>2022</option>
-							  	<option value="2023">2023</option>
-							</select>
+	      					<div class="data-value stretch unom-name">
+	      						<select class="selectpicker" id="paramNumberTso" data-live-search="true" placeholder="УНОМ ТСО - Наименование">
+								  	<option value="2020">2020</option>
+								  	<option value="2021">2021</option>
+								  	<option value="2022" selected>2022</option>
+								  	<option value="2023">2023</option>
+								</select>
+	      					</div>
 						</div>
 						<div class="data-item">
 							<label class="data-label">на</label>

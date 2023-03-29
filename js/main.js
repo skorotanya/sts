@@ -314,7 +314,7 @@ window.onload = () => {
        let buttonBox = el.getBoundingClientRect();
        let availBottom = window.innerHeight - buttonBox.top - el.offsetHeight;
         pop.style.marginTop = "0px";
-        pop.style.left = buttonBox.right - pop.offsetWidth + "px";
+        pop.style.right = window.innerWidth - buttonBox.right + "px";
 
         if(pop.offsetHeight < availBottom) {
             pop.style.top = buttonBox.bottom + "px";
