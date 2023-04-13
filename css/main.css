@@ -27,7 +27,7 @@ body {
 
 }
 
-p, .data-item, td {
+p, .data-item {
 	margin: 0;
 	line-height: 20px;
 	font-size: 16px;
@@ -119,6 +119,7 @@ h5 {
 	color: var(--text-color);
 	font-size: 1em;
 	margin-bottom: 0;
+	margin-top: 0.2rem;
 }
 
 /* Buttons */
@@ -233,6 +234,12 @@ button:disabled, .bttn.disabled{
 	box-shadow: none;
 }
 
+
+.bttn-burger {
+	position: absolute;
+	left: -14px;
+	top: -4px;
+}
 
 /* Page structure elements */
 
@@ -781,6 +788,10 @@ border-left: 6px solid var(--action-color);
 
 .tab-content {
 	padding-top: 15px;
+}
+
+.tab-content:has(.bttn-burger) > .tab-pane h3 {
+	margin-left: 45px;
 }
 
 /* Table parameters */
