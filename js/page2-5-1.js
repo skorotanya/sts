@@ -29,7 +29,8 @@ $(document).ready(function () {
       columns: [],
       modal: '',
       tab: true,
-      firstTab: true
+      firstTab: true,
+      accordionId: ''
     },
     {
       name: 'loadsByYear',
@@ -37,7 +38,8 @@ $(document).ready(function () {
       columns: [],
       modal: '',
       tab: true,
-      firstTab: false
+      firstTab: false,
+      accordionId: ''
     },
     {
       name: 'equipment',
@@ -45,7 +47,8 @@ $(document).ready(function () {
       columns: [],
       modal: '',
       tab: true,
-      firstTab: false
+      firstTab: false,
+      accordionId: ''
     },
     {
       name: 'loadsSchema',
@@ -53,7 +56,8 @@ $(document).ready(function () {
       columns: [],
       modal: '',
       tab: true,
-      firstTab: false
+      firstTab: false,
+      accordionId: ''
     },
     {
       name: 'automation',
@@ -61,7 +65,8 @@ $(document).ready(function () {
       columns: [],
       modal: '',
       tab: true,
-      firstTab: false
+      firstTab: false,
+      accordionId: ''
     },
     {
       name: 'resources',
@@ -69,7 +74,8 @@ $(document).ready(function () {
       columns: [],
       modal: '',
       tab: true,
-      firstTab: false
+      firstTab: false,
+      accordionId: ''
     },
     {
       name: 'development',
@@ -77,7 +83,117 @@ $(document).ready(function () {
       columns: [],
       modal: '',
       tab: true,
-      firstTab: false
+      firstTab: false,
+      accordionId: ''
+    },
+    {
+      name: 'listSwitchHP',
+      type: 'simple-scroll',
+      columns: [],
+      height: '40vh',
+      modal: 'editSwitchHP',
+      tab: false,
+      firstTab: true,
+      accordionId: ''
+    },
+    {
+      name: 'switchCustomers',
+      type: 'full',
+      columns: [],
+      modal: 'editLoadsData',
+      tab: false,
+      firstTab: true,
+      accordionId: ''
+    },
+    {
+      name: 'heatEquip',
+      type: 'simple-scroll',
+      columns: [],
+      height: '22vh',
+      modal: 'editData',
+      tab: false,
+      firstTab: false,
+      accordionId: 'panel5-1'
+    },
+    {
+      name: 'pumpEquip',
+      type: 'simple-scroll',
+      columns: [],
+      height: '22vh',
+      modal: 'editData',
+      tab: false,
+      firstTab: false,
+      accordionId: 'panel5-2'
+    },
+    {
+      name: 'resAccount',
+      type: 'simple-scroll',
+      columns: [],
+      height: '22vh',
+      modal: 'editData',
+      tab: false,
+      firstTab: false,
+      accordionId: 'panel7'
+    },
+    {
+      name: 'docsFotos',
+      type: 'simple-scroll',
+      columns: [],
+      height: '22vh',
+      modal: 'editData',
+      tab: false,
+      firstTab: false,
+      accordionId: 'panel9'
+    },
+    {
+      name: 'selectSources',
+      type: 'simple-scroll',
+      columns: [],
+      height: '20vh',
+      modal: 'tableConstructor',
+      tab: false,
+      firstTab: true,
+      accordionId: ''
+    },
+    {
+      name: 'allSources',
+      type: 'simple-scroll',
+      columns: [],
+      height: '22vh',
+      modal: 'tableConstructor',
+      tab: false,
+      firstTab: true,
+      accordionId: ''
+    },
+    {
+      name: 'selectHP',
+      type: 'simple-scroll',
+      columns: [],
+      height: '20vh',
+      modal: 'tableConstructor',
+      tab: false,
+      firstTab: true,
+      accordionId: ''
+    },
+    {
+      name: 'allHP',
+      type: 'simple-scroll',
+      columns: [],
+      height: '22vh',
+      modal: 'tableConstructor',
+      tab: false,
+      firstTab: true,
+      accordionId: ''
+    },
+    {
+      name: 'selectCustomers',
+      type: 'simple-scroll',
+      columns: [],
+      height: '20vh',
+      modal: 'tableConstructor',
+      tab: false,
+      firstTab: true,
+      accordionId: ''
     }
   ];
   
@@ -136,6 +252,26 @@ $(document).ready(function () {
       document.querySelector('#calcYear').value = this.children[0].innerText;
 
     } );
+
+    // Double click on row loadsByYearTable 
+    $('#loadsByYearTable tbody').on('dblclick', 'tr', function () {
+      showModal('editLoadsData');
+    } );
+
+    // show modal window for edit data
+    $('.bttn-group-event').on('click', (e) => {
+        showModal('editGroupEventData');
+    });
+
+      // Double click on row developmentTable 
+    $('#developmentTable tbody').on('dblclick', 'tr', function () {
+      showModal('editDevelopmentData');
+    } );
+
+    // show modal window for constructor
+    $('.bttn-constructor').on('click', (e) => {
+        showModal('tableConstructor');
+    });
 
 
 

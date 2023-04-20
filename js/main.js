@@ -270,6 +270,13 @@ const initPageTables = (pageTables) => {
                 adjustColumns(tblId);
             });
         };
+        if(tbl.accordionId !='') {
+            // adjust table columns after showing tab for edit data
+            let accEl = document.querySelector('#' + tbl.accordionId);
+            accEl.addEventListener('shown.bs.collapse', event => {
+                adjustColumns(tblId);
+            });
+        };
         if(tbl.modal !='' && tbl.firstTab) {
             // adjust table columns after showing modal window for edit data
             let mdlEl = document.getElementById(tbl.modal);

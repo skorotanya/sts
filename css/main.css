@@ -212,6 +212,10 @@ button.dt-button:active:not(.disabled), button.dt-button:active:not(.disabled):h
 	background-image: url(../images/close-circle.svg);
 }
 
+.bttn-icon-goto {
+	background-image: url(../images/goto-circle.svg);
+}
+
 button:disabled, .bttn.disabled{
 	pointer-events: none;
 	opacity: 0.5;
@@ -386,7 +390,7 @@ button:disabled, .bttn.disabled{
 	padding: 0.2rem;
 }
 
-.table-inp-stretch .data-value {
+.table-inp-stretch .data-value, .table-inp-stretch .bootsrap-select  {
 	width: 100%;
 }
  
@@ -481,6 +485,35 @@ input[disabled], .form-check-input[disabled], .bootstrap-select > .btn.dropdown-
 
 .bootstrap-select.disabled {
 	cursor: default;
+}
+
+.data-switcher {
+	height: 20px;
+	width: 34px;
+	min-width: 34px;
+	border-radius: 20px;
+	border: 1px solid var(--shad-color);
+	background-color: #fff;
+	background-image: url(../images/circle.svg);
+	background-position: left center;
+	background-repeat: no-repeat;
+	appearance: none;
+	transition: 200ms ease-in;
+	cursor: pointer;
+}
+
+.data-switcher:focus {
+	border-color: var(--action-color);
+	box-shadow: none;
+}
+
+.data-switcher::active {
+	filter: none;
+}
+
+.data-switcher:checked {
+background-color: var(--action-color);
+background-position: right center;
 }
 
 
