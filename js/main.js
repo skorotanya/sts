@@ -270,7 +270,7 @@ const initPageTables = (pageTables) => {
                 adjustColumns(tblId);
             });
         };
-        if(tbl.accordionId !='') {
+        if(tbl.accordionId && tbl.accordionId !='') {
             // adjust table columns after showing tab for edit data
             let accEl = document.querySelector('#' + tbl.accordionId);
             accEl.addEventListener('shown.bs.collapse', event => {

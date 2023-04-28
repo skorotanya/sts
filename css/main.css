@@ -498,7 +498,7 @@ input[disabled], .form-check-input[disabled], .bootstrap-select > .btn.dropdown-
 	background-position: left center;
 	background-repeat: no-repeat;
 	appearance: none;
-	transition: 200ms ease-in;
+	transition: 150ms ease-in;
 	cursor: pointer;
 }
 
@@ -514,6 +514,21 @@ input[disabled], .form-check-input[disabled], .bootstrap-select > .btn.dropdown-
 .data-switcher:checked {
 background-color: var(--action-color);
 background-position: right center;
+}
+
+span.data-array {
+	border: 1px solid var(--shad-color);
+    border-radius: 6px;
+    padding: 0.3rem;
+    line-height: 20px;
+    text-align: left;
+    min-height: 22vh;
+}
+
+span.data-array:focus-visible {
+	border-color: var(--action-color);
+	box-shadow: none;
+	outline: none;
 }
 
 
