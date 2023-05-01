@@ -523,14 +523,24 @@ span.data-array {
     line-height: 20px;
     text-align: left;
     min-height: 22vh;
+    line-height: 29px;
+    font-weight: 300;
 }
 
-span.data-array:focus-visible {
+span.data-array:focus-visible, textarea.data-array:focus-visible {
 	border-color: var(--action-color);
 	box-shadow: none;
 	outline: none;
 }
 
+textarea.data-array {
+    resize: none;
+    min-height: 22vh;
+    height: 22vh;
+    overflow-y: hidden;
+    line-height: 29px;
+    font-weight: 300;
+}
 
 /* new bootstrap-select */
 

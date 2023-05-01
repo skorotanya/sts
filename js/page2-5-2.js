@@ -80,6 +80,26 @@ $(document).ready(function () {
       tab: false,
       firstTab: true,
       accordionId: ''
+    },
+    {
+      name: 'allHP',
+      type: 'full',
+      columns: [],
+      height: '22vh',
+      modal: 'tableConstructor',
+      tab: false,
+      firstTab: true,
+      accordionId: ''
+    },
+    {
+      name: 'selectCustomers',
+      type: 'simple-scroll',
+      columns: [],
+      height: '22vh',
+      modal: 'tableConstructor',
+      tab: false,
+      firstTab: true,
+      accordionId: ''
     } /* ,
     {
       name: 'switchCustomers',
@@ -155,16 +175,6 @@ $(document).ready(function () {
       type: 'simple-scroll',
       columns: [],
       height: '22vh',
-      modal: 'tableConstructor',
-      tab: false,
-      firstTab: true,
-      accordionId: ''
-    },
-    {
-      name: 'selectCustomers',
-      type: 'simple-scroll',
-      columns: [],
-      height: '20vh',
       modal: 'tableConstructor',
       tab: false,
       firstTab: true,
@@ -248,7 +258,14 @@ $(document).ready(function () {
         showModal('tableConstructor');
     });
 
+    // Adjust textarea height on content
+    $('textarea.data-array').on('keyup', function(){
+      let rowCount = this.value.split('\n').length;
+      let newHeight = (5 + rowCount*20);
+      let parentElem = this.parentNode;
+        parentElem.children[0].style.height = newHeight + "px";
+        parentElem.children[1].style.height = newHeight + "px";  
+    });
 
 
 });
-
