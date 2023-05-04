@@ -224,12 +224,12 @@ $(document).ready(function () {
       document.querySelector('#nameCustomer').innerText = this.children[1].innerText;
     } );
 
-   /* $('#checkHasBattery').change(function(){
-      let inp = document.querySelector('#inpSizeBattery');
+    $('#checkInProgram').change(function(){
+      let inp = document.querySelector('#inpProgramYear');
       inp.value = '';
       inp.disabled = !this.checked;
     } );
-
+/*
     // Double click on row HNdistribTable 
     $('#HNdistribTable tbody').on('dblclick', 'tr', function () {
       showModal('editDistribData');

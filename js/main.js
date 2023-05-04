@@ -87,6 +87,7 @@ $.extend( $.fn.dataTable.defaults, {
     scrollCollapse: true,
     paging: false,
     info: false,
+    fixedColumns: true,
     language: {
         //url: 'https://cdn.datatables.net/plug-ins/1.13.1/i18n/ru.json',
         searchBuilder: {
@@ -194,7 +195,6 @@ const initDataTable = (tId, oType, height = '55vh', colsDefs) => {
                 stateSave: true,
                 select: true,
                 orderCellsTop: true,
-                fixedColumns: true,
                 dom: 'Brt',
                 initComplete: function () {
                     // Apply the search
