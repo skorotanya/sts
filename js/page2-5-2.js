@@ -248,10 +248,7 @@ $(document).ready(function () {
         showModal('editGroupEventData');
     });
 
-      // Double click on row developmentTable 
-    $('#developmentTable tbody').on('dblclick', 'tr', function () {
-      showModal('editDevelopmentData');
-    } );
+
 */
     // show modal window for constructor
     $('.bttn-constructor').on('click', (e) => {
@@ -267,5 +264,9 @@ $(document).ready(function () {
         parentElem.children[1].style.height = newHeight + "px";  
     });
 
+    // show modal window for edit data
+    $('.bttn-switch-prog').on('click', (e) => {
+        showModal('switchProgram');
+    });
 
 });

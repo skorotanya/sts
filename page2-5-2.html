@@ -3648,7 +3648,7 @@
 												      					<div class="data-item data-item-right flex-wrap flex-xl-nowrap">
 												      						<button type="button" class="bttn mb-1 mb-xl-0">Добавить связь с программой</button>
 												      						<button type="button" class="bttn mb-1 mb-xl-0">Переключить программу</button>
-												      						<button type="button" class="bttn mb-1 mb-xl-0">Переключить программу по группам потребителей</button>
+												      						<button type="button" class="bttn mb-1 mb-xl-0 bttn-switch-prog">Переключить программу по группам потребителей</button>
 												      					</div>
 												      				</div>
 												      				<div class="scroll-table-wrapper">
@@ -3763,69 +3763,174 @@
 	    </div>
 	</div>
 
-	<div class="modal modal-2 fade show" id="editDistribData" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
+	<div class="modal modal-2 fade show" id="switchProgram" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
 	  <div class="modal-dialog">
 	    <div class="modal-content">
 	      <div class="modal-header">
-	        <h3 class="modal-title" id="editDataLabel">Распределительные тепловые сети</h3>
+	        <h3 class="modal-title" id="editDataLabel">Переключение программ по группам потребителей</h3>
 	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 	      </div>
 	      <div class="modal-body">
 	        <div class="data-block">
-	        	<div class="data-item">
-	        		<label class="data-label">Расчетный год</label>
-					<input type="text" class="data-value" id="calcYear" disabled value="01.01.2026">
+	        	<div class="data-block static-block">
+        			<div class="data-item">
+		        		<label class="data-label">Уникальные номера потребителей:</label>
+      					<div class="data-value unom-name stretch">
+      						<select class="selectpicker" id="paramNumberTso" data-live-search="true" multiple="true" placeholder="Выберите перечень УНОМ П">
+							  	<option value="2020">2020</option>
+							  	<option value="2021">2021</option>
+							  	<option value="2022">2022</option>
+							  	<option value="2023">2023</option>
+							  	<option value="2023">2024</option>
+							  	<option value="2023">2025</option>
+							  	<option value="2023">2026</option>
+							  	<option value="2023">2027</option>
+							  	<option value="2023">2028</option>
+							  	<option value="2023">2029</option>
+							  	<option value="2023">2030</option>
+							</select>
+      					</div>
+		        	</div>
+	        		<div class="data-row">
+	        			<div class="data-item">
+			        		<label class="data-label">Уникальные номера потребителей:</label>
+	      					<div class="data-value">
+	      						<select class="selectpicker" id="paramNumberTso" data-live-search="true" placeholder="Выберите УНОМ ПР">
+								  	<option value="2020">2020</option>
+								  	<option value="2021">2021</option>
+								  	<option value="2022">2022</option>
+								  	<option value="2023">2023</option>
+								  	<option value="2023">2024</option>
+								  	<option value="2023">2025</option>
+								  	<option value="2023">2026</option>
+								  	<option value="2023">2027</option>
+								  	<option value="2023">2028</option>
+								  	<option value="2023">2029</option>
+								  	<option value="2023">2030</option>
+								</select>
+	      					</div>
+			        	</div>
+			        	<div class="data-item stretch">
+			        		<label class="data-label">Наименование программы</label>
+							<input type="text" class="data-value stretch" disabled placeholder="Наименование программы">
+			        	</div>
+	        		</div>
 	        	</div>
-	        	<div class="data-item">
-	        		<label class="data-label">Наименование слоя</label>
-					<input type="text" class="data-value stretch" disabled value="Moscow_2026_aktual">
-	        	</div>
-	        	<table>
-	        		<thead>
-	        			<tr>
-	        				<th>SYS</th>
-	        				<th>L,<span class="data-unit">м</span></th>
-	      					<th>Д<sub>ср</sub><sup>под</sup></th>
-	      					<th>Д<sub>ср</sub><sup>обр</sup></th>
-	      					<th>Тип</th>
-	      					<th>Объём, <span class="data-unit">м<sup>3</sup></span></th>
-	        			</tr>
-	        		</thead>
-	        		<tbody>
-	        			<tr>
-	        				<td>153085</td>
-	        				<td>200</td>
-	        				<td>150</td>
-	        				<td>150</td>
-	        				<td>отопление</td>
-	        				<td>7,068</td>
-	        			</tr>
-	        			<tr>
-	        				<td>153085</td>
-	        				<td>200</td>
-	        				<td>150</td>
-	        				<td>150</td>
-	        				<td>яентиляция</td>
-	        				<td>7,068</td>
-	        			</tr>
-	        			<tr>
-	        				<td>153085</td>
-	        				<td>200</td>
-	        				<td>150</td>
-	        				<td>150</td>
-	        				<td>горячее водоснабжение</td>
-	        				<td>7,068</td>
-	        			</tr>
-	        			<tr>
-	        				<td>153085</td>
-	        				<td>200</td>
-	        				<td>150</td>
-	        				<td>150</td>
-	        				<td>технология</td>
-	        				<td>7,068</td>
-	        			</tr>
-	        		</tbody>
-	        	</table>
+	        	<div class="scroll-block-wrapper" style="max-height: 65vh;">
+	      			<div class="data-block scroll-block">
+			        	<div class="scroll-table-wrapper">
+			        		<table>
+				        		<thead>
+				        			<tr>
+				        				<th rowspan="2">УНОМ П</th>
+				        				<th rowspan="2">Обозначение на схеме</th>
+				        				<th colspan="6">Параметры по программе развития города (поселения) учтенной в схеме</th>
+				        				<th colspan="6">Параметры в выбранной программе развития города (поселения)</th>
+				        			</tr>
+				        			<tr>
+				        				<th style="position: static;">УНОМ ПР</th>
+				        				<th>Тип</th>
+				        				<th>Номер объекта</th>
+				        				<th>Объем, <span class="data-unit">тыс. м<sup>2</sup></span></th>
+				        				<th>∑ Q<sup>ЗГ</sup>, <span class="data-unit">Гкал/ч</span></th>
+				        				<th>∑ Q<sup>РГ</sup>, <span class="data-unit">Гкал/ч</span></th>
+				        				<th>УНОМ ПР</th>
+				        				<th>Тип</th>
+				        				<th>Номер объекта</th>
+				        				<th>Объем, <span class="data-unit">тыс. м<sup>2</sup></span></th>
+				        				<th>∑ Q<sup>ЗГ</sup>, <span class="data-unit">Гкал/ч</span></th>
+				        				<th>∑ Q<sup>РГ</sup>, <span class="data-unit">Гкал/ч</span></th>
+				        			</tr>
+				        		</thead>
+				        		<tbody>
+				        			<tr>
+				        				<td>5243434</td>
+				        				<td>Р02482</td>
+				        				<td>А01234.2022</td>
+				        				<td>АИП</td>
+				        				<td>12345642</td>
+				        				<td>1 500,0</td>
+				        				<td>2,502</td>
+				        				<td>1,603</td>
+				        				<td>А01234.2022</td>
+				        				<td>АИП</td>
+				        				<td>12345642</td>
+				        				<td>1 820,0</td>
+				        				<td>2,902</td>
+				        				<td>2,163</td>
+				        			</tr>
+				        			<tr>
+				        				<td>5432123</td>
+				        				<td>Р02432</td>
+				        				<td>Т01234.2022</td>
+				        				<td>УП</td>
+				        				<td>Т-УП1-01-210122/0</td>
+				        				<td>1 800,0</td>
+				        				<td>2,103</td>
+				        				<td>1,523</td>
+				        				<td>А01234.2022</td>
+				        				<td>АИП</td>
+				        				<td>213543543</td>
+				        				<td>1 050,0</td>
+				        				<td>1,304</td>
+				        				<td>0,923</td>
+				        			</tr>
+				        			<tr>
+				        				<td>546573</td>
+				        				<td>Р02548</td>
+				        				<td>G01234.2022</td>
+				        				<td>Ген. План</td>
+				        				<td>1108015</td>
+				        				<td>2 300,0</td>
+				        				<td>5,030</td>
+				        				<td>3,060</td>
+				        				<td>А01234.2022</td>
+				        				<td>АИП</td>
+				        				<td>4345354354</td>
+				        				<td>6 300,0</td>
+				        				<td>7,033</td>
+				        				<td>6,061</td>
+				        			</tr>
+				        			<tr>
+				        				<td>2356</td>
+				        				<td>Р03851</td>
+				        				<td>А02234.2021</td>
+				        				<td>АИП</td>
+				        				<td>234556485</td>
+				        				<td>253,56</td>
+				        				<td>0,256</td>
+				        				<td>0,123</td>
+				        				<td>А01234.2022</td>
+				        				<td>АИП</td>
+				        				<td>1108015</td>
+				        				<td>22,0</td>
+				        				<td>0,359</td>
+				        				<td>0,287</td>
+				        			</tr>
+				        		</tbody>
+				        	</table>
+			        	</div>
+			        	
+			        	<div class="data-row table-summary">
+							<div class="data-item rows-count">
+								<h5>Всего записей:</h5>
+								<p><span class="mark-color">10</span></p>
+							</div>
+							<div class="data-table-block">
+								<p class="data-item">∑ S<sub>до</sub>: <span class="mark-color">10</span><span class="data-unit">тыс. м<sup>2</sup></span></p>
+							</div>
+							<div class="data-table-block">
+								<p class="data-item">∑ Q<sup>РГ</sup><sub>до</sub>: <span class="mark-color">10</span><span class="data-unit">Гкал/ч</span></p>
+							</div>
+							<div class="data-table-block">
+								<p class="data-item">∑ S<sub>после</sub>: <span class="mark-color">10</span><span class="data-unit">тыс. м<sup>2</sup></span></p>
+							</div>
+							<div class="data-table-block">
+								<p class="data-item">∑ Q<sup>РГ</sup><sub>после</sub>: <span class="mark-color">10</span><span class="data-unit">Гкал/ч</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
 	        </div>
 	      </div>
 	      <div class="modal-footer">
