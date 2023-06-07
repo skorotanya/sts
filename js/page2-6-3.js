@@ -21,7 +21,7 @@ $(document).ready(function () {
 
     const pageTables = [
     {
-      name: 'refCompanies',
+      name: 'refZones',
       type: 'full',
       height: '73vh',
       columns: [],
@@ -42,18 +42,9 @@ $(document).ready(function () {
     });
 
     /* Double click on row ecoTable */
-    $('#refCompaniesTable tbody').on('dblclick', 'tr', function () {
+    $('#refZonesTable tbody').on('dblclick', 'tr', function () {
       showModal('editData');
     } );
 
-    $('.bttn-add-phone').on('click', (e) => {
-        const parent = e.target.parentNode;
-        parent.insertAdjacentHTML('beforebegin','<div class="data-item"><label class="data-label smx-fix"></label><input type="phone" class="data-value md-stretch"></input></div>');
-    });
-
-     $('.bttn-add-email').on('click', (e) => {
-        const parent = e.target.parentNode;
-        parent.insertAdjacentHTML('beforebegin','<div class="data-item"><label class="data-label smx-fix"></label><input type="email" class="data-value md-stretch"></input></div>');
-    });
 });
 

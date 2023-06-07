@@ -134,8 +134,8 @@
 			            Справочные таблицы
 			          </a>
 			          <ul class="subnav collapse list-unstyled show" id="st_menu">
-			            <li><a class="subnav-item nav-link active" href="#">Организации</a></li>
-			            <li><a class="subnav-item nav-link" href="page2-6-2.html">Территориальное деление</a></li>
+			            <li><a class="subnav-item nav-link" href="page2-6-1.html">Организации</a></li>
+			            <li><a class="subnav-item nav-link active" href="#">Территориальное деление</a></li>
 			            <li><a class="subnav-item nav-link" href="page2-6-3.html">Тарифные зоны</a></li>
 			            <li><a class="subnav-item nav-link" href="#">Зоны деятельности ЕТО</a></li>
 			            <li><a class="subnav-item nav-link" href="#">Системы теплоснабжения</a></li>
@@ -197,23 +197,38 @@
 				<div class="data-row">
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a class="ref-color" href="#">Главная</a></li>
-						<li class="breadcrumb-item">Справочники - Организации</li>
+						<li class="breadcrumb-item">Справочники - Территориальное деление</li>
 					</ul>
 				</div>
 				<div class="data-row">
-					<h1 class="title">Организации</h1>
+					<h1 class="title">Территориальное деление</h1>
 					<div class="data-item data-item-right">
 						<button class="bttn bttn-color bttn-edit-data" type="button">Добавить/Удалить</button>
 						<a class="bttn bttn-color bttn-load-data" type="button" href="page2-2-1-2.html">Загрузить данные</a>
 					</div>
 				</div>
+				<div class="data-row static-block">
+					<div class="data-item">
+						<label class="data-label">Графа</label>
+						<select class="selectpicker data-value lg-fix" placeholder="Выберите графу">
+						  <option value="2020">Графа 1</option>
+						  <option value="2021">Графа 2</option>
+						  <option value="2022">Графа 3</option>
+						  <option value="2023">Графа 4</option>
+						</select>
+					</div>
+					<div class="data-item">
+						<label class="data-label">Значение</label>
+						<input type="text" class="data-value lg-fix" placeholder="Введите значение"></input>
+					</div>
+					<button class="bttn bttn-color">Заполнить</button>
+				</div>
 			</div>
 			
 		  	<div class="data-block main-content border-block" style="border-color: var(--action-color);">
-				
 				<div class="table-block">
-					<div class="table-buttons refCompaniesTable-buttons"></div>
-					<table id="refCompaniesTable" class="display compact table-clicked" style="width:100%">
+					<div class="table-buttons refRegionsTable-buttons"></div>
+					<table id="refRegionsTable" class="display compact table-clicked" style="width:100%">
 					    <thead>
 					        <tr>
 					            <th>Номер</th>
@@ -607,11 +622,49 @@
 				<div class="data-row table-summary">
 					<div class="data-item rows-count">
 						<h5>Всего записей:</h5>
-						<p><span class="mark-color">10</span>, из них теплоснабжающие или теплосетевые организации <span class="mark-color">10</span></p>
+						<p><span class="mark-color">127</span></p>
 					</div>
-					
+					<div class="scroll-table-wrapper">
+						<table>
+							<thead>
+								<tr>
+									<th>Расчётный год</th>
+									<th>01.01.2022</th>
+									<th>01.01.2023</th>
+									<th>01.01.2024</th>
+									<th>01.01.2025</th>
+									<th>01.01.2026</th>
+									<th>01.01.2027</th>
+									<th>01.01.2028</th>
+									<th>01.01.2029</th>
+									<th>01.01.2030</th>
+									<th>01.01.2031</th>
+									<th>01.01.2032</th>
+									<th>01.01.2033</th>
+									<th>01.01.2034</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Численность населения, <span class="data-unit">тыс. чел.</span></td>
+									<td><span class="mark-color">10</span></td>
+									<td><span class="mark-color">10</span></td>
+									<td><span class="mark-color">10</span></td>
+									<td><span class="mark-color">10</span></td>
+									<td><span class="mark-color">10</span></td>
+									<td><span class="mark-color">10</span></td>
+									<td><span class="mark-color">10</span></td>
+									<td><span class="mark-color">10</span></td>
+									<td><span class="mark-color">10</span></td>
+									<td><span class="mark-color">10</span></td>
+									<td><span class="mark-color">10</span></td>
+									<td><span class="mark-color">10</span></td>
+									<td><span class="mark-color">10</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>
@@ -657,18 +710,18 @@
 	  	<div class="modal-dialog modal-dialog-centered">
 	    	<div class="modal-content">
 	      		<div class="modal-header"> 
-			        <h3 class="modal-title" id="editDataLabel">Организация</h3>
+			        <h3 class="modal-title" id="editDataLabel">Территориальная единица</h3>
 			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			     </div>
 			     <div class="modal-body">
 	      			<div class="data-block static-block data-params">
 	      				<div class="data-row">
 	      					<div class="data-item">
-		      					<label class="data-label">Уникальный номер организации</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="УНОМ организации">
+		      					<label class="data-label">Уникальный номер района (поселения)</label>
+	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="УНОМ района (поселения)">
 								  	<option value="2020">2020</option>
 								  	<option value="2021">2021</option>
-								  	<option value="2022" selected>2022</option>
+								  	<option value="2022">2022</option>
 								  	<option value="2023">2023</option>
 								</select> 	
 							</div>
@@ -681,68 +734,136 @@
 						      		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel1" aria-expanded="false">Общие сведения</button>
 								    <div id="panel1" class="accordion-collapse collapse">
 								      	<div class="accordion-body">
-								      		<div class="data-block">
-								      			<div class="data-row">
-								      				<label class="data-label lg-fix">Статус:</label>
-								      				<div class="data-item">
-								      					<label class="data-label">действует</label>
-								      					<input type="radio" name="statusCompany" class="form-check-input"></input>
-								      				</div>
-								      				<div class="data-item">
-								      					<label class="data-label">ликвидирован</label>
-								      					<input type="radio" name="statusCompany" class="form-check-input"></input>
-								      				</div>
-								      			</div>
+								      		<div class="data-row">
 								      			<div class="data-item">
-								      				<label class="data-label lg-fix">Наименование: <span class="sublabel">краткое</span></label>
+								      				<label class="data-label lg-fix">Наименование округа: <span class="sublabel">полное</span></label>
 								      				<input type="text" class="data-value xxl-stretch"></input>
 								      			</div>
 								      			<div class="data-item">
-								      				<label class="data-label lg-fix"><span class="sublabel">полное</span></label>
-								      				<textarea class="data-value xxl-stretch" style="height: 62px;"></textarea>
-								      			</div>
-								      			<div class="data-row">
-								      				<div class="data-item">
-								      					<label class="data-label lg-fix">Тип по виду деятельности</label>
-								      					<select class="selectpicker data-value xl-stretch" id="paramNumberTso" data-live-search="true" placeholder="УНОМ организации">
-														  	<option value="2020">2020</option>
-														  	<option value="2021">2021</option>
-														  	<option value="2022" selected>2022</option>
-														  	<option value="2023">2023</option>
-														</select>
-								      				</div>
-								      				<div class="data-item">
-								      					<label class="data-label">Организация является структурным подразделением</label>
-								      					<input type="checkbox" class="data-switcher">
-								      				</div>
+								      				<label class="data-label smx-fix"><span class="sublabel">краткое</span></label>
+								      				<input type="text" class="data-value xl-stretch"></input>
 								      			</div>
 								      		</div>
+							      			<div class="data-row">
+							      				<div class="data-item">
+							      					<label class="data-label lg-fix">Наименование района (поселения)</label>
+							      					<input type="text" class="data-value xxl-stretch"></input>
+							      				</div>
+							      			</div>
+							      			<div class="data-row">
+							      				<div class="data-item">
+							      					<label class="data-label lg-fix">Уникальный номер слоя электронной модели</label>
+							      					<select class="selectpicker data-value lg-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите значение">
+													  	<option value="2020">2020</option>
+													  	<option value="2021">2021</option>
+													  	<option value="2022">2022</option>
+													  	<option value="2023">2023</option>
+													</select>
+							      				</div>
+							      				<div class="data-item">
+							      					<label class="data-label lg-fix">SYS объекта в электронном слое</label>
+							      					<input type="text" class="data-value lg-stretch"></input>
+							      				</div>
+							      			</div>
 								      	</div>
 								    </div>
 							  	</div>
 							  	<div class=" border-block">
-					      			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel2" aria-expanded="false">Сведения о руководителе</button>
+					      			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel2" aria-expanded="false">Климатические характеристики</button>
 							    	<div id="panel2" class="accordion-collapse collapse" >
 							      		<div class="accordion-body">
 							        		<div class="data-block">
 					      						<div class="data-row">
 					      							<div class="data-item">
-					      								<label class="data-label sm-fix">Должность</label>
-					      								<input type="text" class="data-value xl-stretch"></input>
+					      								<label class="data-label xxl-fix">Расчетная температура наружного воздуха для систем отопления и вентиляции</label>
+					      								<input type="text" class="data-value smx-fix"></input>
+					      								<span class="data-unit smx-fix">°C</span>
+					      							</div>
+					      							<div class="data-item">
+					      								<label class="data-label lg-fix">Тоже при зарасчетном похолодании</label>
+					      								<input type="text" class="data-value smx-fix"></input>
+					      								<span class="data-unit smx-fix">°C</span>
 					      							</div>
 					      						</div>
 					      						<div class="data-row">
 					      							<div class="data-item">
-					      								<label class="data-label sm-fix">Фамилия</label>
-					      								<input type="text" class="data-value xl-stretch"></input>
+					      								<label class="data-label xxl-fix">Средняя температура наиболее холодного месяца</label>
+					      								<input type="text" class="data-value smx-fix"></input>
+					      								<span class="data-unit smx-fix">°C</span>
 					      							</div>
 					      							<div class="data-item">
-					      								<label class="data-label sm-fix">Имя</label>
-					      								<input type="text" class="data-value lg-stretch"></input>
+					      								<label class="data-label lg-fix">Наименование наиболее холодного месяца</label>
+					      								<select class="selectpicker data-value lg-fix" id="paramNumberTso" data-live-search="true" placeholder="Выберите...">
+					      									<option value="11">ноябрь</option>
+														  	<option value="12">декабрь</option>
+														  	<option value="01">январь</option>
+														  	<option value="02">февраль</option>
+														  	<option value="03">март</option>
+														</select>
+					      							</div>
+					      						</div>
+					      						<div class="data-row">
+					      							<div class="data-item">
+					      								<label class="data-label xxl-fix">Средняя температура наружного воздуха за отопительный период: <span class="sublabel">норматив</span></label>
+					      								<input type="text" class="data-value smx-fix"></input>
+					      								<span class="data-unit smx-fix">°C</span>
 					      							</div>
 					      							<div class="data-item">
-					      								<label class="data-label sm-fix">Отчество</label>
-					      								<input type="text" class="data-value lg-stretch"></input>
+					      								<label class="data-label lg-fix"><span class="sublabel">факт</span></label>
+					      								<input type="text" class="data-value smx-fix"></input>
+					      								<span class="data-unit smx-fix">°C</span>
+					      							</div>
+					      						</div>
+					      						<div class="data-row">
+					      							<div class="data-item">
+					      								<label class="data-label xxl-fix">Продолжительность отопительного периода: <span class="sublabel">норматив</span></label>
+					      								<input type="text" class="data-value smx-fix"></input>
+					      								<span class="data-unit smx-fix">сут.</span>
+					      							</div>
+					      							<div class="data-item">
+					      								<label class="data-label lg-fix"><span class="sublabel">факт</span></label>
+					      								<input type="text" class="data-value smx-fix"></input>
+					      								<span class="data-unit smx-fix">сут.</span>
+					      							</div>
+					      						</div>
+					      						<div class="data-row">
+					      							<div class="data-item">
+					      								<label class="data-label xxl-fix">Температура исходной водопроводной воды: <span class="sublabel">в отопительном периоде</span></label>
+					      								<input type="text" class="data-value smx-fix"></input>
+					      								<span class="data-unit smx-fix">°C</span>
+					      							</div>
+					      							<div class="data-item">
+					      								<label class="data-label lg-fix"><span class="sublabel">в неотопительном периоде</span></label>
+					      								<input type="text" class="data-value smx-fix"></input>
+					      								<span class="data-unit smx-fix">°C</span>
+					      							</div>
+					      						</div>
+					      						<div class="data-row">
+					      							<div class="data-item">
+					      								<label class="data-label xxl-fix">Продолжительность ежегодного профилактического отключения системы теплоснабжения</label>
+					      								<input type="text" class="data-value smx-fix"></input>
+					      								<span class="data-unit smx-fix">сут.</span>
+					      							</div>
+					      						</div>
+					      						<div class="data-row">
+					      							<div class="data-item">
+					      								<label class="data-label xxl-fix">Годовое число часов использования максимума отопительно-вентиляционной нагрузки</label>
+					      								<input type="text" class="data-value smx-fix"></input>
+					      								<span class="data-unit smx-fix">ч/год</span>
+					      							</div>
+					      						</div>
+					      						<div class="data-row">
+					      							<div class="data-item">
+					      								<label class="data-label xxl-fix">Годовое число часов использования максимума нагрузки горячего водоснабжения</label>
+					      								<input type="text" class="data-value smx-fix"></input>
+					      								<span class="data-unit smx-fix">ч/год</span>
+					      							</div>
+					      						</div>
+					      						<div class="data-row">
+					      							<div class="data-item">
+					      								<label class="data-label xxl-fix">Градусо-сутки отопительного периода (ГСОП)</label>
+					      								<input type="text" class="data-value smx-fix"></input>
+					      								<span class="data-unit smx-fix">°C · сут.</span>
 					      							</div>
 					      						</div>
 							      			</div>
@@ -754,46 +875,47 @@
 							    	<div id="panel3" class="accordion-collapse collapse" >
 							      		<div class="accordion-body">
 							        		<div class="data-row">
-				      							<div class="data-item">
-				      								<label class="data-label smx-fix">ОГРН</label>
-				      								<input type="text" class="data-value lg-stretch"></input>
-				      							</div>
-				      							<div class="data-item">
-				      								<label class="data-label smx-fix">ИНН</label>
-				      								<input type="text" class="data-value lg-stretch"></input>
-				      							</div>
-				      							<div class="data-item">
-				      								<label class="data-label smx-fix">КПП</label>
-				      								<input type="text" class="data-value lg-stretch"></input>
-				      							</div>
-				      						</div>
-							      		</div>
-							    	</div>
-							  	</div>
-							  	<div class="border-block">
-						      		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel4" aria-expanded="false">Контактная информация</button>
-							    	<div id="panel4" class="accordion-collapse collapse">
-							      		<div class="accordion-body">
-							        		<div class="data-row">
-					      						<div class="data-block border-block stretch">
-					      							<div class="data-item">
-					      								<label class="data-label smx-fix">Телефон</label>
-					      								<input type="phone" class="data-value md-stretch"></input>
-					      							</div>
-					      							<div class="data-item">
-					      								<button class="bttn bttn-square bttn-icon-add bttn-add-phone"></button>
-					      							</div>
-					      						</div>
-					      						<div class="data-block border-block stretch">
-					      							<div class="data-item">
-					      								<label class="data-label smx-fix">E-mail</label>
-					      								<input type="email" class="data-value md-stretch"></input>
-					      							</div>
-					      							<div class="data-item">
-					      								<button class="bttn bttn-square bttn-icon-add bttn-add-email"></button>
-					      							</div>
-					      						</div>
-							      			</div>
+					      						<div class="scroll-table-wrapper">
+													<table class="table-inp-stretch" style="width: 100%;">
+														<thead>
+															<tr>
+																<th>Расчётный год</th>
+																<th>01.01.2022</th>
+																<th>01.01.2023</th>
+																<th>01.01.2024</th>
+																<th>01.01.2025</th>
+																<th>01.01.2026</th>
+																<th>01.01.2027</th>
+																<th>01.01.2028</th>
+																<th>01.01.2029</th>
+																<th>01.01.2030</th>
+																<th>01.01.2031</th>
+																<th>01.01.2032</th>
+																<th>01.01.2033</th>
+																<th>01.01.2034</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>Численность населения, <span class="data-unit">тыс. чел.</span></td>
+																<td><input type="text" class="data-value"></td>
+																<td><input type="text" class="data-value"></td>
+																<td><input type="text" class="data-value"></td>
+																<td><input type="text" class="data-value"></td>
+																<td><input type="text" class="data-value"></td>
+																<td><input type="text" class="data-value"></td>
+																<td><input type="text" class="data-value"></td>
+																<td><input type="text" class="data-value"></td>
+																<td><input type="text" class="data-value"></td>
+																<td><input type="text" class="data-value"></td>
+																<td><input type="text" class="data-value"></td>
+																<td><input type="text" class="data-value"></td>
+																<td><input type="text" class="data-value"></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+					      					</div>
 							      		</div>
 							    	</div>
 							  	</div>
@@ -818,7 +940,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
 
 	<script type="text/javascript" charset="utf8" src="js/main.js"></script>
-	<script type="text/javascript" charset="utf8" src="js/page2-6-1.js"></script>
+	<script type="text/javascript" charset="utf8" src="js/page2-6-2.js"></script>
 	
 	
 </body>

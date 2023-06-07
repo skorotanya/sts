@@ -1410,7 +1410,8 @@ td.dtfc-fixed-left{
 }
 
 .modal-dialog {
-	max-width: fit-content;
+	width: fit-content;
+	max-width: 95%;
 	transition: all ease 150ms;
 }
 
@@ -1419,7 +1420,7 @@ td.dtfc-fixed-left{
 }
 
 .wide-modal .modal-dialog {
-	max-width: 95%;
+
 	width: 95%;
 }
 

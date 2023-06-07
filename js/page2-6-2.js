@@ -21,9 +21,9 @@ $(document).ready(function () {
 
     const pageTables = [
     {
-      name: 'refCompanies',
+      name: 'refRegions',
       type: 'full',
-      height: '73vh',
+      height: '62vh',
       columns: [],
       modal: '',
       tab: false,
@@ -42,18 +42,9 @@ $(document).ready(function () {
     });
 
     /* Double click on row ecoTable */
-    $('#refCompaniesTable tbody').on('dblclick', 'tr', function () {
+    $('#refRegionsTable tbody').on('dblclick', 'tr', function () {
       showModal('editData');
     } );
 
-    $('.bttn-add-phone').on('click', (e) => {
-        const parent = e.target.parentNode;
-        parent.insertAdjacentHTML('beforebegin','<div class="data-item"><label class="data-label smx-fix"></label><input type="phone" class="data-value md-stretch"></input></div>');
-    });
-
-     $('.bttn-add-email').on('click', (e) => {
-        const parent = e.target.parentNode;
-        parent.insertAdjacentHTML('beforebegin','<div class="data-item"><label class="data-label smx-fix"></label><input type="email" class="data-value md-stretch"></input></div>');
-    });
 });
 
