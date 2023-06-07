@@ -200,11 +200,16 @@
 						<li class="breadcrumb-item">Теплоснабжающие организации - Тепловой баланс</li>
 					</ul>
 				</div>
-				<h1 class="title">Тепловой баланс</h1>
-			</div>
-			
-		  	<div class="data-block main-content">
-				<div class="data-row table-params">
+				<div class="data-row">
+					<h1 class="title">Тепловой баланс</h1>
+					<div class="data-item data-item-right">
+						<button class="bttn bttn-color bttn-edit-data" type="button">Добавить/Удалить</button>
+						<a class="bttn bttn-color bttn-load-data" type="button" href="page2-2-1-2.html">Загрузить данные</a>
+						<button class="bttn bttn-color bttn-excel-export" type="button">Выгрузить в Excel</button>
+					</div>
+				</div>
+				
+				<div class="data-row static-block">
 					<div class="data-item">
 						<label for="paramCalcYear" class="data-label">Выберите год:</label>
 						<select class="selectpicker param-calc-year" data-width="140px" id="paramCalcYear">
@@ -217,651 +222,649 @@
 					<div class="data-item">
 						<div class="note">Базовый год - <span class="note-base-year">2022 (01.01.2023)</span>; следующие года - перспективные.</div>
 					</div>
-					
-					<div class="data-item">
-						<button class="bttn bttn-color bttn-edit-data" type="button">Добавить</button>
-						<a class="bttn bttn-color bttn-load-data" type="button" href="page2-2-1-2.html">Загрузить данные</a>
-						<button class="bttn bttn-color bttn-excel-export" type="button">Выгрузить в Excel</button>
-					</div>
-
 				</div>
-				<ul class="nav nav-tabs" role="tablist">
-				  	<li class="nav-item" role="presentation">
-				    	<button class="nav-link active" data-bs-toggle="tab" data-bs-target="#hpProductionTab" type="button" role="tab" aria-controls="hpProductionTab" aria-selected="true">Производство</button>
-				  	</li>
-				  	<li class="nav-item" role="presentation">
-				    	<button class="nav-link" data-bs-toggle="tab" data-bs-target="#hpTransferTab" type="button" role="tab" aria-controls="hpTransferTab" aria-selected="false">Передача</button>
-				  	</li>
-				</ul>
-				<div class="tab-content">
-				  	<div class="tab-pane fade show active" id="hpProductionTab" role="tabpanel" >
-				  		<div class="data-block">
-				  			<div class="table-block">
-								<div class="table-buttons hpProductionTable-buttons"></div>
-						  		<table id="hpProductionTable" class="display compact table-clicked" style="width:100%">
-								    <thead>
-								        <tr>
-								            <th>УНОМ ТЗ</th>
-								            <th>Наименование</th>
-								            <th>Адрес</th>
-								            <th>Дата</th>
-								            <th>Тип</th>
-								            <th>Округ</th>
-								            <th>Состояние</th>
-								            <th>Полезная энергия</th>
-								            <th>Тепловая энергия</th>
-								            <th>Источники</th>
-								        </tr>
-								        <tr class="filter-row ">
-								            <th class="dtfc-fixed-left" style="left:0; position:sticky;"><input type="text" class="filter-col-0"/></th>
-								            <th><input type="text" class="filter-col-1"/></th>
-								            <th><input type="text" class="filter-col-2"/></th>
-								            <th><input type="text" class="filter-col-3"/></th>
-								            <th><input type="text" class="filter-col-4"/></th>
-								            <th><input type="text" class="filter-col-5"/></th>
-								            <th><input type="text" class="filter-col-6"/></th>
-								            <th><input type="text" class="filter-col-7"/></th>
-								            <th><input type="text" class="filter-col-8"/></th>
-								            <th><input type="text" class="filter-col-9"/></th>
-								        </tr>
-								    </thead>
-								    <tbody>
-								        <tr>
-								            <td>1</td>
-								            <td>ТСО 1</td>
-								            <td>Row 1 Data 3</td>
-								            <td>Row 1 Data 4</td>
-								            <td>Row 1 Data 5</td>
-								            <td>Row 1 Data 6</td>
-								            <td>Row 1 Data 7</td>
-								            <td>Row 1 Data 8</td>
-								            <td>Row 1 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>2</td>
-								            <td>ТСО 2</td>
-								            <td>Row 2 Data 3</td>
-								            <td>Row 2 Data 4</td>
-								            <td>Row 2 Data 5</td>
-								            <td>Row 2 Data 6</td>
-								            <td>Row 2 Data 7</td>
-								            <td>Row 2 Data 8</td>
-								            <td>Row 2 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>3</td>
-								            <td>ТСО 3</td>
-								            <td>Row 3 Data 3</td>
-								            <td>Row 3 Data 4</td>
-								            <td>Row 3 Data 5</td>
-								            <td>Row 3 Data 6</td>
-								            <td>Row 3 Data 7</td>
-								            <td>Row 3 Data 8</td>
-								            <td>Row 3 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>4</td>
-								            <td>ТСО 4</td>
-								            <td>Row 4 Data 3</td>
-								            <td>Row 4 Data 4</td>
-								            <td>Row 4 Data 5</td>
-								            <td>Row 4 Data 6</td>
-								            <td>Row 4 Data 7</td>
-								            <td>Row 4 Data 8</td>
-								            <td>Row 4 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>5</td>
-								            <td>ТСО 5</td>
-								            <td>Row 5 Data 3</td>
-								            <td>Row 5 Data 4</td>
-								            <td>Row 5 Data 5</td>
-								            <td>Row 5 Data 6</td>
-								            <td>Row 5 Data 7</td>
-								            <td>Row 5 Data 8</td>
-								            <td>Row 5 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>6</td>
-								            <td>ТСО 6</td>
-								            <td>Row 6 Data 3</td>
-								            <td>Row 6 Data 4</td>
-								            <td>Row 6 Data 5</td>
-								            <td>Row 6 Data 6</td>
-								            <td>Row 6 Data 7</td>
-								            <td>Row 6 Data 8</td>
-								            <td>Row 6 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>7</td>
-								            <td>ТСО 7</td>
-								            <td>Row 7 Data 3</td>
-								            <td>Row 7 Data 4</td>
-								            <td>Row 7 Data 5</td>
-								            <td>Row 7 Data 6</td>
-								            <td>Row 7 Data 7</td>
-								            <td>Row 7 Data 8</td>
-								            <td>Row 7 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>8</td>
-								            <td>ТСО 8</td>
-								            <td>Row 8 Data 3</td>
-								            <td>Row 8 Data 4</td>
-								            <td>Row 8 Data 5</td>
-								            <td>Row 8 Data 6</td>
-								            <td>Row 8 Data 7</td>
-								            <td>Row 8 Data 8</td>
-								            <td>Row 8 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>9</td>
-								            <td>ТСО 9</td>
-								            <td>Row 9 Data 3</td>
-								            <td>Row 9 Data 4</td>
-								            <td>Row 9 Data 5</td>
-								            <td>Row 9 Data 6</td>
-								            <td>Row 9 Data 7</td>
-								            <td>Row 9 Data 8</td>
-								            <td>Row 9 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>10</td>
-								            <td>ТСО 10</td>
-								            <td>Row 10 Data 3</td>
-								            <td>Row 10 Data 4</td>
-								            <td>Row 10 Data 5</td>
-								            <td>Row 10 Data 6</td>
-								            <td>Row 10 Data 7</td>
-								            <td>Row 10 Data 8</td>
-								            <td>Row 10 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>1</td>
-								            <td>ТСО 1</td>
-								            <td>Row 1 Data 3</td>
-								            <td>Row 1 Data 4</td>
-								            <td>Row 1 Data 5</td>
-								            <td>Row 1 Data 6</td>
-								            <td>Row 1 Data 7</td>
-								            <td>Row 1 Data 8</td>
-								            <td>Row 1 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>2</td>
-								            <td>ТСО 2</td>
-								            <td>Row 2 Data 3</td>
-								            <td>Row 2 Data 4</td>
-								            <td>Row 2 Data 5</td>
-								            <td>Row 2 Data 6</td>
-								            <td>Row 2 Data 7</td>
-								            <td>Row 2 Data 8</td>
-								            <td>Row 2 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>3</td>
-								            <td>ТСО 3</td>
-								            <td>Row 3 Data 3</td>
-								            <td>Row 3 Data 4</td>
-								            <td>Row 3 Data 5</td>
-								            <td>Row 3 Data 6</td>
-								            <td>Row 3 Data 7</td>
-								            <td>Row 3 Data 8</td>
-								            <td>Row 3 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>4</td>
-								            <td>ТСО 4</td>
-								            <td>Row 4 Data 3</td>
-								            <td>Row 4 Data 4</td>
-								            <td>Row 4 Data 5</td>
-								            <td>Row 4 Data 6</td>
-								            <td>Row 4 Data 7</td>
-								            <td>Row 4 Data 8</td>
-								            <td>Row 4 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>5</td>
-								            <td>ТСО 5</td>
-								            <td>Row 5 Data 3</td>
-								            <td>Row 5 Data 4</td>
-								            <td>Row 5 Data 5</td>
-								            <td>Row 5 Data 6</td>
-								            <td>Row 5 Data 7</td>
-								            <td>Row 5 Data 8</td>
-								            <td>Row 5 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>6</td>
-								            <td>ТСО 6</td>
-								            <td>Row 6 Data 3</td>
-								            <td>Row 6 Data 4</td>
-								            <td>Row 6 Data 5</td>
-								            <td>Row 6 Data 6</td>
-								            <td>Row 6 Data 7</td>
-								            <td>Row 6 Data 8</td>
-								            <td>Row 6 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>7</td>
-								            <td>ТСО 7</td>
-								            <td>Row 7 Data 3</td>
-								            <td>Row 7 Data 4</td>
-								            <td>Row 7 Data 5</td>
-								            <td>Row 7 Data 6</td>
-								            <td>Row 7 Data 7</td>
-								            <td>Row 7 Data 8</td>
-								            <td>Row 7 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>8</td>
-								            <td>ТСО 8</td>
-								            <td>Row 8 Data 3</td>
-								            <td>Row 8 Data 4</td>
-								            <td>Row 8 Data 5</td>
-								            <td>Row 8 Data 6</td>
-								            <td>Row 8 Data 7</td>
-								            <td>Row 8 Data 8</td>
-								            <td>Row 8 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>9</td>
-								            <td>ТСО 9</td>
-								            <td>Row 9 Data 3</td>
-								            <td>Row 9 Data 4</td>
-								            <td>Row 9 Data 5</td>
-								            <td>Row 9 Data 6</td>
-								            <td>Row 9 Data 7</td>
-								            <td>Row 9 Data 8</td>
-								            <td>Row 9 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>10</td>
-								            <td>ТСО 10</td>
-								            <td>Row 10 Data 3</td>
-								            <td>Row 10 Data 4</td>
-								            <td>Row 10 Data 5</td>
-								            <td>Row 10 Data 6</td>
-								            <td>Row 10 Data 7</td>
-								            <td>Row 10 Data 8</td>
-								            <td>Row 10 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								    </tbody>
-								</table>
-							</div>
+			</div>
+			
+		  	<div class="data-block main-content">
+				<div class="tabs-block">
+					<ul class="nav nav-tabs" role="tablist">
+					  	<li class="nav-item" role="presentation">
+					    	<button class="nav-link active" data-bs-toggle="tab" data-bs-target="#hpProductionTab" type="button" role="tab" aria-controls="hpProductionTab" aria-selected="true">Производство</button>
+					  	</li>
+					  	<li class="nav-item" role="presentation">
+					    	<button class="nav-link" data-bs-toggle="tab" data-bs-target="#hpTransferTab" type="button" role="tab" aria-controls="hpTransferTab" aria-selected="false">Передача</button>
+					  	</li>
+					</ul>
+					<div class="tab-content">
+					  	<div class="tab-pane fade show active" id="hpProductionTab" role="tabpanel" >
+					  		<div class="data-block">
+					  			<div class="table-block">
+									<div class="table-buttons hpProductionTable-buttons"></div>
+							  		<table id="hpProductionTable" class="display compact table-clicked" style="width:100%">
+									    <thead>
+									        <tr>
+									            <th>УНОМ ТЗ</th>
+									            <th>Наименование</th>
+									            <th>Адрес</th>
+									            <th>Дата</th>
+									            <th>Тип</th>
+									            <th>Округ</th>
+									            <th>Состояние</th>
+									            <th>Полезная энергия</th>
+									            <th>Тепловая энергия</th>
+									            <th>Источники</th>
+									        </tr>
+									        <tr class="filter-row ">
+									            <th class="dtfc-fixed-left" style="left:0; position:sticky;"><input type="text" class="filter-col-0"/></th>
+									            <th><input type="text" class="filter-col-1"/></th>
+									            <th><input type="text" class="filter-col-2"/></th>
+									            <th><input type="text" class="filter-col-3"/></th>
+									            <th><input type="text" class="filter-col-4"/></th>
+									            <th><input type="text" class="filter-col-5"/></th>
+									            <th><input type="text" class="filter-col-6"/></th>
+									            <th><input type="text" class="filter-col-7"/></th>
+									            <th><input type="text" class="filter-col-8"/></th>
+									            <th><input type="text" class="filter-col-9"/></th>
+									        </tr>
+									    </thead>
+									    <tbody>
+									        <tr>
+									            <td>1</td>
+									            <td>ТСО 1</td>
+									            <td>Row 1 Data 3</td>
+									            <td>Row 1 Data 4</td>
+									            <td>Row 1 Data 5</td>
+									            <td>Row 1 Data 6</td>
+									            <td>Row 1 Data 7</td>
+									            <td>Row 1 Data 8</td>
+									            <td>Row 1 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>2</td>
+									            <td>ТСО 2</td>
+									            <td>Row 2 Data 3</td>
+									            <td>Row 2 Data 4</td>
+									            <td>Row 2 Data 5</td>
+									            <td>Row 2 Data 6</td>
+									            <td>Row 2 Data 7</td>
+									            <td>Row 2 Data 8</td>
+									            <td>Row 2 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>3</td>
+									            <td>ТСО 3</td>
+									            <td>Row 3 Data 3</td>
+									            <td>Row 3 Data 4</td>
+									            <td>Row 3 Data 5</td>
+									            <td>Row 3 Data 6</td>
+									            <td>Row 3 Data 7</td>
+									            <td>Row 3 Data 8</td>
+									            <td>Row 3 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>4</td>
+									            <td>ТСО 4</td>
+									            <td>Row 4 Data 3</td>
+									            <td>Row 4 Data 4</td>
+									            <td>Row 4 Data 5</td>
+									            <td>Row 4 Data 6</td>
+									            <td>Row 4 Data 7</td>
+									            <td>Row 4 Data 8</td>
+									            <td>Row 4 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>5</td>
+									            <td>ТСО 5</td>
+									            <td>Row 5 Data 3</td>
+									            <td>Row 5 Data 4</td>
+									            <td>Row 5 Data 5</td>
+									            <td>Row 5 Data 6</td>
+									            <td>Row 5 Data 7</td>
+									            <td>Row 5 Data 8</td>
+									            <td>Row 5 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>6</td>
+									            <td>ТСО 6</td>
+									            <td>Row 6 Data 3</td>
+									            <td>Row 6 Data 4</td>
+									            <td>Row 6 Data 5</td>
+									            <td>Row 6 Data 6</td>
+									            <td>Row 6 Data 7</td>
+									            <td>Row 6 Data 8</td>
+									            <td>Row 6 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>7</td>
+									            <td>ТСО 7</td>
+									            <td>Row 7 Data 3</td>
+									            <td>Row 7 Data 4</td>
+									            <td>Row 7 Data 5</td>
+									            <td>Row 7 Data 6</td>
+									            <td>Row 7 Data 7</td>
+									            <td>Row 7 Data 8</td>
+									            <td>Row 7 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>8</td>
+									            <td>ТСО 8</td>
+									            <td>Row 8 Data 3</td>
+									            <td>Row 8 Data 4</td>
+									            <td>Row 8 Data 5</td>
+									            <td>Row 8 Data 6</td>
+									            <td>Row 8 Data 7</td>
+									            <td>Row 8 Data 8</td>
+									            <td>Row 8 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>9</td>
+									            <td>ТСО 9</td>
+									            <td>Row 9 Data 3</td>
+									            <td>Row 9 Data 4</td>
+									            <td>Row 9 Data 5</td>
+									            <td>Row 9 Data 6</td>
+									            <td>Row 9 Data 7</td>
+									            <td>Row 9 Data 8</td>
+									            <td>Row 9 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>10</td>
+									            <td>ТСО 10</td>
+									            <td>Row 10 Data 3</td>
+									            <td>Row 10 Data 4</td>
+									            <td>Row 10 Data 5</td>
+									            <td>Row 10 Data 6</td>
+									            <td>Row 10 Data 7</td>
+									            <td>Row 10 Data 8</td>
+									            <td>Row 10 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>1</td>
+									            <td>ТСО 1</td>
+									            <td>Row 1 Data 3</td>
+									            <td>Row 1 Data 4</td>
+									            <td>Row 1 Data 5</td>
+									            <td>Row 1 Data 6</td>
+									            <td>Row 1 Data 7</td>
+									            <td>Row 1 Data 8</td>
+									            <td>Row 1 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>2</td>
+									            <td>ТСО 2</td>
+									            <td>Row 2 Data 3</td>
+									            <td>Row 2 Data 4</td>
+									            <td>Row 2 Data 5</td>
+									            <td>Row 2 Data 6</td>
+									            <td>Row 2 Data 7</td>
+									            <td>Row 2 Data 8</td>
+									            <td>Row 2 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>3</td>
+									            <td>ТСО 3</td>
+									            <td>Row 3 Data 3</td>
+									            <td>Row 3 Data 4</td>
+									            <td>Row 3 Data 5</td>
+									            <td>Row 3 Data 6</td>
+									            <td>Row 3 Data 7</td>
+									            <td>Row 3 Data 8</td>
+									            <td>Row 3 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>4</td>
+									            <td>ТСО 4</td>
+									            <td>Row 4 Data 3</td>
+									            <td>Row 4 Data 4</td>
+									            <td>Row 4 Data 5</td>
+									            <td>Row 4 Data 6</td>
+									            <td>Row 4 Data 7</td>
+									            <td>Row 4 Data 8</td>
+									            <td>Row 4 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>5</td>
+									            <td>ТСО 5</td>
+									            <td>Row 5 Data 3</td>
+									            <td>Row 5 Data 4</td>
+									            <td>Row 5 Data 5</td>
+									            <td>Row 5 Data 6</td>
+									            <td>Row 5 Data 7</td>
+									            <td>Row 5 Data 8</td>
+									            <td>Row 5 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>6</td>
+									            <td>ТСО 6</td>
+									            <td>Row 6 Data 3</td>
+									            <td>Row 6 Data 4</td>
+									            <td>Row 6 Data 5</td>
+									            <td>Row 6 Data 6</td>
+									            <td>Row 6 Data 7</td>
+									            <td>Row 6 Data 8</td>
+									            <td>Row 6 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>7</td>
+									            <td>ТСО 7</td>
+									            <td>Row 7 Data 3</td>
+									            <td>Row 7 Data 4</td>
+									            <td>Row 7 Data 5</td>
+									            <td>Row 7 Data 6</td>
+									            <td>Row 7 Data 7</td>
+									            <td>Row 7 Data 8</td>
+									            <td>Row 7 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>8</td>
+									            <td>ТСО 8</td>
+									            <td>Row 8 Data 3</td>
+									            <td>Row 8 Data 4</td>
+									            <td>Row 8 Data 5</td>
+									            <td>Row 8 Data 6</td>
+									            <td>Row 8 Data 7</td>
+									            <td>Row 8 Data 8</td>
+									            <td>Row 8 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>9</td>
+									            <td>ТСО 9</td>
+									            <td>Row 9 Data 3</td>
+									            <td>Row 9 Data 4</td>
+									            <td>Row 9 Data 5</td>
+									            <td>Row 9 Data 6</td>
+									            <td>Row 9 Data 7</td>
+									            <td>Row 9 Data 8</td>
+									            <td>Row 9 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>10</td>
+									            <td>ТСО 10</td>
+									            <td>Row 10 Data 3</td>
+									            <td>Row 10 Data 4</td>
+									            <td>Row 10 Data 5</td>
+									            <td>Row 10 Data 6</td>
+									            <td>Row 10 Data 7</td>
+									            <td>Row 10 Data 8</td>
+									            <td>Row 10 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									    </tbody>
+									</table>
+								</div>
 
-							<div class="data-row table-summary">
-								<div class="data-item rows-count">
-									<h5>Всего записей:</h5>
-									<p><span class="mark-color">10</span></p>
-								</div>
-								<div class="data-block">
-									<h5>Отпуск тепловой энергии с коллекторов (брутто):</h5>
-									<div class="data-table-block">
-										<p class="data-item">план - <span class="mark-color">4</span><span class="data-unit"> Гкал/ч</span></p>
-										<p class="data-item">факт - <span class="mark-color">10</span><span class="data-unit"> Гкал/ч</span></p>
+								<div class="data-row table-summary">
+									<div class="data-item rows-count">
+										<h5>Всего записей:</h5>
+										<p><span class="mark-color">10</span></p>
+									</div>
+									<div class="data-block">
+										<h5>Отпуск тепловой энергии с коллекторов (брутто):</h5>
+										<div class="data-table-block">
+											<p class="data-item">план - <span class="mark-color">4</span><span class="data-unit"> Гкал/ч</span></p>
+											<p class="data-item">факт - <span class="mark-color">10</span><span class="data-unit"> Гкал/ч</span></p>
+										</div>
+									</div>
+									<div class="data-block">
+										<h5>Отпуск тепловой энергии в сеть:</h5>
+										<div class="data-table-block">
+											<p class="data-item">план - <span class="mark-color">4</span><span class="data-unit"> Гкал/ч</span></p>
+											<p class="data-item">факт - <span class="mark-color">10</span><span class="data-unit"> Гкал/ч</span></p>
+										</div>
+									</div>
+									<div class="data-block">
+										<h5>Потери тепла в тепловых сетях:</h5>
+										<div class="data-table-block">
+											<p class="data-item">план - <span class="mark-color">4</span><span class="data-unit"> Гкал/ч</span></p>
+											<p class="data-item">факт - <span class="mark-color">10</span><span class="data-unit"> Гкал/ч</span></p>
+										</div>
+									</div>
+									<div class="data-block">
+										<h5>Полезный отпуск тепловой энергии:</h5>
+										<div class="data-table-block">
+											<p class="data-item">план - <span class="mark-color">4</span><span class="data-unit"> Гкал/ч</span></p>
+											<p class="data-item">факт - <span class="mark-color">10</span><span class="data-unit"> Гкал/ч</span></p>
+										</div>
 									</div>
 								</div>
-								<div class="data-block">
-									<h5>Отпуск тепловой энергии в сеть:</h5>
-									<div class="data-table-block">
-										<p class="data-item">план - <span class="mark-color">4</span><span class="data-unit"> Гкал/ч</span></p>
-										<p class="data-item">факт - <span class="mark-color">10</span><span class="data-unit"> Гкал/ч</span></p>
+					  		</div>
+					  		
+						</div>
+
+					  	<div class="tab-pane fade" id="hpTransferTab" role="tabpanel" >
+					  		<div class="data-block">
+					  			<div class="table-block">
+									<div class="table-buttons hpTransferTable-buttons"></div>
+									<table id="hpTransferTable" class="display compact table-clicked" style="width:100%">
+									    <thead>
+									        <tr>
+									            <th>УНОМ ТЗ</th>
+									            <th>Наименование</th>
+									            <th>Адрес</th>
+									            <th>Дата</th>
+									            <th>Тип</th>
+									            <th>Округ</th>
+									            <th>Состояние</th>
+									            <th>Полезная энергия</th>
+									            <th>Тепловая энергия</th>
+									            <th>Источники</th>
+									        </tr>
+									        <tr class="filter-row ">
+									            <th class="dtfc-fixed-left" style="left:0; position:sticky;"><input type="text" class="filter-col-0"/></th>
+									            <th><input type="text" class="filter-col-1"/></th>
+									            <th><input type="text" class="filter-col-2"/></th>
+									            <th><input type="text" class="filter-col-3"/></th>
+									            <th><input type="text" class="filter-col-4"/></th>
+									            <th><input type="text" class="filter-col-5"/></th>
+									            <th><input type="text" class="filter-col-6"/></th>
+									            <th><input type="text" class="filter-col-7"/></th>
+									            <th><input type="text" class="filter-col-8"/></th>
+									            <th><input type="text" class="filter-col-9"/></th>
+									        </tr>
+									    </thead>
+									    <tbody>
+									        <tr>
+									            <td>1</td>
+									            <td>ТСО 1</td>
+									            <td>Row 1 Data 3</td>
+									            <td>Row 1 Data 4</td>
+									            <td>Row 1 Data 5</td>
+									            <td>Row 1 Data 6</td>
+									            <td>Row 1 Data 7</td>
+									            <td>Row 1 Data 8</td>
+									            <td>Row 1 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>2</td>
+									            <td>ТСО 2</td>
+									            <td>Row 2 Data 3</td>
+									            <td>Row 2 Data 4</td>
+									            <td>Row 2 Data 5</td>
+									            <td>Row 2 Data 6</td>
+									            <td>Row 2 Data 7</td>
+									            <td>Row 2 Data 8</td>
+									            <td>Row 2 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>3</td>
+									            <td>ТСО 3</td>
+									            <td>Row 3 Data 3</td>
+									            <td>Row 3 Data 4</td>
+									            <td>Row 3 Data 5</td>
+									            <td>Row 3 Data 6</td>
+									            <td>Row 3 Data 7</td>
+									            <td>Row 3 Data 8</td>
+									            <td>Row 3 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>4</td>
+									            <td>ТСО 4</td>
+									            <td>Row 4 Data 3</td>
+									            <td>Row 4 Data 4</td>
+									            <td>Row 4 Data 5</td>
+									            <td>Row 4 Data 6</td>
+									            <td>Row 4 Data 7</td>
+									            <td>Row 4 Data 8</td>
+									            <td>Row 4 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>5</td>
+									            <td>ТСО 5</td>
+									            <td>Row 5 Data 3</td>
+									            <td>Row 5 Data 4</td>
+									            <td>Row 5 Data 5</td>
+									            <td>Row 5 Data 6</td>
+									            <td>Row 5 Data 7</td>
+									            <td>Row 5 Data 8</td>
+									            <td>Row 5 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>6</td>
+									            <td>ТСО 6</td>
+									            <td>Row 6 Data 3</td>
+									            <td>Row 6 Data 4</td>
+									            <td>Row 6 Data 5</td>
+									            <td>Row 6 Data 6</td>
+									            <td>Row 6 Data 7</td>
+									            <td>Row 6 Data 8</td>
+									            <td>Row 6 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>7</td>
+									            <td>ТСО 7</td>
+									            <td>Row 7 Data 3</td>
+									            <td>Row 7 Data 4</td>
+									            <td>Row 7 Data 5</td>
+									            <td>Row 7 Data 6</td>
+									            <td>Row 7 Data 7</td>
+									            <td>Row 7 Data 8</td>
+									            <td>Row 7 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>8</td>
+									            <td>ТСО 8</td>
+									            <td>Row 8 Data 3</td>
+									            <td>Row 8 Data 4</td>
+									            <td>Row 8 Data 5</td>
+									            <td>Row 8 Data 6</td>
+									            <td>Row 8 Data 7</td>
+									            <td>Row 8 Data 8</td>
+									            <td>Row 8 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>9</td>
+									            <td>ТСО 9</td>
+									            <td>Row 9 Data 3</td>
+									            <td>Row 9 Data 4</td>
+									            <td>Row 9 Data 5</td>
+									            <td>Row 9 Data 6</td>
+									            <td>Row 9 Data 7</td>
+									            <td>Row 9 Data 8</td>
+									            <td>Row 9 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>10</td>
+									            <td>ТСО 10</td>
+									            <td>Row 10 Data 3</td>
+									            <td>Row 10 Data 4</td>
+									            <td>Row 10 Data 5</td>
+									            <td>Row 10 Data 6</td>
+									            <td>Row 10 Data 7</td>
+									            <td>Row 10 Data 8</td>
+									            <td>Row 10 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>1</td>
+									            <td>ТСО 1</td>
+									            <td>Row 1 Data 3</td>
+									            <td>Row 1 Data 4</td>
+									            <td>Row 1 Data 5</td>
+									            <td>Row 1 Data 6</td>
+									            <td>Row 1 Data 7</td>
+									            <td>Row 1 Data 8</td>
+									            <td>Row 1 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>2</td>
+									            <td>ТСО 2</td>
+									            <td>Row 2 Data 3</td>
+									            <td>Row 2 Data 4</td>
+									            <td>Row 2 Data 5</td>
+									            <td>Row 2 Data 6</td>
+									            <td>Row 2 Data 7</td>
+									            <td>Row 2 Data 8</td>
+									            <td>Row 2 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>3</td>
+									            <td>ТСО 3</td>
+									            <td>Row 3 Data 3</td>
+									            <td>Row 3 Data 4</td>
+									            <td>Row 3 Data 5</td>
+									            <td>Row 3 Data 6</td>
+									            <td>Row 3 Data 7</td>
+									            <td>Row 3 Data 8</td>
+									            <td>Row 3 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>4</td>
+									            <td>ТСО 4</td>
+									            <td>Row 4 Data 3</td>
+									            <td>Row 4 Data 4</td>
+									            <td>Row 4 Data 5</td>
+									            <td>Row 4 Data 6</td>
+									            <td>Row 4 Data 7</td>
+									            <td>Row 4 Data 8</td>
+									            <td>Row 4 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>5</td>
+									            <td>ТСО 5</td>
+									            <td>Row 5 Data 3</td>
+									            <td>Row 5 Data 4</td>
+									            <td>Row 5 Data 5</td>
+									            <td>Row 5 Data 6</td>
+									            <td>Row 5 Data 7</td>
+									            <td>Row 5 Data 8</td>
+									            <td>Row 5 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>6</td>
+									            <td>ТСО 6</td>
+									            <td>Row 6 Data 3</td>
+									            <td>Row 6 Data 4</td>
+									            <td>Row 6 Data 5</td>
+									            <td>Row 6 Data 6</td>
+									            <td>Row 6 Data 7</td>
+									            <td>Row 6 Data 8</td>
+									            <td>Row 6 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>7</td>
+									            <td>ТСО 7</td>
+									            <td>Row 7 Data 3</td>
+									            <td>Row 7 Data 4</td>
+									            <td>Row 7 Data 5</td>
+									            <td>Row 7 Data 6</td>
+									            <td>Row 7 Data 7</td>
+									            <td>Row 7 Data 8</td>
+									            <td>Row 7 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>8</td>
+									            <td>ТСО 8</td>
+									            <td>Row 8 Data 3</td>
+									            <td>Row 8 Data 4</td>
+									            <td>Row 8 Data 5</td>
+									            <td>Row 8 Data 6</td>
+									            <td>Row 8 Data 7</td>
+									            <td>Row 8 Data 8</td>
+									            <td>Row 8 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>9</td>
+									            <td>ТСО 9</td>
+									            <td>Row 9 Data 3</td>
+									            <td>Row 9 Data 4</td>
+									            <td>Row 9 Data 5</td>
+									            <td>Row 9 Data 6</td>
+									            <td>Row 9 Data 7</td>
+									            <td>Row 9 Data 8</td>
+									            <td>Row 9 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									        <tr>
+									            <td>10</td>
+									            <td>ТСО 10</td>
+									            <td>Row 10 Data 3</td>
+									            <td>Row 10 Data 4</td>
+									            <td>Row 10 Data 5</td>
+									            <td>Row 10 Data 6</td>
+									            <td>Row 10 Data 7</td>
+									            <td>Row 10 Data 8</td>
+									            <td>Row 10 Data 9</td>
+									            <td><a href="#">>></a></td>
+									        </tr>
+									    </tbody>
+									</table>
+								</div>
+								<div class="data-row table-summary">
+									<div class="data-item rows-count">
+										<h5>Всего записей:</h5>
+										<p><span class="mark-color">10</span></p>
+									</div>
+									<div class="data-block">
+										<h5>Принято тепловой энрегии для передачи:</h5>
+										<div class="data-table-block">
+											<p class="data-item">план - <span class="mark-color">4</span><span class="data-unit"> Гкал/ч</span></p>
+											<p class="data-item">факт - <span class="mark-color">10</span><span class="data-unit"> Гкал/ч</span></p>
+										</div>
+									</div>
+									<div class="data-block">
+										<h5>Передано на нужды организации:</h5>
+										<div class="data-table-block">
+											<p class="data-item">план - <span class="mark-color">4</span><span class="data-unit"> Гкал/ч</span></p>
+											<p class="data-item">факт - <span class="mark-color">10</span><span class="data-unit"> Гкал/ч</span></p>
+										</div>
+									</div>
+									<div class="data-block">
+										<h5>Потери тепла в тепловых сетях:</h5>
+										<div class="data-table-block">
+											<p class="data-item">план - <span class="mark-color">4</span><span class="data-unit"> Гкал/ч</span></p>
+											<p class="data-item">факт - <span class="mark-color">10</span><span class="data-unit"> Гкал/ч</span></p>
+										</div>
+									</div>
+									<div class="data-block">
+										<h5 >Предано тепловой энергии (другие):</h5>
+										<div class="data-table-block">
+											<p class="data-item">план - <span class="mark-color">4</span><span class="data-unit"> Гкал/ч</span></p>
+											<p class="data-item">факт - <span class="mark-color">10</span><span class="data-unit"> Гкал/ч</span></p>
+										</div>
 									</div>
 								</div>
-								<div class="data-block">
-									<h5>Потери тепла в тепловых сетях:</h5>
-									<div class="data-table-block">
-										<p class="data-item">план - <span class="mark-color">4</span><span class="data-unit"> Гкал/ч</span></p>
-										<p class="data-item">факт - <span class="mark-color">10</span><span class="data-unit"> Гкал/ч</span></p>
-									</div>
-								</div>
-								<div class="data-block">
-									<h5>Полезный отпуск тепловой энергии:</h5>
-									<div class="data-table-block">
-										<p class="data-item">план - <span class="mark-color">4</span><span class="data-unit"> Гкал/ч</span></p>
-										<p class="data-item">факт - <span class="mark-color">10</span><span class="data-unit"> Гкал/ч</span></p>
-									</div>
-								</div>
-							</div>
-				  		</div>
-				  		
+					  		</div>
+					  		
+						</div>
+
 					</div>
-
-				  	<div class="tab-pane fade" id="hpTransferTab" role="tabpanel" >
-				  		<div class="data-block">
-				  			<div class="table-block">
-								<div class="table-buttons hpTransferTable-buttons"></div>
-								<table id="hpTransferTable" class="display compact table-clicked" style="width:100%">
-								    <thead>
-								        <tr>
-								            <th>УНОМ ТЗ</th>
-								            <th>Наименование</th>
-								            <th>Адрес</th>
-								            <th>Дата</th>
-								            <th>Тип</th>
-								            <th>Округ</th>
-								            <th>Состояние</th>
-								            <th>Полезная энергия</th>
-								            <th>Тепловая энергия</th>
-								            <th>Источники</th>
-								        </tr>
-								        <tr class="filter-row ">
-								            <th class="dtfc-fixed-left" style="left:0; position:sticky;"><input type="text" class="filter-col-0"/></th>
-								            <th><input type="text" class="filter-col-1"/></th>
-								            <th><input type="text" class="filter-col-2"/></th>
-								            <th><input type="text" class="filter-col-3"/></th>
-								            <th><input type="text" class="filter-col-4"/></th>
-								            <th><input type="text" class="filter-col-5"/></th>
-								            <th><input type="text" class="filter-col-6"/></th>
-								            <th><input type="text" class="filter-col-7"/></th>
-								            <th><input type="text" class="filter-col-8"/></th>
-								            <th><input type="text" class="filter-col-9"/></th>
-								        </tr>
-								    </thead>
-								    <tbody>
-								        <tr>
-								            <td>1</td>
-								            <td>ТСО 1</td>
-								            <td>Row 1 Data 3</td>
-								            <td>Row 1 Data 4</td>
-								            <td>Row 1 Data 5</td>
-								            <td>Row 1 Data 6</td>
-								            <td>Row 1 Data 7</td>
-								            <td>Row 1 Data 8</td>
-								            <td>Row 1 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>2</td>
-								            <td>ТСО 2</td>
-								            <td>Row 2 Data 3</td>
-								            <td>Row 2 Data 4</td>
-								            <td>Row 2 Data 5</td>
-								            <td>Row 2 Data 6</td>
-								            <td>Row 2 Data 7</td>
-								            <td>Row 2 Data 8</td>
-								            <td>Row 2 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>3</td>
-								            <td>ТСО 3</td>
-								            <td>Row 3 Data 3</td>
-								            <td>Row 3 Data 4</td>
-								            <td>Row 3 Data 5</td>
-								            <td>Row 3 Data 6</td>
-								            <td>Row 3 Data 7</td>
-								            <td>Row 3 Data 8</td>
-								            <td>Row 3 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>4</td>
-								            <td>ТСО 4</td>
-								            <td>Row 4 Data 3</td>
-								            <td>Row 4 Data 4</td>
-								            <td>Row 4 Data 5</td>
-								            <td>Row 4 Data 6</td>
-								            <td>Row 4 Data 7</td>
-								            <td>Row 4 Data 8</td>
-								            <td>Row 4 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>5</td>
-								            <td>ТСО 5</td>
-								            <td>Row 5 Data 3</td>
-								            <td>Row 5 Data 4</td>
-								            <td>Row 5 Data 5</td>
-								            <td>Row 5 Data 6</td>
-								            <td>Row 5 Data 7</td>
-								            <td>Row 5 Data 8</td>
-								            <td>Row 5 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>6</td>
-								            <td>ТСО 6</td>
-								            <td>Row 6 Data 3</td>
-								            <td>Row 6 Data 4</td>
-								            <td>Row 6 Data 5</td>
-								            <td>Row 6 Data 6</td>
-								            <td>Row 6 Data 7</td>
-								            <td>Row 6 Data 8</td>
-								            <td>Row 6 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>7</td>
-								            <td>ТСО 7</td>
-								            <td>Row 7 Data 3</td>
-								            <td>Row 7 Data 4</td>
-								            <td>Row 7 Data 5</td>
-								            <td>Row 7 Data 6</td>
-								            <td>Row 7 Data 7</td>
-								            <td>Row 7 Data 8</td>
-								            <td>Row 7 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>8</td>
-								            <td>ТСО 8</td>
-								            <td>Row 8 Data 3</td>
-								            <td>Row 8 Data 4</td>
-								            <td>Row 8 Data 5</td>
-								            <td>Row 8 Data 6</td>
-								            <td>Row 8 Data 7</td>
-								            <td>Row 8 Data 8</td>
-								            <td>Row 8 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>9</td>
-								            <td>ТСО 9</td>
-								            <td>Row 9 Data 3</td>
-								            <td>Row 9 Data 4</td>
-								            <td>Row 9 Data 5</td>
-								            <td>Row 9 Data 6</td>
-								            <td>Row 9 Data 7</td>
-								            <td>Row 9 Data 8</td>
-								            <td>Row 9 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>10</td>
-								            <td>ТСО 10</td>
-								            <td>Row 10 Data 3</td>
-								            <td>Row 10 Data 4</td>
-								            <td>Row 10 Data 5</td>
-								            <td>Row 10 Data 6</td>
-								            <td>Row 10 Data 7</td>
-								            <td>Row 10 Data 8</td>
-								            <td>Row 10 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>1</td>
-								            <td>ТСО 1</td>
-								            <td>Row 1 Data 3</td>
-								            <td>Row 1 Data 4</td>
-								            <td>Row 1 Data 5</td>
-								            <td>Row 1 Data 6</td>
-								            <td>Row 1 Data 7</td>
-								            <td>Row 1 Data 8</td>
-								            <td>Row 1 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>2</td>
-								            <td>ТСО 2</td>
-								            <td>Row 2 Data 3</td>
-								            <td>Row 2 Data 4</td>
-								            <td>Row 2 Data 5</td>
-								            <td>Row 2 Data 6</td>
-								            <td>Row 2 Data 7</td>
-								            <td>Row 2 Data 8</td>
-								            <td>Row 2 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>3</td>
-								            <td>ТСО 3</td>
-								            <td>Row 3 Data 3</td>
-								            <td>Row 3 Data 4</td>
-								            <td>Row 3 Data 5</td>
-								            <td>Row 3 Data 6</td>
-								            <td>Row 3 Data 7</td>
-								            <td>Row 3 Data 8</td>
-								            <td>Row 3 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>4</td>
-								            <td>ТСО 4</td>
-								            <td>Row 4 Data 3</td>
-								            <td>Row 4 Data 4</td>
-								            <td>Row 4 Data 5</td>
-								            <td>Row 4 Data 6</td>
-								            <td>Row 4 Data 7</td>
-								            <td>Row 4 Data 8</td>
-								            <td>Row 4 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>5</td>
-								            <td>ТСО 5</td>
-								            <td>Row 5 Data 3</td>
-								            <td>Row 5 Data 4</td>
-								            <td>Row 5 Data 5</td>
-								            <td>Row 5 Data 6</td>
-								            <td>Row 5 Data 7</td>
-								            <td>Row 5 Data 8</td>
-								            <td>Row 5 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>6</td>
-								            <td>ТСО 6</td>
-								            <td>Row 6 Data 3</td>
-								            <td>Row 6 Data 4</td>
-								            <td>Row 6 Data 5</td>
-								            <td>Row 6 Data 6</td>
-								            <td>Row 6 Data 7</td>
-								            <td>Row 6 Data 8</td>
-								            <td>Row 6 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>7</td>
-								            <td>ТСО 7</td>
-								            <td>Row 7 Data 3</td>
-								            <td>Row 7 Data 4</td>
-								            <td>Row 7 Data 5</td>
-								            <td>Row 7 Data 6</td>
-								            <td>Row 7 Data 7</td>
-								            <td>Row 7 Data 8</td>
-								            <td>Row 7 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>8</td>
-								            <td>ТСО 8</td>
-								            <td>Row 8 Data 3</td>
-								            <td>Row 8 Data 4</td>
-								            <td>Row 8 Data 5</td>
-								            <td>Row 8 Data 6</td>
-								            <td>Row 8 Data 7</td>
-								            <td>Row 8 Data 8</td>
-								            <td>Row 8 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>9</td>
-								            <td>ТСО 9</td>
-								            <td>Row 9 Data 3</td>
-								            <td>Row 9 Data 4</td>
-								            <td>Row 9 Data 5</td>
-								            <td>Row 9 Data 6</td>
-								            <td>Row 9 Data 7</td>
-								            <td>Row 9 Data 8</td>
-								            <td>Row 9 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								        <tr>
-								            <td>10</td>
-								            <td>ТСО 10</td>
-								            <td>Row 10 Data 3</td>
-								            <td>Row 10 Data 4</td>
-								            <td>Row 10 Data 5</td>
-								            <td>Row 10 Data 6</td>
-								            <td>Row 10 Data 7</td>
-								            <td>Row 10 Data 8</td>
-								            <td>Row 10 Data 9</td>
-								            <td><a href="#">>></a></td>
-								        </tr>
-								    </tbody>
-								</table>
-							</div>
-							<div class="data-row table-summary">
-								<div class="data-item rows-count">
-									<h5>Всего записей:</h5>
-									<p><span class="mark-color">10</span></p>
-								</div>
-								<div class="data-block">
-									<h5>Принято тепловой энрегии для передачи:</h5>
-									<div class="data-table-block">
-										<p class="data-item">план - <span class="mark-color">4</span><span class="data-unit"> Гкал/ч</span></p>
-										<p class="data-item">факт - <span class="mark-color">10</span><span class="data-unit"> Гкал/ч</span></p>
-									</div>
-								</div>
-								<div class="data-block">
-									<h5>Передано на нужды организации:</h5>
-									<div class="data-table-block">
-										<p class="data-item">план - <span class="mark-color">4</span><span class="data-unit"> Гкал/ч</span></p>
-										<p class="data-item">факт - <span class="mark-color">10</span><span class="data-unit"> Гкал/ч</span></p>
-									</div>
-								</div>
-								<div class="data-block">
-									<h5>Потери тепла в тепловых сетях:</h5>
-									<div class="data-table-block">
-										<p class="data-item">план - <span class="mark-color">4</span><span class="data-unit"> Гкал/ч</span></p>
-										<p class="data-item">факт - <span class="mark-color">10</span><span class="data-unit"> Гкал/ч</span></p>
-									</div>
-								</div>
-								<div class="data-block">
-									<h5 >Предано тепловой энергии (другие):</h5>
-									<div class="data-table-block">
-										<p class="data-item">план - <span class="mark-color">4</span><span class="data-unit"> Гкал/ч</span></p>
-										<p class="data-item">факт - <span class="mark-color">10</span><span class="data-unit"> Гкал/ч</span></p>
-									</div>
-								</div>
-							</div>
-				  		</div>
-				  		
-					</div>
-
-				</div>  
+				</div> 
 			</div>
 		</div>
 	</div>
@@ -913,14 +916,12 @@
 			     	<div class="data-block static-block data-params">
       					<div class="data-item">
 	      					<label class="data-label">Уникальный номер тарифной зоны и наименование ТСО</label>
-	      					<div class="data-value stretch">
-      							<select class="selectpicker" id="paramNumberTso" data-live-search="true" placeholder="УНОМ ТЗ - краткое наименвание ТСО">
+      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="УНОМ ТЗ - краткое наименвание ТСО">
 							  	<option value="2020">2020</option>
 							  	<option value="2021">2021</option>
 							  	<option value="2022" selected>2022</option>
 							  	<option value="2023">2023</option>
 							</select>
-      						</div>
 						</div>
       					
 						<div class="data-row">
@@ -1569,14 +1570,12 @@
 			     		<div class="data-row">
 							<div class="data-item stretch">
 		      					<label class="data-label">Уникальный номер тарифной зоны и наименование ТСО</label>
-		      					<div class="data-value stretch">
-	      							<select class="selectpicker" id="paramNumberTso" data-live-search="true" placeholder="УНОМ ТЗ - краткое наименвание ТСО">
-									  	<option value="2020">2020</option>
-									  	<option value="2021">2021</option>
-									  	<option value="2022" selected>2022</option>
-									  	<option value="2023">2023</option>
-									</select>
-	      						</div>
+      							<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="УНОМ ТЗ - краткое наименвание ТСО">
+								  	<option value="2020">2020</option>
+								  	<option value="2021">2021</option>
+								  	<option value="2022" selected>2022</option>
+								  	<option value="2023">2023</option>
+								</select>
 							</div>
 							<div class="data-item">
 		      					<label class="data-label">Только передача</label>
@@ -1591,7 +1590,7 @@
 							</div>
 							<div class="data-item">
 								<label for="paramCalcYear" class="data-label">Расчётный год:</label>
-								<select class="selectpicker param-calc-year" data-width="140px" id="paramCalcYear" value="2022">
+								<select class="selectpicker md-fix param-calc-year " id="paramCalcYear">
 								  <option value="2020">01.01.2021</option>
 								  <option value="2021">01.01.2022</option>
 								  <option value="2022" selected>01.01.2023</option>
@@ -1861,11 +1860,11 @@
 			     	<div class="data-row static-block data-params">
 						<div class="data-item stretch">
 	      					<label class="data-label">Наименование ТСО</label>
-	      					<input type="text" class="data-value stretch" disabled></input>
+	      					<input type="text" class="data-value xxl-stretch" disabled></input>
 						</div>
 						<div class="data-item">
 							<label for="paramCalcYear" class="data-label">Расчётный год:</label>
-							<select class="selectpicker param-calc-year" data-width="140px" id="paramCalcYear" value="2022">
+							<select class="selectpicker md-fix param-calc-year" id="paramCalcYear">
 							  <option value="2020">01.01.2021</option>
 							  <option value="2021">01.01.2022</option>
 							  <option value="2022" selected>01.01.2023</option>
@@ -1900,30 +1899,30 @@
 					      					<tbody>
 					      						<tr>
 					      							<td>с коллекторов источников тепла</td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
 					      						</tr>
 					      						<tr>
 					      							<td>из тепловой сети</td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
 					      						</tr>
 					      						<tr>
 					      							<td>Всего</td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
 					      						</tr>
 					      					</tbody>
 					      				</table>
@@ -1985,44 +1984,43 @@
 			      				<div class="data-row">
 			      					<div class="data-item stretch">
 				      					<label class="data-label">УНОМ тарифной зоны и наименование ТСО</label>
-				      					<div class="data-value stretch">
-			      							<select class="selectpicker" id="paramNumberTso" data-live-search="true" placeholder="УНОМ ТЗ - краткое наименвание ТСО">
-											  	<option value="2020">2020</option>
-											  	<option value="2021">2021</option>
-											  	<option value="2022" selected>2022</option>
-											  	<option value="2023">2023</option>
-											</select>
-			      						</div>
+		      							<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="УНОМ ТЗ - краткое наименвание ТСО">
+										  	<option value="2020">2020</option>
+										  	<option value="2021">2021</option>
+										  	<option value="2022" selected>2022</option>
+										  	<option value="2023">2023</option>
+										</select>
 									</div>
 									<div class="data-item stretch">
 				      					<label class="data-label">УНОМ и наименование источника</label>
-				      					<div class="data-value stretch">
-			      							<select class="selectpicker" id="paramNumberTso" data-live-search="true" placeholder="УНОМ ИСТ - Наименование источника тепловой энергии">
-											  	<option value="2020">2020</option>
-											  	<option value="2021">2021</option>
-											  	<option value="2022" selected>2022</option>
-											  	<option value="2023">2023</option>
-											</select>
-			      						</div>
+		      							<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="УНОМ ИСТ - Наименование источника тепловой энергии">
+										  	<option value="2020">2020</option>
+										  	<option value="2021">2021</option>
+										  	<option value="2022" selected>2022</option>
+										  	<option value="2023">2023</option>
+										</select>
 									</div>
 			      				</div>
 			      				<div class="data-row">
 			      					<h4>Покупка тепловой энергии осуществляется</h4>
-			      					<div class="data-item">
-			      						<label class="data-label">с коллекторов источников тепла</label>
-			      					<input type="radio" name="heatBuyType" class="form-check-input">
+			      					<div class="data-row">
+			      						<div class="data-item">
+			      							<label class="data-label">с коллекторов источников тепла</label>
+				      						<input type="radio" name="heatBuyType" class="form-check-input">
+				      					</div>
+				      					<div class="data-item">
+				      						<label class="data-label">из тепловой сети</label>
+				      						<input type="radio" name="heatBuyType" class="form-check-input">
+				      					</div>
 			      					</div>
-			      					<div class="data-item">
-			      						<label class="data-label">из тепловой сети</label>
-			      					<input type="radio" name="heatBuyType" class="form-check-input">
-			      					</div>
+			      					
 			      				</div>
 			      				<div class="data-block">
 			      					<div class="data-row">
 			      						<button class="bttn bttn-square bttn-icon-save ms-auto" type="button" title="Сохранить"></button>
 			      					</div>
 			      					<div class="scroll-table-wrapper">
-				      					<table class="table table-hover table-inp-stretch"  style="width:100%">
+				      					<table class="table-inp-stretch"  style="width:100%">
 					      					<thead>
 					      						<tr>
 					      							<th rowspan="2">Показатель, <span class="data-unit">Гкал</span></h4></th>
@@ -2041,48 +2039,48 @@
 					      					<tbody>
 					      						<tr>
 					      							<td>Покупная тепловая энергия, всего</td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
 					      						</tr>
 					      						<tr>
 					      							<td>1. на технологические нужды</td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
 					      						</tr>
 					      						<tr>
 					      							<td>1.1. - включая покупку потерь</td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
 					      						</tr>
 					      						<tr>
 					      							<td>2. на хозяйственные нужды</td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
 					      						</tr>
 					      						<tr>
 					      							<td>2.1. - включая покупку потерь</td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
 					      						</tr>
 					      					</tbody>
 					      				</table>
@@ -2114,11 +2112,11 @@
 			     	<div class="data-row static-block data-params">
 						<div class="data-item stretch">
 	      					<label class="data-label">Наименование ТСО</label>
-	      					<input type="text" class="data-value stretch" disabled></input>
+	      					<input type="text" class="data-value xxl-stretch" disabled></input>
 						</div>
 						<div class="data-item">
 							<label for="paramCalcYear" class="data-label">Расчётный год:</label>
-							<select class="selectpicker param-calc-year" data-width="140px" id="paramCalcYear" value="2022">
+							<select class="selectpicker md-fix param-calc-year" id="paramCalcYear">
 							  <option value="2020">01.01.2021</option>
 							  <option value="2021">01.01.2022</option>
 							  <option value="2022" selected>01.01.2023</option>
@@ -2153,12 +2151,12 @@
 					      					<tbody>
 					      						<tr>
 					      							<td><h4>Принято тепловой энергии для передачи (транспортировки), <span class="data-unit">Гкал</span></h4></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
 					      						</tr>
 					      					</tbody>
 					      				</table>
@@ -2216,25 +2214,21 @@
 			      				<div class="data-row">
 			      					<div class="data-item stretch">
 				      					<label class="data-label">УНОМ тарифной зоны и наименование ТСО</label>
-				      					<div class="data-value stretch">
-			      							<select class="selectpicker" id="paramNumberTso" data-live-search="true" placeholder="УНОМ ТЗ - краткое наименвание ТСО">
-											  	<option value="2020">2020</option>
-											  	<option value="2021">2021</option>
-											  	<option value="2022" selected>2022</option>
-											  	<option value="2023">2023</option>
-											</select>
-			      						</div>
+		      							<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="УНОМ ТЗ - краткое наименвание ТСО">
+										  	<option value="2020">2020</option>
+										  	<option value="2021">2021</option>
+										  	<option value="2022" selected>2022</option>
+										  	<option value="2023">2023</option>
+										</select>
 									</div>
 									<div class="data-item stretch">
 				      					<label class="data-label">УНОМ и наименование источника</label>
-				      					<div class="data-value stretch">
-			      							<select class="selectpicker" id="paramNumberTso" data-live-search="true" placeholder="УНОМ ИСТ - Наименование источника тепловой энергии">
-											  	<option value="2020">2020</option>
-											  	<option value="2021">2021</option>
-											  	<option value="2022" selected>2022</option>
-											  	<option value="2023">2023</option>
-											</select>
-			      						</div>
+		      							<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="УНОМ ИСТ - Наименование источника тепловой энергии">
+										  	<option value="2020">2020</option>
+										  	<option value="2021">2021</option>
+										  	<option value="2022" selected>2022</option>
+										  	<option value="2023">2023</option>
+										</select>
 									</div>
 			      				</div>
 			      				<div class="data-block">
@@ -2261,84 +2255,84 @@
 					      					<tbody>
 					      						<tr>
 					      							<td>Принято тепловой энергии для передачи (транспортировки), всего:</td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
 					      						</tr>
 					      						<tr>
 					      							<td>1. потери тепла в тепловых сетях</td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
 					      						</tr>
 					      						<tr>
 					      							<td>2. отпуск на нужды организации, всего</td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
 					      						</tr>
 					      						<tr>
 					      							<td>2.1. - собственное производство</td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
 					      						</tr>
 					      						<tr>
 					      							<td>2.2. - хозяйственные нужды</td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
 					      						</tr>
 					      						<tr>
 					      							<td>3. теплоснабжающим организациям</td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
 					      						</tr>
 					      						<tr>
 					      							<td>4. бюджетным потребителя</td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
 					      						</tr>
 					      						<tr>
 					      							<td>5. населению</td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
 					      						</tr>
 					      						<tr>
 					      							<td>6. прочим потребителям</td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value"></div></td>
-					      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value"></td>
+					      							<td><input type="text" name="" class="data-value" disabled></td>
 					      						</tr>
 					      					</tbody>
 					      				</table>

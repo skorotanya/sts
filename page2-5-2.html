@@ -216,50 +216,23 @@
 						</div>
 					</div>
 				</div>
-				
+				<div class="data-row static-block">
+					<div class="data-item">
+						<label for="paramCalcYear" class="data-label">Выберите год:</label>
+						<select class="selectpicker md-fix param-calc-year" id="paramCalcYear" >
+						  <option value="2020">01.01.2021</option>
+						  <option value="2021">01.01.2022</option>
+						  <option value="2022" selected>01.01.2023</option>
+						  <option value="2023">01.01.2024</option>
+						</select>
+					</div>
+					<div class="note">Базовый год -&nbsp;<span class="note-base-year">2022 (01.01.2023)</span>; следующие года - перспективные.</div>
+					<div class="note">Обновление связей данных -&nbsp;<span class="note-update-date">14.11.2022</span>.</div>
+		  		</div>
 			</div>
 				
 		  	<div class="data-block main-content">
-		  		<div class="data-block border-block table-params">
-		  			<div class="data-row">
-						<div class="data-item">
-							<label for="paramCalcYear" class="data-label">Выберите год:</label>
-							<select class="selectpicker param-calc-year" data-width="140px" id="paramCalcYear" >
-							  <option value="2020">01.01.2021</option>
-							  <option value="2021">01.01.2022</option>
-							  <option value="2022" selected>01.01.2023</option>
-							  <option value="2023">01.01.2024</option>
-							</select>
-						</div>
-						<div class="note">Базовый год -&nbsp;<span class="note-base-year">2022 (01.01.2023)</span>; следующие года - перспективные.</div>
-						<div class="note">Обновление связей данных -&nbsp;<span class="note-update-date">14.11.2022</span>.</div>
-					</div>
-		  		</div>
 		  		
-				
-				<!--ul class="nav nav-tabs" role="tablist">
-				  	<li class="nav-item" role="presentation">
-				    	<button class="nav-link active" data-bs-toggle="tab" data-bs-target="#hpListTab" type="button" role="tab" aria-controls="hpListTab" aria-selected="true"><br class="d-lg-none">Перечень <br class="d-lg-none"> тепловых пунктов</button>
-				  	</li>
-				  	<li class="nav-item" role="presentation">
-				    	<button class="nav-link" data-bs-toggle="tab" data-bs-target="#loadsByYearTab" type="button" role="tab" aria-controls="loadsByYearTab" aria-selected="false">Нагрузки и <br class="d-lg-none">расходы по годам</button>
-				  	</li>
-				  	<li class="nav-item" role="presentation">
-				    	<button class="nav-link" data-bs-toggle="tab" data-bs-target="#equipmentTab" type="button" role="tab" aria-controls="equipmentTab" aria-selected="false"><br class="d-lg-none">Оборудование</button>
-				  	</li>
-				  	<li class="nav-item" role="presentation">
-				    	<button class="nav-link" data-bs-toggle="tab" data-bs-target="#loadsSchemaTab" type="button" role="tab" aria-controls="loadsSchemaTab" aria-selected="false">Схема присоединения <br class="d-lg-none">нагрузок</button>
-				  	</li>
-				  	<li class="nav-item" role="presentation">
-				    	<button class="nav-link" data-bs-toggle="tab" data-bs-target="#automationTab" type="button" role="tab" aria-controls="automationTab" aria-selected="false"><br class="d-lg-none">Автоматизация</button>
-				  	</li>
-				  	<li class="nav-item" role="presentation">
-				    	<button class="nav-link" data-bs-toggle="tab" data-bs-target="#resourcesTab" type="button" role="tab" aria-controls="resourcesTab" aria-selected="false">Учет энергетических <br class="d-lg-none">ресурсов</button>
-				  	</li>
-				  	<li class="nav-item" role="presentation">
-				    	<button class="nav-link" data-bs-toggle="tab" data-bs-target="#developmentTab" type="button" role="tab" aria-controls="developmentTab" aria-selected="false">Мероприятия <br class="d-lg-none">по развитию</button>
-				  	</li>
-				</ul-->
 				<div class="tab-content">
 					<div class="dropdown">
 					  	<button class="bttn bttn-square bttn-burger" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -571,21 +544,16 @@
 											<span class="data-label">в горячей воде</span>
 											<span class="data-label"></span>
 										</p>
-
-											<p class="data-item">по договорам: <span class="mark-color">10</span><span class="data-unit">т/ч</span><span class="mark-color">10</span><span class="data-unit">Гкал/ч</span></p>
-
-											<p class="data-item">расчетная/зарасчетная: <span class="mark-color">10</span><span class="data-unit">т/ч</span><span class="mark-color">10</span><span class="data-unit">Гкал/ч</span></p>		
+										<p class="data-item">по договорам: <span class="mark-color">10</span><span class="data-unit">т/ч</span><span class="mark-color">10</span><span class="data-unit">Гкал/ч</span></p>
+										<p class="data-item">расчетная/зарасчетная: <span class="mark-color">10</span><span class="data-unit">т/ч</span><span class="mark-color">10</span><span class="data-unit">Гкал/ч</span></p>		
 									</div>
 								</div>
 								<div class="data-row">
 									<h5 class="align-self-start">Годовое теплопотребление:</h5>
 									<div class="data-table-block">
-											<p class="data-item">Всего: <span class="mark-color">10</span><span class="data-unit">тыс. Гкал/год</span></p>
-									
-											<p class="data-item">в горячей воде: <span class="mark-color">10</span><span class="data-unit">тыс. Гкал/год</span></p>
-										
-											<p class="data-item">в паре: <span class="mark-color">10</span><span class="data-unit">тыс. Гкал/год</span></p>
-								
+										<p class="data-item">Всего: <span class="mark-color">10</span><span class="data-unit">тыс. Гкал/год</span></p>
+										<p class="data-item">в горячей воде: <span class="mark-color">10</span><span class="data-unit">тыс. Гкал/год</span></p>
+										<p class="data-item">в паре: <span class="mark-color">10</span><span class="data-unit">тыс. Гкал/год</span></p>
 									</div>
 								</div>
 							</div>
@@ -1212,8 +1180,7 @@
 										<p><span class="mark-color">10</span></p>
 									</div>
 									<div class="data-item">
-										<label for="paramCalcYear" class="data-label">Показать
-нарастающим итогом</label>
+										<label for="paramCalcYear" class="data-label">Показать нарастающим итогом</label>
 										<input type="checkbox" class="form-check-input">
 									</div>
 								</div>
@@ -1686,7 +1653,6 @@
 								</div>
 							</div>
 						</div>
-						
 					</div>
 				</div>
 			</div>
@@ -1742,34 +1708,30 @@
 	      			<div class="data-block static-block data-params">
 		      			<div class="data-row">
 		      				<div class="data-item stretch">
-		      					<label class="data-label">Уникальный(ые) номер(а) потребителей:</label>
-		      					<div class="data-value stretch unom-name">
-		      						<select class="selectpicker" id="paramNumberTso" data-live-search="true" multiple="true" placeholder="Выберите один или несколько УНОМ П, которые будут переключаться">
-									  	<option value="ТП 1">Потребитель 1</option>
-									  	<option value="ТП 2">Потребитель 2</option>
-									  	<option value="ТП 3" selected>Потребитель 3</option>
-									  	<option value="ТП 4">Потребитель 4</option>
-									</select>
-		      					</div>
+		      					<label class="data-label fix-325">Уникальный(ые) номер(а) потребителей:</label>
+	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" multiple="true" placeholder="Выберите один или несколько УНОМ П, которые будут переключаться">
+								  	<option value="ТП 1">Потребитель 1</option>
+								  	<option value="ТП 2">Потребитель 2</option>
+								  	<option value="ТП 3">Потребитель 3</option>
+								  	<option value="ТП 4">Потребитель 4</option>
+								</select>
 							</div>
 							<div class="data-item stretch">
-		      					<label class="data-label">Уникальный номер теплового пункта и номер после переключений:</label>
-		      					<div class="data-value stretch unom-name">
-		      						<select class="selectpicker" id="paramNumberTso" data-live-search="true" placeholder="УНОМ ТП - Номер на схеме">
-									  	<option value="ТП 1">ТП 1</option>
-									  	<option value="ТП 2">ТП 2</option>
-									  	<option value="ТП 3" selected>ТП 3</option>
-									  	<option value="ТП 4">ТП 4</option>
-									</select>
-		      					</div>
+		      					<label class="data-label fix-325">Уникальный номер теплового пункта и номер после переключений:</label>
+	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="УНОМ ТП - Номер на схеме">
+								  	<option value="ТП 1">ТП 1</option>
+								  	<option value="ТП 2">ТП 2</option>
+								  	<option value="ТП 3">ТП 3</option>
+								  	<option value="ТП 4">ТП 4</option>
+								</select>
 							</div>
 		      			</div>
 		      			<div class="data-row">
-		      				<h5>Расчётный год схемы:</h5>
+		      				<h5 style="width: 325px" class="text-end">Расчётный год схемы:</h5>
 		      				<div class="data-row">
 		      					<div class="data-item">
 									<label for="paramCalcYear" class="data-label">начало переключений - </label>
-									<select class="selectpicker param-calc-year" data-width="140px" id="paramCalcYear" value="2022">
+									<select class="selectpicker md-fix param-calc-year" id="paramCalcYear">
 									  <option value="2020">01.01.2021</option>
 									  <option value="2021">01.01.2022</option>
 									  <option value="2022" selected>01.01.2023</option>
@@ -1778,11 +1740,11 @@
 								</div>
 								<div class="data-item">
 									<label for="paramCalcYear" class="data-label">окончание переключений - </label>
-									<select class="selectpicker param-calc-year" data-width="140px" id="paramCalcYear" value="2022">
+									<select class="selectpicker md-fix param-calc-year" id="paramCalcYear">
 									  <option value="2020">01.01.2021</option>
 									  <option value="2021">01.01.2022</option>
-									  <option value="2022" selected>01.01.2023</option>
-									  <option value="2023">01.01.2024</option>
+									  <option value="2022">01.01.2023</option>
+									  <option value="2023" selected>01.01.2024</option>
 									</select>
 								</div>
 		      				</div>
@@ -1814,8 +1776,8 @@
 		      								</tr>
 		      							</tbody>
 		      						</table>
-		      						<div class="data-row">
-		      							<p class="data-item">Количество: <span class="mark-color">10</span><span class="data-unit"> шт.</span></p>
+		      						<div class="table-summary data-row">
+		      							<p class="data-item rows-count">Количество: <span class="mark-color">10</span><span class="data-unit"> шт.</span></p>
 										<p class="data-item">∑ Q<sup>РГ</sup><sub>пер</sub>: <span class="mark-color">10</span><span class="data-unit">Гкал/ч</span></p>
 		      						</div>
 		      					</div>
@@ -2058,57 +2020,49 @@
 			     <div class="modal-body">
 	      			<div class="data-block static-block data-params">
 	      				<div class="data-row">
-	      					<div class="data-item ">
+	      					<div class="data-item stretch">
 		      					<label class="data-label">Уникальный номер потребителя:</label>
-		      					<div class="data-value unom-name">
-		      						<select class="selectpicker" id="paramNumberTso" data-live-search="true" placeholder="Выберите УНОМ потребителя">
-									  	<option value="2020">2020</option>
-									  	<option value="2021">2021</option>
-									  	<option value="2022" >2022</option>
-									  	<option value="2023">2023</option>
-									</select>
-		      					</div>
+	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите УНОМ потребителя">
+								  	<option value="2020">2020</option>
+								  	<option value="2021">2021</option>
+								  	<option value="2022" >2022</option>
+								  	<option value="2023">2023</option>
+								</select>
 							</div>
 							<div class="data-item stretch">
 		      					<label class="data-label">Адрес потребителя:</label>
-		      					<div class="data-value stretch unom-name">
-		      						<select class="selectpicker" id="paramNumberTso" data-live-search="true" placeholder="Выбрейте или введите адрес потребителя">
-									  	<option value="2020">2020</option>
-									  	<option value="2021">2021</option>
-									  	<option value="2022" >2022</option>
-									  	<option value="2023">2023</option>
-									</select>
-		      					</div>
+	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите или введите адрес потребителя">
+								  	<option value="2020">2020</option>
+								  	<option value="2021">2021</option>
+								  	<option value="2022" >2022</option>
+								  	<option value="2023">2023</option>
+								</select>
 							</div>
 	      				</div>
 	      				<div class="data-row">
 	      					<div class="data-item stretch">
 		      					<label class="data-label">Округ:</label>
-		      					<div class="data-value stretch unom-name">
-		      						<select class="selectpicker" id="paramNumberTso" data-live-search="true" placeholder="Выберите округ потребителя">
-									  	<option value="2020">2020</option>
-									  	<option value="2021">2021</option>
-									  	<option value="2022" >2022</option>
-									  	<option value="2023">2023</option>
-									</select>
-		      					</div>
+	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите округ потребителя">
+								  	<option value="2020">2020</option>
+								  	<option value="2021">2021</option>
+								  	<option value="2022" >2022</option>
+								  	<option value="2023">2023</option>
+								</select>
 							</div>
 							<div class="data-item stretch">
 		      					<label class="data-label">Район (поселение):</label>
-		      					<div class="data-value stretch unom-name">
-		      						<select class="selectpicker" id="paramNumberTso" data-live-search="true" placeholder="Выбрейте район или населённый пункт потребителя">
-									  	<option value="2020">2020</option>
-									  	<option value="2021">2021</option>
-									  	<option value="2022" >2022</option>
-									  	<option value="2023">2023</option>
-									</select>
-		      					</div>
+	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите район или населённый пункт потребителя">
+								  	<option value="2020">2020</option>
+								  	<option value="2021">2021</option>
+								  	<option value="2022" >2022</option>
+								  	<option value="2023">2023</option>
+								</select>
 							</div>
 	      				</div>
       					<div class="data-row">
       						<div class="data-item stretch">
 	      						<label class="data-label">Наименование:</label>
-	      						<input type="text" class="data-value stretch" placeholder="Введите наименование или назначение потебителя">
+	      						<input type="text" class="data-value xl-stretch" placeholder="Введите наименование или назначение потебителя">
 	      					</div>
 	      					<div class="data-item ">
 	      						<label class="data-label">Существующий потребитель</label>
@@ -2122,27 +2076,25 @@
       					<div class="data-row">
       						<div class="data-item stretch">
 	      						<label class="data-label">Обозначение на схеме:</label>
-	      						<div class="data-value stretch">
-		      						<select class="selectpicker" id="paramNumberTso" data-live-search="true" placeholder="Выбрейте УНОМ ПП">
-									  	<option value="2020">2020</option>
-									  	<option value="2021">2021</option>
-									  	<option value="2022" >2022</option>
-									  	<option value="2023">2023</option>
-									</select>
-		      					</div>
+	      						<select class="selectpicker data-value xl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите УНОМ ПП">
+								  	<option value="2020">2020</option>
+								  	<option value="2021">2021</option>
+								  	<option value="2022">2022</option>
+								  	<option value="2023">2023</option>
+								</select>
 	      					</div>
-	      					<div class="data-item ">
+	      					<div class="data-item stretch">
 	      						<label class="data-label">∑ Q<sub>р</sub>:</label>
-	      						<input type="text" class="data-value" disabled>
+	      						<input type="text" class="data-value sm-stretch" disabled>
 	      						<span class="data-unit">т/ч</span>
-	      						<input type="text" class="data-value" disabled>
+	      						<input type="text" class="data-value sm-stretch" disabled>
 	      						<span class="data-unit">Гкал/ч</span>
 	      					</div>
-	      					<div class="data-item ">
+	      					<div class="data-item stretch">
 	      						<label class="data-label">∑ Q<sub>д</sub>:</label>
-	      						<input type="text" class="data-value" disabled>
+	      						<input type="text" class="data-value sm-stretch" disabled>
 	      						<span class="data-unit">Гкал/ч</span>
-	      						<input type="text" class="data-value" disabled>
+	      						<input type="text" class="data-value sm-stretch" disabled>
 	      						<span class="data-unit">т/ч</span>
 	      					</div>
       					</div>
@@ -2175,36 +2127,30 @@
 															</div>
 															<div class="data-item fix-180">
 										      					<label class="data-label">Управляющая организация:</label>
-										      					<div class="data-value stretch">
-										      						<select class="selectpicker" id="paramNumberTso" data-live-search="true">
-																	  	<option value="2020">2020</option>
-																	  	<option value="2021">2021</option>
-																	  	<option value="2022">2022</option>
-																	  	<option value="2023">2023</option>
-																	</select>
-										      					</div>
+									      						<select class="selectpicker data-value stretch" id="paramNumberTso" data-live-search="true">
+																  	<option value="2020">2020</option>
+																  	<option value="2021">2021</option>
+																  	<option value="2022">2022</option>
+																  	<option value="2023">2023</option>
+																</select>
 															</div>
 															<div class="data-item fix-180">
 										      					<label class="data-label">ИНН организации:</label>
-										      					<div class="data-value stretch">
-										      						<select class="selectpicker" id="paramNumberTso" data-live-search="true">
-																	  	<option value="2020">2020</option>
-																	  	<option value="2021">2021</option>
-																	  	<option value="2022">2022</option>
-																	  	<option value="2023">2023</option>
-																	</select>
-										      					</div>
+									      						<select class="selectpicker data-value stretch" id="paramNumberTso" data-live-search="true">
+																  	<option value="2020">2020</option>
+																  	<option value="2021">2021</option>
+																  	<option value="2022">2022</option>
+																  	<option value="2023">2023</option>
+																</select>
 															</div>
 															<div class="data-item fix-180">
 										      					<label class="data-label">Номер функциональной зоны Генерального плана:</label>
-										      					<div class="data-value stretch">
-										      						<select class="selectpicker" id="paramNumberTso" data-live-search="true">
-																	  	<option value="2020">2020</option>
-																	  	<option value="2021">2021</option>
-																	  	<option value="2022">2022</option>
-																	  	<option value="2023">2023</option>
-																	</select>
-										      					</div>
+									      						<select class="selectpicker data-value stretch" id="paramNumberTso" data-live-search="true">
+																  	<option value="2020">2020</option>
+																  	<option value="2021">2021</option>
+																  	<option value="2022">2022</option>
+																  	<option value="2023">2023</option>
+																</select>
 															</div>
 								      					</div>
 								      				</div>
@@ -2239,84 +2185,88 @@
 								      	<div class="accordion-body">
 								      		<div class="data-block">
 								      			<div class="data-row">
-								      				<div class="data-item">
-								      					<label class="data-label">Этажность:</label>
-								      					<div class="data-value">
-								      						<select class="selectpicker" id="paramNumberTso" data-live-search="true">
-															  	<option value="1">1</option>
-															  	<option value="2">2</option>
-															  	<option value="3">3</option>
-															  	<option value="4">4</option>
-															</select>
-								      					</div>
-													</div>
-													<div class="data-item">
-							      						<label class="data-label">Потребитель относится к социальному объекту</label>
-							      						<input type="checkbox" class="form-check-input">
-							      					</div>
-						      					</div>
-						      					<div class="data-row border-block">
-									      			<div class="data-block">
-									      				<h5>Категория надежности:</h5>
-									      				<div class="data-item">
-								      						<label class="data-label">1 категория</label>
-								      						<input type="radio" name="radioGroup1" class="form-check-input">
-								      					</div>
-								      					<div class="data-item">
-								      						<label class="data-label">2 категория</label>
-								      						<input type="radio" name="radioGroup1" class="form-check-input" checked>
-								      					</div>
-								      					<div class="data-item">
-								      						<label class="data-label">3 категория</label>
-								      						<input type="radio" name="radioGroup1" class="form-check-input">
+									      			<div class="col-12 col-xxl-3">
+									      				<div class="data-block me-xxl-3">
+									      					<div class="data-row">
+									      						<div class="data-item stretch">
+											      					<label class="data-label">Этажность:</label>
+										      						<select class="selectpicker data-value smx-stretch" id="paramNumberTso" data-live-search="true">
+																	  	<option value="1">1</option>
+																	  	<option value="2">2</option>
+																	  	<option value="3">3</option>
+																	  	<option value="4">4</option>
+																	</select>
+																</div>
+																<div class="data-item">
+										      						<label class="data-label">Потребитель относится к социальному объекту</label>
+										      						<input type="checkbox" class="form-check-input">
+										      					</div>
+									      					</div>
 								      					</div>
 									      			</div>
-									      			<div class="data-block">
-									      				<h5>Назначение потребителя (нагрузка):</h5>
-									      				<div class="data-item">
-								      						<label class="data-label">жилое</label>
-								      						<input type="radio" name="radioGroup2" class="form-check-input" checked>
-								      					</div>
-								      					<div class="data-item">
-								      						<label class="data-label">общественное</label>
-								      						<input type="radio" name="radioGroup2" class="form-check-input">
-								      					</div>
-								      					<div class="data-item">
-								      						<label class="data-label">промышленное</label>
-								      						<input type="radio" name="radioGroup2" class="form-check-input">
-								      					</div>
-								      					<div class="data-item">
-								      						<label class="data-label">индивидуальное жилое (ИЖС)</label>
-								      						<input type="radio" name="radioGroup2" class="form-check-input">
-								      					</div>
-									      			</div>
-									      			<div class="data-block">
-									      				<h5>Назначение потребителя (потребление):</h5>
-									      				<div class="data-item">
-								      						<label class="data-label">население</label>
-								      						<input type="radio" name="radioGroup3" class="form-check-input" checked>
-								      					</div>
-								      					<div class="data-item">
-								      						<label class="data-label">бюджетный потребитель</label>
-								      						<input type="radio" name="radioGroup3" class="form-check-input">
-								      					</div>
-								      					<div class="data-item">
-								      						<label class="data-label">прочие</label>
-								      						<input type="radio" name="radioGroup3" class="form-check-input">
-								      					</div>
+									      			<div class="col-12 col-xxl-9">
+									      				<div class="data-row border-block ms-xxl-3">
+											      			<div class="data-block stretch">
+											      				<h5 class="text-end">Категория надежности:</h5>
+											      				<div class="data-item">
+										      						<label class="data-label">1 категория</label>
+										      						<input type="radio" name="radioGroup1" class="form-check-input">
+										      					</div>
+										      					<div class="data-item">
+										      						<label class="data-label">2 категория</label>
+										      						<input type="radio" name="radioGroup1" class="form-check-input" checked>
+										      					</div>
+										      					<div class="data-item">
+										      						<label class="data-label">3 категория</label>
+										      						<input type="radio" name="radioGroup1" class="form-check-input">
+										      					</div>
+											      			</div>
+											      			<div class="data-block stretch">
+											      				<h5 class="text-end">Назначение потребителя (нагрузка):</h5>
+											      				<div class="data-item">
+										      						<label class="data-label">жилое</label>
+										      						<input type="radio" name="radioGroup2" class="form-check-input" checked>
+										      					</div>
+										      					<div class="data-item">
+										      						<label class="data-label">общественное</label>
+										      						<input type="radio" name="radioGroup2" class="form-check-input">
+										      					</div>
+										      					<div class="data-item">
+										      						<label class="data-label">промышленное</label>
+										      						<input type="radio" name="radioGroup2" class="form-check-input">
+										      					</div>
+										      					<div class="data-item">
+										      						<label class="data-label">индивидуальное жилое (ИЖС)</label>
+										      						<input type="radio" name="radioGroup2" class="form-check-input">
+										      					</div>
+											      			</div>
+											      			<div class="data-block stretch">
+											      				<h5 class="text-end">Назначение потребителя (потребление):</h5>
+											      				<div class="data-item">
+										      						<label class="data-label">население</label>
+										      						<input type="radio" name="radioGroup3" class="form-check-input" checked>
+										      					</div>
+										      					<div class="data-item">
+										      						<label class="data-label">бюджетный потребитель</label>
+										      						<input type="radio" name="radioGroup3" class="form-check-input">
+										      					</div>
+										      					<div class="data-item">
+										      						<label class="data-label">прочие</label>
+										      						<input type="radio" name="radioGroup3" class="form-check-input">
+										      					</div>
+											      			</div>
+											      		</div>
 									      			</div>
 									      		</div>
 									      		<div class="data-row">
 									      			<div class="data-item stretch">
 								      					<label class="data-label">Назначение потребителя подробно:</label>
-								      					<div class="data-value unom-name stretch">
-								      						<select class="selectpicker" id="paramNumberTso" data-live-search="true" placeholder="Выберите назначение потребителя">
-															  	<option value="1">Назначение потребителя 1</option>
-															  	<option value="2">Назначение потребителя 2</option>
-															  	<option value="3">Назначение потребителя 3</option>
-															  	<option value="4">Назначение потребителя 4</option>
-															</select>
-								      					</div>
+							      						<select class="selectpicker data-value lg-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите назначение потребителя">
+														  	<option value="1">Назначение 1</option>
+														  	<option value="2">Назначение 2</option>
+														  	<option value="3">Назначение 3</option>
+														  	<option value="4">Назначение 4</option>
+														</select>
 													</div>
 									      		</div>
 								      		</div>
@@ -2329,7 +2279,7 @@
 								      	<div class="accordion-body">
 								      		<div class="data-block">
 								      			<div class="scroll-table-wrapper">
-							      					<table class="table-inp-stretch" style="width:100%;">
+							      					<table class="table-inp-stretch" style="width:100%; white-space: nowrap;">
 									      				<thead>
 									      					<tr>
 									      						<th></th>
@@ -2339,38 +2289,38 @@
 										      					<th>Кондиц.</th>
 										      					<th>ГВС ср.ч.</th>
 										      					<th>ГВС max</th>
-										      					<th>Тепловые завесы</th>
+										      					<th>Тепловые<br>завесы</th>
 										      					<th>Прочие</th>
-										      					<th>ВСЕГО с учетом ГВС ср.ч</th>
-										      					<th>ВСЕГО с учетом ГВС мах</th>
+										      					<th>ВСЕГО<br>с учетом ГВС ср.ч</th>
+										      					<th>ВСЕГО<br>с учетом ГВС мах</th>
 									      					</tr>
 									      				</thead>
 									      				<tbody>
 									      					<tr>
-									      						<td>Тепловая нагрузка (по договору) в горячей воде, <span class="data-unit">Гкал/ч</span></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
+									      						<td>Тепловая нагрузка (по договору)<br>в горячей воде, <span class="data-unit">Гкал/ч</span></td>
+									      						<td><input type="text" class="data-value"></td>
+									      						<td><input type="text" class="data-value"></td>
+									      						<td><input type="text" class="data-value"></td>
+									      						<td><input type="text" class="data-value"></td>
+									      						<td><input type="text" class="data-value"></td>
+									      						<td><input type="text" class="data-value"></td>
+									      						<td><input type="text" class="data-value"></td>
+									      						<td><input type="text" class="data-value"></td>
+									      						<td><input type="text" class="data-value" disabled></td>
+									      						<td><input type="text" class="data-value" disabled></td>
 									      					</tr>
 									      					<tr>
-									      						<td>Тепловая нагрузка (по договору) в паре,<span class="data-unit">т/ч</span></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
+									      						<td>Тепловая нагрузка (по договору)<br>в паре,<span class="data-unit">т/ч</span></td>
+									      						<td><input type="text" class="data-value"></td>
+									      						<td><input type="text" class="data-value"></td>
+									      						<td><input type="text" class="data-value"></td>
+									      						<td><input type="text" class="data-value"></td>
+									      						<td><input type="text" class="data-value"></td>
+									      						<td><input type="text" class="data-value"></td>
+									      						<td><input type="text" class="data-value"></td>
+									      						<td><input type="text" class="data-value"></td>
+									      						<td><input type="text" class="data-value" disabled></td>
+									      						<td><input type="text" class="data-value" disabled></td>
 									      					</tr>
 									      				</tbody>
 									      			</table>
@@ -2443,520 +2393,520 @@
 									      					<tr>
 									      						<td>01.01.2022</td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>перспективный</option>
 																	  	<option value="2" >сущ. в работе</option>
 																	  	<option value="3">снос/вывод</option>
-																	</select></div>
+																	</select>
 																</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="15,00"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="2"></div></td>
+									      						<td><input type="text" class="data-value" value="15,00"></td>
+									      						<td><input type="text" class="data-value" value="2"></td>
 									      						<td><input type="text" class="data-value" value="ТЭЦ-8"></td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>23777</option>
 																	  	<option value="2">23778</option>
-																	</select></div>
+																	</select>
 									      						</td>
 									      						<td><input type="text" value="01-01-0536/021"></td>
 									      						<td>
-									      							<div class="input-cell"><div class="data-value"><select class="selectpicker">
+									      							<select class="selectpicker data-value">
 																	  	<option value="1" selected>Нет</option>
 																	  	<option value="2">Да</option>
-																	</select></div></div>
+																	</select>
 									      						</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,750"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,250"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="66,67" disabled></div></td>
+									      						<td><input type="text" class="data-value" value="1,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,750"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,250"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="66,67" disabled></td>
 									      					</tr>
 									      					<tr>
 									      						<td>01.01.2023</td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>перспективный</option>
 																	  	<option value="2" >сущ. в работе</option>
 																	  	<option value="3">снос/вывод</option>
-																	</select></div>
+																	</select>
 																</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="15,00"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="2"></div></td>
+									      						<td><input type="text" class="data-value" value="15,00"></td>
+									      						<td><input type="text" class="data-value" value="2"></td>
 									      						<td><input type="text" class="data-value" value="ТЭЦ-8"></td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>23777</option>
 																	  	<option value="2">23778</option>
-																	</select></div>
+																	</select>
 									      						</td>
 									      						<td><input type="text" value="01-01-0536/021"></td>
 									      						<td>
-									      							<div class="input-cell"><div class="data-value"><select class="selectpicker">
+									      							<select class="selectpicker data-value">
 																	  	<option value="1" selected>Нет</option>
 																	  	<option value="2">Да</option>
-																	</select></div></div>
+																	</select>
 									      						</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,750"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,250"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="66,67" disabled></div></td>
+									      						<td><input type="text" class="data-value" value="1,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,750"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,250"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="66,67" disabled></td>
 									      					</tr>
 									      					<tr>
 									      						<td>01.01.2024</td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>перспективный</option>
 																	  	<option value="2" >сущ. в работе</option>
 																	  	<option value="3">снос/вывод</option>
-																	</select></div>
+																	</select>
 																</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="15,00"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="2"></div></td>
+									      						<td><input type="text" class="data-value" value="15,00"></td>
+									      						<td><input type="text" class="data-value" value="2"></td>
 									      						<td><input type="text" class="data-value" value="ТЭЦ-8"></td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>23777</option>
 																	  	<option value="2">23778</option>
-																	</select></div>
+																	</select>
 									      						</td>
 									      						<td><input type="text" value="01-01-0536/021"></td>
 									      						<td>
-									      							<div class="input-cell"><div class="data-value"><select class="selectpicker">
+									      							<select class="selectpicker data-value">
 																	  	<option value="1" selected>Нет</option>
 																	  	<option value="2">Да</option>
-																	</select></div></div>
+																	</select>
 									      						</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,750"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,250"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="66,67" disabled></div></td>
+									      						<td><input type="text" class="data-value" value="1,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,750"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,250"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="66,67" disabled></td>
 									      					</tr>
 									      					<tr>
 									      						<td>01.01.2025</td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>перспективный</option>
 																	  	<option value="2" >сущ. в работе</option>
 																	  	<option value="3">снос/вывод</option>
-																	</select></div>
+																	</select>
 																</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="15,00"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="2"></div></td>
+									      						<td><input type="text" class="data-value" value="15,00"></td>
+									      						<td><input type="text" class="data-value" value="2"></td>
 									      						<td><input type="text" class="data-value" value="ТЭЦ-8"></td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>23777</option>
 																	  	<option value="2">23778</option>
-																	</select></div>
+																	</select>
 									      						</td>
 									      						<td><input type="text" value="01-01-0536/021"></td>
 									      						<td>
-									      							<div class="input-cell"><div class="data-value"><select class="selectpicker">
+									      							<select class="selectpicker data-value">
 																	  	<option value="1" selected>Нет</option>
 																	  	<option value="2">Да</option>
-																	</select></div></div>
+																	</select>
 									      						</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,750"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,250"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="66,67" disabled></div></td>
+									      						<td><input type="text" class="data-value" value="1,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,750"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,250"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="66,67" disabled></td>
 									      					</tr>
 									      					<tr>
 									      						<td>01.01.2026</td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>перспективный</option>
 																	  	<option value="2" >сущ. в работе</option>
 																	  	<option value="3">снос/вывод</option>
-																	</select></div>
+																	</select>
 																</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="15,00"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="2"></div></td>
+									      						<td><input type="text" class="data-value" value="15,00"></td>
+									      						<td><input type="text" class="data-value" value="2"></td>
 									      						<td><input type="text" class="data-value" value="ТЭЦ-8"></td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>23777</option>
 																	  	<option value="2">23778</option>
-																	</select></div>
+																	</select>
 									      						</td>
 									      						<td><input type="text" value="01-01-0536/021"></td>
 									      						<td>
-									      							<div class="input-cell"><div class="data-value"><select class="selectpicker">
+									      							<select class="selectpicker data-value">
 																	  	<option value="1" selected>Нет</option>
 																	  	<option value="2">Да</option>
-																	</select></div></div>
+																	</select>
 									      						</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,750"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,250"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="66,67" disabled></div></td>
+									      						<td><input type="text" class="data-value" value="1,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,750"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,250"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="66,67" disabled></td>
 									      					</tr>
 									      					<tr>
 									      						<td>01.01.2027</td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>перспективный</option>
 																	  	<option value="2" >сущ. в работе</option>
 																	  	<option value="3">снос/вывод</option>
-																	</select></div>
+																	</select>
 																</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="15,00"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="2"></div></td>
+									      						<td><input type="text" class="data-value" value="15,00"></td>
+									      						<td><input type="text" class="data-value" value="2"></td>
 									      						<td><input type="text" class="data-value" value="ТЭЦ-8"></td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>23777</option>
 																	  	<option value="2">23778</option>
-																	</select></div>
+																	</select>
 									      						</td>
 									      						<td><input type="text" value="01-01-0536/021"></td>
 									      						<td>
-									      							<div class="input-cell"><div class="data-value"><select class="selectpicker">
+									      							<select class="selectpicker data-value">
 																	  	<option value="1" selected>Нет</option>
 																	  	<option value="2">Да</option>
-																	</select></div></div>
+																	</select>
 									      						</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,750"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,250"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="66,67" disabled></div></td>
+									      						<td><input type="text" class="data-value" value="1,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,750"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,250"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="66,67" disabled></td>
 									      					</tr>
 									      					<tr>
 									      						<td>01.01.2028</td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>перспективный</option>
 																	  	<option value="2" >сущ. в работе</option>
 																	  	<option value="3">снос/вывод</option>
-																	</select></div>
+																	</select>
 																</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="15,00"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="2"></div></td>
+									      						<td><input type="text" class="data-value" value="15,00"></td>
+									      						<td><input type="text" class="data-value" value="2"></td>
 									      						<td><input type="text" class="data-value" value="ТЭЦ-8"></td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>23777</option>
 																	  	<option value="2">23778</option>
-																	</select></div>
+																	</select>
 									      						</td>
 									      						<td><input type="text" value="01-01-0536/021"></td>
 									      						<td>
-									      							<div class="input-cell"><div class="data-value"><select class="selectpicker">
+									      							<select class="selectpicker data-value">
 																	  	<option value="1" selected>Нет</option>
 																	  	<option value="2">Да</option>
-																	</select></div></div>
+																	</select>
 									      						</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,750"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,250"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="66,67" disabled></div></td>
+									      						<td><input type="text" class="data-value" value="1,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,750"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,250"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="66,67" disabled></td>
 									      					</tr>
 									      					<tr>
 									      						<td>01.01.2029</td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>перспективный</option>
 																	  	<option value="2" >сущ. в работе</option>
 																	  	<option value="3">снос/вывод</option>
-																	</select></div>
+																	</select>
 																</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="15,00"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="2"></div></td>
+									      						<td><input type="text" class="data-value" value="15,00"></td>
+									      						<td><input type="text" class="data-value" value="2"></td>
 									      						<td><input type="text" class="data-value" value="ТЭЦ-8"></td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>23777</option>
 																	  	<option value="2">23778</option>
-																	</select></div>
+																	</select>
 									      						</td>
 									      						<td><input type="text" value="01-01-0536/021"></td>
 									      						<td>
-									      							<div class="input-cell"><div class="data-value"><select class="selectpicker">
+									      							<select class="selectpicker data-value">
 																	  	<option value="1" selected>Нет</option>
 																	  	<option value="2">Да</option>
-																	</select></div></div>
+																	</select>
 									      						</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,750"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,250"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="66,67" disabled></div></td>
+									      						<td><input type="text" class="data-value" value="1,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,750"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,250"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="66,67" disabled></td>
 									      					</tr>
 									      					<tr>
 									      						<td>01.01.2030</td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>перспективный</option>
 																	  	<option value="2" >сущ. в работе</option>
 																	  	<option value="3">снос/вывод</option>
-																	</select></div>
+																	</select>
 																</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="15,00"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="2"></div></td>
+									      						<td><input type="text" class="data-value" value="15,00"></td>
+									      						<td><input type="text" class="data-value" value="2"></td>
 									      						<td><input type="text" class="data-value" value="ТЭЦ-8"></td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>23777</option>
 																	  	<option value="2">23778</option>
-																	</select></div>
+																	</select>
 									      						</td>
 									      						<td><input type="text" value="01-01-0536/021"></td>
 									      						<td>
-									      							<div class="input-cell"><div class="data-value"><select class="selectpicker">
+									      							<select class="selectpicker data-value">
 																	  	<option value="1" selected>Нет</option>
 																	  	<option value="2">Да</option>
-																	</select></div></div>
+																	</select>
 									      						</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,750"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,250"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="66,67" disabled></div></td>
+									      						<td><input type="text" class="data-value" value="1,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,750"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,250"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="66,67" disabled></td>
 									      					</tr>
 									      					<tr>
 									      						<td>01.01.2031</td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>перспективный</option>
 																	  	<option value="2" >сущ. в работе</option>
 																	  	<option value="3">снос/вывод</option>
-																	</select></div>
+																	</select>
 																</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="15,00"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="2"></div></td>
+									      						<td><input type="text" class="data-value" value="15,00"></td>
+									      						<td><input type="text" class="data-value" value="2"></td>
 									      						<td><input type="text" class="data-value" value="ТЭЦ-8"></td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>23777</option>
 																	  	<option value="2">23778</option>
-																	</select></div>
+																	</select>
 									      						</td>
 									      						<td><input type="text" value="01-01-0536/021"></td>
 									      						<td>
-									      							<div class="input-cell"><div class="data-value"><select class="selectpicker">
+									      							<select class="selectpicker data-value">
 																	  	<option value="1" selected>Нет</option>
 																	  	<option value="2">Да</option>
-																	</select></div></div>
+																	</select>
 									      						</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,750"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,250"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="66,67" disabled></div></td>
+									      						<td><input type="text" class="data-value" value="1,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,750"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,250"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="66,67" disabled></td>
 									      					</tr>
 									      					<tr>
 									      						<td>01.01.2032</td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>перспективный</option>
 																	  	<option value="2" >сущ. в работе</option>
 																	  	<option value="3">снос/вывод</option>
-																	</select></div>
+																	</select>
 																</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="15,00"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="2"></div></td>
+									      						<td><input type="text" class="data-value" value="15,00"></td>
+									      						<td><input type="text" class="data-value" value="2"></td>
 									      						<td><input type="text" class="data-value" value="ТЭЦ-8"></td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>23777</option>
 																	  	<option value="2">23778</option>
-																	</select></div>
+																	</select>
 									      						</td>
 									      						<td><input type="text" value="01-01-0536/021"></td>
 									      						<td>
-									      							<div class="input-cell"><div class="data-value"><select class="selectpicker">
+									      							<select class="selectpicker data-value">
 																	  	<option value="1" selected>Нет</option>
 																	  	<option value="2">Да</option>
-																	</select></div></div>
+																	</select>
 									      						</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,750"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,250"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="66,67" disabled></div></td>
+									      						<td><input type="text" class="data-value" value="1,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,750"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,250"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="66,67" disabled></td>
 									      					</tr>
 									      					<tr>
 									      						<td>01.01.2033</td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>перспективный</option>
 																	  	<option value="2" >сущ. в работе</option>
 																	  	<option value="3">снос/вывод</option>
-																	</select></div>
+																	</select>
 																</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="15,00"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="2"></div></td>
+									      						<td><input type="text" class="data-value" value="15,00"></td>
+									      						<td><input type="text" class="data-value" value="2"></td>
 									      						<td><input type="text" class="data-value" value="ТЭЦ-8"></td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>23777</option>
 																	  	<option value="2">23778</option>
-																	</select></div>
+																	</select>
 									      						</td>
 									      						<td><input type="text" value="01-01-0536/021"></td>
 									      						<td>
-									      							<div class="input-cell"><div class="data-value"><select class="selectpicker">
+									      							<select class="selectpicker data-value">
 																	  	<option value="1" selected>Нет</option>
 																	  	<option value="2">Да</option>
-																	</select></div></div>
+																	</select>
 									      						</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,750"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,250"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="66,67" disabled></div></td>
+									      						<td><input type="text" class="data-value" value="1,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,750"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,250"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="66,67" disabled></td>
 									      					</tr>
 									      					<tr>
 									      						<td>01.01.2034</td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>перспективный</option>
 																	  	<option value="2" >сущ. в работе</option>
 																	  	<option value="3">снос/вывод</option>
-																	</select></div>
+																	</select>
 																</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="15,00"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="2"></div></td>
+									      						<td><input type="text" class="data-value" value="15,00"></td>
+									      						<td><input type="text" class="data-value" value="2"></td>
 									      						<td><input type="text" class="data-value" value="ТЭЦ-8"></td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>23777</option>
 																	  	<option value="2">23778</option>
-																	</select></div>
+																	</select>
 									      						</td>
 									      						<td><input type="text" value="01-01-0536/021"></td>
 									      						<td>
-									      							<div class="input-cell"><div class="data-value"><select class="selectpicker">
+									      							<select class="selectpicker data-value">
 																	  	<option value="1" selected>Нет</option>
 																	  	<option value="2">Да</option>
-																	</select></div></div>
+																	</select>
 									      						</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,750"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,250"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="66,67" disabled></div></td>
+									      						<td><input type="text" class="data-value" value="1,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,750"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,250"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="66,67" disabled></td>
 									      					</tr>
 									      					<tr>
 									      						<td>01.01.2035</td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>перспективный</option>
 																	  	<option value="2" >сущ. в работе</option>
 																	  	<option value="3">снос/вывод</option>
-																	</select></div>
+																	</select>
 																</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="15,00"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="2"></div></td>
+									      						<td><input type="text" class="data-value" value="15,00"></td>
+									      						<td><input type="text" class="data-value" value="2"></td>
 									      						<td><input type="text" class="data-value" value="ТЭЦ-8"></td>
 									      						<td>
-									      							<div class="data-value"><select class="selectpicker" data-live-search="true">
+									      							<select class="selectpicker data-value" data-live-search="true">
 																	  	<option value="1" selected>23777</option>
 																	  	<option value="2">23778</option>
-																	</select></div>
+																	</select>
 									      						</td>
 									      						<td><input type="text" value="01-01-0536/021"></td>
 									      						<td>
-									      							<div class="input-cell"><div class="data-value"><select class="selectpicker">
+									      							<select class="selectpicker data-value">
 																	  	<option value="1" selected>Нет</option>
 																	  	<option value="2">Да</option>
-																	</select></div></div>
+																	</select>
 									      						</td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,750"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,000"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="0,250"></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="1,000" disabled></div></td>
-									      						<td><div class="input-cell"><input type="text" class="data-value" value="66,67" disabled></div></td>
+									      						<td><input type="text" class="data-value" value="1,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,750"></td>
+									      						<td><input type="text" class="data-value" value="0,000"></td>
+									      						<td><input type="text" class="data-value" value="0,250"></td>
+									      						<td><input type="text" class="data-value" value="1,000" disabled></td>
+									      						<td><input type="text" class="data-value" value="66,67" disabled></td>
 									      					</tr>
 									      				</tbody>
 									      			</table>
@@ -3343,7 +3293,7 @@
 												      	<div class="accordion-body">
 												      		<div class="data-row">
 												      			<div class="data-item">
-										      						<label class="data-label">Потребитель учтен в программе капремонта / энергосбережения</label>
+										      						<label class="data-label">Потребитель учтён в программе капремонта / энергосбережения</label>
 										      						<input type="checkbox" id="checkInProgram" class="form-check-input">
 										      					</div>
 										      					<div class="data-item">
@@ -3360,8 +3310,8 @@
 												      	<div class="accordion-body">
 												      		<div class="data-block">
 												      			<div class="data-row">
-												      				<div class="col-12 col-lg-5">
-												      					<div class="data-block me-3">
+												      				<div class="col-12 col-xl-5">
+												      					<div class="data-block me-xl-3">
 												      						<div class="data-item">
 													      						<label class="data-label fix-180">Программа развития:</label>
 													      						<input type="text" class="data-value stretch" placeholder="Наименование типа программы" disabled>
@@ -3371,23 +3321,23 @@
 													      						<input type="text" class="data-value stretch" placeholder="Номер объекта в программе" disabled>
 													      					</div>
 													      					<div class="data-row">
-													      						<div class="data-item">
+													      						<div class="data-item stretch">
 														      						<label class="data-label fix-180">Заявка о подключении: </label><label class="data-label"><span class="sublabel">от</span></label>
-														      						<input type="date" class="data-value" placeholder="Дата" disabled>
+														      						<input type="date" class="data-value smx-stretch" placeholder="Дата" disabled>
 														      					</div>
 														      					<div class="data-item stretch">
 														      						<label class="data-label"> <span class="sublabel">№</span></label>
-														      						<input type="text" class="data-value stretch" placeholder="Номер" disabled>
+														      						<input type="text" class="data-value smx-stretch" placeholder="Номер" disabled>
 														      					</div>
 													      					</div>
 													      					<div class="data-row">
-													      						<div class="data-item">
+													      						<div class="data-item stretch">
 														      						<label class="data-label fix-180">Договор о подключении: </label><label class="data-label"><span class="sublabel">от</span></label>
-														      						<input type="date" class="data-value" placeholder="Дата" disabled>
+														      						<input type="date" class="data-value smx-stretch" placeholder="Дата" disabled>
 														      					</div>
 														      					<div class="data-item stretch">
 														      						<label class="data-label"> <span class="sublabel">№</span></label>
-														      						<input type="text" class="data-value stretch" placeholder="Номер" disabled>
+														      						<input type="text" class="data-value smx-stretch" placeholder="Номер" disabled>
 														      					</div>
 													      					</div>
 													      					
@@ -3397,34 +3347,36 @@
 													      					</div>
 												      					</div>
 												      				</div>
-												      				<div class="col-12 col-lg-7">
-												      					<div class="data-block ms-3">
+												      				<div class="col-12 col-xl-7">
+												      					<div class="data-block ms-xl-3">
 												      						<div class="data-row">
 												      							<div class="data-item stretch">
 														      						<label class="data-label fix-180">Год программы:</label>
-														      						<input type="text" class="data-value stretch" placeholder="Год" disabled>
+														      						<input type="text" class="data-value smx-stretch" placeholder="Год" disabled>
 														      					</div>
-													      						<div class="data-item">
-														      						<label class="data-label">Решение: </label><label class="data-label"><span class="sublabel">от</span></label>
-														      						<input type="date" class="data-value" placeholder="Дата" disabled>
-														      					</div>
-														      					<div class="data-item stretch">
-														      						<label class="data-label"> <span class="sublabel">№</span></label>
-														      						<input type="text" class="data-value stretch" placeholder="Номер" disabled>
+														      					<div class="data-row stretch">
+														      						<div class="data-item stretch">
+															      						<label class="data-label fix-180">Решение: </label><label class="data-label"><span class="sublabel">от</span></label>
+															      						<input type="date" class="data-value md-fix" placeholder="Дата" disabled>
+															      					</div>
+															      					<div class="data-item stretch">
+															      						<label class="data-label"> <span class="sublabel">№</span></label>
+															      						<input type="text" class="data-value sm-stretch" placeholder="Номер" disabled>
+															      					</div>
 														      					</div>
 													      					</div>
 													      					<div class="data-item">
 													      						<label class="data-label fix-180">Наименование заявителя:</label>
-													      						<input type="text" class="data-value stretch" placeholder="Наименование заявителя по объекту" disabled>
+													      						<input type="text" class="data-value xl-stretch" placeholder="Наименование заявителя по объекту" disabled>
 													      					</div>
 													      					<div class="data-row">
 													      						<div class="data-item">
 														      						<label class="data-label fix-180">Условие на подключение: </label><label class="data-label"><span class="sublabel">от</span></label>
-														      						<input type="date" class="data-value" placeholder="Дата" disabled>
+														      						<input type="date" class="data-value md-fix" placeholder="Дата" disabled>
 														      					</div>
 														      					<div class="data-item stretch">
 														      						<label class="data-label"> <span class="sub-label">№</span></label>
-														      						<input type="text" class="data-value stretch" placeholder="Номер" disabled>
+														      						<input type="text" class="data-value sm-stretch" placeholder="Номер" disabled>
 														      					</div>
 													      					</div>
 													      					<div class="data-item">
@@ -3434,11 +3386,11 @@
 													      					<div class="data-row">
 													      						<div class="data-item stretch">
 														      						<label class="data-label fix-180">Года реализации строительства: </label><label class="data-label"><span class="sublabel">год начала</span></label>
-														      						<input type="text" class="data-value stretch" placeholder="Год" >
+														      						<input type="text" class="data-value smx-stretch" placeholder="Год" >
 														      					</div>
 														      					<div class="data-item stretch">
 														      						<label class="data-label fix-80"><span class="sublabel">год окончания</span></label>
-														      						<input type="text" class="data-value stretch" placeholder="Год" >
+														      						<input type="text" class="data-value smx-stretch" placeholder="Год" >
 														      					</div>
 													      					</div>
 												      					</div>
@@ -3467,94 +3419,94 @@
 													      						<tr>
 													      							<td rowspan="3">в горячей воде, <span class="data-unit">Гкал/ч</span></td>
 													      							<td style="position: sticky;left: 70.6px;background: white;z-index: 1;">заявленная</td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
+													      							<td><input type="text" class="data-value" disabled></td>
+													      							<td><input type="text" class="data-value" disabled></td>
+													      							<td><input type="text" class="data-value" disabled></td>
+													      							<td><input type="text" class="data-value" disabled></td>
+													      							<td><input type="text" class="data-value" disabled></td>
+													      							<td><input type="text" class="data-value" disabled></td>
+													      							<td><input type="text" class="data-value" disabled></td>
+													      							<td><input type="text" class="data-value" disabled></td>
+													      							<td><input type="text" class="data-value" disabled></td>
+													      							<td><input type="text" class="data-value" disabled></td>
 													      						</tr>
 													      						<tr>
 													      							<td style="left: 70.6px;">расчетная</td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" ></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" ></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" ></div></td>
+													      							<td><input type="text" class="data-value" ></td>
+													      							<td><input type="text" class="data-value" ></td>
+													      							<td><input type="text" class="data-value" ></td>
 													      							<td></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" ></div></td>
+													      							<td><input type="text" class="data-value" ></td>
 													      							<td></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" ></div></td>
+													      							<td><input type="text" class="data-value" ></td>
 													      							<td></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" ></div></td>
+													      							<td><input type="text" class="data-value" ></td>
 													      							<td></td>
 													      						</tr>
 													      						<tr>
 													      							<td style="left: 70.6px;">отличие, <span class="data-unit">%</span></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
+													      							<td><input type="text" class="data-value" disabled></td>
+													      							<td><input type="text" class="data-value" disabled></td>
+													      							<td><input type="text" class="data-value" disabled></td>
 													      							<td></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
+													      							<td><input type="text" class="data-value" disabled></td>
 													      							<td></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
+													      							<td><input type="text" class="data-value" disabled></td>
 													      							<td></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
+													      							<td><input type="text" class="data-value" disabled></td>
 													      							<td></td>
 													      						</tr>
 													      						<tr>
 													      							<td colspan="2">удельный расход тепла, <span class="data-unit">ккал/(ч · м<sup>2</sup>)</span></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
+													      							<td><input type="text" class="data-value" disabled></td>
+													      							<td><input type="text" class="data-value" disabled></td>
+													      							<td><input type="text" class="data-value" disabled></td>
 													      							<td></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
+													      							<td><input type="text" class="data-value" disabled></td>
 													      							<td></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
+													      							<td><input type="text" class="data-value" disabled></td>
 													      							<td></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
+													      							<td><input type="text" class="data-value" disabled></td>
 													      							<td></td>
 													      						</tr>
 													      						<tr>
 													      							<td rowspan="3">в паре, <span class="data-unit">т/ч</span></td>
 													      							<td style="position: sticky;left: 70.6px;background: white;z-index: 1;">заявленная</td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
+													      							<td><input type="text" class="data-value" disabled></td>
+													      							<td><input type="text" class="data-value" disabled></td>
+													      							<td><input type="text" class="data-value" disabled></td>
+													      							<td><input type="text" class="data-value" disabled></td>
+													      							<td><input type="text" class="data-value" disabled></td>
+													      							<td><input type="text" class="data-value" disabled></td>
+													      							<td><input type="text" class="data-value" disabled></td>
+													      							<td><input type="text" class="data-value" disabled></td>
+													      							<td><input type="text" class="data-value" disabled></td>
+													      							<td><input type="text" class="data-value" disabled></td>
 													      						</tr>
 													      						<tr>
 													      							<td style="left: 70.6px;">расчетная</td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" ></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" ></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" ></div></td>
+													      							<td><input type="text" class="data-value" ></td>
+													      							<td><input type="text" class="data-value" ></td>
+													      							<td><input type="text" class="data-value" ></td>
 													      							<td></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" ></div></td>
+													      							<td><input type="text" class="data-value" ></td>
 													      							<td></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" ></div></td>
+													      							<td><input type="text" class="data-value" ></td>
 													      							<td></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" ></div></td>
+													      							<td><input type="text" class="data-value" ></td>
 													      							<td></td>
 													      						</tr>
 													      						<tr>
 													      							<td style="left: 70.6px;">отличие, <span class="data-unit">%</span></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
+													      							<td><input type="text" class="data-value" disabled></td>
+													      							<td><input type="text" class="data-value" disabled></td>
+													      							<td><input type="text" class="data-value" disabled></td>
 													      							<td></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
+													      							<td><input type="text" class="data-value" disabled></td>
 													      							<td></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
+													      							<td><input type="text" class="data-value" disabled></td>
 													      							<td></td>
-													      							<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
+													      							<td><input type="text" class="data-value" disabled></td>
 													      							<td></td>
 													      						</tr>
 													      					</tbody>
@@ -3564,7 +3516,7 @@
 												      			<div class="data-block border-block">
 												      				<h4>Динамика по годам программы</h4>
 												      				<div class="scroll-table-wrapper">
-												      					<table class="table-inp-stretch" style="width: 100%;">
+												      					<table class="table-inp-stretch" style="width: 100%;white-space: nowrap;">
 												      						<thead>
 												      							<tr>
 												      								<th>
@@ -3587,56 +3539,56 @@
 												      						</thead>
 												      						<tbody>
 												      							<tr>
-												      								<td>Объем строительства, <span class="data-unit">тыс. м<sup>2</sup></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value"></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value"></div></td>
+												      								<td>Объем строительства,<br><span class="data-unit">тыс. м<sup>2</sup></td>
+												      								<td><input type="text" class="data-value"></td>
+												      								<td><input type="text" class="data-value"></td>
+												      								<td><input type="text" class="data-value"></td>
+												      								<td><input type="text" class="data-value"></td>
+												      								<td><input type="text" class="data-value"></td>
+												      								<td><input type="text" class="data-value"></td>
+												      								<td><input type="text" class="data-value"></td>
+												      								<td><input type="text" class="data-value"></td>
+												      								<td><input type="text" class="data-value"></td>
+												      								<td><input type="text" class="data-value"></td>
+												      								<td><input type="text" class="data-value"></td>
+												      								<td><input type="text" class="data-value"></td>
+												      								<td><input type="text" class="data-value"></td>
 												      							</tr>
 												      							<tr>
-												      								<td>Суммарная расчетная тепловая нагрузка</td>
+												      								<td>Суммарная расчетная<br>тепловая нагрузка</td>
 												      								<td colspan="13"></td>
 												      							</tr>
 												      							<tr>
 												      								<td>- горячая вода, <span class="data-unit">Гкал/ч</td>
-												      								<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
+												      								<td><input type="text" class="data-value" disabled></td>
+												      								<td><input type="text" class="data-value" disabled></td>
+												      								<td><input type="text" class="data-value" disabled></td>
+												      								<td><input type="text" class="data-value" disabled></td>
+												      								<td><input type="text" class="data-value" disabled></td>
+												      								<td><input type="text" class="data-value" disabled></td>
+												      								<td><input type="text" class="data-value" disabled></td>
+												      								<td><input type="text" class="data-value" disabled></td>
+												      								<td><input type="text" class="data-value" disabled></td>
+												      								<td><input type="text" class="data-value" disabled></td>
+												      								<td><input type="text" class="data-value" disabled></td>
+												      								<td><input type="text" class="data-value" disabled></td>
+												      								<td><input type="text" class="data-value" disabled></td>
 												      							</tr>
 												      							<tr>
 												      								<td>- пар, <span class="data-unit">т/ч</td>
-												      								<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
-												      								<td><div class="input-cell"><input type="text" class="data-value" disabled></div></td>
+												      								<td><input type="text" class="data-value" disabled></td>
+												      								<td><input type="text" class="data-value" disabled></td>
+												      								<td><input type="text" class="data-value" disabled></td>
+												      								<td><input type="text" class="data-value" disabled></td>
+												      								<td><input type="text" class="data-value" disabled></td>
+												      								<td><input type="text" class="data-value" disabled></td>
+												      								<td><input type="text" class="data-value" disabled></td>
+												      								<td><input type="text" class="data-value" disabled></td>
+												      								<td><input type="text" class="data-value" disabled></td>
+												      								<td><input type="text" class="data-value" disabled></td>
+												      								<td><input type="text" class="data-value" disabled></td>
+												      								<td><input type="text" class="data-value" disabled></td>
+												      								<td><input type="text" class="data-value" disabled></td>
 												      							</tr>
 												      						</tbody>
 												      					</table>
@@ -3724,25 +3676,25 @@
 								      			<div class="data-row">
 								      				<div class="data-item stretch">
 							      						<label class="data-label">MUID</label>
-							      						<input type="text" class="data-value stretch" placeholder="Введите номер MUID">
+							      						<input type="text" class="data-value smx-stretch" placeholder="Введите номер MUID">
 							      					</div>
 							      					<div class="data-item stretch">
 							      						<label class="data-label">UNOM</label>
-							      						<input type="text" class="data-value stretch" placeholder="Введите номер UNOM">
+							      						<input type="text" class="data-value smx-stretch" placeholder="Введите номер UNOM">
 							      					</div>
 							      					<div class="data-item stretch">
 							      						<label class="data-label">CON_CODE</label>
-							      						<input type="text" class="data-value stretch" placeholder="Введите номер CON_CODE">
+							      						<input type="text" class="data-value smx-stretch" placeholder="Введите номер CON_CODE">
 							      					</div>
 								      			</div>
 								      			<div class="data-row">
 								      				<div class="data-item stretch">
 							      						<label class="data-label">KOD_DP_M</label>
-							      						<input type="text" class="data-value stretch" placeholder="Введите номер KOD_DP_M">
+							      						<input type="text" class="data-value smx-stretch" placeholder="Введите номер KOD_DP_M">
 							      					</div>
 							      					<div class="data-item stretch">
 							      						<label class="data-label">KKS_M</label>
-							      						<input type="text" class="data-value stretch" placeholder="Введите номер KKS_M">
+							      						<input type="text" class="data-value smx-stretch" placeholder="Введите номер KKS_M">
 							      					</div>
 								      			</div>
 								      		</div>
@@ -3775,8 +3727,24 @@
 	        	<div class="data-block static-block">
         			<div class="data-item">
 		        		<label class="data-label">Уникальные номера потребителей:</label>
-      					<div class="data-value unom-name stretch">
-      						<select class="selectpicker" id="paramNumberTso" data-live-search="true" multiple="true" placeholder="Выберите перечень УНОМ П">
+  						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" multiple="true" placeholder="Выберите перечень УНОМ П">
+						  	<option value="2020">2020</option>
+						  	<option value="2021">2021</option>
+						  	<option value="2022">2022</option>
+						  	<option value="2023">2023</option>
+						  	<option value="2023">2024</option>
+						  	<option value="2023">2025</option>
+						  	<option value="2023">2026</option>
+						  	<option value="2023">2027</option>
+						  	<option value="2023">2028</option>
+						  	<option value="2023">2029</option>
+						  	<option value="2023">2030</option>
+						</select>
+		        	</div>
+	        		<div class="data-row">
+	        			<div class="data-item stretch">
+			        		<label class="data-label">Уникальные номера потребителей:</label>
+      						<select class="selectpicker data-value xl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите УНОМ ПР">
 							  	<option value="2020">2020</option>
 							  	<option value="2021">2021</option>
 							  	<option value="2022">2022</option>
@@ -3789,30 +3757,10 @@
 							  	<option value="2023">2029</option>
 							  	<option value="2023">2030</option>
 							</select>
-      					</div>
-		        	</div>
-	        		<div class="data-row">
-	        			<div class="data-item">
-			        		<label class="data-label">Уникальные номера потребителей:</label>
-	      					<div class="data-value">
-	      						<select class="selectpicker" id="paramNumberTso" data-live-search="true" placeholder="Выберите УНОМ ПР">
-								  	<option value="2020">2020</option>
-								  	<option value="2021">2021</option>
-								  	<option value="2022">2022</option>
-								  	<option value="2023">2023</option>
-								  	<option value="2023">2024</option>
-								  	<option value="2023">2025</option>
-								  	<option value="2023">2026</option>
-								  	<option value="2023">2027</option>
-								  	<option value="2023">2028</option>
-								  	<option value="2023">2029</option>
-								  	<option value="2023">2030</option>
-								</select>
-	      					</div>
 			        	</div>
 			        	<div class="data-item stretch">
 			        		<label class="data-label">Наименование программы</label>
-							<input type="text" class="data-value stretch" disabled placeholder="Наименование программы">
+							<input type="text" class="data-value xl-stretch" disabled placeholder="Наименование программы">
 			        	</div>
 	        		</div>
 	        	</div>

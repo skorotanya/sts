@@ -1,5 +1,7 @@
 
 
+
+
 /*  PRELOADER */
 
 // hide preloader
@@ -260,15 +262,16 @@ const initPageTables = (pageTables) => {
         if(tbl.type=='full') {
             loadFilterFromState(tblId);
         };
-        if(tbl.modal =='' && tbl.firstTab) {
-            adjustColumns(tblId);
-        };
+       
         if(tbl.tab) {
             // adjust table columns after showing tab for edit data
             let tabEl = document.querySelector('button[data-bs-target="#' + tbl.name + 'Tab"');
             tabEl.addEventListener('shown.bs.tab', event => {
                 adjustColumns(tblId);
             });
+        };
+        if(tbl.modal =='' && tbl.firstTab) {
+            adjustColumns(tblId);
         };
         if(tbl.accordionId && tbl.accordionId !='') {
             // adjust table columns after showing tab for edit data
@@ -286,6 +289,10 @@ const initPageTables = (pageTables) => {
       };
     })
   }
+
+
+
+
 
 
 
@@ -312,6 +319,25 @@ window.onload = () => {
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 
+
+   /// const dropdownElemsList = document.querySelectorAll('.bootstrap-select .dropdown-toggle');
+  //  const customBoundary = document.querySelector('.main-container');
+ //   dropdownElemsList.forEach((el) => {
+   //     return new bootstrap.Dropdown(el, {
+   //         popperConfig: {
+  //              strategy: "fixed"
+   //         }
+   //     });
+ //       let dropdownObj = bootstrap.Dropdown.getInstance(el);
+        //dropdownObj._config.strategy = "fixed";
+   
+  //      dropdownObj._config.boundary = customBoundary;
+      //  if (el.dropdown && el.dropdown._popper) {
+          //  Popper.detectOverflow(dropdownObj, {
+          //    boundary: customBoundary, // 'clippingParents' by default
+         //   });
+      //  }
+  //  })
 
 
     // ajust placement colVis and searchBuilder dropdown panes

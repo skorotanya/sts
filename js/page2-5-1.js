@@ -268,12 +268,6 @@ $(document).ready(function () {
       showModal('editDevelopmentData');
     } );
 
-    // show modal window for constructor
-    $('.bttn-constructor').on('click', (e) => {
-        showModal('tableConstructor');
-    });
-
-
 
 });
 

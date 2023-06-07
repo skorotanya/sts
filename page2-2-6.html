@@ -200,14 +200,18 @@
 						<li class="breadcrumb-item">Теплоснабжающие организации - Экологические показатели</li>
 					</ul>
 				</div>
-				<h1 class="title">Экологические показатели</h1>
-			</div>
-			
-		  	<div class="data-block main-content">
-				<div class="data-row table-params">
+				<div class="data-row">
+					<h1 class="title">Экологические показатели</h1>
+					<div class="data-item data-item-right">
+						<button class="bttn bttn-color bttn-edit-data" type="button">Добавить/Удалить</button>
+						<a class="bttn bttn-color bttn-load-data" type="button" href="page2-2-1-2.html">Загрузить данные</a>
+						<button class="bttn bttn-color bttn-excel-export" type="button">Выгрузить в Excel</button>
+					</div>
+				</div>
+				<div class="data-row static-block">
 					<div class="data-item">
 						<label for="paramCalcYear" class="data-label">Выберите год:</label>
-						<select class="selectpicker param-calc-year" data-width="140px" id="paramCalcYear" value="2022">
+						<select class="selectpicker md-fix param-calc-year" id="paramCalcYear">
 						  <option value="2020">01.01.2021</option>
 						  <option value="2021">01.01.2022</option>
 						  <option value="2022" selected>01.01.2023</option>
@@ -217,13 +221,11 @@
 					<div class="data-item">
 						<div class="note">Базовый год - <span class="note-base-year">2022 (01.01.2023)</span>; следующие года - перспективные.</div>
 					</div>
-					
-					<div class="data-item">
-						<a class="bttn bttn-color bttn-load-data" type="button" href="page2-2-1-2.html">Загрузить данные</a>
-						<button class="bttn bttn-color bttn-excel-export" type="button">Выгрузить в Excel</button>
-					</div>
-
 				</div>
+			</div>
+			
+		  	<div class="data-block main-content border-block" style="border-color: var(--action-color);">
+				
 				<div class="table-block">
 					<div class="table-buttons ecoTable-buttons"></div>
 					<table id="ecoTable" class="display compact table-clicked" style="width:100%">
@@ -566,19 +568,16 @@
 	      				<div class="data-row">
 	      					<div class="data-item stretch">
 		      					<label class="data-label">Наименование ТСО</label>
-		      					<div class="data-value stretch unom-name">
-		      						<select class="selectpicker" id="paramNumberTso" data-live-search="true" placeholder="УНОМ ТСО - Наименование">
-									  	<option value="2020">2020</option>
-									  	<option value="2021">2021</option>
-									  	<option value="2022" selected>2022</option>
-									  	<option value="2023">2023</option>
-									</select>
-		      					</div>
-							  	
+	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="УНОМ ТСО - Наименование">
+								  	<option value="2020">2020</option>
+								  	<option value="2021">2021</option>
+								  	<option value="2022" selected>2022</option>
+								  	<option value="2023">2023</option>
+								</select> 	
 							</div>
 							<div class="data-item">
 								<label for="paramCalcYear" class="data-label">Расчётный год:</label>
-								<select class="selectpicker param-calc-year" data-width="140px" id="paramCalcYear" value="2022">
+								<select class="selectpicker md-fix param-calc-year" id="paramCalcYear">
 								  <option value="2020">01.01.2021</option>
 								  <option value="2021">01.01.2022</option>
 								  <option value="2022" selected>01.01.2023</option>
@@ -618,40 +617,40 @@
 								      					<tbody>
 								      						<tr>
 								      							<td>разрешенные, <span class="data-unit">т/год</span></td>
-								      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-								      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-								      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-								      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-								      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-								      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-								      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-								      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-								      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-								      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+								      							<td><input type="text" name="" class="data-value" disabled></td>
+								      							<td><input type="text" name="" class="data-value" disabled></td>
+								      							<td><input type="text" name="" class="data-value" disabled></td>
+								      							<td><input type="text" name="" class="data-value" disabled></td>
+								      							<td><input type="text" name="" class="data-value" disabled></td>
+								      							<td><input type="text" name="" class="data-value" disabled></td>
+								      							<td><input type="text" name="" class="data-value" disabled></td>
+								      							<td><input type="text" name="" class="data-value" disabled></td>
+								      							<td><input type="text" name="" class="data-value" disabled></td>
+								      							<td><input type="text" name="" class="data-value" disabled></td>
 								      						</tr>
 								      						<tr>
 								      							<td>фактические, <span class="data-unit">т/год</span></td>
-								      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+								      							<td><input type="text" name="" class="data-value" disabled></td>
 								      							<td colspan="2"></td>
-								      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-								      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-								      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-								      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-								      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-								      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-								      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+								      							<td><input type="text" name="" class="data-value" disabled></td>
+								      							<td><input type="text" name="" class="data-value" disabled></td>
+								      							<td><input type="text" name="" class="data-value" disabled></td>
+								      							<td><input type="text" name="" class="data-value" disabled></td>
+								      							<td><input type="text" name="" class="data-value" disabled></td>
+								      							<td><input type="text" name="" class="data-value" disabled></td>
+								      							<td><input type="text" name="" class="data-value" disabled></td>
 								      						</tr>
 								      						<tr>
 								      							<td>отличие (разрешенные – факт), <span class="data-unit">т/год</span></td>
-								      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+								      							<td><input type="text" name="" class="data-value" disabled></td>
 								      							<td colspan="2"></td>
-								      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-								      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-								      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-								      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-								      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-								      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-								      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+								      							<td><input type="text" name="" class="data-value" disabled></td>
+								      							<td><input type="text" name="" class="data-value" disabled></td>
+								      							<td><input type="text" name="" class="data-value" disabled></td>
+								      							<td><input type="text" name="" class="data-value" disabled></td>
+								      							<td><input type="text" name="" class="data-value" disabled></td>
+								      							<td><input type="text" name="" class="data-value" disabled></td>
+								      							<td><input type="text" name="" class="data-value" disabled></td>
 								      						</tr>
 								      					</tbody>
 								      				</table>
@@ -675,7 +674,7 @@
 							      					<tbody>
 							      						<tr>
 							      							<td>Выбросы парниковых газов, <span class="data-unit">т/год</span></td>
-							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><input type="text" name="" class="data-value" disabled></td>
 							      						</tr>
 							      					</tbody>
 							      				</table>
@@ -1027,23 +1026,23 @@
 							      					<tbody>
 							      						<tr>
 							      							<td>Плата за выбросы загрязняющих веществ в атмосферный воздух, <span class="data-unit">тыс. руб.</span></td>
-							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><input type="text" name="" class="data-value" disabled></td>
+							      							<td><input type="text" name="" class="data-value" disabled></td>
+							      							<td><input type="text" name="" class="data-value" disabled></td>
+							      							<td><input type="text" name="" class="data-value" disabled></td>
 							      						</tr>
 							      						<tr>
 							      							<td>Плата за сбросы, <span class="data-unit">тыс. руб.</span></td>
-							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><input type="text" name="" class="data-value" disabled></td>
+							      							<td><input type="text" name="" class="data-value" disabled></td>
+							      							<td><input type="text" name="" class="data-value" disabled></td>
+							      							<td><input type="text" name="" class="data-value" disabled></td>
 							      						</tr>
 							      						<tr>
 							      							<td>Плата за размещение отходов, <span class="data-unit">тыс. руб.</span></td>
-							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
-							      							<td><div class="input-cell"><input type="text" name="" class="data-value" disabled></div></td>
+							      							<td><input type="text" name="" class="data-value" disabled></td>
+							      							<td><input type="text" name="" class="data-value" disabled></td>
+							      							<td><input type="text" name="" class="data-value" disabled></td>
 							      							<td></td>
 							      						</tr>
 							      					</tbody>

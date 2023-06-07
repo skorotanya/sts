@@ -112,5 +112,16 @@ $(document).ready(function () {
       showModal('editExtraData');
     } );
 
+    /* Click on Add button */
+     $('.bttn-edit-data').on('click', (e) => {
+      let activeTabId = $('.tab-pane.active').attr('id');
+      if(activeTabId == 'extraDataTab') {
+        showModal('editExtraData');
+      } else {
+        showModal('editData');
+      }
+      
+    } );
+
 });
 
