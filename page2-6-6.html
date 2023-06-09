@@ -134,12 +134,12 @@
 			            Справочные таблицы
 			          </a>
 			          <ul class="subnav collapse list-unstyled show" id="st_menu">
-			            <li><a class="subnav-item nav-link active" href="#">Организации</a></li>
+			            <li><a class="subnav-item nav-link" href="page2-6-1.html">Организации</a></li>
 			            <li><a class="subnav-item nav-link" href="page2-6-2.html">Территориальное деление</a></li>
 			            <li><a class="subnav-item nav-link" href="page2-6-3.html">Тарифные зоны</a></li>
 			            <li><a class="subnav-item nav-link" href="page2-6-4.html">Зоны деятельности ЕТО</a></li>
 			            <li><a class="subnav-item nav-link" href="page2-6-5.html">Системы теплоснабжения</a></li>
-			            <li><a class="subnav-item nav-link" href="page2-6-6.html">Договора на теплоснабжение</a></li>
+			            <li><a class="subnav-item nav-link active" href="#">Договора на теплоснабжение</a></li>
 			            <li><a class="subnav-item nav-link" href="#">Нормы расхода тепла</a></li>
 			            <li><a class="subnav-item nav-link" href="#">Программы развития города (поселения)</a></li>
 			            <li><a class="subnav-item nav-link" href="#">Оборудование</a></li>
@@ -197,11 +197,11 @@
 				<div class="data-row">
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a class="ref-color" href="#">Главная</a></li>
-						<li class="breadcrumb-item">Справочники - Организации</li>
+						<li class="breadcrumb-item">Справочники - Договора на теплоснабжение</li>
 					</ul>
 				</div>
 				<div class="data-row">
-					<h1 class="title">Организации</h1>
+					<h1 class="title">Договора на теплоснабжение</h1>
 					<div class="data-item data-item-right">
 						<button class="bttn bttn-color bttn-edit-data" type="button">Добавить/Удалить</button>
 						<a class="bttn bttn-color bttn-load-data" type="button" href="page2-2-1-2.html">Загрузить данные</a>
@@ -212,8 +212,8 @@
 		  	<div class="data-block main-content border-block" style="border-color: var(--action-color);">
 				
 				<div class="table-block">
-					<div class="table-buttons refCompaniesTable-buttons"></div>
-					<table id="refCompaniesTable" class="display compact table-clicked" style="width:100%">
+					<div class="table-buttons refHSContractsTable-buttons"></div>
+					<table id="refHSContractsTable" class="display compact table-clicked" style="width:100%">
 					    <thead>
 					        <tr>
 					            <th>Номер</th>
@@ -607,11 +607,9 @@
 				<div class="data-row table-summary">
 					<div class="data-item rows-count">
 						<h5>Всего записей:</h5>
-						<p><span class="mark-color">10</span>, из них теплоснабжающие или теплосетевые организации <span class="mark-color">10</span></p>
+						<p><span class="mark-color">700</span></p>
 					</div>
-					
 				</div>
-
 			</div>
 		</div>
 	</div>
@@ -653,152 +651,190 @@
 	</div>
 
 			<!-- Modal Load Data -->
-	<div class="modal fade" id="editData" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
+	<div class="modal wide-modal fade" id="editData" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
 	  	<div class="modal-dialog modal-dialog-centered">
 	    	<div class="modal-content">
 	      		<div class="modal-header"> 
-			        <h3 class="modal-title" id="editDataLabel">Организация</h3>
+			        <h3 class="modal-title" id="editDataLabel">Договор на теплоснабжение</h3>
 			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			     </div>
 			     <div class="modal-body">
 	      			<div class="data-block static-block data-params">
 	      				<div class="data-row">
 	      					<div class="data-item">
-		      					<label class="data-label">Уникальный номер организации</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="УНОМ организации">
+		      					<label class="data-label lg-fix">Уникальный номер договора</label>
+	      						<select class="selectpicker data-value xxl-stretch" data-live-search="true" placeholder="Выберите УНОМ договора">
 								  	<option value="2020">2020</option>
 								  	<option value="2021">2021</option>
-								  	<option value="2022" selected>2022</option>
+								  	<option value="2022">2022</option>
 								  	<option value="2023">2023</option>
 								</select> 	
 							</div>
 	      				</div>
+	      				<div class="data-row">
+	      					<div class="data-row">
+	      						<h5 style="width: 180px;" class="text-end">Договор на теплоснабжение</h5>
+	      						<div class="data-item">
+	      							<label class="data-label"><span class="sublabel">от</span></label>
+	      							<input type="date" class="data-value md-stretch">
+	      						</div>
+	      						<div class="data-item">
+	      							<label class="data-label"><span class="sublabel">№</span></label>
+	      							<select class="selectpicker data-value lg-stretch" data-live-search="true" placeholder="Выберите...">
+									  	<option value="2020">2020</option>
+									  	<option value="2021">2021</option>
+									  	<option value="2022">2022</option>
+									  	<option value="2023">2023</option>
+									</select>
+	      						</div>
+	      					</div>
+	      					<div class="data-item">
+			      				<label class="data-label lg-fix">Дата действия договора</label>
+			      				<input type="date" class="data-value md-stretch">
+			      			</div>
+			      			<div class="data-item">
+			      				<label class="data-label">∑ Q<sub>д</sub></label>
+			      				<input type="text" class="data-value smx-fix" disabled>
+			      				<span class="data-unit">Гкал/ч;</span>
+			      				<input type="text" class="data-value smx-fix" disabled>
+			      				<span class="data-unit">Гкал/ч;</span>
+			      			</div>
+	      				</div>
+	      				<div class="data-row">
+	      					<div class="data-item">
+      							<label class="data-label lg-fix">Уникальный номер ТСО</label>
+      							<select class="selectpicker data-value md-stretch" data-live-search="true" placeholder="Выберите...">
+								  	<option value="2020">2020</option>
+								  	<option value="2021">2021</option>
+								  	<option value="2022">2022</option>
+								  	<option value="2023">2023</option>
+								</select>
+      						</div>
+      						<div class="data-item">
+      							<label class="data-label lg-fix">Наименование ТСО</label>
+      							<select class="selectpicker data-value xxl-stretch" data-live-search="true" placeholder="Выберите...">
+								  	<option value="2020">2020</option>
+								  	<option value="2021">2021</option>
+								  	<option value="2022">2022</option>
+								  	<option value="2023">2023</option>
+								</select>
+      						</div>
+      						<div class="data-row">
+			      				<label class="data-label">Статус:</label>
+			      				<div class="data-item">
+			      					<label class="data-label">действует</label>
+			      					<input type="radio" name="statusCompany" checked class="form-check-input">
+			      				</div>
+			      				<div class="data-item">
+			      					<label class="data-label">ликвидирован</label>
+			      					<input type="radio" name="statusCompany" class="form-check-input">
+			      				</div>
+			      			</div>
+	      				</div>
+	      				<div class="data-row">
+	      					<div class="data-item">
+      							<label class="data-label lg-fix">Уникальный номер потребителя в схеме</label>
+      							<select class="selectpicker data-value md-stretch" data-live-search="true" placeholder="Выберите...">
+								  	<option value="2020">2020</option>
+								  	<option value="2021">2021</option>
+								  	<option value="2022">2022</option>
+								  	<option value="2023">2023</option>
+								</select>
+      						</div>
+      						<div class="data-item">
+			      				<label class="data-label lg-fix">Адрес абонента по договору</label>
+			      				<input type="text" class="data-value xxl-stretch">
+			      			</div>
+	      				</div>
+	      				<div class="data-row">
+	      					<div class="data-item">
+			      				<label class="data-label lg-fix">Абонент по договору</label>
+			      				<input type="text" class="data-value xxl-stretch">
+			      			</div>
+	      				</div>
+	      				<div class="data-row">
+	      					<div class="data-item">
+      							<label class="data-label lg-fix">Контрагент по договору</label>
+      							<select class="selectpicker data-value xxl-stretch" data-live-search="true" placeholder="Выберите...">
+								  	<option value="2020">2020</option>
+								  	<option value="2021">2021</option>
+								  	<option value="2022">2022</option>
+								  	<option value="2023">2023</option>
+								</select>
+      						</div>
+      						<div class="data-item">
+      							<label class="data-label lg-fix">ИНН организации</label>
+      							<select class="selectpicker data-value lg-stretch" data-live-search="true" placeholder="Выберите...">
+								  	<option value="2020">2020</option>
+								  	<option value="2021">2021</option>
+								  	<option value="2022">2022</option>
+								  	<option value="2023">2023</option>
+								</select>
+      						</div>
+	      				</div>
+	      				<div class="data-row">
+	      					<div class="data-item">
+			      				<label class="data-label">Уникальный номер строения по базе БТИ</label>
+			      				<input type="text" class="data-value xl-stretch">
+			      			</div>
+			      			<div class="data-item">
+			      				<label class="data-label lg-fix">Общая площадь</label>
+			      				<input type="text" class="data-value md-fix" disabled>
+			      				<span class="data-unit">Гкал/ч;</span>
+			      			</div>
+	      				</div>
 		      		</div>
-      				<div class="scroll-block-wrapper" style="max-height: 70vh;">
-	      				<div class="data-block scroll-block">
-					  		<div class="accordion data-block">
-							  	<div class="border-block">
-						      		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel1" aria-expanded="false">Общие сведения</button>
-								    <div id="panel1" class="accordion-collapse collapse">
-								      	<div class="accordion-body">
-								      		<div class="data-block">
-								      			<div class="data-row">
-								      				<label class="data-label lg-fix">Статус:</label>
-								      				<div class="data-item">
-								      					<label class="data-label">действует</label>
-								      					<input type="radio" name="statusCompany" class="form-check-input" checked>
-								      				</div>
-								      				<div class="data-item">
-								      					<label class="data-label">ликвидирован</label>
-								      					<input type="radio" name="statusCompany" class="form-check-input">
-								      				</div>
-								      			</div>
-								      			<div class="data-item">
-								      				<label class="data-label lg-fix">Наименование: <span class="sublabel">краткое</span></label>
-								      				<input type="text" class="data-value xxl-stretch">
-								      			</div>
-								      			<div class="data-item">
-								      				<label class="data-label lg-fix"><span class="sublabel">полное</span></label>
-								      				<textarea class="data-value xxl-stretch" style="height: 62px;"></textarea>
-								      			</div>
-								      			<div class="data-row">
-								      				<div class="data-item">
-								      					<label class="data-label lg-fix">Тип по виду деятельности</label>
-								      					<select class="selectpicker data-value xl-stretch" id="paramNumberTso" data-live-search="true" placeholder="УНОМ организации">
-														  	<option value="2020">2020</option>
-														  	<option value="2021">2021</option>
-														  	<option value="2022" selected>2022</option>
-														  	<option value="2023">2023</option>
-														</select>
-								      				</div>
-								      				<div class="data-item">
-								      					<label class="data-label">Организация является структурным подразделением</label>
-								      					<input type="checkbox" class="data-switcher">
-								      				</div>
-								      			</div>
-								      		</div>
-								      	</div>
-								    </div>
-							  	</div>
-							  	<div class=" border-block">
-					      			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel2" aria-expanded="false">Сведения о руководителе</button>
-							    	<div id="panel2" class="accordion-collapse collapse" >
-							      		<div class="accordion-body">
-							        		<div class="data-block">
-					      						<div class="data-row">
-					      							<div class="data-item">
-					      								<label class="data-label sm-fix">Должность</label>
-					      								<input type="text" class="data-value xl-stretch"></input>
-					      							</div>
-					      						</div>
-					      						<div class="data-row">
-					      							<div class="data-item">
-					      								<label class="data-label sm-fix">Фамилия</label>
-					      								<input type="text" class="data-value xl-stretch"></input>
-					      							</div>
-					      							<div class="data-item">
-					      								<label class="data-label sm-fix">Имя</label>
-					      								<input type="text" class="data-value lg-stretch"></input>
-					      							</div>
-					      							<div class="data-item">
-					      								<label class="data-label sm-fix">Отчество</label>
-					      								<input type="text" class="data-value lg-stretch"></input>
-					      							</div>
-					      						</div>
-							      			</div>
-							     		</div>
-							    	</div>
-							  	</div>
-							  	<div class="border-block">
-					      			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel3" aria-expanded="false" >Регистрационные номера и классификаторы</button>
-							    	<div id="panel3" class="accordion-collapse collapse" >
-							      		<div class="accordion-body">
-							        		<div class="data-row">
-				      							<div class="data-item">
-				      								<label class="data-label smx-fix">ОГРН</label>
-				      								<input type="text" class="data-value lg-stretch"></input>
-				      							</div>
-				      							<div class="data-item">
-				      								<label class="data-label smx-fix">ИНН</label>
-				      								<input type="text" class="data-value lg-stretch"></input>
-				      							</div>
-				      							<div class="data-item">
-				      								<label class="data-label smx-fix">КПП</label>
-				      								<input type="text" class="data-value lg-stretch"></input>
-				      							</div>
-				      						</div>
-							      		</div>
-							    	</div>
-							  	</div>
-							  	<div class="border-block">
-						      		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel4" aria-expanded="false">Контактная информация</button>
-							    	<div id="panel4" class="accordion-collapse collapse">
-							      		<div class="accordion-body">
-							        		<div class="data-row">
-					      						<div class="data-block border-block stretch">
-					      							<div class="data-item">
-					      								<label class="data-label smx-fix">Телефон</label>
-					      								<input type="phone" class="data-value md-stretch"></input>
-					      							</div>
-					      							<div class="data-item">
-					      								<button class="bttn bttn-square bttn-icon-add bttn-add-phone"></button>
-					      							</div>
-					      						</div>
-					      						<div class="data-block border-block stretch">
-					      							<div class="data-item">
-					      								<label class="data-label smx-fix">E-mail</label>
-					      								<input type="email" class="data-value md-stretch"></input>
-					      							</div>
-					      							<div class="data-item">
-					      								<button class="bttn bttn-square bttn-icon-add bttn-add-email"></button>
-					      							</div>
-					      						</div>
-							      			</div>
-							      		</div>
-							    	</div>
-							  	</div>
+      				<div class="data-block">
+		      			<div class="data-row border-block">
+		      				<h4>Тепловые нагрузки по договору на теплоснабжение</h4>
+      						<div class="scroll-table-wrapper">
+			      				<table class="table-inp-stretch" style="width:100%; white-space: nowrap;">
+			      					<thead>
+			      						<tr>
+			      							<th></th>
+			      							<th>технология</th>
+			      							<th>отопление</th>
+			      							<th>вентиляция</th>
+			      							<th>кондиц.</th>
+			      							<th>ГВС ср.ч.</th>
+			      							<th>ГВС max</th>
+			      							<th>тепловые<br>завесы</th>
+			      							<th>прочие</th>
+			      							<th>ВСЕГО с учетом<br>ГВС ср.ч.</th>
+			      							<th>ВСЕГО с учетом<br>ГВС мах</th>
+			      						</tr>
+			      					</thead>
+			      					<tbody>
+			      						<tr>
+			      							<td>Тепловая нагрузка (по договору)<br>в горячей воде,<span class="data-unit">Гкал/ч</span></td>
+			      							<td><input type="text" name="" class="data-value"></td>
+			      							<td><input type="text" name="" class="data-value"></td>
+			      							<td><input type="text" name="" class="data-value"></td>
+			      							<td><input type="text" name="" class="data-value"></td>
+			      							<td><input type="text" name="" class="data-value"></td>
+			      							<td><input type="text" name="" class="data-value"></td>
+			      							<td><input type="text" name="" class="data-value"></td>
+			      							<td><input type="text" name="" class="data-value"></td>
+			      							<td><input type="text" name="" class="data-value" disabled></td>
+			      							<td><input type="text" name="" class="data-value" disabled></td>
+			      						</tr>
+			      						<tr>
+			      							<td>Тепловая нагрузка (по договору)<br>в паре,<span class="data-unit">т/ч</span></td>
+			      							<td><input type="text" name="" class="data-value"></td>
+			      							<td><input type="text" name="" class="data-value"></td>
+			      							<td><input type="text" name="" class="data-value"></td>
+			      							<td><input type="text" name="" class="data-value"></td>
+			      							<td><input type="text" name="" class="data-value"></td>
+			      							<td><input type="text" name="" class="data-value"></td>
+			      							<td><input type="text" name="" class="data-value"></td>
+			      							<td><input type="text" name="" class="data-value"></td>
+			      							<td><input type="text" name="" class="data-value" disabled></td>
+			      							<td><input type="text" name="" class="data-value" disabled></td>
+			      						</tr>
+			      					</tbody>
+			      				</table>
 							</div>
-						</div>
+		      			</div>
 					</div>
 	    		</div>
 	    		<div class="modal-footer">
@@ -820,7 +856,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
 
 	<script type="text/javascript" charset="utf8" src="js/main.js"></script>
-	<script type="text/javascript" charset="utf8" src="js/page2-6-1.js"></script>
+	<script type="text/javascript" charset="utf8" src="js/page2-6-6.js"></script>
 	
 	
 </body>

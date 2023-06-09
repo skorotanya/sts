@@ -137,9 +137,9 @@
 			            <li><a class="subnav-item nav-link" href="page2-6-1.html">Организации</a></li>
 			            <li><a class="subnav-item nav-link" href="page2-6-2.html">Территориальное деление</a></li>
 			            <li><a class="subnav-item nav-link active" href="#">Тарифные зоны</a></li>
-			            <li><a class="subnav-item nav-link" href="#">Зоны деятельности ЕТО</a></li>
-			            <li><a class="subnav-item nav-link" href="#">Системы теплоснабжения</a></li>
-			            <li><a class="subnav-item nav-link" href="#">Договора на теплоснабжение</a></li>
+			            <li><a class="subnav-item nav-link" href="page2-6-4.html">Зоны деятельности ЕТО</a></li>
+			            <li><a class="subnav-item nav-link" href="page2-6-5.html">Системы теплоснабжения</a></li>
+			            <li><a class="subnav-item nav-link" href="page2-6-6.html">Договора на теплоснабжение</a></li>
 			            <li><a class="subnav-item nav-link" href="#">Нормы расхода тепла</a></li>
 			            <li><a class="subnav-item nav-link" href="#">Программы развития города (поселения)</a></li>
 			            <li><a class="subnav-item nav-link" href="#">Оборудование</a></li>
@@ -672,121 +672,121 @@
 							</div>
 	      				</div>
 		      		</div>
-      				<div class="scroll-block-wrapper" style="max-height: 70vh;">
-	      				<div class="data-block scroll-block">
-	      					<div class="data-row">
-			      				<div class="data-item">
-			      					<label class="data-label">Наименование ТСО</label>
-			      					<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите УНОМ ТСО">
-									  	<option value="2020">2020</option>
-									  	<option value="2021">2021</option>
-									  	<option value="2022">2022</option>
-									  	<option value="2023">2023</option>
-									</select>
-			      				</div>
-			      				<div class="data-item">
-				      				<label class="data-label">№ тарифной зоны в исходном файле</label>
-				      				<input type="text" class="data-value md-stretch"></input>
-				      			</div>
+      				<div class="data-block">
+      					<div class="data-row">
+		      				<div class="data-item">
+		      					<label class="data-label">Наименование ТСО</label>
+		      					<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите УНОМ ТСО">
+								  	<option value="2020">2020</option>
+								  	<option value="2021">2021</option>
+								  	<option value="2022">2022</option>
+								  	<option value="2023">2023</option>
+								</select>
+		      				</div>
+		      				<div class="data-item">
+			      				<label class="data-label">№ тарифной зоны в исходном файле</label>
+			      				<input type="text" class="data-value md-stretch">
 			      			</div>
-			      			<div class="data-row border-block">
-			      				<h4>Виды деятельности</h4>
-			      				<div class="data-block stretch">
-					      			<div class="data-item">
-										<label class="data-label">Комбинированное производство, более 25 МВт</label>
-										<input type="checkbox" name="" checked class="form-check-input" disabled>
-									</div>
-									<div class="data-item">
-										<label class="data-label">Комбинированное производство, менее 25 МВт</span></label>
-										<input type="checkbox" name="" class="form-check-input" disabled>
-									</div>
-									
-								</div>
-								<div class="data-block stretch">
-									<div class="data-item">
-										<label class="data-label">Некомбинированное производство</label>
-										<input type="checkbox" name="" class="form-check-input" disabled>
-									</div>
-									<div class="data-item">
-										<label class="data-label">Договор поставки</label>
-										<input type="checkbox" name="" class="form-check-input" disabled>
-									</div>
-								</div>
-								<div class="data-block stretch">
-									<div class="data-item">
-										<label class="data-label">Передача</span></label>
-										<input type="checkbox" name="" class="form-check-input" disabled>
-									</div>
-									<div class="data-item">
-										<label class="data-label">Сбыт</label>
-										<input type="checkbox" name="" class="form-check-input" disabled>
-									</div>
-								</div>
-							</div>				
-							<div class="data-row border-block">
-								<h4>Дифференциация тарифов</h4>
-								<div class="data-item">
-									<label class="data-label">Без дифференциации</label>
-									<input type="checkbox" name="" class="form-check-input">
-								</div>
+		      			</div>
+		      			<div class="data-row border-block">
+		      				<h4>Виды деятельности</h4>
+		      				<div class="data-block stretch">
 				      			<div class="data-item">
-									<label class="data-label">До тепловых пунктов</label>
-									<input type="checkbox" name="" class="form-check-input">
+									<label class="data-label">Комбинированное производство, более 25 МВт</label>
+									<input type="checkbox" name="" checked class="form-check-input">
 								</div>
 								<div class="data-item">
-									<label class="data-label">После тепловых пункто</label>
+									<label class="data-label">Комбинированное производство, менее 25 МВт</span></label>
+									<input type="checkbox" name="" class="form-check-input" >
+								</div>
+								
+							</div>
+							<div class="data-block stretch">
+								<div class="data-item">
+									<label class="data-label">Некомбинированное производство</label>
+									<input type="checkbox" name="" class="form-check-input" >
+								</div>
+								<div class="data-item">
+									<label class="data-label">Договор поставки</label>
 									<input type="checkbox" name="" class="form-check-input">
 								</div>
 							</div>
-							<div class="data-row">
-			      				<div class="data-item">
-			      					<label class="data-label">Уникальный номер слоя электронной модели</label>
-			      					<select class="selectpicker data-value lg-stretch" data-live-search="true" placeholder="Выберите...">
+							<div class="data-block stretch">
+								<div class="data-item">
+									<label class="data-label">Передача</span></label>
+									<input type="checkbox" name="" class="form-check-input">
+								</div>
+								<div class="data-item">
+									<label class="data-label">Сбыт</label>
+									<input type="checkbox" name="" class="form-check-input">
+								</div>
+							</div>
+						</div>				
+						<div class="data-row border-block">
+							<h4>Дифференциация тарифов</h4>
+							<div class="data-item">
+								<label class="data-label">Без дифференциации</label>
+								<input type="checkbox" name="" class="form-check-input">
+							</div>
+			      			<div class="data-item">
+								<label class="data-label">До тепловых пунктов</label>
+								<input type="checkbox" name="" class="form-check-input">
+							</div>
+							<div class="data-item">
+								<label class="data-label">После тепловых пункто</label>
+								<input type="checkbox" name="" class="form-check-input">
+							</div>
+						</div>
+						<div class="data-row">
+		      				<div class="data-item">
+		      					<label class="data-label">Уникальный номер слоя электронной модели</label>
+		      					<select class="selectpicker data-value lg-stretch" data-live-search="true" placeholder="Выберите...">
+								  	<option value="2020">2020</option>
+								  	<option value="2021">2021</option>
+								  	<option value="2022">2022</option>
+								  	<option value="2023">2023</option>
+								</select>
+		      				</div>
+		      				<div class="data-item">
+			      				<label class="data-label">SYS объекта в электронном слое</label>
+			      				<input type="text" class="data-value md-stretch">
+			      			</div>
+		      			</div>
+		      			<div class="data-row border-block">
+      						<div class="data-block stretch">
+      							<div class="data-item">
+      								<label class="data-label lg-stretch">Наименование района (поселения)</label>
+      								<select class="selectpicker data-value xl-stretch" data-live-search="true" placeholder="Выберите...">
 									  	<option value="2020">2020</option>
 									  	<option value="2021">2021</option>
 									  	<option value="2022">2022</option>
 									  	<option value="2023">2023</option>
 									</select>
-			      				</div>
-			      				<div class="data-item">
-				      				<label class="data-label">SYS объекта в электронном слое</label>
-				      				<input type="text" class="data-value md-stretch"></input>
-				      			</div>
-			      			</div>
-			      			<div class="data-row border-block">
-	      						<div class="data-block stretch">
-	      							<div class="data-item">
-	      								<label class="data-label lg-stretch">Наименование района (поселения)</label>
-	      								<select class="selectpicker data-value xl-stretch" data-live-search="true" placeholder="Выберите...">
-										  	<option value="2020">2020</option>
-										  	<option value="2021">2021</option>
-										  	<option value="2022">2022</option>
-										  	<option value="2023">2023</option>
-										</select>
-	      							</div>
-	      							<div class="data-item">
-	      								<button class="bttn bttn-square bttn-icon-add bttn-add-region"></button>
-	      							</div>
-	      						</div>
-	      						<div class="data-block stretch h-100">
-	      							<div class="data-item">
-	      								<label class="data-label">Округ</label>
-	      								<select class="selectpicker data-value lg-stretch" data-live-search="true" placeholder="Выберите...">
-										  	<option value="2020">2020</option>
-										  	<option value="2021">2021</option>
-										  	<option value="2022">2022</option>
-										  	<option value="2023">2023</option>
-										</select>
-	      							</div>
-	      						</div>
-			      			</div>
-						</div>
+      							</div>
+      							<div class="data-item">
+      								<button class="bttn bttn-square bttn-icon-add bttn-add-region"></button>
+      							</div>
+      						</div>
+      						<div class="data-block stretch h-100">
+      							<div class="data-item">
+      								<label class="data-label">Округ</label>
+      								<select class="selectpicker data-value lg-stretch" data-live-search="true" placeholder="Выберите...">
+									  	<option value="2020">2020</option>
+									  	<option value="2021">2021</option>
+									  	<option value="2022">2022</option>
+									  	<option value="2023">2023</option>
+									</select>
+      							</div>
+      						</div>
+		      			</div>
 					</div>
 	    		</div>
-	    		 <div class="modal-footer">
+	    		<div class="modal-footer">
 			        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
 			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Сохранить</button>
-			      </div>
+			        <button type="button" class="bttn bttn-color">Создать копию</button>
+			        <button type="button" class="bttn bttn-color">Удалить</button>
+			    </div>
 	    	</div>
 	    </div>
 	</div>
