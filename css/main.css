@@ -1348,7 +1348,7 @@ td.dtfc-fixed-left{
 	display: table-cell;
 }
 
-.data-table-block input {width: 100%;}
+.data-table-block input:not([class*='fix']) {width: 100%;}
 
 .data-unit {
 	text-align: start;
