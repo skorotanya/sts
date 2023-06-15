@@ -46,14 +46,5 @@ $(document).ready(function () {
       showModal('editData');
     } );
 
-    $('#radioLayerDelete').change(function(){
-      let inp = document.querySelector('#inpYearDelete');
-      inp.value = '';
-      inp.disabled = !this.checked;
-      inp= document.querySelector('#inpCauseDelete');
-      inp.value = '';
-      inp.disabled = !this.checked;
-    } );
-
 });
 
