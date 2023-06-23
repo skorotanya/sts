@@ -144,56 +144,6 @@ $(document).ready(function () {
       tab: false,
       firstTab: false,
       accordionId: 'panel9'
-    },
-    {
-      name: 'selectSources',
-      type: 'simple-scroll',
-      columns: [],
-      height: '20vh',
-      modal: 'tableConstructor',
-      tab: false,
-      firstTab: true,
-      accordionId: ''
-    },
-    {
-      name: 'allSources',
-      type: 'simple-scroll',
-      columns: [],
-      height: '22vh',
-      modal: 'tableConstructor',
-      tab: false,
-      firstTab: true,
-      accordionId: ''
-    },
-    {
-      name: 'selectHP',
-      type: 'simple-scroll',
-      columns: [],
-      height: '20vh',
-      modal: 'tableConstructor',
-      tab: false,
-      firstTab: true,
-      accordionId: ''
-    },
-    {
-      name: 'allHP',
-      type: 'simple-scroll',
-      columns: [],
-      height: '22vh',
-      modal: 'tableConstructor',
-      tab: false,
-      firstTab: true,
-      accordionId: ''
-    },
-    {
-      name: 'selectCustomers',
-      type: 'simple-scroll',
-      columns: [],
-      height: '20vh',
-      modal: 'tableConstructor',
-      tab: false,
-      firstTab: true,
-      accordionId: ''
     }
   ];
   
@@ -232,6 +182,36 @@ $(document).ready(function () {
         showModal('editData');
     });
 
+    $('#hpListTable tbody').on('dblclick', 'tr', function () {
+      showModal('editData');
+    } );
+
+    // Double click on row loadsByYearTable 
+    $('#loadsByYearTable tbody').on('dblclick', 'tr', function () {
+      showModal('editLoadsData');
+    } );
+
+    $('#equipmentTable tbody').on('dblclick', 'tr', function () {
+      showModal('editData');
+    } );
+
+    $('#loadsSchemaTable tbody').on('dblclick', 'tr', function () {
+      showModal('editData');
+    } );
+
+    $('#automationTable tbody').on('dblclick', 'tr', function () {
+      showModal('editData');
+    } );
+
+    $('#resourcesTable tbody').on('dblclick', 'tr', function () {
+      showModal('editData');
+    } );
+
+    // Double click on row developmentTable 
+    $('#developmentTable tbody').on('dblclick', 'tr', function () {
+      showModal('editDevelopmentData');
+    } );
+
         // Click on row listSwitchHPTable 
     $('#listSwitchHPTable tbody').on('click', 'tr', function () {
 
@@ -248,14 +228,8 @@ $(document).ready(function () {
     // Double click on row HNdistribTable 
     $('#HNdistribTable tbody').on('dblclick', 'tr', function () {
       showModal('editDistribData');
-
       document.querySelector('#calcYear').value = this.children[0].innerText;
 
-    } );
-
-    // Double click on row loadsByYearTable 
-    $('#loadsByYearTable tbody').on('dblclick', 'tr', function () {
-      showModal('editLoadsData');
     } );
 
     // show modal window for edit data
@@ -263,10 +237,7 @@ $(document).ready(function () {
         showModal('editGroupEventData');
     });
 
-      // Double click on row developmentTable 
-    $('#developmentTable tbody').on('dblclick', 'tr', function () {
-      showModal('editDevelopmentData');
-    } );
+
 
 
 });
