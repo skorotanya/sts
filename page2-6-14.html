@@ -50,6 +50,7 @@
 				<a class="user__exit ref-white" href="#" role="button" ><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 512 512"><title>Выход</title><path d="M304 336v40a40 40 0 01-40 40H104a40 40 0 01-40-40V136a40 40 0 0140-40h152c22.09 0 48 17.91 48 40v40M368 336l80-80-80-80M176 256h256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg></a>
 			</div>
 			<div class="data-block sidebar-params">
+				
 				<div class="data-item">
 					<label for="paramCity" class="data-label">Город/ поселение</label>
 					<div class="input-group">
@@ -77,11 +78,11 @@
 			<nav class="navbar">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-column list-unstyled">
 			        <li class="nav-item">
-			          <a class="nav-link btn-toggle" href="#" role="button" data-bs-toggle="collapse" data-bs-target="#tso_menu" aria-expanded="true">
+			          <a class="nav-link btn-toggle collapsed" href="#" role="button" data-bs-toggle="collapse" data-bs-target="#tso_menu" aria-expanded="false">
 			            Теплоснабжающие организации
 			          </a>
-			          	<ul class="subnav collapse list-unstyled show" id="tso_menu">
-				            <li><a class="subnav-item nav-link active" href="#">Перечень организаций</a></li>
+			          	<ul class="subnav collapse list-unstyled" id="tso_menu">
+				            <li><a class="subnav-item nav-link" href="index.html">Перечень организаций</a></li>
 				            <li><a class="subnav-item nav-link" href="page2-2-2.html">Объекты в обслуживании</a></li>
 				            <li><a class="subnav-item nav-link" href="page2-2-3.html">Тепловой баланс</a></li>
 				            <li><a class="subnav-item nav-link" href="page2-2-4.html">Затраты и цены</a></li>
@@ -129,10 +130,10 @@
 			        </li>
 
 			        <li class="nav-item">
-			          <a class="nav-link btn-toggle collapsed" href="#" role="button" data-bs-toggle="collapse" data-bs-target="#st_menu" aria-expanded="false">
+			          <a class="nav-link btn-toggle" href="#" role="button" data-bs-toggle="collapse" data-bs-target="#st_menu" aria-expanded="true">
 			            Справочные таблицы
 			          </a>
-			          <ul class="subnav collapse list-unstyled" id="st_menu">
+			          <ul class="subnav collapse list-unstyled show" id="st_menu">
 			            <li><a class="subnav-item nav-link" href="page2-6-1.html">Организации</a></li>
 			            <li><a class="subnav-item nav-link" href="page2-6-2.html">Территориальное деление</a></li>
 			            <li><a class="subnav-item nav-link" href="page2-6-3.html">Тарифные зоны</a></li>
@@ -146,7 +147,7 @@
 			            <li><a class="subnav-item nav-link" href="page2-6-11.html">Программы развития энергообъектов</a></li>
 			            <li><a class="subnav-item nav-link" href="page2-6-12.html">Типы схем тепловых пунктов</a></li>
 			            <li><a class="subnav-item nav-link" href="page2-6-13.html">Реестр слоев электронной модели</a></li>
-			            <li><a class="subnav-item nav-link" href="page2-6-14.html">Температурные графики/удельные расходы</a></li>
+			            <li><a class="subnav-item nav-link active" href="#">Температурные графики/удельные расходы</a></li>
 			            <li><a class="subnav-item nav-link" href="page2-6-15.html">Головные выводы источников</a></li>
 			            <li><a class="subnav-item nav-link" href="page2-6-16.html">Условные диаметры</a></li>
 			            <li><a class="subnav-item nav-link" href="page2-6-17.html">Тепловая изоляция тепловых сетей</a></li>
@@ -196,56 +197,30 @@
 				<div class="data-row">
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a class="ref-color" href="#">Главная</a></li>
-						<li class="breadcrumb-item">Теплоснабжающие организации - Перечень организаций</li>
+						<li class="breadcrumb-item">Справочники - Температурные графики</li>
 					</ul>
 				</div>
 				<div class="data-row">
-					<h1 class="title">Теплоснабжающие и теплосетевые организации</h1>
+					<h1 class="title">Температурные графики</h1>
 					<div class="data-item data-item-right">
 						<button class="bttn bttn-color bttn-edit-data" type="button">Добавить/Удалить</button>
 						<a class="bttn bttn-color bttn-load-data" type="button" href="page2-2-1-2.html">Загрузить данные</a>
-						<button class="bttn bttn-color bttn-excel-export" type="button">Выгрузить в Excel</button>
-					</div>
-				</div>
-				<div class="data-row static-block">
-					<div class="data-row">
-						<div class="data-item">
-							<label for="paramCalcYear" class="data-label">Выберите год:</label>
-							<select class="selectpicker md-fix param-calc-year" id="paramCalcYear" >
-							  <option value="2020">01.01.2021</option>
-							  <option value="2021">01.01.2022</option>
-							  <option value="2022" selected>01.01.2023</option>
-							  <option value="2023">01.01.2024</option>
-							</select>
-						</div>
-						<div class="data-item">
-							<div class="note">Базовый год - <span class="note-base-year">2022 (01.01.2023)</span>; следующие года - перспективные.</div>
-						</div>
-					</div>
-					<div class="data-row">
-						<div class="data-item">
-							<label for="paramCalcYear" class="data-label">Только регулируемые и договор поставки</label>
-							<input type="checkbox" name="check1" class="form-check-input">
-						</div>
-						<div class="data-item">
-							<label for="paramCalcYear" class="data-label">Показать ликвидированные</label>
-							<input type="checkbox" name="check2" class="form-check-input">
-						</div>
 					</div>
 				</div>
 			</div>
 			
-			<div class="data-block main-content border-block" style="border-color: var(--action-color);">
+		  	<div class="data-block main-content border-block" style="border-color: var(--action-color);">
+				
 				<div class="table-block">
-					<div class="table-buttons tsoTable-buttons"></div>
-					<table id="tsoTable" class="display compact table-clicked" style="width:100%" >
+					<div class="table-buttons refTermalGraphTable-buttons"></div>
+					<table id="refTermalGraphTable" class="display compact table-clicked" style="width:100%">
 					    <thead>
 					        <tr>
 					            <th>Номер</th>
 					            <th>Наименование</th>
 					            <th>Адрес</th>
 					            <th>Дата</th>
-					            <th title="Тип">Тип <a class="info" data-bs-toggle="tooltip" data-bs-custom-class="info-tooltip" data-bs-html="true" data-bs-title='<ul class="list-unstyled"><li>ЗК - замкнутый контур</li><li>ПЛ - подземная линия</li><li>ТЛ - транзитная линия</li></ul>'></a></th>
+					            <th>Тип</th>
 					            <th>Округ</th>
 					            <th>Состояние</th>
 					            <th>Полезная энергия</th>
@@ -265,7 +240,7 @@
 					            <th><input type="text" class="filter-col-9"/></th>
 					        </tr>
 					    </thead>
-					    <tbody title="Двойной клик открывает форму редактирования">
+					    <tbody>
 					        <tr>
 					            <td>1</td>
 					            <td>ТСО 1</td>
@@ -327,6 +302,126 @@
 					            <td><a href="#">>></a></td>
 					        </tr>
 					        <tr>
+					            <td>6</td>
+					            <td>ТСО 6</td>
+					            <td>Row 6 Data 3</td>
+					            <td>Row 6 Data 4</td>
+					            <td>Row 6 Data 5</td>
+					            <td>Row 6 Data 6</td>
+					            <td>Row 6 Data 7</td>
+					            <td>Row 6 Data 8</td>
+					            <td>Row 6 Data 9</td>
+					            <td><a href="#">>></a></td>
+					        </tr>
+					        <tr>
+					            <td>7</td>
+					            <td>ТСО 7</td>
+					            <td>Row 7 Data 3</td>
+					            <td>Row 7 Data 4</td>
+					            <td>Row 7 Data 5</td>
+					            <td>Row 7 Data 6</td>
+					            <td>Row 7 Data 7</td>
+					            <td>Row 7 Data 8</td>
+					            <td>Row 7 Data 9</td>
+					            <td><a href="#">>></a></td>
+					        </tr>
+					        <tr>
+					            <td>8</td>
+					            <td>ТСО 8</td>
+					            <td>Row 8 Data 3</td>
+					            <td>Row 8 Data 4</td>
+					            <td>Row 8 Data 5</td>
+					            <td>Row 8 Data 6</td>
+					            <td>Row 8 Data 7</td>
+					            <td>Row 8 Data 8</td>
+					            <td>Row 8 Data 9</td>
+					            <td><a href="#">>></a></td>
+					        </tr>
+					        <tr>
+					            <td>9</td>
+					            <td>ТСО 9</td>
+					            <td>Row 9 Data 3</td>
+					            <td>Row 9 Data 4</td>
+					            <td>Row 9 Data 5</td>
+					            <td>Row 9 Data 6</td>
+					            <td>Row 9 Data 7</td>
+					            <td>Row 9 Data 8</td>
+					            <td>Row 9 Data 9</td>
+					            <td><a href="#">>></a></td>
+					        </tr>
+					        <tr>
+					            <td>10</td>
+					            <td>ТСО 10</td>
+					            <td>Row 10 Data 3</td>
+					            <td>Row 10 Data 4</td>
+					            <td>Row 10 Data 5</td>
+					            <td>Row 10 Data 6</td>
+					            <td>Row 10 Data 7</td>
+					            <td>Row 10 Data 8</td>
+					            <td>Row 10 Data 9</td>
+					            <td><a href="#">>></a></td>
+					        </tr>
+					        <tr>
+					            <td>1</td>
+					            <td>ТСО 1</td>
+					            <td>Row 1 Data 3</td>
+					            <td>Row 1 Data 4</td>
+					            <td>Row 1 Data 5</td>
+					            <td>Row 1 Data 6</td>
+					            <td>Row 1 Data 7</td>
+					            <td>Row 1 Data 8</td>
+					            <td>Row 1 Data 9</td>
+					            <td><a href="#">>></a></td>
+					        </tr>
+					        <tr>
+					            <td>2</td>
+					            <td>ТСО 2</td>
+					            <td>Row 2 Data 3</td>
+					            <td>Row 2 Data 4</td>
+					            <td>Row 2 Data 5</td>
+					            <td>Row 2 Data 6</td>
+					            <td>Row 2 Data 7</td>
+					            <td>Row 2 Data 8</td>
+					            <td>Row 2 Data 9</td>
+					            <td><a href="#">>></a></td>
+					        </tr>
+					        <tr>
+					            <td>3</td>
+					            <td>ТСО 3</td>
+					            <td>Row 3 Data 3</td>
+					            <td>Row 3 Data 4</td>
+					            <td>Row 3 Data 5</td>
+					            <td>Row 3 Data 6</td>
+					            <td>Row 3 Data 7</td>
+					            <td>Row 3 Data 8</td>
+					            <td>Row 3 Data 9</td>
+					            <td><a href="#">>></a></td>
+					        </tr>
+					        <tr>
+					            <td>4</td>
+					            <td>ТСО 4</td>
+					            <td>Row 4 Data 3</td>
+					            <td>Row 4 Data 4</td>
+					            <td>Row 4 Data 5</td>
+					            <td>Row 4 Data 6</td>
+					            <td>Row 4 Data 7</td>
+					            <td>Row 4 Data 8</td>
+					            <td>Row 4 Data 9</td>
+					            <td><a href="#">>></a></td>
+					        </tr>
+					        <tr>
+					            <td>5</td>
+					            <td>ТСО 5</td>
+					            <td>Row 5 Data 3</td>
+					            <td>Row 5 Data 4</td>
+					            <td>Row 5 Data 5</td>
+					            <td>Row 5 Data 6</td>
+					            <td>Row 5 Data 7</td>
+					            <td>Row 5 Data 8</td>
+					            <td>Row 5 Data 9</td>
+					            <td><a href="#">>></a></td>
+					        </tr>
+					        					        <tr>
 					            <td>6</td>
 					            <td>ТСО 6</td>
 					            <td>Row 6 Data 3</td>
@@ -508,42 +603,17 @@
 					        </tr>
 					    </tbody>
 					</table>
-						
 				</div>
-
 				<div class="data-row table-summary">
 					<div class="data-item rows-count">
 						<h5>Всего записей:</h5>
-						<p><span class="mark-color">10</span></p>
-					</div>
-					<div class="data-block">
-						<h5 >Количество организаций:</h5>
-						<div class="data-table-block">
-							<p class="data-item">регулируемые - <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
-							<p class="data-item">нерегулируемые - <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
-							<p class="data-item">договор поставки - <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
-						</div>
-					</div>
-					<div class="data-block">
-						<h5>В том числе по видам деятельности:</h5>
-						<div class="data-row">
-							<div class="data-table-block">
-								<p class="data-item">комбинированное производство, более 25 МВт - <span class="mark-color">4</span><span class="data-unit">шт.</span></p>
-								<p class="data-item">комбинированное производство менее 25 МВт - <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
-								<p class="data-item">некомбинированное производство - <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
-							</div>
-							<div class="data-table-block">
-								<p class="data-item">передача - <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
-								<p class="data-item">сбыт - <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
-							</div>
-
-						</div>
-						
+						<p><span class="mark-color">83</span></p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
 	<!-- Modal infoUser -->
 	<div class="modal fade" id="infoUser" tabindex="-1" aria-labelledby="infoUserLabel" aria-hidden="true">
 	  <div class="modal-dialog">
@@ -574,393 +644,347 @@
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
-	        <a role="button" href="welcome.html" class="bttn bttn-color">Да</a>
+	        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Да</button>
 	      </div>
 	    </div>
 	  </div>
 	</div>
 
-	<!-- Modal Message-->
-	<div class="modal fade" id="infoMessage" tabindex="-1" aria-labelledby="infoUserLabel" aria-hidden="true">
-	  <div class="modal-dialog">
-	    <div class="modal-content">
-	      <div class="modal-body">
-	      	<div class="data-block">
-	      		<button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
-	      		<div class="border-block info">
-	      			<div class="message-icon">
-		        		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 56C145.72 56 56 145.72 56 256s89.72 200 200 200 200-89.72 200-200S366.28 56 256 56zm0 82a26 26 0 11-26 26 26 26 0 0126-26zm48 226h-88a16 16 0 010-32h28v-88h-16a16 16 0 010-32h32a16 16 0 0116 16v104h28a16 16 0 010 32z"/></svg>
-		        	</div>
-		        	<div class="message-text">Текст сообщения</div>
-	      		</div>
-	      	</div>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-	
-	<!-- Modal Load Data -->
-	<div class="form-data-edit modal wide-modal fade" id="editData" data-bs-backdrop="static" tabindex="-1" aria-labelledby="loadDataLabel" aria-hidden="true">
+			<!-- Modal Load Data -->
+	<div class="modal fade" id="editData" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
 	  	<div class="modal-dialog modal-dialog-centered">
 	    	<div class="modal-content">
 	      		<div class="modal-header"> 
-			        <h3 class="modal-title" id="editDataLabel">Редактирование ТСО</h3>
+			        <h3 class="modal-title" id="editDataLabel">Температурный график</h3>
 			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			     </div>
-			     <div class="modal-body ">
-			     	<div class="data-block">
-			     		<div class="data-row static-block">
-		      				<div class="data-item stretch">
-		      					<label class="data-label">Уникальный номер ТСО</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true">
-								  	<option value="2020">2020</option>
-								  	<option value="2021">2021</option>
-								  	<option value="2022">2022</option>
-								  	<option value="2023">2023</option>
-								</select>
-							</div>	
-							<div class="data-item">
-								<div class="note">Базовый год - <span class="note-base-year">2022 (01.01.2023)</span>.</div>
-							</div>
-			      		</div>
-			      		<div class="scroll-block-wrapper" style="max-height: calc(95vh - 250px);">
-				      		<div class="data-block scroll-block">
-				      			<form>
-					      			<div class="data-block border-block">
-					      				<h4>Общие сведения об организации:</h4>
-					      				<div class="data-row">
-				      						<div class="data-block stretch me-xxl-3">
-					      						<div class="data-row">
-					      							<div class="col-12 col-lg-3 order-lg-5">
-					      								<div class="data-item ms-lg-3">
-															<label class="data-label">Код ТСО</label>
-															<input type="text" class="data-value md-auto" name="">
-														</div>
-					      							</div>
-					      							<div class="col-12 col-lg-9">
-					      								<div class="data-item me-lg-3">
-															<label class="data-label xl-auto">Наименование ТСО: <span class="sublabel">краткое</span></label>
-															<input type="text" class="data-value stretch" name="">
-														</div>
-					      							</div>
-					      							
-													
-					      						</div>
-						  						<div class="data-row">
-						  							<div class="data-item stretch">
-														<label class="data-label xl-auto"><span class="sublabel">полное</span></label>
-														<textarea class="data-value stretch" style="height: 62px;"></textarea>
-													</div>
-													<div class="data-item stretch">
-														<label class="data-label md-auto">Примечание</label>
-														<textarea class="data-value stretch" style="height: 62px;"></textarea>
-													</div>
-						  						</div>
-												
-												<div class="data-row">
-					      							<div class="data-item stretch">
-														<label class="data-label">Организация является структурным подразделением</label>
-														<input type="checkbox" class="form-check-input">
-													</div>
-													<div class="data-item stretch">
-														<label class="data-label">Организация является плательщиком НДС</label>
-														<input type="checkbox" class="form-check-input">
-													</div>
-					      						</div>
-						      				</div>
-				      					
-				      						<div class="data-block ms-xxl-3 data-xxl-row fix-80">
-					      					
-												<div class="data-item stretch">
-													<label class="data-label">ИНН</label>
-													<input type="text" class="data-value md-stretch" name="">
-												</div>
-												<div class="data-item stretch">
-													<label class="data-label">ОГРН</label>
-													<input type="text" class="data-value md-stretch" name="">
-												</div>
-												<div class="data-item stretch">
-													<label class="data-label">КПП</label>
-													<input type="text" class="data-value md-stretch" name="">
-												</div>
-						      				</div>
-					      				</div>
-					      			</div>
-										
-									<div class="data-row">
-										<div class="col-12 col-xxl-5">
-											<div class="data-block border-block me-xxl-1">
-												<h4>Руководитель:</h4>
-												<div class="data-row">
-													<div class="col-12 col-md-6">
-														<div class="data-block me-md-3">
-															<div class="data-item">
-																<label class="data-label sm-fix">Должность</label>
-																<input type="text" class="data-value stretch" name="">
-															</div>
-															<div class="data-item">
-																<label class="data-label sm-fix">Фамилия</label>
-																<input type="text" class="data-value stretch" name="">
-															</div>
-															<div class="data-item">
-																<label class="data-label sm-fix">Имя</label>
-																<input type="text" class="data-value stretch" name="">
-															</div>
-														</div>
-													</div>
-													<div class="col-12 col-md-6">
-														<div class="data-block ms-md-3 fix-110">
-															<div class="data-item">
-																<label class="data-label">Отчество</label>
-																<input type="text" class="data-value stretch" name="">
-															</div>
-															<div class="data-item">
-																<label class="data-label">Контактный телефон</label>
-																<input type="tel" class="data-value stretch" name="">
-															</div>
-															<div class="data-item">
-																<label class="data-label">Эл. почта</label>
-																<input type="email" class="data-value stretch" name="">
-															</div>
-														</div>
-													</div>
-													
-												</div>
-											</div>
-											
-										</div>
-										<div class="col-12 col-xxl-7">
-											<div class="data-block border-block ms-xxl-1">
-												<div class="data-row">
-													<div class="col-12 col-md-6">
-														<div class="data-block me-md-3">
-															<div class="data-item">
-																<label class="data-label md-fix">Размер собственного капитала</label>
-																<input type="text" class="data-value stretch" name=""><span class="data-unit"> тыс.р.</span>
-															</div>
-															<div class="data-item">
-																<label class="data-label md-fix">по состоянию на</label>
-																<input type="date" class="data-value stretch" name="">
-															</div>
-															<div class="data-item">
-																<label class="data-label md-fix">Вид собственности</label>
-
-																  	<select class="selectpicker data-value stretch" id="paramPropertyType" data-live-search="true" placeholder="Выберите значение">
-																	  	<option value="1">частная</option>
-																	  	<option value="2">государственная</option>
-																	</select>
-
-															</div>
-														</div>
-													</div>
-													<div class="col-12 col-md-6">
-														<div class="data-block ms-md-3">
-
-															<div class="data-item">
-																<label class="data-label md-fix">Способ отправки писем</label>
-																  	<select class="selectpicker data-value stretch" id="paramPostMethod" data-live-search="true" placeholder="Выберите значение">
-																	  	<option value="1">частная</option>
-																	  	<option value="2">государственная</option>
-																	</select>
-															</div>
-															<div class="data-item">
-																<label class="data-label md-fix">Организация действует в зоне(нах) ЕТО</label>
-																
-																  	<select class="selectpicker data-value stretch" id="paramEtoZone" multiple data-live-search="true" placeholder="Выберите значение">
-																	  	<option value="1">частная</option>
-																	  	<option value="2">государственная</option>
-																	</select>
-															</div>
-															<div class="data-item">
-																<label class="data-label md-fix">Статус ЕТО</label>
-																<div class="input-group stretch">
-																  	<select class="selectpicker data-value stretch" id="paramEtoStatus" placeholder="Выберите значение">
-																	  	<option value="1">частная</option>
-																	  	<option value="2">государственная</option>
-																	</select>
-																	<button class="bttn bttn-square bttn-icon-add" type="button"></button>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>	
-										</div>
-									</div>
-								</form>
+			     <div class="modal-body">
+	      			<div class="data-block static-block">
+      					<div class="data-item">
+	      					<label class="data-label">Уникальный номер температурного графика</label>
+      						<select class="selectpicker data-value xxl-stretch" data-live-search="true" placeholder="Выберите...">
+							  	<option value="2020">2020</option>
+							  	<option value="2021">2021</option>
+							  	<option value="2022">2022</option>
+							  	<option value="2023">2023</option>
+							</select> 	
+						</div>
+					</div>
+		      		<div class="scroll-block-wrapper" style="max-height: 72vh;">
+	      				<div class="data-block scroll-block">
+			      			<div class="data-block border-block">
+			      				<div class="data-item">
+			      					<label class="data-label xl-fix">Наименование температурного графика</label>
+		      						<input type="text" class="data-value xxl-stretch">
+								</div>
 								<div class="data-row">
-									<div class="col-xxl-6 col-12">
-										<div class="data-block border-block me-1">
-											<div class="data-row">
-												<h4>Параметры ТСО по годам расчетного периода схемы</h4>
-												<button class="bttn bttn-square bttn-icon-save ms-auto" type="button" title="Сохранить"></button>
-											</div>
-											<table id="yearParamTable" class="display nowrap compact table-inp-stretch" style="width:100%">
-											    <thead>
-											        <tr>
-											            <th>Год схемы</th>
-											            <th>Статус организации</th>
-											            <th>Тип организации</th>
-											            <th>Тарифные зоны</th>
-											        </tr>
-											    </thead>
-											    <tbody>
-											    	<tr>
-											    		<td>01.01.2022</td>
-											    		<td>
-											    			<select class="data-value selectpicker" placeholder="Выберите значение">
-															  <option value="1" selected>Действует</option>
-															  <option value="2">Ликвидированная</option>
-															</select>
-											    		</td>
-											    		<td>
-											    			<select class="data-value selectpicker" placeholder="Выберите значение">
-															  <option value="1" selected>Регулируемая</option>
-															  <option value="2">Договор поставки</option>
-															  <option value="3">Не регулируемая</option>
-															</select>
-											    		</td>
-											    		<td>
-											    			3.1; 3.2
-											    		</td>
-											    	</tr>
-											    	<tr>
-											    		<td>01.01.2023</td>
-											    		<td>
-											    			<select class="data-value selectpicker " placeholder="Выберите значение">
-															  <option value="1" selected>Действует</option>
-															  <option value="2">Ликвидированная</option>
-															</select>
-											    		</td>
-											    		<td>
-											    			<select class="data-value selectpicker " placeholder="Выберите значение">
-															  <option value="1" selected>Регулируемая</option>
-															  <option value="2">Договор поставки</option>
-															  <option value="3">Не регулируемая</option>
-															</select>
-											    		</td>
-											    		<td>
-											    			3.1; 3.2
-											    		</td>
-											    	</tr>
-											    	<tr>
-											    		<td>01.01.2024</td>
-											    		<td>
-											    			<select class="data-value selectpicker " placeholder="Выберите значение">
-															  <option value="1" selected>Действует</option>
-															  <option value="2">Ликвидированная</option>
-															</select>
-											    		</td>
-											    		<td>
-											    			<select class="data-value selectpicker " placeholder="Выберите значение">
-															  <option value="1" selected>Регулируемая</option>
-															  <option value="2">Договор поставки</option>
-															  <option value="3">Не регулируемая</option>
-															</select>
-											    		</td>
-											    		<td>
-											    			3.1; 3.2
-											    		</td>
-											    	</tr>
-											    	<tr>
-											    		<td>01.01.2025</td>
-											    		<td>
-											    			<select class="data-value selectpicker " placeholder="Выберите значение">
-															  <option value="1" selected>Действует</option>
-															  <option value="2">Ликвидированная</option>
-															</select>
-											    		</td>
-											    		<td>
-											    			<select class="data-value selectpicker " placeholder="Выберите значение">
-															  <option value="1" selected>Регулируемая</option>
-															  <option value="2">Договор поставки</option>
-															  <option value="3">Не регулируемая</option>
-															</select>
-											    		</td>
-											    		<td>
-											    			3.1; 3.2
-											    		</td>
-											    	</tr>
-											    	<tr>
-											    		<td>01.01.2026</td>
-											    		<td>
-											    			<select class="data-value selectpicker " placeholder="Выберите значение">
-															  <option value="1" selected>Действует</option>
-															  <option value="2">Ликвидированная</option>
-															</select>
-											    		</td>
-											    		<td>
-											    			<select class="data-value selectpicker " placeholder="Выберите значение">
-															  <option value="1" selected>Регулируемая</option>
-															  <option value="2">Договор поставки</option>
-															  <option value="3">Не регулируемая</option>
-															</select>
-											    		</td>
-											    		<td>
-											    			3.1; 3.2
-											    		</td>
-											    	</tr>
-											    </tbody>
-											</table>
-										</div>
-										
-									</div>
-									<div class="col-xxl-6 col-12">
-										<div class="data-block border-block ms-1">
-											<div class="data-row pb-1 mt-1">
-												<h4>Ответственное лицо за подготовку данных по схеме</h4>
-											</div>
-											<table id="responseTable" class="display nowrap compact table-inp-stretch" style="width:100%">
-											    <thead>
-											        <tr>
-											            <th>Должность</th>
-											            <th>Фамилия</th>
-											            <th>Имя</th>
-											            <th>Отчество</th>
-											            <th>Телефон</th>
-											            <th>Адрес эл. почты</th>
-											            <th></th>
-											        </tr>
-											    </thead>
-											    <tbody>
-											    	<tr>
-											    		<td><input type="text" class="data-value" value="Главный инженер"></td>
-											    		<td><input type="text" class="data-value" value="Иванов"></td>
-											    		<td><input type="text" class="data-value" value="Иван"></td>
-											    		<td><input type="text" class="data-value" value="Иванович"></td>
-											    		<td><input type="tel" class="data-value" value="+7(945)456-65-78"></td>
-											    		<td><input type="email" class="data-value" value="ivanov@mail.ru"></td>
-											    		<td><button class="bttn bttn-square bttn-icon-save" type="button" title="Сохранить">
-														</button><button class="bttn bttn-square bttn-icon-del" type="button" title="Удалить">
-														</button></td>
-											    	</tr>
-											    	<tr class="add-row">
-											    		<td><input type="text" class="data-value xl-full" value=""></td>
-											    		<td><input type="text" class="data-value lg-full" value=""></td>
-											    		<td><input type="text" class="data-value md-full" value=""></td>
-											    		<td><input type="text" class="data-value lg-full" value=""></td>
-											    		<td><input type="tel" class="data-value xxl-full" value=""></td>
-											    		<td><input type="email" class="data-value xl-full" value=""></td>
-											    		<td><button class="bttn bttn-square bttn-icon-save" type="button" title="Сохранить">
-														</button><button class="bttn bttn-square bttn-icon-del" type="button" title="Удалить">
-														</button></td>
-											    	</tr>
-											    </tbody>
-											</table>
-										</div>
-										
+									<label class="data-label xl-fix">Вид системы:</label>
+									<div class="data-row">
+										<div class="data-item">
+					      					<label class="data-label">отпуск с коллектора</label>
+					      					<input type="radio" name="sysType" class="form-check-input" checked>
+					      				</div>
+					      				<div class="data-item">
+					      					<label class="data-label">отопление/вентиляция</label>
+					      					<input type="radio" name="sysType" class="form-check-input">
+					      				</div>
+					      				<div class="data-item">
+					      					<label class="data-label">горячее водоснабжение</label>
+					      					<input type="radio" name="sysType" class="form-check-input">
+					      				</div>
+					      				<div class="data-item">
+					      					<label class="data-label">технология</label>
+					      					<input type="radio" name="sysType" class="form-check-input">
+					      				</div>
 									</div>
 								</div>
+								<div class="data-row">
+									<label class="data-label xxl-fix">Температуры теплоносителя в расчетной точке:</label>
+									<div class="data-item">
+				      					<label class="data-label">подающая линия (Т<sub>1</sub>)</label>
+				      					<input type="text" class="data-value md-fix">
+				      					<span class="data-unit">°C</span>
+				      				</div>
+				      				<div class="data-item">
+				      					<label class="data-label">обратная линия (Т<sub>2</sub>)</label>
+				      					<input type="text" class="data-value md-fix">
+				      					<span class="data-unit">°C</span>
+				      				</div>
+								</div>
+								<div class="data-row">
+									<label class="data-label xxl-fix">Температуры теплоносителя в точке излома:</label>
+									<div class="data-item">
+				      					<label class="data-label">подающая линия (Т<sub>1</sub>)</label>
+				      					<input type="text" class="data-value md-fix">
+				      					<span class="data-unit">°C</span>
+				      				</div>
+				      				<div class="data-item">
+				      					<label class="data-label">обратная линия (Т<sub>2</sub>)</label>
+				      					<input type="text" class="data-value md-fix">
+				      					<span class="data-unit">°C</span>
+				      				</div>
+								</div>
 							</div>
+							<div class="data-block border-block">
+								<div class="data-row">
+									<h4>Температурный график</h4>
+									<div class="data-row stretch">
+										<label class="data-label">Способ ввода данных:</label>
+										<div class="data-row">
+											<div class="data-item">
+						      					<label class="data-label">автоматический расчет</label>
+						      					<input type="radio" name="calcType" class="form-check-input" checked>
+						      				</div>
+						      				<div class="data-item">
+						      					<label class="data-label">в ручную</label>
+						      					<input type="radio" name="calcType" class="form-check-input">
+						      				</div>
+										</div>
+									</div>
+									<button type="button" class="bttn ms-auto">Построить</button>
+								</div>
+			      				<div class="data-row">
+			      					<div class="data-block">
+			      						<table class="table-inp-stretch">
+			      							<thead>
+			      								<tr>
+			      									<th>T<sup>НВ</sup>, <span class="data-unit">°C</span></th>
+			      									<th>Т<sub>1</sub>, <span class="data-unit">°C</span></th>
+			      									<th>Т<sub>2</sub>, <span class="data-unit">°C</span></th>
+			      								</tr>
+			      							</thead>
+			      							<tbody>
+			      								<tr>
+			      									<td>+8</td>
+			      									<td><input type="text" class="data-value" value="43"></td>
+			      									<td><input type="text" class="data-value" value="70"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>+7</td>
+			      									<td><input type="text" class="data-value" value="43"></td>
+			      									<td><input type="text" class="data-value" value="70"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>+6</td>
+			      									<td><input type="text" class="data-value" value="43"></td>
+			      									<td><input type="text" class="data-value" value="70"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>+5</td>
+			      									<td><input type="text" class="data-value" value="43"></td>
+			      									<td><input type="text" class="data-value" value="70"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>+4</td>
+			      									<td><input type="text" class="data-value" value="45"></td>
+			      									<td><input type="text" class="data-value" value="75"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>+3</td>
+			      									<td><input type="text" class="data-value" value="47"></td>
+			      									<td><input type="text" class="data-value" value="80"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>+2</td>
+			      									<td><input type="text" class="data-value" value="49"></td>
+			      									<td><input type="text" class="data-value" value="85"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>+1</td>
+			      									<td><input type="text" class="data-value" value="51"></td>
+			      									<td><input type="text" class="data-value" value="90"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>0</td>
+			      									<td><input type="text" class="data-value" value="53"></td>
+			      									<td><input type="text" class="data-value" value="95"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>-1</td>
+			      									<td><input type="text" class="data-value" value="55"></td>
+			      									<td><input type="text" class="data-value" value="100"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>-2</td>
+			      									<td><input type="text" class="data-value" value="57"></td>
+			      									<td><input type="text" class="data-value" value="105"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>-3</td>
+			      									<td><input type="text" class="data-value" value="59"></td>
+			      									<td><input type="text" class="data-value" value="110"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>-4</td>
+			      									<td><input type="text" class="data-value" value="61"></td>
+			      									<td><input type="text" class="data-value" value="115"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>-5</td>
+			      									<td><input type="text" class="data-value" value="63"></td>
+			      									<td><input type="text" class="data-value" value="120"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>-6</td>
+			      									<td><input type="text" class="data-value" value="65"></td>
+			      									<td><input type="text" class="data-value" value="125"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>-7</td>
+			      									<td><input type="text" class="data-value" value="67"></td>
+			      									<td><input type="text" class="data-value" value="130"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>-8</td>
+			      									<td><input type="text" class="data-value" value="69"></td>
+			      									<td><input type="text" class="data-value" value="135"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>-9</td>
+			      									<td><input type="text" class="data-value" value="71"></td>
+			      									<td><input type="text" class="data-value" value="140"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>-10</td>
+			      									<td><input type="text" class="data-value" value="73"></td>
+			      									<td><input type="text" class="data-value" value="145"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>-11</td>
+			      									<td><input type="text" class="data-value" value="75"></td>
+			      									<td><input type="text" class="data-value" value="150"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>-12</td>
+			      									<td><input type="text" class="data-value" value="77"></td>
+			      									<td><input type="text" class="data-value" value="155"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>-13</td>
+			      									<td><input type="text" class="data-value" value="79"></td>
+			      									<td><input type="text" class="data-value" value="160"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>-14</td>
+			      									<td><input type="text" class="data-value" value="81"></td>
+			      									<td><input type="text" class="data-value" value="165"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>-15</td>
+			      									<td><input type="text" class="data-value" value="83"></td>
+			      									<td><input type="text" class="data-value" value="170"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>-16</td>
+			      									<td><input type="text" class="data-value" value="85"></td>
+			      									<td><input type="text" class="data-value" value="175"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>-17</td>
+			      									<td><input type="text" class="data-value" value="87"></td>
+			      									<td><input type="text" class="data-value" value="180"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>-18</td>
+			      									<td><input type="text" class="data-value" value="89"></td>
+			      									<td><input type="text" class="data-value" value="185"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>-19</td>
+			      									<td><input type="text" class="data-value" value="91"></td>
+			      									<td><input type="text" class="data-value" value="190"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>-20</td>
+			      									<td><input type="text" class="data-value" value="93"></td>
+			      									<td><input type="text" class="data-value" value="195"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>-21</td>
+			      									<td><input type="text" class="data-value" value="95"></td>
+			      									<td><input type="text" class="data-value" value="200"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>-22</td>
+			      									<td><input type="text" class="data-value" value="97"></td>
+			      									<td><input type="text" class="data-value" value="205"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>-23</td>
+			      									<td><input type="text" class="data-value" value="99"></td>
+			      									<td><input type="text" class="data-value" value="210"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>-24</td>
+			      									<td><input type="text" class="data-value" value="101"></td>
+			      									<td><input type="text" class="data-value" value="215"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>-25</td>
+			      									<td><input type="text" class="data-value" value="103"></td>
+			      									<td><input type="text" class="data-value" value="220"></td>
+			      								</tr>
+			      								<tr>
+			      									<td>-26</td>
+			      									<td><input type="text" class="data-value" value="105"></td>
+			      									<td><input type="text" class="data-value" value="225"></td>
+			      								</tr>
+			      							</tbody>
+			      						</table>
+			      					</div>
+			      					<div class="data-block">
+			      						<h5 class="text-center w-100">Наименование температурного графика</h5>
+			      						<img src="images/termalGraph.JPG" class="ms-auto me-auto">
+			      					</div>
+			      				</div>
+			      			</div>
+			      			<div class="data-block border-block">
+			      				<div class="data-row">
+			      					<h4>Удельные расходы сетевой воды на тепловых вводах потребителей</h4>
+			      					<button type="button" class="bttn ms-auto">Рассчитать и записать</button>
+			      				</div>
+			      				<div class="data-block">
+			      					<div class="data-item">
+			      						<label class="data-label lg-fix">Жилые здания</label>
+			      						<input type="text" class="data-value md-fix"></input>
+			      						<span class="data-unit">т/Гкал</span>
+			      						<p class="text-secondary small"> - при независимом подключении тепловых нагрузок, закрытой двухступенчатой схеме подключения ГВС, Q<sub>v</sub><sup>max</sup> < 15% Q<sub>o</sub><sup>max</sup> и доле нагрузки ГВС ρ = 30%</p>
+			      					</div>
+			      					<div class="data-item">
+			      						<label class="data-label lg-fix">Общественные здания</label>
+			      						<input type="text" class="data-value md-fix"></input>
+			      						<span class="data-unit">т/Гкал</span>
+			      						<p class="text-secondary small"> - при независимом подключении тепловых нагрузок, закрытой двухступенчатой схеме подключения ГВС, Q<sub>v</sub><sup>max</sup> > 15% Q<sub>o</sub><sup>max</sup> и доле нагрузки ГВС ρ = 5%</p>
+			      					</div>
+			      					<div class="data-item">
+			      						<label class="data-label lg-fix">Больницы</label>
+			      						<input type="text" class="data-value md-fix"></input>
+			      						<span class="data-unit">т/Гкал</span>
+			      						<p class="text-secondary small"> - при независимом подключении тепловых нагрузок, закрытой двухступенчатой схеме подключения ГВС, Q<sub>v</sub><sup>max</sup> > 15% Q<sub>o</sub><sup>max</sup> и доле нагрузки ГВС ρ = 20%</p>
+			      					</div>
+			      					<div class="data-item">
+			      						<label class="data-label lg-fix">ФОК с басесейном</label>
+			      						<input type="text" class="data-value md-fix"></input>
+			      						<span class="data-unit">т/Гкал</span>
+			      						<p class="text-secondary small"> - при независимом подключении тепловых нагрузок, закрытой двухступенчатой схеме подключения ГВС, Q<sub>v</sub><sup>max</sup> > 15% Q<sub>o</sub><sup>max</sup> и доле нагрузки ГВС ρ = 10%</p>
+			      					</div>
+			      					<div class="data-item">
+			      						<label class="data-label lg-fix">Промышленные здания</label>
+			      						<input type="text" class="data-value md-fix"></input>
+			      						<span class="data-unit">т/Гкал</span>
+			      						<p class="text-secondary small"> - при независимом подключении тепловых нагрузок, закрытой двухступенчатой схеме подключения ГВС, Q<sub>v</sub><sup>max</sup> > 15% Q<sub>o</sub><sup>max</sup> и доле нагрузки ГВС ρ = 2%</p>
+			      					</div>
+			      				</div>
+			      			</div>
 						</div>
-			     	</div>
-		      		
-			     </div>
-			     <div class="modal-footer">
-			      	<button type="button" class="bttn bttn-color">Сохранить</button>
-			      	<button type="button" class="bttn bttn-color">Создать копию</button>
-			      	<button type="button" class="bttn bttn-color">Удалить</button>
-			     </div>
+					</div>
+	    		</div>
+	    		<div class="modal-footer">
+			        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
+			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Сохранить</button>
+			        <button type="button" class="bttn bttn-color">Создать копию</button>
+			        <button type="button" class="bttn bttn-color">Удалить</button>
+			    </div>
 	    	</div>
 	    </div>
 	</div>
@@ -972,9 +996,9 @@
 	<script type="text/javascript" src="js/datatables.min.js"></script>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
-	
+
 	<script type="text/javascript" charset="utf8" src="js/main.js"></script>
-	<script type="text/javascript" charset="utf8" src="js/page2-2-1.js"></script>
+	<script type="text/javascript" charset="utf8" src="js/page2-6-14.js"></script>
 	
 	
 </body>
