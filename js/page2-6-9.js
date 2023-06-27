@@ -239,16 +239,19 @@ $(document).ready(function () {
 
         /* Double click on row otherCostsTable */
     $('#equipmentType11Table tbody').on('dblclick', 'tr', function () {
+      $('#editEquipmentTypesData .modal-title').text('Редактирование данных установки обратного осмоса ВПУ');
       showModal('editEquipmentTypesData');
     } );
 
         /* Double click on row otherCostsTable */
     $('#equipmentType12Table tbody').on('dblclick', 'tr', function () {
+       $('#editEquipmentTypesData .modal-title').text('Редактирование данных установки нано фильтрации ВПУ');
       showModal('editEquipmentTypesData');
     } );
 
         /* Double click on row otherCostsTable */
     $('#equipmentType13Table tbody').on('dblclick', 'tr', function () {
+      $('#editEquipmentTypesData .modal-title').text('Редактирование данных деаэратора');
       showModal('editEquipmentTypesData');
     } );
 
@@ -259,6 +262,7 @@ $(document).ready(function () {
 
         /* Double click on row otherCostsTable */
     $('#equipmentType15Table tbody').on('dblclick', 'tr', function () {
+       $('#editEquipmentTypesData .modal-title').text('Редактирование данных комплексона ВПУ');
       showModal('editEquipmentTypesData');
     } );
 
@@ -283,7 +287,7 @@ $(document).ready(function () {
                         break;
         case 'equipmentType6Tab' : showModal('editEquipmentType6Data');
                         break;
-        case 'equipmentType7v' : showModal('editEquipmentType7Data');
+        case 'equipmentType7Tab' : showModal('editEquipmentType7Data');
                         break;
         case 'equipmentType8Tab' : showModal('editEquipmentType8Data');
                         break;
@@ -291,18 +295,18 @@ $(document).ready(function () {
                         break;
         case 'equipmentType10Tab' : showModal('editEquipmentType10Data');
                         break;
-        case 'equipmentType11Tab' : $('editEquipmentTypesData modal-title').val('Редактирование данных установки обратного осмоса ВПУ');
+        case 'equipmentType11Tab' : $('#editEquipmentTypesData .modal-title').text('Редактирование данных установки обратного осмоса ВПУ');
                         showModal('editEquipmentTypesData');
                         break;
-        case 'equipmentType12Tab' : $('editEquipmentTypesData modal-title').val = 'Редактирование данных установки нано фильтрации ВПУ';
+        case 'equipmentType12Tab' : $('#editEquipmentTypesData .modal-title').text('Редактирование данных установки нано фильтрации ВПУ');
                         showModal('editEquipmentTypesData');
                         break;
-        case 'equipmentType13Tab' : $('editEquipmentTypesData modal-title').val = 'Редактирование данных деаэратора';
+        case 'equipmentType13Tab' : $('#editEquipmentTypesData .modal-title').text('Редактирование данных деаэратора');
                         showModal('editEquipmentTypesData');
                         break;
         case 'equipmentType14Tab' : showModal('editEquipmentType14Data');
                         break;
-        case 'equipmentType15Tab' : $('editEquipmentTypesData modal-title').val = 'Редактирование данных комплексона ВПУ';
+        case 'equipmentType15Tab' : $('#editEquipmentTypesData .modal-title').text('Редактирование данных комплексона ВПУ');
                         showModal('editEquipmentTypesData');
                         break;
         case 'equipmentType16Tab' : showModal('editEquipmentType16Data');

@@ -9,47 +9,14 @@
 	
 	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-
-	<!--link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/searchbuilder/1.4.0/css/searchBuilder.dataTables.min.css">
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.3.2/css/buttons.dataTables.min.css">
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.5.0/css/select.dataTables.min.css"-->
-
-	<!--link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.13.1/datatables.min.css"/-->
-
-	<link rel="stylesheet" type="text/css" href="css/datatables.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/css/bootstrap-select.min.css">
 
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+
 </head>
 <body>
-	<div class="preloader">
-		<div class="preloader-img">
-			<svg version="1.1" id="L2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-				<circle fill="none" stroke="#292e32" stroke-width="4" stroke-miterlimit="10" cx="50" cy="50" r="48"/>
-				<line fill="none" stroke-linecap="round" stroke="#5f2fe7" stroke-width="4" stroke-miterlimit="10" x1="50" y1="50" x2="85" y2="50.5">
-				  <animateTransform 
-				       attributeName="transform" 
-				       dur="2s"
-				       type="rotate"
-				       from="0 50 50"
-				       to="360 50 50"
-				       repeatCount="indefinite" />
-				</line>
-				<line fill="none" stroke-linecap="round" stroke="#5f2fe7" stroke-width="4" stroke-miterlimit="10" x1="50" y1="50" x2="49.5" y2="74">
-				  <animateTransform 
-				       attributeName="transform" 
-				       dur="15s"
-				       type="rotate"
-				       from="0 50 50"
-				       to="360 50 50"
-				       repeatCount="indefinite" />
-				</line>
-			</svg>
-		</div>
-	</div>
 	
-	<div class="main-container d-flex">
+	<div class="main-container welcome d-flex">
 		<div class="sidebar offcanvas offcanvas-start" id="offcanvas-sidebar" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1">
 			<div class="user d-flex">
 				<img src="images/user-logo.png" title="Пользователь" alt="Логотип">
@@ -57,7 +24,6 @@
 				<a class="user__exit ref-white" href="#" role="button" ><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 512 512"><title>Выход</title><path d="M304 336v40a40 40 0 01-40 40H104a40 40 0 01-40-40V136a40 40 0 0140-40h152c22.09 0 48 17.91 48 40v40M368 336l80-80-80-80M176 256h256" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg></a>
 			</div>
 			<div class="data-block sidebar-params">
-				
 				<div class="data-item">
 					<label for="paramCity" class="data-label">Город/ поселение</label>
 					<div class="input-group">
@@ -85,11 +51,11 @@
 			<nav class="navbar">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-column list-unstyled">
 			        <li class="nav-item">
-			          <a class="nav-link btn-toggle" href="#" role="button" data-bs-toggle="collapse" data-bs-target="#tso_menu" aria-expanded="true">
+			          <a class="nav-link btn-toggle collapsed" href="#" role="button" data-bs-toggle="collapse" data-bs-target="#tso_menu" aria-expanded="false">
 			            Теплоснабжающие организации
 			          </a>
-			          	<ul class="subnav collapse list-unstyled show" id="tso_menu">
-				            <li><a class="subnav-item nav-link active" href="#">Перечень организаций</a></li>
+			          	<ul class="subnav collapse list-unstyled" id="tso_menu">
+				            <li><a class="subnav-item nav-link" href="index.html">Перечень организаций</a></li>
 				            <li><a class="subnav-item nav-link" href="page2-2-2.html">Объекты в обслуживании</a></li>
 				            <li><a class="subnav-item nav-link" href="page2-2-3.html">Тепловой баланс</a></li>
 				            <li><a class="subnav-item nav-link" href="page2-2-4.html">Затраты и цены</a></li>
@@ -99,17 +65,17 @@
 			        </li>
 
 			        <li class="nav-item">
-			          <a class="nav-link btn-toggle collapsed" href="#" role="button" data-bs-toggle="collapse" data-bs-target="#ite_menu" aria-expanded="false">
+			          <a class="nav-link btn-toggle" href="#" role="button" data-bs-toggle="collapse" data-bs-target="#ite_menu" aria-expanded="true">
 			            Источники тепловой энергии
 			          </a>
-			          	<ul class="subnav collapse list-unstyled" id="ite_menu">
+			          	<ul class="subnav collapse list-unstyled show" id="ite_menu">
 				            <li><a class="subnav-item nav-link" href="page2-3-1.html">Перечень источников</a></li>
 				            <li><a class="subnav-item nav-link" href="page2-3-2.html">Оборудование</a></li>
 				            <li><a class="subnav-item nav-link" href="page2-3-3.html">Ресурсоснабжение</a></li>
 				            <li><a class="subnav-item nav-link" href="page2-3-4.html">Выдача тепловой мощности</a></li>
 				            <li><a class="subnav-item nav-link" href="page2-3-5.html">Технико-экономические показатели</a></li>
 				            <li><a class="subnav-item nav-link" href="page2-3-6.html">Статистика отказов</a></li>
-				            <li><a class="subnav-item nav-link" href="page2-3-7.html">Мероприятия по развитию</a></li>
+				            <li><a class="subnav-item nav-link active" href="#">Мероприятия по развитию</a></li>
 				            <li><a class="subnav-item nav-link" href="page2-3-8.html">Калькуляция себестоимости</a></li>
 				            <li><a class="subnav-item nav-link" href="page2-3-9.html">Экологические показатели</a></li>
 				        </ul>
@@ -198,142 +164,22 @@
 				</svg>
 			</a>
 		</div>
-		<div class="data-block workspace">
-
+		<div class="data-block text-center justify-content-center align-items-center w-100">
 			<div class="data-block title-block">
-				<div class="data-row">
-				
-					<ul class="breadcrumb">
-						<li class="breadcrumb-item"><a class="ref-color" href="#">Главная</a></li>
-						<li class="breadcrumb-item"><a class="ref-color" href="index.html">Теплоснабжающие организации - Перечень организаций</a></li>
-						<li class="breadcrumb-item">Загрузка данных</li>
-					</ul>
-				</div>
-				<h1 class="title">Теплоснабжающие и теплосетевые организации</h1>
-			</div>	
-				
-		  	<div class="data-block main-content">
-				<div class="data-row table-params">
-					<div class="data-item">
-						<label class="data-label">Файл загрузки</label>
-						<input class="data-value" type="file" id="formFile">
-					</div>
-					<div class="data-item">
-						<label for="paramCalcYear" class="data-label">Год схемы, на который загружаются данные</label>
-						<select class="selectpicker param-calc-year" data-width="140px" id="paramCalcYear" value="2022">
-						  <option value="2020">01.01.2021</option>
-						  <option value="2021">01.01.2022</option>
-						  <option value="2022" selected>01.01.2023</option>
-						  <option value="2023">01.01.2024</option>
-						</select>
-					</div>
-					<div class="data-item">
-						<div class="note">Базовый год - <span class="note-base-year">2022 (01.01.2023)</span>; следующие года - перспективные.</div>
-					</div>								 
-				</div>
-
-				<div class="table-block">
-					<div class="table-buttons loadTable-buttons"></div>
-					<table id="loadTable" class="display compact" style="width:100%" >
-					    <thead>
-					        <tr>
-					            <th>Номер</th>
-					            <th>Наименование</th>
-					            <th>Адрес</th>
-					            <th>Дата</th>
-					            <th>Тип</th>
-					            <th>Округ</th>
-					            <th>Состояние</th>
-					            <th>Полезная энергия</th>
-					            <th>Тепловая энергия</th>
-					            <th>Источники</th>
-					        </tr>
-					        <tr class="filter-row ">
-				            <th class="dtfc-fixed-left" style="left:0; position:sticky;"><input type="text" class="filter-col-0"/></th>
-					            <th><input type="text" class="filter-col-1"/></th>
-					            <th><input type="text" class="filter-col-2"/></th>
-					            <th><input type="text" class="filter-col-3"/></th>
-					            <th><input type="text" class="filter-col-4"/></th>
-					            <th><input type="text" class="filter-col-5"/></th>
-					            <th><input type="text" class="filter-col-6"/></th>
-					            <th><input type="text" class="filter-col-7"/></th>
-					            <th><input type="text" class="filter-col-8"/></th>
-					            <th><input type="text" class="filter-col-9"/></th>
-					        </tr>
-					    </thead>
-					    <tbody>
-					    </tbody>
-					</table>
-				</div>
-
-				<div class="data-row table-summary">
-					<div class="data-item rows-count">
-						<h5>Всего записей:</h5>
-						<p><span class="mark-color">10</span></p>
-					</div>
-					<div class="data-item data-item-right">
-						<div class="load-status wait">Ожидание загрузки</div>
-				        <button type="button" class="bttn bttn-color">Загрузить данные</button>
-				        <button type="button" class="bttn bttn-color">Провести проверку</button>
-			    	</div>
-				</div>
+				<h2 class="text-white text-opacity-50">Автоматизированная информационная система</h2>
+				<h1 class="text-white fs-1">"Схема теплоснабжения"</h1>
+			</div>
+			<div class="data-block text-white w-50 align-self-center mt-4 mb-3">
+				<h3 class="text-white text-opacity-75">Данная страница ещё находится в разработке.</h3>
+				<p>Попробуйте пока выбрать другой пункт меню или вернитесь к <a href="javascript:history.back()" style="color: var(--action-color);">предыдущей странице</a>.</p>
 			</div>
 		</div>
 	</div>
-
-	<!-- Modal infoUser -->
-	<div class="modal fade" id="infoUser" tabindex="-1" aria-labelledby="infoUserLabel" aria-hidden="true">
-	  <div class="modal-dialog">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <h5 class="modal-title" id="infoUserLabel">Информация о пользователе</h5>
-	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-	      </div>
-	      <div class="modal-body">
-	        Фамилия Имя Отчество
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Закрыть</button>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-	<!-- Modal exitUser -->
-	<div class="modal fade" id="exitUser" tabindex="-1" aria-labelledby="exitUserLabel" aria-hidden="true">
-	  <div class="modal-dialog">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <h5 class="modal-title" id="exitUserLabel">Предупреждение</h5>
-	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-	      </div>
-	      <div class="modal-body">
-	        Вы уверены, что хотите выйти из системы?
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
-	        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Да</button>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-
+	
 	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-	<!--script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
-	<script type="text/javascript" src="https://cdn.datatables.net/searchbuilder/1.4.0/js/dataTables.searchBuilder.min.js"></script>
-	<script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.2/js/dataTables.buttons.min.js"></script>
-	<script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.colVis.min.js"></script>
-	<script type="text/javascript" src="https://cdn.datatables.net/select/1.5.0/js/dataTables.select.min.js"></script-->
-
- 	<!-- cdn link for DataTables Library -->
-	<!--script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.13.1/b-2.3.3/b-colvis-2.3.3/fh-3.3.1/r-2.4.0/sc-2.0.7/sb-1.4.0/sl-1.5.0/sr-1.2.0/datatables.min.js"></script-->
-
-	<!-- direct link for DataTables Library's File -->
-	<script type="text/javascript" src="js/datatables.min.js"></script>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
 	
-	<script type="text/javascript" charset="utf8" src="js/main.js"></script>
-	<script type="text/javascript" charset="utf8" src="js/page2-2-1-2.js"></script>
 </body>
 </html>

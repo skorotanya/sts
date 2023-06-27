@@ -142,7 +142,7 @@
 			            <li><a class="subnav-item nav-link" href="page2-6-6.html">Договора на теплоснабжение</a></li>
 			            <li><a class="subnav-item nav-link" href="page2-6-7.html">Нормы расхода тепла</a></li>
 			            <li><a class="subnav-item nav-link" href="page2-6-8.html">Программы развития города (поселения)</a></li>
-			            <li><a class="subnav-item nav-link active" href="#">Оборудование</a></li>
+			            <li><a class="subnav-item nav-link" href="page2-6-9.html">Оборудование</a></li>
 			            <li><a class="subnav-item nav-link" href="page2-6-10.html">Топливо</a></li>
 			            <li><a class="subnav-item nav-link" href="page2-6-11.html">Программы развития энергообъектов</a></li>
 			            <li><a class="subnav-item nav-link" href="page2-6-12.html">Типы схем тепловых пунктов</a></li>
@@ -152,7 +152,7 @@
 			            <li><a class="subnav-item nav-link" href="page2-6-16.html">Условные диаметры</a></li>
 			            <li><a class="subnav-item nav-link" href="page2-6-17.html">Тепловая изоляция тепловых сетей</a></li>
 			            <li><a class="subnav-item nav-link" href="page2-6-18.html">Удельные нормативные потери тепла в т/с</a></li>
-			            <li><a class="subnav-item nav-link" href="page2-6-19.html">Удельные капитальные вложения</a></li>
+			            <li><a class="subnav-item nav-link active" href="#">Удельные капитальные вложения</a></li>
 			            <li><a class="subnav-item nav-link" href="page2-6-20.html">Коэффициенты инфляции</a></li>
 			            <li><a class="subnav-item nav-link" href="page2-6-21.html">Поправочные коэффициенты на климат</a></li>
 			          </ul>
@@ -195,11 +195,11 @@
 				<div class="data-row">
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a class="ref-color" href="#">Главная</a></li>
-						<li class="breadcrumb-item">Справочные таблицы - Оборудование</li>
+						<li class="breadcrumb-item">Справочные таблицы - Удельные капитальные вложения</li>
 					</ul>
 				</div>
 				<div class="data-row">
-					<h1 class="title">Оборудование</h1>
+					<h1 class="title">Удельные капитальные вложения</h1>
 					<div class="data-row stretch justify-content-end">
 						<div class="data-item">
 							<button class="bttn bttn-color bttn-edit-data" type="button">Добавить/Удалить</button>
@@ -216,61 +216,70 @@
 					  	</button>
 					  	<ul class="dropdown-menu" role="tablist">
 						    <li>
-						    	<button class="dropdown-item active" data-bs-toggle="tab" data-bs-target="#equipmentType1Tab" type="button" role="tab" aria-controls="equipmentType1Tab" aria-selected="false">Паровые турбоагрегаты</button>
+						    	<button class="dropdown-item active" data-bs-toggle="tab" data-bs-target="#objectType1Tab" type="button" role="tab" aria-controls="objectType1Tab" aria-selected="false">Водогрейная котельная</button>
 						  	</li>
 						  	<li>
-						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#equipmentType2Tab" type="button" role="tab" aria-controls="equipmentType2Tab" aria-selected="false">Газовые турбоагрегаты</button>
+						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#objectType2Tab" type="button" role="tab" aria-controls="objectType2Tab" aria-selected="false">Паровая котельная</button>
 						  	</li>
 						  	<li>
-						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#equipmentType3Tab" type="button" role="tab" aria-controls="equipmentType3Tab" aria-selected="false">Паровые котлоагрегаты</button>
+						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#objectType3Tab" type="button" role="tab" aria-controls="objectType3Tab" aria-selected="false">БМК (водогрейная)</button>
 						  	</li>
 						  	<li>
-						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#equipmentType4Tab" type="button" role="tab" aria-controls="equipmentType4Tab" aria-selected="false">Водогрейные котлоагрегаты</button>
+						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#objectType4Tab" type="button" role="tab" aria-controls="objectType4Tab" aria-selected="false">БМК (паровая)</button>
 						  	</li>
 						  	<li>
-						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#equipmentType5Tab" type="button" role="tab" aria-controls="equipmentType5Tab" aria-selected="false">Поршневые установки</button>
+						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#objectType5Tab" type="button" role="tab" aria-controls="objectType5Tab" aria-selected="false">Паровой котлоагрегат</button>
 						  	</li>
 						  	<li>
-						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#equipmentType6Tab" type="button" role="tab" aria-controls="equipmentType6Tab" aria-selected="false">РОУ</button>
+						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#objectType6Tab" type="button" role="tab" aria-controls="objectType6Tab" aria-selected="false">Водогрейный котлоагрегат</button>
 						  	</li>
 						  	<li>
-						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#equipmentType7Tab" type="button" role="tab" aria-controls="equipmentType7Tab" aria-selected="false">Водоподогреватели</button>
+						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#objectType7Tab" type="button" role="tab" aria-controls="objectType7Tab" aria-selected="false">Паровая турбина</button>
 						  	</li>
 						  	<li>
-						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#equipmentType8Tab" type="button" role="tab" aria-controls="equipmentType8Tab" aria-selected="false">Насосы</button>
+						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#objectType8Tab" type="button" role="tab" aria-controls="objectType8Tab" aria-selected="false">Газовая турбина</button>
 						  	</li>
 						  	<li>
-						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#equipmentType9Tab" type="button" role="tab" aria-controls="equipmentType9Tab" aria-selected="false">Фильтры ВПУ</button>
+						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#objectType9Tab" type="button" role="tab" aria-controls="objectType9Tab" aria-selected="false">Поршневой агрегат</button>
 						  	</li>
 						  	<li>
-						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#equipmentType10Tab" type="button" role="tab" aria-controls="equipmentType10Tab" aria-selected="false">Осветлители ВПУ</button>
+						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#objectType10Tab" type="button" role="tab" aria-controls="objectType10Tab" aria-selected="false">Тепловая сеть</button>
 						  	</li>
 						  	<li>
-						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#equipmentType11Tab" type="button" role="tab" aria-controls="equipmentType11Tab" aria-selected="false">Установки обратного осмоса ВПУ</button>
+						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#objectType11Tab" type="button" role="tab" aria-controls="objectType11Tab" aria-selected="false">Камера</button>
 						  	</li>
 						  	<li>
-						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#equipmentType12Tab" type="button" role="tab" aria-controls="equipmentType12Tab" aria-selected="false">Установки нано фильтрации ВПУ</button>
+						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#objectType12Tab" type="button" role="tab" aria-controls="objectType12Tab" aria-selected="false">Шаровой кран с электроприводом</button>
 						  	</li>
 						  	<li>
-						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#equipmentType13Tab" type="button" role="tab" aria-controls="equipmentType13Tab" aria-selected="false">Деаэраторы</button>
+						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#objectType13Tab" type="button" role="tab" aria-controls="objectType13Tab" aria-selected="false">Шаровой кран с редуктором</button>
 						  	</li>
 						  	<li>
-						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#equipmentType14Tab" type="button" role="tab" aria-controls="equipmentType14Tab" aria-selected="false">Баки ВПУ</button>
+						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#objectType14Tab" type="button" role="tab" aria-controls="objectType14Tab" aria-selected="false">Насосная станция</button>
 						  	</li>
 						  	<li>
-						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#equipmentType15Tab" type="button" role="tab" aria-controls="equipmentType15Tab" aria-selected="false">Комплексоны ВПУ</button>
+						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#objectType15Tab" type="button" role="tab" aria-controls="objectType15Tab" aria-selected="false">Насос центробежный</button>
 						  	</li>
 						  	<li>
-						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#equipmentType16Tab" type="button" role="tab" aria-controls="equipmentType16Tab" aria-selected="false">Дымовые трубы</button>
+						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#objectType16Tab" type="button" role="tab" aria-controls="objectType16Tab" aria-selected="false">Теплообменник кожухотрубный</button>
+						  	</li>
+						  	<li>
+						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#objectType17Tab" type="button" role="tab" aria-controls="objectType17Tab" aria-selected="false">Теплообменник пластинчатый</button>
+						  	</li>
+						  	<li>
+						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#objectType18Tab" type="button" role="tab" aria-controls="objectType18Tab" aria-selected="false">ЦТП</button>
+						  	</li>
+						  	<li>
+						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#objectType19Tab" type="button" role="tab" aria-controls="objectType19Tab" aria-selected="false">ИТП</button>
 						  	</li>
 					  	</ul>
 					</div>
-				  	<div class="tab-pane fade show active" id="equipmentType1Tab" role="tabpanel" >
+				  	<div class="tab-pane fade show active" id="objectType1Tab" role="tabpanel" >
 				  		<div class="data-block">
-				  			<h3>Паровые турбоагрегаты</h3>
+				  			<h3>Водогрейная котельная</h3>
 				  			<div class="table-block">
-								<div class="table-buttons equipmentType1Table-buttons"></div>
-						  		<table id="equipmentType1Table" class="display compact table-clicked" style="width:100%">
+								<div class="table-buttons objectType1Table-buttons"></div>
+						  		<table id="objectType1Table" class="display compact table-clicked" style="width:100%">
 								    <thead>
 								        <tr>
 								            <th>УНОМ ТП</th>
@@ -543,12 +552,12 @@
 							</div>
 				  		</div>	
 					</div>
-				  	<div class="tab-pane fade" id="equipmentType2Tab" role="tabpanel" >
+				  	<div class="tab-pane fade" id="objectType2Tab" role="tabpanel" >
 				  		<div class="data-block">
-				  			<h3>Газовые турбоагрегаты</h3>
+				  			<h3>Паровая котельная</h3>
 				  			<div class="table-block">
-								<div class="table-buttons equipmentType2Table-buttons"></div>
-						  		<table id="equipmentType2Table" class="display compact table-clicked" style="width:100%">
+								<div class="table-buttons objectType2Table-buttons"></div>
+						  		<table id="objectType2Table" class="display compact table-clicked" style="width:100%">
 								    <thead>
 								        <tr>
 								            <th>УНОМ ТП</th>
@@ -821,12 +830,12 @@
 							</div>
 				  		</div>	
 					</div>
-				  	<div class="tab-pane fade" id="equipmentType3Tab" role="tabpanel">
+				  	<div class="tab-pane fade" id="objectType3Tab" role="tabpanel">
 				  		<div class="data-block">
-				  			<h3>Паровые котлоагрегаты</h3>
+				  			<h3>БМК (водогрейная)</h3>
 				  			<div class="table-block">
-								<div class="table-buttons equipmentType3Table-buttons"></div>
-						  		<table id="equipmentType3Table" class="display compact table-clicked" style="width:100%">
+								<div class="table-buttons objectType3Table-buttons"></div>
+						  		<table id="objectType3Table" class="display compact table-clicked" style="width:100%">
 								    <thead>
 								        <tr>
 								            <th>УНОМ ТЗ</th>
@@ -1099,12 +1108,12 @@
 							</div>
 				  		</div>
 					</div>
-					<div class="tab-pane fade" id="equipmentType4Tab" role="tabpanel" >
+					<div class="tab-pane fade" id="objectType4Tab" role="tabpanel" >
 						<div class="data-block">
-							<h3>Водогрейные котлоагрегаты</h3>
+							<h3>БМК (паровая)</h3>
 							<div class="table-block">
-								<div class="table-buttons equipmentType4Table-buttons"></div>
-						  		<table id="equipmentType4Table" class="display compact table-clicked" style="width:100%">
+								<div class="table-buttons objectType4Table-buttons"></div>
+						  		<table id="objectType4Table" class="display compact table-clicked" style="width:100%">
 								    <thead>
 								        <tr>
 								            <th>Номер ТП</th>
@@ -1378,12 +1387,12 @@
 						</div>
 					</div>
 
-					<div class="tab-pane fade" id="equipmentType5Tab" role="tabpanel" >
+					<div class="tab-pane fade" id="objectType5Tab" role="tabpanel" >
 						<div class="data-block">
-							<h3>Поршневые установки</h3>
+							<h3>Паровой котлоагрегат</h3>
 							<div class="table-block">
-								<div class="table-buttons equipmentType5Table-buttons"></div>
-						  		<table id="equipmentType5Table" class="display compact table-clicked" style="width:100%">
+								<div class="table-buttons objectType5Table-buttons"></div>
+						  		<table id="objectType5Table" class="display compact table-clicked" style="width:100%">
 								    <thead>
 								        <tr>
 								            <th>Номер ТП</th>
@@ -1657,12 +1666,12 @@
 						</div>			
 					</div>
 
-					<div class="tab-pane fade" id="equipmentType6Tab" role="tabpanel" >
+					<div class="tab-pane fade" id="objectType6Tab" role="tabpanel" >
 						<div class="data-block">
-							<h3>РОУ</h3>
+							<h3>Водогрейный котлоагрегат</h3>
 							<div class="table-block">
-								<div class="table-buttons equipmentType6Table-buttons"></div>
-						  		<table id="equipmentType6Table" class="display compact table-clicked" style="width:100%">
+								<div class="table-buttons objectType6Table-buttons"></div>
+						  		<table id="objectType6Table" class="display compact table-clicked" style="width:100%">
 								    <thead>
 								        <tr>
 								            <th>Номер ТП</th>
@@ -1936,12 +1945,12 @@
 						</div>
 					</div>
 
-					<div class="tab-pane fade" id="equipmentType7Tab" role="tabpanel" >
+					<div class="tab-pane fade" id="objectType7Tab" role="tabpanel" >
 						<div class="data-block">
-							<h3>Водоподогреватели</h3>
+							<h3>Паровая турбина</h3>
 							<div class="table-block">
-								<div class="table-buttons equipmentType7Table-buttons"></div>
-						  		<table id="equipmentType7Table" class="display compact table-clicked" style="width:100%">
+								<div class="table-buttons objectType7Table-buttons"></div>
+						  		<table id="objectType7Table" class="display compact table-clicked" style="width:100%">
 								    <thead>
 								        <tr>
 								            <th>Номер ТП</th>
@@ -2214,12 +2223,12 @@
 							</div>
 						</div>
 					</div>
-					<div class="tab-pane fade" id="equipmentType8Tab" role="tabpanel" >
+					<div class="tab-pane fade" id="objectType8Tab" role="tabpanel" >
 						<div class="data-block">
-							<h3>Насосы</h3>
+							<h3>Газовая турбина</h3>
 							<div class="table-block">
-								<div class="table-buttons equipmentType8Table-buttons"></div>
-						  		<table id="equipmentType8Table" class="display compact table-clicked" style="width:100%">
+								<div class="table-buttons objectType8Table-buttons"></div>
+						  		<table id="objectType8Table" class="display compact table-clicked" style="width:100%">
 								    <thead>
 								        <tr>
 								            <th>Номер ТП</th>
@@ -2492,12 +2501,12 @@
 							</div>
 						</div>
 					</div>
-					<div class="tab-pane fade" id="equipmentType9Tab" role="tabpanel" >
+					<div class="tab-pane fade" id="objectType9Tab" role="tabpanel" >
 				  		<div class="data-block">
-				  			<h3>Фильтры ВПУ</h3>
+				  			<h3>Поршневой агрегат</h3>
 				  			<div class="table-block">
-								<div class="table-buttons equipmentType9Table-buttons"></div>
-						  		<table id="equipmentType9Table" class="display compact table-clicked" style="width:100%">
+								<div class="table-buttons objectType9Table-buttons"></div>
+						  		<table id="objectType9Table" class="display compact table-clicked" style="width:100%">
 								    <thead>
 								        <tr>
 								            <th>УНОМ ТП</th>
@@ -2770,12 +2779,12 @@
 							</div>
 				  		</div>	
 					</div>
-				  	<div class="tab-pane fade" id="equipmentType10Tab" role="tabpanel" >
+				  	<div class="tab-pane fade" id="objectType10Tab" role="tabpanel" >
 				  		<div class="data-block">
-				  			<h3>Осветлители ВПУ</h3>
+				  			<h3>Тепловая сеть</h3>
 				  			<div class="table-block">
-								<div class="table-buttons equipmentType10Table-buttons"></div>
-						  		<table id="equipmentType10Table" class="display compact table-clicked" style="width:100%">
+								<div class="table-buttons objectType10Table-buttons"></div>
+						  		<table id="objectType10Table" class="display compact table-clicked" style="width:100%">
 								    <thead>
 								        <tr>
 								            <th>УНОМ ТП</th>
@@ -3048,12 +3057,12 @@
 							</div>
 				  		</div>	
 					</div>
-				  	<div class="tab-pane fade" id="equipmentType11Tab" role="tabpanel">
+				  	<div class="tab-pane fade" id="objectType11Tab" role="tabpanel">
 				  		<div class="data-block">
-				  			<h3>Установки обратного осмоса ВПУ</h3>
+				  			<h3>Камера</h3>
 				  			<div class="table-block">
-								<div class="table-buttons equipmentType11Table-buttons"></div>
-						  		<table id="equipmentType11Table" class="display compact table-clicked" style="width:100%">
+								<div class="table-buttons objectType11Table-buttons"></div>
+						  		<table id="objectType11Table" class="display compact table-clicked" style="width:100%">
 								    <thead>
 								        <tr>
 								            <th>УНОМ ТЗ</th>
@@ -3326,12 +3335,12 @@
 							</div>
 				  		</div>
 					</div>
-					<div class="tab-pane fade" id="equipmentType12Tab" role="tabpanel" >
+					<div class="tab-pane fade" id="objectType12Tab" role="tabpanel" >
 						<div class="data-block">
-							<h3>Установки нано фильтрации ВПУ</h3>
+							<h3>Шаровой кран с электроприводом</h3>
 							<div class="table-block">
-								<div class="table-buttons equipmentType12Table-buttons"></div>
-						  		<table id="equipmentType12Table" class="display compact table-clicked" style="width:100%">
+								<div class="table-buttons objectType12Table-buttons"></div>
+						  		<table id="objectType12Table" class="display compact table-clicked" style="width:100%">
 								    <thead>
 								        <tr>
 								            <th>Номер ТП</th>
@@ -3605,12 +3614,12 @@
 						</div>
 					</div>
 
-					<div class="tab-pane fade" id="equipmentType13Tab" role="tabpanel" >
+					<div class="tab-pane fade" id="objectType13Tab" role="tabpanel" >
 						<div class="data-block">
-							<h3>Деаэраторы</h3>
+							<h3>Шаровой кран с редуктором</h3>
 							<div class="table-block">
-								<div class="table-buttons equipmentType13Table-buttons"></div>
-						  		<table id="equipmentType13Table" class="display compact table-clicked" style="width:100%">
+								<div class="table-buttons objectType13Table-buttons"></div>
+						  		<table id="objectType13Table" class="display compact table-clicked" style="width:100%">
 								    <thead>
 								        <tr>
 								            <th>Номер ТП</th>
@@ -3884,12 +3893,12 @@
 						</div>			
 					</div>
 
-					<div class="tab-pane fade" id="equipmentType14Tab" role="tabpanel" >
+					<div class="tab-pane fade" id="objectType14Tab" role="tabpanel" >
 						<div class="data-block">
-							<h3>Баки ВПУ</h3>
+							<h3>Насосная станция</h3>
 							<div class="table-block">
-								<div class="table-buttons equipmentType14Table-buttons"></div>
-						  		<table id="equipmentType14Table" class="display compact table-clicked" style="width:100%">
+								<div class="table-buttons objectType14Table-buttons"></div>
+						  		<table id="objectType14Table" class="display compact table-clicked" style="width:100%">
 								    <thead>
 								        <tr>
 								            <th>Номер ТП</th>
@@ -4163,12 +4172,12 @@
 						</div>
 					</div>
 
-					<div class="tab-pane fade" id="equipmentType15Tab" role="tabpanel" >
+					<div class="tab-pane fade" id="objectType15Tab" role="tabpanel" >
 						<div class="data-block">
-							<h3>Комплексоны ВПУ</h3>
+							<h3>Насос центробежный</h3>
 							<div class="table-block">
-								<div class="table-buttons equipmentType15Table-buttons"></div>
-						  		<table id="equipmentType15Table" class="display compact table-clicked" style="width:100%">
+								<div class="table-buttons objectType15Table-buttons"></div>
+						  		<table id="objectType15Table" class="display compact table-clicked" style="width:100%">
 								    <thead>
 								        <tr>
 								            <th>Номер ТП</th>
@@ -4441,12 +4450,847 @@
 							</div>
 						</div>
 					</div>
-					<div class="tab-pane fade" id="equipmentType16Tab" role="tabpanel" >
+					<div class="tab-pane fade" id="objectType16Tab" role="tabpanel" >
 						<div class="data-block">
-							<h3>Дымовые трубы</h3>
+							<h3>Теплообменник кожухотрубный</h3>
 							<div class="table-block">
-								<div class="table-buttons equipmentType16Table-buttons"></div>
-						  		<table id="equipmentType16Table" class="display compact table-clicked" style="width:100%">
+								<div class="table-buttons objectType16Table-buttons"></div>
+						  		<table id="objectType16Table" class="display compact table-clicked" style="width:100%">
+								    <thead>
+								        <tr>
+								            <th>Номер ТП</th>
+								            <th>Наименование</th>
+								            <th>Адрес</th>
+								            <th>Дата</th>
+								            <th>Тип</th>
+								            <th>Округ</th>
+								            <th>Состояние</th>
+								            <th>Полезная энергия</th>
+								            <th>Тепловая энергия</th>
+								            <th>Источники</th>
+								        </tr>
+								        <tr class="filter-row ">
+								            <th class="dtfc-fixed-left" style="left:0; position:sticky;"><input type="text" class="filter-col-0"/></th>
+								            <th><input type="text" class="filter-col-1"/></th>
+								            <th><input type="text" class="filter-col-2"/></th>
+								            <th><input type="text" class="filter-col-3"/></th>
+								            <th><input type="text" class="filter-col-4"/></th>
+								            <th><input type="text" class="filter-col-5"/></th>
+								            <th><input type="text" class="filter-col-6"/></th>
+								            <th><input type="text" class="filter-col-7"/></th>
+								            <th><input type="text" class="filter-col-8"/></th>
+								            <th><input type="text" class="filter-col-9"/></th>
+								        </tr>
+								    </thead>
+								    <tbody>
+								        <tr>
+								            <td>1</td>
+								            <td>ТСО 1</td>
+								            <td>Row 1 Data 3</td>
+								            <td>Row 1 Data 4</td>
+								            <td>Row 1 Data 5</td>
+								            <td>Row 1 Data 6</td>
+								            <td>Row 1 Data 7</td>
+								            <td>Row 1 Data 8</td>
+								            <td>Row 1 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>2</td>
+								            <td>ТСО 2</td>
+								            <td>Row 2 Data 3</td>
+								            <td>Row 2 Data 4</td>
+								            <td>Row 2 Data 5</td>
+								            <td>Row 2 Data 6</td>
+								            <td>Row 2 Data 7</td>
+								            <td>Row 2 Data 8</td>
+								            <td>Row 2 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>3</td>
+								            <td>ТСО 3</td>
+								            <td>Row 3 Data 3</td>
+								            <td>Row 3 Data 4</td>
+								            <td>Row 3 Data 5</td>
+								            <td>Row 3 Data 6</td>
+								            <td>Row 3 Data 7</td>
+								            <td>Row 3 Data 8</td>
+								            <td>Row 3 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>4</td>
+								            <td>ТСО 4</td>
+								            <td>Row 4 Data 3</td>
+								            <td>Row 4 Data 4</td>
+								            <td>Row 4 Data 5</td>
+								            <td>Row 4 Data 6</td>
+								            <td>Row 4 Data 7</td>
+								            <td>Row 4 Data 8</td>
+								            <td>Row 4 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>5</td>
+								            <td>ТСО 5</td>
+								            <td>Row 5 Data 3</td>
+								            <td>Row 5 Data 4</td>
+								            <td>Row 5 Data 5</td>
+								            <td>Row 5 Data 6</td>
+								            <td>Row 5 Data 7</td>
+								            <td>Row 5 Data 8</td>
+								            <td>Row 5 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>6</td>
+								            <td>ТСО 6</td>
+								            <td>Row 6 Data 3</td>
+								            <td>Row 6 Data 4</td>
+								            <td>Row 6 Data 5</td>
+								            <td>Row 6 Data 6</td>
+								            <td>Row 6 Data 7</td>
+								            <td>Row 6 Data 8</td>
+								            <td>Row 6 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>7</td>
+								            <td>ТСО 7</td>
+								            <td>Row 7 Data 3</td>
+								            <td>Row 7 Data 4</td>
+								            <td>Row 7 Data 5</td>
+								            <td>Row 7 Data 6</td>
+								            <td>Row 7 Data 7</td>
+								            <td>Row 7 Data 8</td>
+								            <td>Row 7 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>8</td>
+								            <td>ТСО 8</td>
+								            <td>Row 8 Data 3</td>
+								            <td>Row 8 Data 4</td>
+								            <td>Row 8 Data 5</td>
+								            <td>Row 8 Data 6</td>
+								            <td>Row 8 Data 7</td>
+								            <td>Row 8 Data 8</td>
+								            <td>Row 8 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>9</td>
+								            <td>ТСО 9</td>
+								            <td>Row 9 Data 3</td>
+								            <td>Row 9 Data 4</td>
+								            <td>Row 9 Data 5</td>
+								            <td>Row 9 Data 6</td>
+								            <td>Row 9 Data 7</td>
+								            <td>Row 9 Data 8</td>
+								            <td>Row 9 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>10</td>
+								            <td>ТСО 10</td>
+								            <td>Row 10 Data 3</td>
+								            <td>Row 10 Data 4</td>
+								            <td>Row 10 Data 5</td>
+								            <td>Row 10 Data 6</td>
+								            <td>Row 10 Data 7</td>
+								            <td>Row 10 Data 8</td>
+								            <td>Row 10 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>1</td>
+								            <td>ТСО 1</td>
+								            <td>Row 1 Data 3</td>
+								            <td>Row 1 Data 4</td>
+								            <td>Row 1 Data 5</td>
+								            <td>Row 1 Data 6</td>
+								            <td>Row 1 Data 7</td>
+								            <td>Row 1 Data 8</td>
+								            <td>Row 1 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>2</td>
+								            <td>ТСО 2</td>
+								            <td>Row 2 Data 3</td>
+								            <td>Row 2 Data 4</td>
+								            <td>Row 2 Data 5</td>
+								            <td>Row 2 Data 6</td>
+								            <td>Row 2 Data 7</td>
+								            <td>Row 2 Data 8</td>
+								            <td>Row 2 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>3</td>
+								            <td>ТСО 3</td>
+								            <td>Row 3 Data 3</td>
+								            <td>Row 3 Data 4</td>
+								            <td>Row 3 Data 5</td>
+								            <td>Row 3 Data 6</td>
+								            <td>Row 3 Data 7</td>
+								            <td>Row 3 Data 8</td>
+								            <td>Row 3 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>4</td>
+								            <td>ТСО 4</td>
+								            <td>Row 4 Data 3</td>
+								            <td>Row 4 Data 4</td>
+								            <td>Row 4 Data 5</td>
+								            <td>Row 4 Data 6</td>
+								            <td>Row 4 Data 7</td>
+								            <td>Row 4 Data 8</td>
+								            <td>Row 4 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>5</td>
+								            <td>ТСО 5</td>
+								            <td>Row 5 Data 3</td>
+								            <td>Row 5 Data 4</td>
+								            <td>Row 5 Data 5</td>
+								            <td>Row 5 Data 6</td>
+								            <td>Row 5 Data 7</td>
+								            <td>Row 5 Data 8</td>
+								            <td>Row 5 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>6</td>
+								            <td>ТСО 6</td>
+								            <td>Row 6 Data 3</td>
+								            <td>Row 6 Data 4</td>
+								            <td>Row 6 Data 5</td>
+								            <td>Row 6 Data 6</td>
+								            <td>Row 6 Data 7</td>
+								            <td>Row 6 Data 8</td>
+								            <td>Row 6 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>7</td>
+								            <td>ТСО 7</td>
+								            <td>Row 7 Data 3</td>
+								            <td>Row 7 Data 4</td>
+								            <td>Row 7 Data 5</td>
+								            <td>Row 7 Data 6</td>
+								            <td>Row 7 Data 7</td>
+								            <td>Row 7 Data 8</td>
+								            <td>Row 7 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>8</td>
+								            <td>ТСО 8</td>
+								            <td>Row 8 Data 3</td>
+								            <td>Row 8 Data 4</td>
+								            <td>Row 8 Data 5</td>
+								            <td>Row 8 Data 6</td>
+								            <td>Row 8 Data 7</td>
+								            <td>Row 8 Data 8</td>
+								            <td>Row 8 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>9</td>
+								            <td>ТСО 9</td>
+								            <td>Row 9 Data 3</td>
+								            <td>Row 9 Data 4</td>
+								            <td>Row 9 Data 5</td>
+								            <td>Row 9 Data 6</td>
+								            <td>Row 9 Data 7</td>
+								            <td>Row 9 Data 8</td>
+								            <td>Row 9 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>10</td>
+								            <td>ТСО 10</td>
+								            <td>Row 10 Data 3</td>
+								            <td>Row 10 Data 4</td>
+								            <td>Row 10 Data 5</td>
+								            <td>Row 10 Data 6</td>
+								            <td>Row 10 Data 7</td>
+								            <td>Row 10 Data 8</td>
+								            <td>Row 10 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								    </tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="objectType17Tab" role="tabpanel" >
+						<div class="data-block">
+							<h3>Теплообменник пластинчатый</h3>
+							<div class="table-block">
+								<div class="table-buttons objectType17Table-buttons"></div>
+						  		<table id="objectType17Table" class="display compact table-clicked" style="width:100%">
+								    <thead>
+								        <tr>
+								            <th>Номер ТП</th>
+								            <th>Наименование</th>
+								            <th>Адрес</th>
+								            <th>Дата</th>
+								            <th>Тип</th>
+								            <th>Округ</th>
+								            <th>Состояние</th>
+								            <th>Полезная энергия</th>
+								            <th>Тепловая энергия</th>
+								            <th>Источники</th>
+								        </tr>
+								        <tr class="filter-row ">
+								            <th class="dtfc-fixed-left" style="left:0; position:sticky;"><input type="text" class="filter-col-0"/></th>
+								            <th><input type="text" class="filter-col-1"/></th>
+								            <th><input type="text" class="filter-col-2"/></th>
+								            <th><input type="text" class="filter-col-3"/></th>
+								            <th><input type="text" class="filter-col-4"/></th>
+								            <th><input type="text" class="filter-col-5"/></th>
+								            <th><input type="text" class="filter-col-6"/></th>
+								            <th><input type="text" class="filter-col-7"/></th>
+								            <th><input type="text" class="filter-col-8"/></th>
+								            <th><input type="text" class="filter-col-9"/></th>
+								        </tr>
+								    </thead>
+								    <tbody>
+								        <tr>
+								            <td>1</td>
+								            <td>ТСО 1</td>
+								            <td>Row 1 Data 3</td>
+								            <td>Row 1 Data 4</td>
+								            <td>Row 1 Data 5</td>
+								            <td>Row 1 Data 6</td>
+								            <td>Row 1 Data 7</td>
+								            <td>Row 1 Data 8</td>
+								            <td>Row 1 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>2</td>
+								            <td>ТСО 2</td>
+								            <td>Row 2 Data 3</td>
+								            <td>Row 2 Data 4</td>
+								            <td>Row 2 Data 5</td>
+								            <td>Row 2 Data 6</td>
+								            <td>Row 2 Data 7</td>
+								            <td>Row 2 Data 8</td>
+								            <td>Row 2 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>3</td>
+								            <td>ТСО 3</td>
+								            <td>Row 3 Data 3</td>
+								            <td>Row 3 Data 4</td>
+								            <td>Row 3 Data 5</td>
+								            <td>Row 3 Data 6</td>
+								            <td>Row 3 Data 7</td>
+								            <td>Row 3 Data 8</td>
+								            <td>Row 3 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>4</td>
+								            <td>ТСО 4</td>
+								            <td>Row 4 Data 3</td>
+								            <td>Row 4 Data 4</td>
+								            <td>Row 4 Data 5</td>
+								            <td>Row 4 Data 6</td>
+								            <td>Row 4 Data 7</td>
+								            <td>Row 4 Data 8</td>
+								            <td>Row 4 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>5</td>
+								            <td>ТСО 5</td>
+								            <td>Row 5 Data 3</td>
+								            <td>Row 5 Data 4</td>
+								            <td>Row 5 Data 5</td>
+								            <td>Row 5 Data 6</td>
+								            <td>Row 5 Data 7</td>
+								            <td>Row 5 Data 8</td>
+								            <td>Row 5 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>6</td>
+								            <td>ТСО 6</td>
+								            <td>Row 6 Data 3</td>
+								            <td>Row 6 Data 4</td>
+								            <td>Row 6 Data 5</td>
+								            <td>Row 6 Data 6</td>
+								            <td>Row 6 Data 7</td>
+								            <td>Row 6 Data 8</td>
+								            <td>Row 6 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>7</td>
+								            <td>ТСО 7</td>
+								            <td>Row 7 Data 3</td>
+								            <td>Row 7 Data 4</td>
+								            <td>Row 7 Data 5</td>
+								            <td>Row 7 Data 6</td>
+								            <td>Row 7 Data 7</td>
+								            <td>Row 7 Data 8</td>
+								            <td>Row 7 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>8</td>
+								            <td>ТСО 8</td>
+								            <td>Row 8 Data 3</td>
+								            <td>Row 8 Data 4</td>
+								            <td>Row 8 Data 5</td>
+								            <td>Row 8 Data 6</td>
+								            <td>Row 8 Data 7</td>
+								            <td>Row 8 Data 8</td>
+								            <td>Row 8 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>9</td>
+								            <td>ТСО 9</td>
+								            <td>Row 9 Data 3</td>
+								            <td>Row 9 Data 4</td>
+								            <td>Row 9 Data 5</td>
+								            <td>Row 9 Data 6</td>
+								            <td>Row 9 Data 7</td>
+								            <td>Row 9 Data 8</td>
+								            <td>Row 9 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>10</td>
+								            <td>ТСО 10</td>
+								            <td>Row 10 Data 3</td>
+								            <td>Row 10 Data 4</td>
+								            <td>Row 10 Data 5</td>
+								            <td>Row 10 Data 6</td>
+								            <td>Row 10 Data 7</td>
+								            <td>Row 10 Data 8</td>
+								            <td>Row 10 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>1</td>
+								            <td>ТСО 1</td>
+								            <td>Row 1 Data 3</td>
+								            <td>Row 1 Data 4</td>
+								            <td>Row 1 Data 5</td>
+								            <td>Row 1 Data 6</td>
+								            <td>Row 1 Data 7</td>
+								            <td>Row 1 Data 8</td>
+								            <td>Row 1 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>2</td>
+								            <td>ТСО 2</td>
+								            <td>Row 2 Data 3</td>
+								            <td>Row 2 Data 4</td>
+								            <td>Row 2 Data 5</td>
+								            <td>Row 2 Data 6</td>
+								            <td>Row 2 Data 7</td>
+								            <td>Row 2 Data 8</td>
+								            <td>Row 2 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>3</td>
+								            <td>ТСО 3</td>
+								            <td>Row 3 Data 3</td>
+								            <td>Row 3 Data 4</td>
+								            <td>Row 3 Data 5</td>
+								            <td>Row 3 Data 6</td>
+								            <td>Row 3 Data 7</td>
+								            <td>Row 3 Data 8</td>
+								            <td>Row 3 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>4</td>
+								            <td>ТСО 4</td>
+								            <td>Row 4 Data 3</td>
+								            <td>Row 4 Data 4</td>
+								            <td>Row 4 Data 5</td>
+								            <td>Row 4 Data 6</td>
+								            <td>Row 4 Data 7</td>
+								            <td>Row 4 Data 8</td>
+								            <td>Row 4 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>5</td>
+								            <td>ТСО 5</td>
+								            <td>Row 5 Data 3</td>
+								            <td>Row 5 Data 4</td>
+								            <td>Row 5 Data 5</td>
+								            <td>Row 5 Data 6</td>
+								            <td>Row 5 Data 7</td>
+								            <td>Row 5 Data 8</td>
+								            <td>Row 5 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>6</td>
+								            <td>ТСО 6</td>
+								            <td>Row 6 Data 3</td>
+								            <td>Row 6 Data 4</td>
+								            <td>Row 6 Data 5</td>
+								            <td>Row 6 Data 6</td>
+								            <td>Row 6 Data 7</td>
+								            <td>Row 6 Data 8</td>
+								            <td>Row 6 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>7</td>
+								            <td>ТСО 7</td>
+								            <td>Row 7 Data 3</td>
+								            <td>Row 7 Data 4</td>
+								            <td>Row 7 Data 5</td>
+								            <td>Row 7 Data 6</td>
+								            <td>Row 7 Data 7</td>
+								            <td>Row 7 Data 8</td>
+								            <td>Row 7 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>8</td>
+								            <td>ТСО 8</td>
+								            <td>Row 8 Data 3</td>
+								            <td>Row 8 Data 4</td>
+								            <td>Row 8 Data 5</td>
+								            <td>Row 8 Data 6</td>
+								            <td>Row 8 Data 7</td>
+								            <td>Row 8 Data 8</td>
+								            <td>Row 8 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>9</td>
+								            <td>ТСО 9</td>
+								            <td>Row 9 Data 3</td>
+								            <td>Row 9 Data 4</td>
+								            <td>Row 9 Data 5</td>
+								            <td>Row 9 Data 6</td>
+								            <td>Row 9 Data 7</td>
+								            <td>Row 9 Data 8</td>
+								            <td>Row 9 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>10</td>
+								            <td>ТСО 10</td>
+								            <td>Row 10 Data 3</td>
+								            <td>Row 10 Data 4</td>
+								            <td>Row 10 Data 5</td>
+								            <td>Row 10 Data 6</td>
+								            <td>Row 10 Data 7</td>
+								            <td>Row 10 Data 8</td>
+								            <td>Row 10 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								    </tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane fade" id="objectType18Tab" role="tabpanel" >
+						<div class="data-block">
+							<h3>ЦТП</h3>
+							<div class="table-block">
+								<div class="table-buttons objectType18Table-buttons"></div>
+						  		<table id="objectType18Table" class="display compact table-clicked" style="width:100%">
+								    <thead>
+								        <tr>
+								            <th>Номер ТП</th>
+								            <th>Наименование</th>
+								            <th>Адрес</th>
+								            <th>Дата</th>
+								            <th>Тип</th>
+								            <th>Округ</th>
+								            <th>Состояние</th>
+								            <th>Полезная энергия</th>
+								            <th>Тепловая энергия</th>
+								            <th>Источники</th>
+								        </tr>
+								        <tr class="filter-row ">
+								            <th class="dtfc-fixed-left" style="left:0; position:sticky;"><input type="text" class="filter-col-0"/></th>
+								            <th><input type="text" class="filter-col-1"/></th>
+								            <th><input type="text" class="filter-col-2"/></th>
+								            <th><input type="text" class="filter-col-3"/></th>
+								            <th><input type="text" class="filter-col-4"/></th>
+								            <th><input type="text" class="filter-col-5"/></th>
+								            <th><input type="text" class="filter-col-6"/></th>
+								            <th><input type="text" class="filter-col-7"/></th>
+								            <th><input type="text" class="filter-col-8"/></th>
+								            <th><input type="text" class="filter-col-9"/></th>
+								        </tr>
+								    </thead>
+								    <tbody>
+								        <tr>
+								            <td>1</td>
+								            <td>ТСО 1</td>
+								            <td>Row 1 Data 3</td>
+								            <td>Row 1 Data 4</td>
+								            <td>Row 1 Data 5</td>
+								            <td>Row 1 Data 6</td>
+								            <td>Row 1 Data 7</td>
+								            <td>Row 1 Data 8</td>
+								            <td>Row 1 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>2</td>
+								            <td>ТСО 2</td>
+								            <td>Row 2 Data 3</td>
+								            <td>Row 2 Data 4</td>
+								            <td>Row 2 Data 5</td>
+								            <td>Row 2 Data 6</td>
+								            <td>Row 2 Data 7</td>
+								            <td>Row 2 Data 8</td>
+								            <td>Row 2 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>3</td>
+								            <td>ТСО 3</td>
+								            <td>Row 3 Data 3</td>
+								            <td>Row 3 Data 4</td>
+								            <td>Row 3 Data 5</td>
+								            <td>Row 3 Data 6</td>
+								            <td>Row 3 Data 7</td>
+								            <td>Row 3 Data 8</td>
+								            <td>Row 3 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>4</td>
+								            <td>ТСО 4</td>
+								            <td>Row 4 Data 3</td>
+								            <td>Row 4 Data 4</td>
+								            <td>Row 4 Data 5</td>
+								            <td>Row 4 Data 6</td>
+								            <td>Row 4 Data 7</td>
+								            <td>Row 4 Data 8</td>
+								            <td>Row 4 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>5</td>
+								            <td>ТСО 5</td>
+								            <td>Row 5 Data 3</td>
+								            <td>Row 5 Data 4</td>
+								            <td>Row 5 Data 5</td>
+								            <td>Row 5 Data 6</td>
+								            <td>Row 5 Data 7</td>
+								            <td>Row 5 Data 8</td>
+								            <td>Row 5 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>6</td>
+								            <td>ТСО 6</td>
+								            <td>Row 6 Data 3</td>
+								            <td>Row 6 Data 4</td>
+								            <td>Row 6 Data 5</td>
+								            <td>Row 6 Data 6</td>
+								            <td>Row 6 Data 7</td>
+								            <td>Row 6 Data 8</td>
+								            <td>Row 6 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>7</td>
+								            <td>ТСО 7</td>
+								            <td>Row 7 Data 3</td>
+								            <td>Row 7 Data 4</td>
+								            <td>Row 7 Data 5</td>
+								            <td>Row 7 Data 6</td>
+								            <td>Row 7 Data 7</td>
+								            <td>Row 7 Data 8</td>
+								            <td>Row 7 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>8</td>
+								            <td>ТСО 8</td>
+								            <td>Row 8 Data 3</td>
+								            <td>Row 8 Data 4</td>
+								            <td>Row 8 Data 5</td>
+								            <td>Row 8 Data 6</td>
+								            <td>Row 8 Data 7</td>
+								            <td>Row 8 Data 8</td>
+								            <td>Row 8 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>9</td>
+								            <td>ТСО 9</td>
+								            <td>Row 9 Data 3</td>
+								            <td>Row 9 Data 4</td>
+								            <td>Row 9 Data 5</td>
+								            <td>Row 9 Data 6</td>
+								            <td>Row 9 Data 7</td>
+								            <td>Row 9 Data 8</td>
+								            <td>Row 9 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>10</td>
+								            <td>ТСО 10</td>
+								            <td>Row 10 Data 3</td>
+								            <td>Row 10 Data 4</td>
+								            <td>Row 10 Data 5</td>
+								            <td>Row 10 Data 6</td>
+								            <td>Row 10 Data 7</td>
+								            <td>Row 10 Data 8</td>
+								            <td>Row 10 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>1</td>
+								            <td>ТСО 1</td>
+								            <td>Row 1 Data 3</td>
+								            <td>Row 1 Data 4</td>
+								            <td>Row 1 Data 5</td>
+								            <td>Row 1 Data 6</td>
+								            <td>Row 1 Data 7</td>
+								            <td>Row 1 Data 8</td>
+								            <td>Row 1 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>2</td>
+								            <td>ТСО 2</td>
+								            <td>Row 2 Data 3</td>
+								            <td>Row 2 Data 4</td>
+								            <td>Row 2 Data 5</td>
+								            <td>Row 2 Data 6</td>
+								            <td>Row 2 Data 7</td>
+								            <td>Row 2 Data 8</td>
+								            <td>Row 2 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>3</td>
+								            <td>ТСО 3</td>
+								            <td>Row 3 Data 3</td>
+								            <td>Row 3 Data 4</td>
+								            <td>Row 3 Data 5</td>
+								            <td>Row 3 Data 6</td>
+								            <td>Row 3 Data 7</td>
+								            <td>Row 3 Data 8</td>
+								            <td>Row 3 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>4</td>
+								            <td>ТСО 4</td>
+								            <td>Row 4 Data 3</td>
+								            <td>Row 4 Data 4</td>
+								            <td>Row 4 Data 5</td>
+								            <td>Row 4 Data 6</td>
+								            <td>Row 4 Data 7</td>
+								            <td>Row 4 Data 8</td>
+								            <td>Row 4 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>5</td>
+								            <td>ТСО 5</td>
+								            <td>Row 5 Data 3</td>
+								            <td>Row 5 Data 4</td>
+								            <td>Row 5 Data 5</td>
+								            <td>Row 5 Data 6</td>
+								            <td>Row 5 Data 7</td>
+								            <td>Row 5 Data 8</td>
+								            <td>Row 5 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>6</td>
+								            <td>ТСО 6</td>
+								            <td>Row 6 Data 3</td>
+								            <td>Row 6 Data 4</td>
+								            <td>Row 6 Data 5</td>
+								            <td>Row 6 Data 6</td>
+								            <td>Row 6 Data 7</td>
+								            <td>Row 6 Data 8</td>
+								            <td>Row 6 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>7</td>
+								            <td>ТСО 7</td>
+								            <td>Row 7 Data 3</td>
+								            <td>Row 7 Data 4</td>
+								            <td>Row 7 Data 5</td>
+								            <td>Row 7 Data 6</td>
+								            <td>Row 7 Data 7</td>
+								            <td>Row 7 Data 8</td>
+								            <td>Row 7 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>8</td>
+								            <td>ТСО 8</td>
+								            <td>Row 8 Data 3</td>
+								            <td>Row 8 Data 4</td>
+								            <td>Row 8 Data 5</td>
+								            <td>Row 8 Data 6</td>
+								            <td>Row 8 Data 7</td>
+								            <td>Row 8 Data 8</td>
+								            <td>Row 8 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>9</td>
+								            <td>ТСО 9</td>
+								            <td>Row 9 Data 3</td>
+								            <td>Row 9 Data 4</td>
+								            <td>Row 9 Data 5</td>
+								            <td>Row 9 Data 6</td>
+								            <td>Row 9 Data 7</td>
+								            <td>Row 9 Data 8</td>
+								            <td>Row 9 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>10</td>
+								            <td>ТСО 10</td>
+								            <td>Row 10 Data 3</td>
+								            <td>Row 10 Data 4</td>
+								            <td>Row 10 Data 5</td>
+								            <td>Row 10 Data 6</td>
+								            <td>Row 10 Data 7</td>
+								            <td>Row 10 Data 8</td>
+								            <td>Row 10 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								    </tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="objectType19Tab" role="tabpanel" >
+						<div class="data-block">
+							<h3>ИТП</h3>
+							<div class="table-block">
+								<div class="table-buttons objectType19Table-buttons"></div>
+						  		<table id="objectType19Table" class="display compact table-clicked" style="width:100%">
 								    <thead>
 								        <tr>
 								            <th>Номер ТП</th>
@@ -4767,19 +5611,19 @@
 	</div>
 
 	<!-- Modal Load Data -->
-	<div class="modal fade" id="editEquipmentType1Data" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
+	<div class="modal fade" id="editObjectType1Data" data-bs-backdrop="static" tabindex="-1"  aria-hidden="true">
 	  	<div class="modal-dialog modal-dialog-centered">
 	    	<div class="modal-content">
 	      		<div class="modal-header"> 
-			        <h3 class="modal-title" id="editDataLabel">Редактирование данных парового турбоагрегата</h3>
+			        <h3 class="modal-title">Редактирование данных парового турбоагрегата</h3>
 			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			    </div>
 			    <div class="modal-body">
 	      			<div class="data-block static-block">
 	      				<div class="data-row">
 	      					<div class="data-item">
-		      					<label class="data-label xl-fix">Уникальный номер оборудования в справочнике</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите УНОМ оборудования">
+		      					<label class="data-label xl-fix">Уникальный номер удельной величины КВ</label>
+	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите...">
 								  	<option value="2020">2020</option>
 								  	<option value="2021">2021</option>
 								  	<option value="2022">2022</option>
@@ -4787,65 +5631,10 @@
 								</select>
 							</div>
 						</div>
-						<div class="data-row">
-							<div class="data-item">
-		      					<label class="data-label xl-fix">Марка оборудования</label>
-	      						<input type="text" class="data-value xxl-stretch">
-							</div>
-						</div>
-						<div class="data-row">
-							<div class="data-item">
-		      					<label class="data-label xl-fix">Завод изготовитель</label>
-		      					<input type="text" class="data-value xxl-stretch">
-							</div>
-	      				</div>
 		      		</div>
-      				<div class="data-block">
-      					<h4>Паспортные технические параметры оборудования</h4>
-      					<div class="data-row">
-      						<div class="data-table-block">
-      							<div class="data-item">
-			      					<label class="data-label fix-325">Установленная электрическая мощность</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">МВт</span>
-								</div>
-								<div class="data-item">
-			      					<label class="data-label">Установленная тепловая мощность, всего</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">Гкал/ч</span>
-								</div>
-								<div class="data-item">
-			      					<label class="data-label">- теплофикационные отборы</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">Гкал/ч</span>
-								</div>
-								<div class="data-item">
-			      					<label class="data-label">- производственные отборы</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">Гкал/ч</span>
-								</div>
-      						</div>
-      						<div class="data-table-block">
-      							<div class="data-item">
-			      					<label class="data-label fix-325">Парковый ресурс</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">тыс. ч</span>
-								</div>
-								<div class="data-item">
-			      					<label class="data-label">Давление свежего пара</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">ата</span>
-								</div>
-								<div class="data-item">
-			      					<label class="data-label">Температура свежего пара</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">°С</span>
-								</div>
-      						</div>
-      					</div>
-					</div>
 	    		</div>
 	    		<div class="modal-footer">
+	    			<button type="button" class="bttn" >Применить ко всем районам (поселениям) округа</button>
 			        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
 			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Сохранить</button>
 			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Создать копию</button>
@@ -4856,19 +5645,19 @@
 	</div>
 
 		<!-- Modal Load Data -->
-	<div class="modal fade" id="editEquipmentType2Data" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
+	<div class="modal fade" id="editObjectType10Data" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
 	  	<div class="modal-dialog modal-dialog-centered">
 	    	<div class="modal-content">
 	      		<div class="modal-header"> 
-			        <h3 class="modal-title" id="editDataLabel">Редактирование данных газового турбоагрегата</h3>
+			        <h3 class="modal-title" id="editDataLabel">Редактирование данных тепловой сети</h3>
 			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			    </div>
 			    <div class="modal-body">
 	      			<div class="data-block static-block">
 	      				<div class="data-row">
 	      					<div class="data-item">
-		      					<label class="data-label xl-fix">Уникальный номер оборудования в справочнике</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите УНОМ оборудования">
+		      					<label class="data-label xl-fix">Уникальный номер удельной величины КВ</label>
+	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите...">
 								  	<option value="2020">2020</option>
 								  	<option value="2021">2021</option>
 								  	<option value="2022">2022</option>
@@ -4876,41 +5665,10 @@
 								</select>
 							</div>
 						</div>
-						<div class="data-row">
-							<div class="data-item">
-		      					<label class="data-label xl-fix">Марка оборудования</label>
-	      						<input type="text" class="data-value xxl-stretch">
-							</div>
-						</div>
-						<div class="data-row">
-							<div class="data-item">
-		      					<label class="data-label xl-fix">Завод изготовитель</label>
-		      					<input type="text" class="data-value xxl-stretch">
-							</div>
-	      				</div>
 		      		</div>
-      				<div class="data-block">
-      					<h4>Паспортные технические параметры оборудования</h4>
-      					<div class="data-row">
-  							<div class="data-item">
-		      					<label class="data-label xl-fix">Установленная электрическая мощность</label>
-		      					<input type="text" class="data-value sm-fix">
-		      					<span class="data-unit">МВт</span>
-							</div>
-							<div class="data-item">
-		      					<label class="data-label xl-fix">Парковый ресурс</label>
-		      					<input type="text" class="data-value sm-fix">
-		      					<span class="data-unit">тыс. ч</span>
-							</div>
-							<div class="data-item">
-		      					<label class="data-label xl-fix">Нормативное количество пусков</label>
-		      					<input type="text" class="data-value sm-fix">
-		      					<span class="data-unit">шт.</span>
-							</div>
-      					</div>
-					</div>
 	    		</div>
 	    		<div class="modal-footer">
+	    			<button type="button" class="bttn" >Применить ко всем районам (поселениям) округа</button>
 			        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
 			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Сохранить</button>
 			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Создать копию</button>
@@ -4921,7 +5679,7 @@
 	</div>
 
 		<!-- Modal Load Data -->
-	<div class="modal fade" id="editEquipmentType3Data" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
+	<div class="modal fade" id="editObjectType11Data" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
 	  	<div class="modal-dialog modal-dialog-centered">
 	    	<div class="modal-content">
 	      		<div class="modal-header"> 
@@ -4932,8 +5690,8 @@
 	      			<div class="data-block static-block">
 	      				<div class="data-row">
 	      					<div class="data-item">
-		      					<label class="data-label xl-fix">Уникальный номер оборудования в справочнике</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите УНОМ оборудования">
+		      					<label class="data-label xl-fix">Уникальный номер удельной величины КВ</label>
+	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите...">
 								  	<option value="2020">2020</option>
 								  	<option value="2021">2021</option>
 								  	<option value="2022">2022</option>
@@ -4941,60 +5699,10 @@
 								</select>
 							</div>
 						</div>
-						<div class="data-row">
-							<div class="data-item">
-		      					<label class="data-label xl-fix">Марка оборудования</label>
-	      						<input type="text" class="data-value xxl-stretch">
-							</div>
-						</div>
-						<div class="data-row">
-							<div class="data-item">
-		      					<label class="data-label xl-fix">Завод изготовитель</label>
-		      					<input type="text" class="data-value xxl-stretch">
-							</div>
-	      				</div>
 		      		</div>
-      				<div class="data-block">
-      					<h4>Паспортные технические параметры оборудования</h4>
-      					<div class="data-row">
-      						<div class="data-table-block">
-      							<div class="data-item">
-			      					<label class="data-label">Паропроизводительность</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">т/ч</span>
-								</div>
-								<div class="data-item">
-			      					<label class="data-label">Теплопроизводительность</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">Гкал/ч</span>
-								</div>
-								<div class="data-item">
-			      					<label class="data-label">Нормативный срок службы</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">лет</span>
-								</div>
-      						</div>
-      						<div class="data-table-block">
-      							<div class="data-item">
-			      					<label class="data-label">КПД</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">%</span>
-								</div>
-								<div class="data-item">
-			      					<label class="data-label">Давление свежего пара</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">ата</span>
-								</div>
-								<div class="data-item">
-			      					<label class="data-label">Температура свежего пара</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">°С</span>
-								</div>
-      						</div>
-      					</div>
-					</div>
 	    		</div>
 	    		<div class="modal-footer">
+	    			<button type="button" class="bttn" >Применить ко всем районам (поселениям) округа</button>
 			        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
 			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Сохранить</button>
 			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Создать копию</button>
@@ -5005,7 +5713,7 @@
 	</div>
 
 		<!-- Modal Load Data -->
-	<div class="modal fade" id="editEquipmentType4Data" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
+	<div class="modal fade" id="editObjectType14Data" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
 	  	<div class="modal-dialog modal-dialog-centered">
 	    	<div class="modal-content">
 	      		<div class="modal-header"> 
@@ -5016,8 +5724,8 @@
 	      			<div class="data-block static-block">
 	      				<div class="data-row">
 	      					<div class="data-item">
-		      					<label class="data-label xl-fix">Уникальный номер оборудования в справочнике</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите УНОМ оборудования">
+		      					<label class="data-label xl-fix">Уникальный номер удельной величины КВ</label>
+	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите...">
 								  	<option value="2020">2020</option>
 								  	<option value="2021">2021</option>
 								  	<option value="2022">2022</option>
@@ -5025,620 +5733,10 @@
 								</select>
 							</div>
 						</div>
-						<div class="data-row">
-							<div class="data-item">
-		      					<label class="data-label xl-fix">Марка оборудования</label>
-	      						<input type="text" class="data-value xxl-stretch">
-							</div>
-						</div>
-						<div class="data-row">
-							<div class="data-item">
-		      					<label class="data-label xl-fix">Завод изготовитель</label>
-		      					<input type="text" class="data-value xxl-stretch">
-							</div>
-	      				</div>
 		      		</div>
-      				<div class="data-block">
-      					<h4>Паспортные технические параметры оборудования</h4>
-      					<div class="data-row">
-      						<div class="data-table-block">
-      							<div class="data-item">
-			      					<label class="data-label fix-325">Установленная тепловая мощность</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">Гкал/ч</span>
-								</div>
-								<div class="data-item">
-			      					<label class="data-label">Максимальная температура на выходе</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">°С</span>
-								</div>
-								<div class="data-item">
-			      					<label class="data-label">Нормативный срок службы</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">лет</span>
-								</div>
-      						</div>
-      						<div class="data-table-block">
-      							<div class="data-item">
-			      					<label class="data-label fix-325">Расход сетевой воды - минимальный</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">т/ч</span>
-								</div>
-								<div class="data-item">
-			      					<label class="data-label">- номинальный</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">т/ч</span>
-								</div>
-								<div class="data-item">
-			      					<label class="data-label">- максимальный</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">т/ч</span>
-								</div>
-      						</div>
-      						<div class="data-block">
-      							<div class="data-item">
-			      					<label class="data-label fix-325">КПД</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">%</span>
-								</div>
-      						</div>
-      						
-      					</div>
-					</div>
 	    		</div>
 	    		<div class="modal-footer">
-			        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Сохранить</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Создать копию</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Удалить</button>
-			    </div>
-	    	</div>
-	    </div>
-	</div>
-
-		<!-- Modal Load Data -->
-	<div class="modal fade" id="editEquipmentType5Data" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
-	  	<div class="modal-dialog modal-dialog-centered">
-	    	<div class="modal-content">
-	      		<div class="modal-header"> 
-			        <h3 class="modal-title" id="editDataLabel">Редактирование данных поршневой установки</h3>
-			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			    </div>
-			    <div class="modal-body">
-	      			<div class="data-block static-block">
-	      				<div class="data-row">
-	      					<div class="data-item">
-		      					<label class="data-label xl-fix">Уникальный номер оборудования в справочнике</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите УНОМ оборудования">
-								  	<option value="2020">2020</option>
-								  	<option value="2021">2021</option>
-								  	<option value="2022">2022</option>
-								  	<option value="2023">2023</option>
-								</select>
-							</div>
-						</div>
-						<div class="data-row">
-							<div class="data-item">
-		      					<label class="data-label xl-fix">Марка оборудования</label>
-	      						<input type="text" class="data-value xxl-stretch">
-							</div>
-						</div>
-						<div class="data-row">
-							<div class="data-item">
-		      					<label class="data-label xl-fix">Завод изготовитель</label>
-		      					<input type="text" class="data-value xxl-stretch">
-							</div>
-	      				</div>
-		      		</div>
-      				<div class="data-block">
-      					<h4>Паспортные технические параметры оборудования</h4>
-      					<div class="data-row">
-  							<div class="data-item">
-		      					<label class="data-label xl-fix">Установленная электрическая мощность</label>
-		      					<input type="text" class="data-value sm-fix">
-		      					<span class="data-unit">МВт</span>
-							</div>
-							<div class="data-item">
-		      					<label class="data-label xl-fix">Установленная тепловая мощность</label>
-		      					<input type="text" class="data-value sm-fix">
-		      					<span class="data-unit">Гкал/ч</span>
-							</div>
-							<div class="data-item">
-		      					<label class="data-label xl-fix">Парковый ресурс</label>
-		      					<input type="text" class="data-value sm-fix">
-		      					<span class="data-unit">тыс. ч</span>
-							</div>
-      					</div>
-					</div>
-	    		</div>
-	    		<div class="modal-footer">
-			        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Сохранить</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Создать копию</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Удалить</button>
-			    </div>
-	    	</div>
-	    </div>
-	</div>
-
-		<!-- Modal Load Data -->
-	<div class="modal fade" id="editEquipmentType6Data" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
-	  	<div class="modal-dialog modal-dialog-centered">
-	    	<div class="modal-content">
-	      		<div class="modal-header"> 
-			        <h3 class="modal-title" id="editDataLabel">Редактирование данных РОУ</h3>
-			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			    </div>
-			    <div class="modal-body">
-	      			<div class="data-block static-block">
-	      				<div class="data-row">
-	      					<div class="data-item">
-		      					<label class="data-label xl-fix">Уникальный номер оборудования в справочнике</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите УНОМ оборудования">
-								  	<option value="2020">2020</option>
-								  	<option value="2021">2021</option>
-								  	<option value="2022">2022</option>
-								  	<option value="2023">2023</option>
-								</select>
-							</div>
-						</div>
-						<div class="data-row">
-							<div class="data-item">
-		      					<label class="data-label xl-fix">Марка оборудования</label>
-	      						<input type="text" class="data-value xxl-stretch">
-							</div>
-						</div>
-		      		</div>
-      				<div class="data-block">
-      					<h4>Паспортные технические параметры оборудования</h4>
-      					<div class="data-row">
-  							<div class="data-item">
-		      					<label class="data-label xl-fix">Паропроизводительность</label>
-		      					<input type="text" class="data-value sm-fix">
-		      					<span class="data-unit">т/ч</span>
-							</div>
-							<div class="data-item">
-		      					<label class="data-label xl-fix">Давление свежего пара</label>
-		      					<input type="text" class="data-value sm-fix">
-		      					<span class="data-unit">ата</span>
-							</div>
-							<div class="data-item">
-		      					<label class="data-label xl-fix">Температура свежего пара</label>
-		      					<input type="text" class="data-value sm-fix">
-		      					<span class="data-unit">°С</span>
-							</div>
-      					</div>
-					</div>
-	    		</div>
-	    		<div class="modal-footer">
-			        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Сохранить</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Создать копию</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Удалить</button>
-			    </div>
-	    	</div>
-	    </div>
-	</div>
-
-		<!-- Modal Load Data -->
-	<div class="modal fade" id="editEquipmentType7Data" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
-	  	<div class="modal-dialog modal-dialog-centered">
-	    	<div class="modal-content">
-	      		<div class="modal-header"> 
-			        <h3 class="modal-title" id="editDataLabel">Редактирование данных водоподогревателя</h3>
-			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			    </div>
-			    <div class="modal-body">
-	      			<div class="data-block static-block">
-	      				<div class="data-row">
-	      					<div class="data-item">
-		      					<label class="data-label xl-fix">Уникальный номер оборудования в справочнике</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите УНОМ оборудования">
-								  	<option value="2020">2020</option>
-								  	<option value="2021">2021</option>
-								  	<option value="2022">2022</option>
-								  	<option value="2023">2023</option>
-								</select>
-							</div>
-						</div>
-						<div class="data-row">
-							<div class="data-item">
-		      					<label class="data-label xl-fix">Марка оборудования</label>
-	      						<input type="text" class="data-value xxl-stretch">
-							</div>
-						</div>
-						<div class="data-row">
-							<div class="data-item">
-		      					<label class="data-label xl-fix">Завод изготовитель</label>
-		      					<input type="text" class="data-value xxl-stretch">
-							</div>
-	      				</div>
-		      		</div>
-      				<div class="data-block">
-      					<h4>Паспортные технические параметры оборудования</h4>
-      					<div class="data-row">
-      						<label class="data-label">Тип теплообменника:</label>
-      						<div class="data-row">
-      							<div class="data-item">
-	      							<label class="data-label">кожухотрубный</label>
-	      							<input type="radio" name="heatChangerType" class="form-check-input" checked>
-	      						</div>
-	      						<div class="data-item">
-	      							<label class="data-label">пластинчатый</label>
-	      							<input type="radio" name="heatChangerType" class="form-check-input">
-	      						</div>
-      						</div>
-      						
-      					</div>
-      					<div class="data-row">
-      						<div class="data-table-block">
-      							<div class="data-item">
-			      					<label class="data-label fix-325">Поверхность теплообмена</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">м<sup>2</sup></span>
-								</div>
-								<div class="data-item">
-			      					<label class="data-label">Количество секций</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">шт</span>
-								</div>
-								<div class="data-item">
-			      					<label class="data-label">Диаметр кожуха</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">м</span>
-								</div>
-								<div class="data-item">
-			      					<label class="data-label">Длинна секции</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">м</span>
-								</div>
-      						</div>
-      						<div class="data-table-block">
-      							<div class="data-item">
-			      					<label class="data-label fix-325">Максимальная температура на выходе</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">°С</span>
-								</div>
-								<div class="data-item">
-			      					<label class="data-label">Теплопроизводительность</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">ата</span>
-								</div>
-								<div class="data-item">
-			      					<label class="data-label">Расход сетевой воды - номинальный</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">т/ч</span>
-								</div>
-								<div class="data-item">
-			      					<label class="data-label">- максимальный</label>
-			      					<input type="text" class="data-value sm-fix">
-			      					<span class="data-unit">т/ч</span>
-								</div>
-      						</div>
-      					</div>
-					</div>
-	    		</div>
-	    		<div class="modal-footer">
-			        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Сохранить</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Создать копию</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Удалить</button>
-			    </div>
-	    	</div>
-	    </div>
-	</div>
-
-		<!-- Modal Load Data -->
-	<div class="modal fade" id="editEquipmentType8Data" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
-	  	<div class="modal-dialog modal-dialog-centered">
-	    	<div class="modal-content">
-	      		<div class="modal-header"> 
-			        <h3 class="modal-title" id="editDataLabel">Редактирование данных насоса</h3>
-			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			    </div>
-			    <div class="modal-body">
-	      			<div class="data-block static-block">
-	      				<div class="data-row">
-	      					<div class="data-item">
-		      					<label class="data-label xl-fix">Уникальный номер оборудования в справочнике</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите УНОМ оборудования">
-								  	<option value="2020">2020</option>
-								  	<option value="2021">2021</option>
-								  	<option value="2022">2022</option>
-								  	<option value="2023">2023</option>
-								</select>
-							</div>
-						</div>
-						<div class="data-row">
-							<div class="data-item">
-		      					<label class="data-label xl-fix">Марка оборудования</label>
-	      						<input type="text" class="data-value xxl-stretch">
-							</div>
-						</div>
-		      		</div>
-      				<div class="data-block">
-      					<h4>Паспортные технические параметры оборудования</h4>
-      					<div class="data-row">
-  							<div class="data-item">
-		      					<label class="data-label lg-fix">Производительность</label>
-		      					<input type="text" class="data-value sm-fix">
-		      					<span class="data-unit">м<sup>3</sup>/ч</span>
-							</div>
-							<div class="data-item">
-		      					<label class="data-label lg-fix">Напор сетевой воды</label>
-		      					<input type="text" class="data-value sm-fix">
-		      					<span class="data-unit">м вод. ст.</span>
-							</div>
-      					</div>
-					</div>
-	    		</div>
-	    		<div class="modal-footer">
-			        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Сохранить</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Создать копию</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Удалить</button>
-			    </div>
-	    	</div>
-	    </div>
-	</div>
-
-		<!-- Modal Load Data -->
-	<div class="modal fade" id="editEquipmentType9Data" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
-	  	<div class="modal-dialog modal-dialog-centered">
-	    	<div class="modal-content">
-	      		<div class="modal-header"> 
-			        <h3 class="modal-title" id="editDataLabel">Редактирование данных фильтра ВПУ</h3>
-			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			    </div>
-			    <div class="modal-body">
-	      			<div class="data-block static-block">
-	      				<div class="data-row">
-	      					<div class="data-item">
-		      					<label class="data-label xl-fix">Уникальный номер оборудования в справочнике</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите УНОМ оборудования">
-								  	<option value="2020">2020</option>
-								  	<option value="2021">2021</option>
-								  	<option value="2022">2022</option>
-								  	<option value="2023">2023</option>
-								</select>
-							</div>
-						</div>
-						<div class="data-row">
-							<div class="data-item">
-		      					<label class="data-label xl-fix">Марка оборудования</label>
-	      						<input type="text" class="data-value xxl-stretch">
-							</div>
-						</div>
-		      		</div>
-      				<div class="data-block">
-      					<h4>Паспортные технические параметры оборудования</h4>
-      					<div class="data-row">
-  							<div class="data-item">
-		      					<label class="data-label lg-fix">Производительность</label>
-		      					<input type="text" class="data-value sm-fix">
-		      					<span class="data-unit">м<sup>3</sup>/ч</span>
-							</div>
-							<div class="data-item">
-		      					<label class="data-label lg-fix">Диаметр</label>
-		      					<input type="text" class="data-value sm-stretch">
-		      					<span class="data-unit">м</span>
-							</div>
-      					</div>
-					</div>
-	    		</div>
-	    		<div class="modal-footer">
-			        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Сохранить</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Создать копию</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Удалить</button>
-			    </div>
-	    	</div>
-	    </div>
-	</div>
-
-		<!-- Modal Load Data -->
-	<div class="modal fade" id="editEquipmentType10Data" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
-	  	<div class="modal-dialog modal-dialog-centered">
-	    	<div class="modal-content">
-	      		<div class="modal-header"> 
-			        <h3 class="modal-title" id="editDataLabel">Редактирование данных осветлителя ВПУ</h3>
-			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			    </div>
-			    <div class="modal-body">
-	      			<div class="data-block static-block">
-	      				<div class="data-row">
-	      					<div class="data-item">
-		      					<label class="data-label xl-fix">Уникальный номер оборудования в справочнике</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите УНОМ оборудования">
-								  	<option value="2020">2020</option>
-								  	<option value="2021">2021</option>
-								  	<option value="2022">2022</option>
-								  	<option value="2023">2023</option>
-								</select>
-							</div>
-						</div>
-						<div class="data-row">
-							<div class="data-item">
-		      					<label class="data-label xl-fix">Марка оборудования</label>
-	      						<input type="text" class="data-value xxl-stretch">
-							</div>
-						</div>
-		      		</div>
-      				<div class="data-block">
-      					<h4>Паспортные технические параметры оборудования</h4>
-      					<div class="data-row">
-      						<div class="data-item">
-		      					<label class="data-label lg-fix">Производительность</label>
-		      					<input type="text" class="data-value sm-fix">
-		      					<span class="data-unit">м<sup>3</sup>/ч</span>
-							</div>
-							<div class="data-item">
-		      					<label class="data-label lg-fix">Объём</label>
-		      					<input type="text" class="data-value sm-fix">
-		      					<span class="data-unit">м<sup>3</sup></span>
-							</div>
-							<div class="data-item">
-		      					<label class="data-label lg-fix">Диаметр</label>
-		      					<input type="text" class="data-value sm-fix">
-		      					<span class="data-unit">м</span>
-							</div>
-      					</div>
-					</div>
-	    		</div>
-	    		<div class="modal-footer">
-			        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Сохранить</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Создать копию</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Удалить</button>
-			    </div>
-	    	</div>
-	    </div>
-	</div>
-
-		<!-- Modal Load Data -->
-	<div class="modal fade" id="editEquipmentType14Data" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
-	  	<div class="modal-dialog modal-dialog-centered">
-	    	<div class="modal-content">
-	      		<div class="modal-header"> 
-			        <h3 class="modal-title" id="editDataLabel">Редактирование данных бака ВПУ</h3>
-			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			    </div>
-			    <div class="modal-body">
-	      			<div class="data-block static-block">
-	      				<div class="data-row">
-	      					<div class="data-item">
-		      					<label class="data-label xl-fix">Уникальный номер оборудования в справочнике</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите УНОМ оборудования">
-								  	<option value="2020">2020</option>
-								  	<option value="2021">2021</option>
-								  	<option value="2022">2022</option>
-								  	<option value="2023">2023</option>
-								</select>
-							</div>
-						</div>
-						<div class="data-row">
-							<div class="data-item">
-		      					<label class="data-label xl-fix">Марка оборудования</label>
-	      						<input type="text" class="data-value xxl-stretch">
-							</div>
-						</div>
-		      		</div>
-      				<div class="data-block">
-      					<h4>Паспортные технические параметры оборудования</h4>
-      					<div class="data-row">
-      						<div class="data-item">
-		      					<label class="data-label">Объём</label>
-		      					<input type="text" class="data-value sm-fix">
-		      					<span class="data-unit">м<sup>3</sup></span>
-							</div>
-      					</div>
-      					
-					</div>
-	    		</div>
-	    		<div class="modal-footer">
-			        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Сохранить</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Создать копию</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Удалить</button>
-			    </div>
-	    	</div>
-	    </div>
-	</div>
-
-		<!-- Modal Load Data -->
-	<div class="modal fade" id="editEquipmentType16Data" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
-	  	<div class="modal-dialog modal-dialog-centered">
-	    	<div class="modal-content">
-	      		<div class="modal-header"> 
-			        <h3 class="modal-title" id="editDataLabel">Редактирование данных дымовой трубы</h3>
-			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			    </div>
-			    <div class="modal-body">
-	      			<div class="data-block static-block">
-	      				<div class="data-row">
-	      					<div class="data-item">
-		      					<label class="data-label xl-fix">Уникальный номер оборудования в справочнике</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите УНОМ оборудования">
-								  	<option value="2020">2020</option>
-								  	<option value="2021">2021</option>
-								  	<option value="2022">2022</option>
-								  	<option value="2023">2023</option>
-								</select>
-							</div>
-						</div>
-						<div class="data-row">
-							<div class="data-item">
-		      					<label class="data-label xl-fix">Марка оборудования</label>
-	      						<input type="text" class="data-value xxl-stretch">
-							</div>
-						</div>
-		      		</div>
-      				<div class="data-block">
-      					<h4>Паспортные технические параметры оборудования</h4>
-      					<div class="data-row">
-  							<div class="data-item">
-		      					<label class="data-label lg-fix">Высота от уровня земли</label>
-		      					<input type="text" class="data-value sm-fix">
-		      					<span class="data-unit">м</span>
-							</div>
-							<div class="data-item">
-		      					<label class="data-label lg-fix">Диаметр устья</label>
-		      					<input type="text" class="data-value sm-fix">
-		      					<span class="data-unit">м</span>
-							</div>
-      					</div>
-					</div>
-	    		</div>
-	    		<div class="modal-footer">
-			        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Сохранить</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Создать копию</button>
-			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Удалить</button>
-			    </div>
-	    	</div>
-	    </div>
-	</div>
-
-		<!-- Modal Load Data -->
-	<div class="modal fade" id="editEquipmentTypesData" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
-	  	<div class="modal-dialog modal-dialog-centered">
-	    	<div class="modal-content">
-	      		<div class="modal-header"> 
-			        <h3 class="modal-title" id="editDataLabel">Редактирование данных парового турбоагрегата</h3>
-			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			    </div>
-			    <div class="modal-body">
-	      			<div class="data-block static-block">
-	      				<div class="data-row">
-	      					<div class="data-item">
-		      					<label class="data-label xl-fix">Уникальный номер оборудования в справочнике</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите УНОМ оборудования">
-								  	<option value="2020">2020</option>
-								  	<option value="2021">2021</option>
-								  	<option value="2022">2022</option>
-								  	<option value="2023">2023</option>
-								</select>
-							</div>
-						</div>
-						<div class="data-row">
-							<div class="data-item">
-		      					<label class="data-label xl-fix">Марка оборудования</label>
-	      						<input type="text" class="data-value xxl-stretch">
-							</div>
-						</div>
-		      		</div>
-      				<div class="data-block">
-      					<h4>Паспортные технические параметры оборудования</h4>
-      					<div class="data-row">
-      						<div class="data-item">
-		      					<label class="data-label">Производительность</label>
-		      					<input type="text" class="data-value sm-fix">
-		      					<span class="data-unit">м<sup>3</sup>/ч</span>
-							</div>
-      					</div>
-					</div>
-	    		</div>
-	    		<div class="modal-footer">
+	    			<button type="button" class="bttn" >Применить ко всем районам (поселениям) округа</button>
 			        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
 			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Сохранить</button>
 			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Создать копию</button>
@@ -5655,6 +5753,6 @@
 	<script type="text/javascript" src="js/datatables.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
 	<script type="text/javascript" charset="utf8" src="js/main.js"></script>
-	<script type="text/javascript" charset="utf8" src="js/page2-6-9.js"></script>
+	<script type="text/javascript" charset="utf8" src="js/page2-6-19.js"></script>
 </body>
 </html>
