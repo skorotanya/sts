@@ -227,6 +227,10 @@ button.dt-button:active:not(.disabled), button.dt-button:active:not(.disabled):h
 	background-image: url(../images/spread-circle.svg);
 }
 
+.bttn-icon-sync {
+	background-image: url(../images/sync-circle.svg);
+}
+
 button:disabled, .bttn.disabled{
 	pointer-events: none;
 	opacity: 0.5;
@@ -471,6 +475,7 @@ input, textarea, .bootstrap-select .btn, .dtsb-data, .dtsb-value, .dtsb-conditio
 	border: 1px solid var(--border-color);
 	min-width: 80px;
 	padding-left: 0.5rem;
+	
 }
 
 
@@ -488,10 +493,28 @@ input, textarea, .bootstrap-select .btn, .dtsb-data, .dtsb-value, .dtsb-conditio
 	width: 100%;
 }
 
-input.data-value:focus, .filter-row>th>input:focus, .filter-row>th>input:focus-visible {
+input.data-value:focus, textarea.data-value:focus, .filter-row>th>input:focus, .filter-row>th>input:focus-visible {
 	border-color: var(--action-color);
 	box-shadow: none;
 	outline: none;
+}
+
+td > textarea.data-value {
+	vertical-align: middle;
+}
+input[type='file'] {
+	padding-left: 0;
+	background: #fff;
+}
+input[type='file']::-webkit-file-upload-button{
+	height: 100%;
+    border-radius: 6px 0 0 6px;
+    border: 1px solid var(--action-color);
+    /* border-right: 2px solid var(--action-color); */
+    background: #fff;
+    color: var(--action-color);
+    box-shadow: 1px 0 4px var(--bttn-shad);
+    cursor: pointer;
 }
 
 .form-check-input {
@@ -1328,13 +1351,14 @@ td.dtfc-fixed-left{
 .table-summary {
 	align-items: baseline;
 	font-size: 0.9rem;
+	padding-right:34px;
 }
 
 .table-summary .data-item {
 	font-size: 0.9rem;
 }
 
-.rows-count, h4 {
+.table-summary .rows-count, h4 {
 	align-self: baseline;
     align-items: baseline;
 }

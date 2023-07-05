@@ -215,7 +215,7 @@
 		  			<div class="data-row">
 						<div class="data-item">
 							<label for="paramCalcYear" class="data-label">Выберите год:</label>
-							<select class="selectpicker md-fix param-calc-year" id="paramCalcYear" >
+							<select class="selectpicker md-fix param-calc-year">
 							  <option value="2020">01.01.2021</option>
 							  <option value="2021">01.01.2022</option>
 							  <option value="2022" selected>01.01.2023</option>
@@ -273,7 +273,7 @@
 					  	</button>
 					  	<ul class="dropdown-menu" role="tablist">
 						    <li>
-						    	<button class="dropdown-item active" data-bs-toggle="tab" data-bs-target="#hpListTab" type="button" role="tab" aria-controls="hpListTab" aria-selected="false">Перечень тепловых пунктов</button>
+						    	<button class="dropdown-item active" data-bs-toggle="tab" data-bs-target="#hpListTab" type="button" role="tab" aria-controls="hpListTab" aria-selected="true">Перечень тепловых пунктов</button>
 						  	</li>
 						  	<li>
 						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#loadsByYearTab" type="button" role="tab" aria-controls="loadsByYearTab" aria-selected="false">Нагрузки и расходы по годам</button>
@@ -2511,26 +2511,27 @@
 							</div>
 		      			</div>
 		      			<div class="data-row">
-		      				<div class="data-row">
-		      					<div class="data-item">
-									<label class="data-label">Расчётный год схемы: <span class="sublabel">начало переключений</span></label>
-									<select class="selectpicker md-fix param-calc-year" id="paramCalcYear">
-									  <option value="2020">01.01.2021</option>
-									  <option value="2021">01.01.2022</option>
-									  <option value="2022" selected>01.01.2023</option>
-									  <option value="2023">01.01.2024</option>
-									</select>
-								</div>
-								<div class="data-item">
-									<label class="data-label"><span class="sublabel">окончание переключений</span></label>
-									<select class="selectpicker md-fix param-calc-year" id="paramCalcYear" value="2022">
-									  <option value="2020">01.01.2021</option>
-									  <option value="2021">01.01.2022</option>
-									  <option value="2022" selected>01.01.2023</option>
-									  <option value="2023">01.01.2024</option>
-									</select>
-								</div>
-		      				</div>
+	      					<div class="data-item">
+								<label class="data-label">Расчётный год схемы: <span class="sublabel">начало переключений</span></label>
+								<select class="selectpicker md-fix">
+								  <option value="2020">01.01.2021</option>
+								  <option value="2021">01.01.2022</option>
+								  <option value="2022" selected>01.01.2023</option>
+								  <option value="2023">01.01.2024</option>
+								</select>
+							</div>
+							<div class="data-item">
+								<label class="data-label"><span class="sublabel">окончание переключений</span></label>
+								<select class="selectpicker md-fix">
+								  <option value="2020">01.01.2021</option>
+								  <option value="2021">01.01.2022</option>
+								  <option value="2022" selected>01.01.2023</option>
+								  <option value="2023">01.01.2024</option>
+								</select>
+							</div>
+							<div class="data-item data-item-right">
+								<button class="bttn bttn-square bttn-icon-sync"></button>
+							</div>
 		      			</div>
 		      		</div>
 		      		<div class="scroll-block-wrapper">
@@ -4620,10 +4621,12 @@
 															<input type="text" class="data-value md-fix" disabled>
 														</div>
 								      				</div>
-								      				<div class="data-item">
-														<label class="data-label">Наименование слоя</label>
-														<input type="text" class="data-value stretch" disabled>
-													</div>
+								      				<div class="data-row">
+								      					<div class="data-item">
+															<label class="data-label">Наименование слоя</label>
+															<input type="text" class="data-value stretch" disabled>
+														</div>
+								      				</div>
 													<div class="data-row">
 														<div class="data-item stretch">
 															<label class="data-label">Номер SYS объекта</label>
