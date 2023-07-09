@@ -288,9 +288,37 @@ const initPageTables = (pageTables) => {
             });
       };
     })
-  }
+  };
 
+  const setEnableElements = (checkId, type='check', radioName) => {
+    let selector;
+    if(type=='check'){
+        selector = '#'+checkId;
+    } else if(type=='radio'){
+        selector = `input[name='${radioName}']`;
+    }
 
+    $(selector).on('change', function () {
+        let check;
+        if(type=='check'){
+            check = this.checked;
+        } else if(type=='radio'){
+            check = $('#'+checkId)[0].checked;
+        }
+        
+        $('.' + checkId).each(function(){
+          if(this.tagName=='INPUT'){
+            this.disabled = !check;
+          }
+          if($(this).hasClass('selectpicker')) {
+            $(this).prop('disabled', !check);
+            $(this).selectpicker('destroy');
+            $(this).selectpicker();
+            $(this).addClass('selectpicker');
+          }
+        });
+    });
+  };
 
 
 
@@ -320,26 +348,6 @@ window.onload = () => {
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 
 
-   /// const dropdownElemsList = document.querySelectorAll('.bootstrap-select .dropdown-toggle');
-  //  const customBoundary = document.querySelector('.main-container');
- //   dropdownElemsList.forEach((el) => {
-   //     return new bootstrap.Dropdown(el, {
-   //         popperConfig: {
-  //              strategy: "fixed"
-   //         }
-   //     });
- //       let dropdownObj = bootstrap.Dropdown.getInstance(el);
-        //dropdownObj._config.strategy = "fixed";
-   
-  //      dropdownObj._config.boundary = customBoundary;
-      //  if (el.dropdown && el.dropdown._popper) {
-          //  Popper.detectOverflow(dropdownObj, {
-          //    boundary: customBoundary, // 'clippingParents' by default
-         //   });
-      //  }
-  //  })
-
-
     // ajust placement colVis and searchBuilder dropdown panes
     document.querySelectorAll('.table-buttons button').forEach((el) => {el.addEventListener('click', (e) => {
         
@@ -357,6 +365,9 @@ window.onload = () => {
         }
     })
     });
+
+
+
 
 };
 

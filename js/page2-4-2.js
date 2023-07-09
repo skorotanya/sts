@@ -24,40 +24,27 @@ $(document).ready(function () {
 
   const pageTables = [
     {
-      name: 'hnList',
+      name: 'psList',
       type: 'full',
       columns: [],
-      height:'52vh',
       modal: '',
       tab: true,
       firstTab: true,
       accordionId: ''
     },
     {
-      name: 'hnByYear',
+      name: 'psSupply',
       type: 'full',
       columns: [],
-      height:'41vh',
       modal: '',
       tab: true,
       firstTab: false,
       accordionId: ''
     },
     {
-      name: 'losses',
+      name: 'equipment',
       type: 'full',
       columns: [],
-      height:'44vh',
-      modal: '',
-      tab: true,
-      firstTab: false,
-      accordionId: ''
-    },
-    {
-      name: 'damage',
-      type: 'full',
-      columns: [],
-      height: '44vh',
       modal: '',
       tab: true,
       firstTab: false,
@@ -67,7 +54,15 @@ $(document).ready(function () {
       name: 'protection',
       type: 'full',
       columns: [],
-      height: '51vh',
+      modal: '',
+      tab: true,
+      firstTab: false,
+      accordionId: ''
+    },
+    {
+      name: 'psFailure',
+      type: 'full',
+      columns: [],
       modal: '',
       tab: true,
       firstTab: false,
@@ -77,21 +72,30 @@ $(document).ready(function () {
       name: 'development',
       type: 'full',
       columns: [],
-      height: '41vh',
       modal: '',
       tab: true,
       firstTab: false,
       accordionId: ''
     },
     {
-      name: 'listGroupHN',
+      name: 'psEquipment',
       type: 'simple-scroll',
       columns: [],
       height: '40vh',
-      modal: 'editGroupHN',
+      modal: 'editEquipmentData',
       tab: false,
       firstTab: true,
       accordionId: ''
+    },
+    {
+      name: 'powerSupply',
+      type: 'simple-scroll',
+      columns: [],
+      height: '22vh',
+      modal: 'editData',
+      tab: false,
+      firstTab: false,
+      accordionId: 'panel4'
     },
     {
       name: 'lossesDamage',
@@ -101,7 +105,7 @@ $(document).ready(function () {
       modal: 'editData',
       tab: false,
       firstTab: false,
-      accordionId: 'panel4'
+      accordionId: 'panel6'
     },
     {
       name: 'docsFotos',
@@ -139,77 +143,57 @@ $(document).ready(function () {
     } );
 */
 
-    // show modal window for edit data
-    $('.bttn-edit-group').on('click', (e) => {
-        showModal('editGroupHN');
-    });
-
-        // show modal window for edit data
+     // show modal window for edit data
     $('.bttn-edit-data').on('click', (e) => {
         showModal('editData');
     });
 
-    $('#hnListTable tbody').on('dblclick', 'tr', function () {
+    $('#psListTable tbody').on('dblclick', 'tr', function () {
       showModal('editData');
-    });
+    } );
 
     // Double click on row loadsByYearTable 
-    $('#hnByYearTable tbody').on('dblclick', 'tr', function () {
+    $('#psSupplyTable tbody').on('dblclick', 'tr', function () {
       showModal('editData');
-    });
+    } );
 
-    $('#lossesTable tbody').on('dblclick', 'tr', function () {
-      showModal('editData');
-    });
-
-    $('#damageTable tbody').on('dblclick', 'tr', function () {
-      showModal('editData');
-    });
+    $('#equipmentTable tbody').on('dblclick', 'tr', function () {
+      showModal('editEquipmentData');
+    } );
 
     $('#protectionTable tbody').on('dblclick', 'tr', function () {
       showModal('editData');
-    });
+    } );
+
+    $('#psFailureTable tbody').on('dblclick', 'tr', function () {
+      showModal('editData');
+    } );
 
     // Double click on row developmentTable 
     $('#developmentTable tbody').on('dblclick', 'tr', function () {
       showModal('editDevelopmentData');
+    } );
+
+    // show modal window for edit data
+    $('.bttn-group-event').on('click', (e) => {
+        showModal('editGroupEventData');
     });
 
-    // Enabled / disabled year select depending on active tab
-    $('.main-content .tab-content button[data-bs-toggle="tab"]').on('shown.bs.tab', function() {
-        let year = $('select.param-calc-year');
-        if($(this).data('bs-target') == '#hnListTab'){
-          year.prop('disabled',false);
-        } else {
-          year.prop('disabled',true);
-        }
-        year.selectpicker('destroy');
-        year.selectpicker();
-        year.addClass('selectpicker');
-    });
+    $('#equipmentByYearTable tbody').on('dblclick', 'tr', function () {
+      showModal('editEquipmentData');
+    } );
 
-    // Enabled / disabled form controls on popup "editGroupHN" by checkboxes
-    for (let i = 1; i <= 6; i++) {
-      setEnableElements('checkData' + i);
-      /*$('#checkData' + i).on('change', function () {
-        let check = this.checked;
-        $('.checkData' + i).each(function(){
-          if($(this).attr('type')=='text'){
-            this.disabled = !check;
-          }
-          if($(this).hasClass('selectpicker')) {
-            $(this).prop('disabled', !check);
-            $(this).selectpicker('destroy');
-            $(this).selectpicker();
-            $(this).addClass('selectpicker');
-          }
-        });
-      });*/
-    }
 
-    setEnableElements('checkEHZ');
+    setEnableElements('checkPPS','radio','radioPSType2');
 
-    
+    setEnableElements('checkTM');
+
+    setEnableElements('checkValve1');
+
+    setEnableElements('checkValve2');
+
+    setEnableElements('checkValve3');
+
 
 });
 
