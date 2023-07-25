@@ -15,41 +15,72 @@
 
 </head>
 <body>
-	
+	<div class="preloader">
+		<div class="preloader-img">
+			<svg version="1.1" id="L2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+				<circle fill="none" stroke="#292e32" stroke-width="4" stroke-miterlimit="10" cx="50" cy="50" r="48"/>
+				<line fill="none" stroke-linecap="round" stroke="#5f2fe7" stroke-width="4" stroke-miterlimit="10" x1="50" y1="50" x2="85" y2="50.5">
+				  <animateTransform 
+				       attributeName="transform" 
+				       dur="2s"
+				       type="rotate"
+				       from="0 50 50"
+				       to="360 50 50"
+				       repeatCount="indefinite" />
+				</line>
+				<line fill="none" stroke-linecap="round" stroke="#5f2fe7" stroke-width="4" stroke-miterlimit="10" x1="50" y1="50" x2="49.5" y2="74">
+				  <animateTransform 
+				       attributeName="transform" 
+				       dur="15s"
+				       type="rotate"
+				       from="0 50 50"
+				       to="360 50 50"
+				       repeatCount="indefinite" />
+				</line>
+			</svg>
+		</div>
+	</div>
 	<div class="main-container welcome d-flex justify-content-center align-items-center">
 		<div class="data-block registration text-center">
 			<div class="data-block title-block">
 				<h2 class="text-white text-opacity-50">Автоматизированная информационная система</h2>
 				<h1 class="text-white fs-1">"Схема теплоснабжения"</h1>
 			</div>
-			<div class="data-block fix-180 text-white w-75 align-self-center mt-4 mb-3">
+			<div class="data-block text-white w-75 align-self-center mt-4 mb-3">
 				<h3 class="text-white text-opacity-75">Вход в личный кабинет</h3>
-				<div class="data-row mb-2">
-					<div class="data-item stretch">
-						<label class="data-label text-opacity-75">Тип личного кабинета</label>
-						<select class="selectpicker data-value stretch" required>
-							<option>Тип 1</option>
-							<option>Тип 2</option>
-							<option>Тип 3</option>
-						</select>
+				<form class="needs-validation" novalidate>
+					<div class="data-row mb-2">
+						<div class="data-item stretch">
+							<label class="data-label text-opacity-75 lg-fix">Тип личного кабинета</label>
+							<select class="selectpicker data-value stretch" required title="Выберите...">
+								<option>Тип 1</option>
+								<option>Тип 2</option>
+								<option>Тип 3</option>
+							</select>
+							<a class="invalid-tooltip error" data-bs-toggle="tooltip" data-bs-custom-class="error-tooltip" data-bs-html="false" data-bs-title="Выберите значение из списка"></a>
+						</div>
 					</div>
-				</div>
-				<div class="data-row mb-2">
-					<div class="data-item stretch">
-						<label class="data-label text-opacity-75">Логин/эл.почта</label>
-						<input type="text" class="data-value stretch" required></input>
+					<div class="data-row mb-2">
+						<div class="data-item stretch">
+							<label class="data-label text-opacity-75 lg-fix">Логин/эл.почта</label>
+							<input type="text" class="data-value stretch" required></input>
+							<a class="invalid-tooltip error" data-bs-toggle="tooltip" data-bs-custom-class="error-tooltip" data-bs-html="false" data-bs-title="Это поле должно быть заполнено"></a>
+						</div>
 					</div>
-				</div>
-				<div class="data-row mb-3">
-					<div class="data-item stretch">
-						<label class="data-label text-opacity-75">Пароль</label>
-						<input type="text" class="data-value stretch" required></input>
+					<div class="data-row mb-3">
+						<div class="data-item stretch">
+							<label class="data-label text-opacity-75 lg-fix">Пароль</label>
+							<input type="password" class="data-value stretch" required></input>
+							<a class="invalid-tooltip error" data-bs-toggle="tooltip" data-bs-custom-class="error-tooltip" data-bs-html="false" data-bs-title="Это поле должно быть заполнено"></a>
+						</div>
 					</div>
-				</div>
-				<div class="data-row">
-					<a role="button" class="bttn stretch m-0 bg-transparent border-white text-white border-opacity-75" href="#">Зарегистрироваться</a>
-					<a role="button" class="bttn bttn-color stretch m-0" href="index.html">Войти</a>
-				</div>
+					<div class="data-row">
+
+						<a role="button" class="bttn stretch m-0 bg-transparent border-white text-white border-opacity-75" href="#">Зарегистрироваться</a>
+						<button type="submit" class="bttn bttn-color stretch m-0" value="Войти">Войти</button>
+						<!--a role="submit" class="bttn bttn-color stretch m-0" href="index.html">Войти</a-->
+					</div>
+				</form>
 			</div>
 			
 		</div>
@@ -58,7 +89,11 @@
 	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 
+	<!-- direct link for DataTables Library's File -->
+	<script type="text/javascript" src="js/datatables.min.js"></script>
+
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
 	
+	<script type="text/javascript" charset="utf8" src="js/main.js"></script>
 </body>
 </html>

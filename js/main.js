@@ -331,18 +331,21 @@ window.onload = () => {
     hidePreloader();
 
     // show popup information about user with preloader
-    document.querySelector('.user-name').addEventListener('click', (e) => { 
+    const userBtn = document.querySelector('.user-name');
+
+    if(userBtn) {userBtn.addEventListener('click', (e) => { 
         showPreloader();
         setTimeout(function(){
             hidePreloader();
             showModal('infoUser');
         }, 500);
-    });
+    });}
 
     // show popup on user exit
-    document.querySelector('.user__exit').addEventListener('click', (e) => {
+    const userExit = document.querySelector('.user__exit');
+    if(userExit) {userExit.addEventListener('click', (e) => {
         showModal('exitUser');
-    });
+    });}
 
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
@@ -366,7 +369,19 @@ window.onload = () => {
     })
     });
 
+ // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault(false);
+        event.stopPropagation();
+      }
 
+      form.classList.add('was-validated');
+    }, false);
+  })
 
 
 };
