@@ -6,7 +6,7 @@
  --bttn-shad:#431bb770; /* color for buttons shadow*/
  --bttn-color-shad:#431bb7ad; /* color for buttons shadow on hover*/
  --bttn-color-hover:#6d46ed; /* purple color for buttons on hover*/
- --grey-color: #626262; /* grey color for scrolling line*/
+ --grey-color: #777777; /* grey color for scrolling line*/
  --padding-edge: 20px; /* size of padding */
  --light-color:#f7f4fe; /* light purple color */
  --dark-color:#4b25b7; /* dark purple for active buttons */
@@ -14,7 +14,8 @@
  --text-color:#252525; /* all common text color */
  --text-color-light: #25252580; /* semi-transparent text color */
  --ref-white-color:#ffffff80; /* semi-tranparent white color */
- --green-color: #22bd3c;
+ --green-color: #26a916; /* 22bd3c*/
+ --red-color: #e72f73;
  --border-color: #d2cbef;
  --border-radius: 6px;
  --base-height: 31px;
@@ -316,6 +317,7 @@ button:disabled, .bttn.disabled{
 
 .data-row > .data-item {
 	align-self: center;
+	min-height: 31px;
 }
 
 .data-row:not(:has(*[class*=col-])) {
@@ -499,43 +501,41 @@ input[type='file']::-webkit-file-upload-button{
     cursor: pointer;
 }
 
-.form-check-input {
+.data-check {
 	height: 20px;
     width: 20px;
     min-width: 20px;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     margin-top: 0px;
+    appearance: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
     color: var(--action-color);
     cursor: pointer;
 }
 
-.form-check-input:hover {
-	/*background-color: var(--light-color);*/
-}
 
-
-.form-check-input[type=checkbox]:checked {
+.data-check[type=checkbox]:checked {
 	background-color: #fff;
 	background-image: url(../images/checkmark.svg);
 	border-color: var(--border-color);
 }
 
-.form-check-input[type=radio]:checked {
+.data-check[type=radio]:checked {
 	background-color: #fff;
 	background-image: url(../images/ellipse.svg);
 	border-color: var(--border-color);
 	background-size: auto;
 }
 
-.form-check-input:active {
+.data-check:active {
 	filter: none;
 }
 
-.form-check-input:focus {
+.data-check:focus {
 	border-color: var(--action-color);
 	box-shadow: none;
 }
@@ -546,7 +546,7 @@ input[type='file']::-webkit-file-upload-button{
 	opacity: 0.5;
 }
 
-input[disabled], .form-check-input[disabled], .bootstrap-select > .btn.dropdown-toggle.disabled {
+input[disabled], .data-check[disabled], .bootstrap-select > .btn.dropdown-toggle.disabled {
 	opacity: .5;
 	border-color: var(--active-color);
 	background-color: var(--light-color);
@@ -640,6 +640,10 @@ textarea.data-array {
 	border: 0;
 }
 
+.bttn.dropdown-toggle:after {
+	margin: 0.2rem 0.2rem 0.2rem 0.8rem;
+}
+
 .clicker > .dropdown-toggle {
 	padding-right: 0.5rem;
 }
@@ -652,7 +656,7 @@ textarea.data-array {
 	outline: 0 !important;
 }
 
-.bootstrap-select .dropdown-item.active, .bootstrap-select .dropdown-item:active {
+.bootstrap-select .dropdown-item.active, .bootstrap-select .dropdown-item:active, .bttn-dropdown .dropdown-item:active {
 	background-color: #9f7ff7;
 }
 
@@ -1392,31 +1396,30 @@ td.dtfc-fixed-left{
     transition: all ease-in 300ms;
 }
 
-.load-status.wait {
+.load-status.wait {  /*  grey */
 
 	--load-status-bgc: #f1f1f1;
-    --load-status-bc: #cfcfcf;
-    --load-status-fc: #727272;
+    --load-status-bc: var(--grey-color);
+    --load-status-fc: var(--grey-color);
 }
 
-.load-status.process {
+.load-status.process {  /* purple */
 	--load-status-bgc: #d9cff3;
-    --load-status-bc: #ac95ed;
-    --load-status-fc: #957ae1;
+    --load-status-bc: var(--active-color);
+    --load-status-fc: var(--active-color);
 }
 
-.load-status.success {
+.load-status.success {  /* green  */
 	--load-status-bgc: #d6f3cf;
-    --load-status-bc: #84ef97;
+    --load-status-bc: var(--green-color);
     --load-status-fc: var(--green-color);
 }
 
-.load-status.fault {
+.load-status.fault {  /* red */
 	--load-status-bgc: #fde6ef;
-    --load-status-bc: #edb4cb;
-    --load-status-fc: #bd225b;
+    --load-status-bc: var(--red-color);
+    --load-status-fc: var(--red-color);
 }
-
 
 /* data edit modal window */
 
@@ -1542,12 +1545,12 @@ table .bttn:not(:last-child) {
 	border-color: var(--action-color);
 }
 .modal .success {
-	--message-icon-color: #26a916;
-	border-color: #26a916;
+	--message-icon-color: var(--green-color);
+	border-color: var(--green-color);
 }
 .modal .fault {
-	--message-icon-color: #e72f73;
-	border-color: #e72f73;
+	--message-icon-color: var(--red-color);
+	border-color: var(--red-color);
 }
 
 .message-icon {
@@ -1589,7 +1592,7 @@ table .bttn:not(:last-child) {
 }
 
 .radio-up:checked {
-	background: #26a916;
+	background: var(--green-color);
 }
 
 .radio-down {
@@ -1597,7 +1600,7 @@ table .bttn:not(:last-child) {
 }
 
 .radio-down:checked {
-	background: #e72f73;
+	background: var(--red-color);
 }
 
 .data-display {
@@ -1638,7 +1641,7 @@ a.error {
 }
 
 .error-tooltip {
-	--bs-tooltip-bg: #e72f73;
+	--bs-tooltip-bg: var(--red-color);
 	transition: opacity ease 150ms;
 	--bs-tooltip-color: #fff;
 }
@@ -1649,7 +1652,7 @@ a.error {
 
 
 form.was-validated :invalid {
-	border-color: #e72f73;
+	border-color: var(--red-color);
 }
 
 form.was-validated .data-item:has(:required) {

@@ -18,38 +18,50 @@ $(document).ready(function () {
    { "width": "10%" },
    { "width": "10%" }
   ];*/
-    initDataTable('ratesTable', 'full');
-    adjustColumns('ratesTable');
-    loadFilterFromState('ratesTable');
+      const pageTables = [
+    {
+      name: 'rates',
+      type: 'full',
+      columns: [],
+      height: '59vh',
+      modal: '',
+      tab: true,
+      firstTab: true
+    },
+    {
+      name: 'tpPersonalFee',
+      type: 'full',
+      columns: [],
+      height: '61vh',
+      modal: '',
+      tab: true,
+      firstTab: false
+    },
+    {
+      name: 'tpStandartFee',
+      type: 'full',
+      columns: [],
+      height: '61vh',
+      modal: '',
+      tab: true,
+      firstTab: false
+    },
+    {
+      name: 'reserveFee',
+      type: 'full',
+      columns: [],
+      height: '61vh',
+      modal: '',
+      tab: true,
+      firstTab: false
+    }
+  ];
 
-    initDataTable('tpPersonalFeeTable', 'full');
-    initDataTable('tpStandartFeeTable', 'full');
+  initPageTables(pageTables);
 
-    initDataTable('reserveFeeTable', 'full');
 
 
     // event listeners on current page
-
-    // adjust table columns after showing tab for edit data
-    const ratesTab = document.querySelector('button[data-bs-target="#ratesTab"');
-    ratesTab.addEventListener('shown.bs.tab', event => {
-      adjustColumns('ratesTable');
-    })
-  
-    const tpPersonalFeeTab = document.querySelector('button[data-bs-target="#tpPersonalFeeTab"');
-    tpPersonalFeeTab.addEventListener('shown.bs.tab', event => {
-      adjustColumns('tpPersonalFeeTable');
-    })
-
-     const tpStandartFeeTab = document.querySelector('button[data-bs-target="#tpStandartFeeTab"');
-    tpStandartFeeTab.addEventListener('shown.bs.tab', event => {
-      adjustColumns('tpStandartFeeTable');
-    })
-
-    const reserveFeeTab = document.querySelector('button[data-bs-target="#reserveFeeTab"');
-    reserveFeeTab.addEventListener('shown.bs.tab', event => {
-      adjustColumns('reserveFeeTable');
-    })
 
 
     /* Double click on row ratesTable */

@@ -121,27 +121,6 @@ $(document).ready(function () {
   
   initPageTables(pageTables);
 
-/*
-    // Double click on row tsoServTable 
-    $('#tsoServTable tbody').on('dblclick', 'tr', function () {
-      showModal('editData');
-    } );
-
-    // Double click on row srcListTable 
-    $('#srcListTable tbody').on('dblclick', 'tr', function () {
-      showModal('editData');
-    } );
-
-    // Double click on row heatPointTable 
-    $('#heatPointTable tbody').on('dblclick', 'tr', function () {
-      showModal('editData');
-    } );
-
-    // Double click on row extraDataTable 
-    $('#extraDataTable tbody').on('dblclick', 'tr', function () {
-      showModal('editExtraData');
-    } );
-*/
 
      // show modal window for edit data
     $('.bttn-edit-data').on('click', (e) => {

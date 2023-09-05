@@ -665,7 +665,7 @@
 	      				<div class="data-row">
 	      					<div class="data-item">
 		      					<label class="data-label">Уникальный номер организации</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="УНОМ организации">
+	      						<select class="selectpicker data-value xxl-stretch"  data-live-search="true" placeholder="УНОМ организации">
 								  	<option value="2020">2020</option>
 								  	<option value="2021">2021</option>
 								  	<option value="2022" selected>2022</option>
@@ -684,14 +684,14 @@
 								      		<div class="data-block">
 								      			<div class="data-row">
 								      				<label class="data-label lg-fix">Статус:</label>
-								      				<div class="data-item">
-								      					<label class="data-label">действует</label>
-								      					<input type="radio" name="statusCompany" class="form-check-input" checked>
-								      				</div>
-								      				<div class="data-item">
-								      					<label class="data-label">ликвидирован</label>
-								      					<input type="radio" name="statusCompany" class="form-check-input">
-								      				</div>
+								      				<label class="data-item">
+								      					<span class="data-label">действует</span>
+								      					<input type="radio" name="statusCompany" class="data-check" checked>
+								      				</label>
+								      				<label class="data-item">
+								      					<span class="data-label">ликвидирован</span>
+								      					<input type="radio" name="statusCompany" class="data-check">
+								      				</label>
 								      			</div>
 								      			<div class="data-item">
 								      				<label class="data-label lg-fix">Наименование: <span class="sublabel">краткое</span></label>
@@ -704,17 +704,17 @@
 								      			<div class="data-row">
 								      				<div class="data-item">
 								      					<label class="data-label lg-fix">Тип по виду деятельности</label>
-								      					<select class="selectpicker data-value xl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите...">
+								      					<select class="selectpicker data-value xl-stretch" data-live-search="true" placeholder="Выберите...">
 														  	<option value="2020">2020</option>
 														  	<option value="2021">2021</option>
 														  	<option value="2022">2022</option>
 														  	<option value="2023">2023</option>
 														</select>
 								      				</div>
-								      				<div class="data-item">
-								      					<label class="data-label">Организация является структурным подразделением</label>
-								      					<input type="checkbox" class="data-switcher">
-								      				</div>
+								      				<label class="data-item">
+								      					<span class="data-label">Организация является структурным подразделением</span>
+								      					<input type="checkbox" class="data-check">
+								      				</label>
 								      			</div>
 								      		</div>
 								      	</div>

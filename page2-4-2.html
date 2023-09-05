@@ -223,7 +223,7 @@
 						<div class="note">Обновление связей данных -&nbsp;<span class="note-update-date">14.11.2022</span>.</div>
 					</div>
 					<div class="data-row">
-						<div class="data-item stretch">
+						<div class="data-item ">
 							<label class="data-label">Эксплуатирующая ТСО:</label>
 							<select class="selectpicker data-value lg-stretch" data-live-search="true" placeholder="Выберите наименование ТСО">
 							  	<option value="1">ТСО 1</option>
@@ -232,7 +232,7 @@
 							  	<option value="4">ТСО 4</option>
 							</select>
 						</div>
-						<div class="data-item stretch">
+						<div class="data-item ">
 							<label class="data-label">Источник тепловой энергии:</label>
 							<select class="selectpicker data-value lg-stretch" data-live-search="true" placeholder="Выберите наименование источника">
 							  	<option value="1">Источник 1</option>
@@ -242,14 +242,14 @@
 							</select>
 						</div>
 						<div class="data-row">
-							<div class="data-item">
-								<label class="data-label">НПС</label>
-								<input type="checkbox" class="form-check-input" checked>
-							</div>
-							<div class="data-item">
-								<label class="data-label">ДНС</label>
-								<input type="checkbox" class="form-check-input">
-							</div>
+							<label class="data-item">
+								<span class="data-label">НПС</span>
+								<input type="checkbox" class="data-check" checked>
+							</label>
+							<label class="data-item">
+								<span class="data-label">ДНС</span>
+								<input type="checkbox" class="data-check">
+							</label>
 						</div>
 					</div>
 		  		</div>
@@ -2153,14 +2153,14 @@
 							</div>
 							<div class="data-row">
 								<label class="data-label xl-fix">Тип насосной станции:</label>
-	      						<div class="data-item ">
-		      						<label class="data-label">НПС</label>
-		      						<input type="radio" id="checkPPS" name="radioPSType2" class="data-value form-check-input" checked>
-		      					</div>
-		      					<div class="data-item ">
-		      						<label class="data-label">ДНС</label>
-		      						<input type="radio" name="radioPSType2" class="data-value form-check-input">
-		      					</div>
+	      						<label class="data-item ">
+		      						<span class="data-label">НПС</span>
+		      						<input type="radio" id="checkPPS" name="radioPSType2" class="data-value data-check" checked>
+		      					</label>
+		      					<label class="data-item ">
+		      						<span class="data-label">ДНС</span>
+		      						<input type="radio" name="radioPSType2" class="data-value data-check">
+		      					</label>
 	      					</div>
 	      					<div class="data-item data-item-right">
 								<label class="data-label">∑ G<sub>произ.</sub></label>
@@ -2223,14 +2223,14 @@
 																</select>
 															</div>
 															<div class="data-row">
-																<div class="data-item">
-																	<label class="data-label xl-fix">Бесхозяйный участок сети</label>
-																	<input type="checkbox" class="form-check-input">
-																</div>
-																<div class="data-item">
-																	<label class="data-label xl-fix">Ветхий участок сети</label>
-																	<input type="checkbox" class="form-check-input">
-																</div>
+																<label class="data-item">
+																	<span class="data-label xl-fix">Бесхозяйный участок сети</span>
+																	<input type="checkbox" class="data-check">
+																</label>
+																<label class="data-item">
+																	<span class="data-label xl-fix">Ветхий участок сети</span>
+																	<input type="checkbox" class="data-check">
+																</label>
 															</div>
 															<div class="data-row">
 											      				<div class="data-item ">
@@ -2325,39 +2325,39 @@
 									      				<div class="data-row">
 									      					<label class="data-label xl-fix">Схема присоединения к трубопроводам:</label>
 									      					<div class="data-row">
-									      						<div class="data-item">
-												      				<label class="data-label">подающая линия</label>
-												      				<input type="radio" name="radioSchema" class="data-value form-check-input checkPPS">
-												      			</div>
-												      			<div class="data-item">
-												      				<label class="data-label">обратная линия</label>
-												      				<input type="radio" name="radioSchema" class="data-value form-check-input checkPPS" checked>
-												      			</div>
+									      						<label class="data-item">
+												      				<span class="data-label">подающая линия</span>
+												      				<input type="radio" name="radioSchema" class="data-value data-check checkPPS">
+												      			</label>
+												      			<label class="data-item">
+												      				<span class="data-label">обратная линия</span>
+												      				<input type="radio" name="radioSchema" class="data-value data-check checkPPS" checked>
+												      			</label>
 									      					</div>
 									      				</div>
 									      				<div class="data-row">
 									      					<label class="data-label xl-fix">Способ регулирования напора:</label>
 									      					<div class="data-row">
-									      						<div class="data-item">
-												      				<label class="data-label">дросселирование</label>
-												      				<input type="radio" name="radioPressure" class="data-value form-check-input checkPPS" checked>
-												      			</div>
-												      			<div class="data-item">
-												      				<label class="data-label">ЧРП</label>
-												      				<input type="radio" name="radioPressure" class="data-value form-check-input checkPPS">
-												      			</div>
-												      			<div class="data-item">
-												      				<label class="data-label">гидромуфта</label>
-												      				<input type="radio" name="radioPressure" class="data-value form-check-input checkPPS">
-												      			</div>
+									      						<label class="data-item">
+												      				<span class="data-label">дросселирование</span>
+												      				<input type="radio" name="radioPressure" class="data-value data-check checkPPS" checked>
+												      			</label>
+												      			<label class="data-item">
+												      				<span class="data-label">ЧРП</span>
+												      				<input type="radio" name="radioPressure" class="data-value data-check checkPPS">
+												      			</label>
+												      			<label class="data-item">
+												      				<span class="data-label">гидромуфта</span>
+												      				<input type="radio" name="radioPressure" class="data-value data-check checkPPS">
+												      			</label>
 									      					</div>
 									      				</div>
 									      			</div>
 									      			<div class="data-row stretch">
-									      				<div class="data-item">
-										      				<label class="data-label xl-fix">Наличие телемеханики</label>
-										      				<input type="checkbox" id="checkTM" class="data-value data-switcher checkPPS">
-										      			</div>
+									      				<label class="data-item">
+										      				<span class="data-label xl-fix">Наличие телемеханики</span>
+										      				<input type="checkbox" id="checkTM" class="data-value data-check checkPPS">
+										      			</label>
 										      			<div class="data-item">
 										      				<label class="data-label xl-fix">Тип телемеханики</label>
 										      				<input type="text" class="data-value checkTM md-stretch" disabled>
@@ -2957,10 +2957,10 @@
 								      	<div class="accordion-body">
 								      		<div class="data-block">
 									      		<div class="data-row border-block">
-									      			<div class="data-item">
-														<label class="data-label xl-fix">Наличие клапана рассечки</label>
-														<input type="checkbox" id="checkValve1" class="data-switcher">
-													</div>
+									      			<label class="data-item">
+														<span class="data-label xl-fix">Наличие клапана рассечки</span>
+														<input type="checkbox" id="checkValve1" class="data-check">
+													</label>
 													<div class="data-item">
 														<label class="data-label xl-fix">Количество</label>
 														<input type="text" class="data-value checkValve1 sm-fix" disabled>
@@ -2968,10 +2968,10 @@
 													</div>
 												</div>
 												<div class="data-row border-block">
-									      			<div class="data-item">
-														<label class="data-label xl-fix">Наличие сбросного клапана</label>
-														<input type="checkbox" id="checkValve2" class="data-switcher">
-													</div>
+									      			<label class="data-item">
+														<span class="data-label xl-fix">Наличие сбросного клапана</span>
+														<input type="checkbox" id="checkValve2" class="data-check">
+													</label>
 													<div class="data-item">
 														<label class="data-label xl-fix">Количество</label>
 														<input type="text" class="data-value checkValve2 sm-fix" disabled>
@@ -2979,10 +2979,10 @@
 													</div>
 												</div>
 												<div class="data-row border-block">
-													<div class="data-item align-self-start">
-														<label class="data-label xl-fix">Наличие гидрозатвора</label>
-														<input type="checkbox" id="checkValve3" class="data-switcher">
-													</div>
+													<label class="data-item align-self-start">
+														<span class="data-label xl-fix">Наличие гидрозатвора</span>
+														<input type="checkbox" id="checkValve3" class="data-check">
+													</label>
 													<div class="data-row">
 														<div class="data-block">
 															<div class="data-item">
@@ -3015,18 +3015,18 @@
 															<div class="data-row">
 																<lable class="data-label xl-fix">Тип входной арматуры:</lable>
 																<div class="data-row">
-										      						<div class="data-item">
-													      				<label class="data-label">клиновая</label>
-													      				<input type="radio" name="radioRebar" class="data-value form-check-input checkValve3" checked>
-													      			</div>
-													      			<div class="data-item">
-													      				<label class="data-label">шаровая</label>
-													      				<input type="radio" name="radioRebar" class="data-value form-check-input checkValve3">
-													      			</div>
-													      			<div class="data-item">
-													      				<label class="data-label">без арматуры</label>
-													      				<input type="radio" name="radioRebar" class="data-value form-check-input checkValve3">
-													      			</div>
+										      						<label class="data-item">
+													      				<span class="data-label">клиновая</span>
+													      				<input type="radio" name="radioRebar" class="data-value data-check checkValve3" checked>
+													      			</label>
+													      			<label class="data-item">
+													      				<span class="data-label">шаровая</span>
+													      				<input type="radio" name="radioRebar" class="data-value data-check checkValve3">
+													      			</label>
+													      			<label class="data-item">
+													      				<span class="data-label">без арматуры</span>
+													      				<input type="radio" name="radioRebar" class="data-value data-check checkValve3">
+													      			</label>
 										      					</div>
 															</div>
 															<div class="data-item">
@@ -3305,14 +3305,14 @@
 							</div>
 							<div class="data-row">
 								<label class="data-label">Тип насосной станции:</label>
-	      						<div class="data-item ">
-		      						<label class="data-label">НПС</label>
-		      						<input type="radio" name="radioPSType" class="data-value form-check-input">
-		      					</div>
-		      					<div class="data-item ">
-		      						<label class="data-label">ДНС</label>
-		      						<input type="radio" name="radioPSType" class="data-value form-check-input">
-		      					</div>
+	      						<label class="data-item ">
+		      						<span class="data-label">НПС</span>
+		      						<input type="radio" name="radioPSType" class="data-value data-check">
+		      					</label>
+		      					<label class="data-item ">
+		      						<span class="data-label">ДНС</span>
+		      						<input type="radio" name="radioPSType" class="data-value data-check">
+		      					</label>
 	      					</div>
 	      				</div>
 	      				<div class="data-row">
@@ -3447,49 +3447,49 @@
 			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			    </div>
 			    <div class="modal-body">
-	      			<div class="data-block static-block data-params">
+	      			<div class="data-block static-block">
 	      				<div class="data-row">
-	      					<div class="data-item stretch">
+	      					<div class="data-item ">
 		      					<label class="data-label">Уникальный номер ТП</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите УНОМ теплового пункта">
+	      						<select class="selectpicker data-value xxl-stretch" data-live-search="true" placeholder="Выберите УНОМ теплового пункта">
 								  	<option value="2020">2020</option>
 								  	<option value="2021">2021</option>
 								  	<option value="2022" selected>2022</option>
 								  	<option value="2023">2023</option>
 								</select>
 							</div>
-							<div class="data-item stretch">
+							<div class="data-item ">
 		      					<label class="data-label">Номер ТП</label>
-	      						<select class="selectpicker data-value stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите номер теплового пункта">
+	      						<select class="selectpicker data-value stretch"data-live-search="true" placeholder="Выберите номер теплового пункта">
 								  	<option value="2020">2020</option>
 								  	<option value="2021">2021</option>
 								  	<option value="2022" selected>2022</option>
 								  	<option value="2023">2023</option>
 								</select>
 							</div>
-							<div class="data-item stretch">
+							<div class="data-item ">
 		      					<label class="data-label">Адрес</label>
-		      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выбрейте или введите адрес месторасположения ТП">
-									  	<option value="2020">2020</option>
-									  	<option value="2021">2021</option>
-									  	<option value="2022" selected>2022</option>
-									  	<option value="2023">2023</option>
-									</select>
+	      						<select class="selectpicker data-value xxl-stretch" data-live-search="true" placeholder="Выбрейте или введите адрес месторасположения ТП">
+								  	<option value="2020">2020</option>
+								  	<option value="2021">2021</option>
+								  	<option value="2022" selected>2022</option>
+								  	<option value="2023">2023</option>
+								</select>
 							</div>
 	      				</div>
       					<div class="data-row">
-      						<div class="data-item stretch">
+      						<div class="data-item ">
 	      						<label class="data-label">Теплоснабжающая организация</label>
 	      						<input type="text" class="data-value xxl-stretch" disabled>
 	      					</div>
-	      					<div class="data-item">
-								<label class="data-label">ЦТП</label>
-								<input type="checkbox" class="form-check-input">
-							</div>
-							<div class="data-item">
-								<label class="data-label">ИТП</label>
-								<input type="checkbox" class="form-check-input" checked>
-							</div>
+	      					<label class="data-item">
+								<span class="data-label">ЦТП</span>
+								<input type="checkbox" class="data-check">
+							</label>
+							<label class="data-item">
+								<span class="data-label">ИТП</span>
+								<input type="checkbox" class="data-check" checked>
+							</label>
       					</div>
 		      		</div>
 	      			<div class="scroll-block-wrapper" style="max-height: 73vh;">
@@ -3503,80 +3503,80 @@
 								      			<div class="data-block border-block">
 						      						<h4>Основные сведения:</h4>
 						      						<div class="data-row">
-						      							<div class="data-item stretch">
-							      							<label class="data-label fix-325">Уникальный номер мероприятия (проекта)</label>
-						      								<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите назначение">
+						      							<div class="data-item ">
+							      							<label class="data-label lm-fix">Уникальный номер мероприятия (проекта)</label>
+						      								<select class="selectpicker data-value xxl-stretch"  data-live-search="true" placeholder="Выберите назначение">
 															  	<option value="2020">Назначение 1</option>
 															  	<option value="2021">Назначение 2</option>
 															  	<option value="2022" >Назначение 3</option>
 															  	<option value="2023">Назначение 4</option>
 															</select>
 							      						</div>
-							      						<div class="data-item align-self-end">
-															<label class="data-label">Мероприятие (проект) учитывается в схеме по сторонней программе развития энергообъектов</label>
-															<input type="checkbox" class="form-check-input">
-														</div>
+							      						<label class="data-item data-item-right">
+															<span class="data-label">Мероприятие (проект) учитывается в схеме по сторонней программе развития энергообъектов</span>
+															<input type="checkbox" class="data-check">
+														</label>
 						      						</div>
 						      						
 					      							<div class="data-item">
-						      							<label class="data-label fix-325">Наименование мероприятия (проекта)</label>
+						      							<label class="data-label lm-fix">Наименование мероприятия (проекта)</label>
 						      							<input type="text" class="data-value xxl-stretch">
 						      						</div>
 						      						<div class="data-row">
-						      							<h5 class="text-end" style="width: 325px;">Изменение технических параметров:</h5>
+						      							<h5 class="text-end lm-fix">Изменение технических параметров:</h5>
 					      								<div class="data-row stretch">
-					      									<div class="data-item stretch">
-					      										<label class="data-label fix-325">Суммарная тепловая мощность: <span class="sublabel">до:</span></label>
+					      									<div class="data-item ">
+					      										<label class="data-label lm-fix">Суммарная тепловая мощность: <span class="sublabel">до:</span></label>
 																<input class="data-value smx-stretch" type="text">
 																<span class="data-unit">Гкал/ч</span>
 															</div>
-															<div class="data-item stretch">
-																<label class="data-label"><span class="sublabel">после:</span></label>
+															<div class="data-item ">
+																<label class="data-label sublabel">после:</label>
 																<input type="text" class="data-value smx-stretch">
 																<span class="data-unit">Гкал/ч</span>
 															</div>
 														</div>
 													</div>
 						      						<div class="data-row flex-nowrap">
-						      							<h5 class="text-end" style="width: 325px;">Вид мероприятия (проекта):</h5>
+						      							<h5 class="text-end lm-fix" >Вид мероприятия (проекта):</h5>
 						      							<div class="data-row">
-						      								<div class="data-item">
-																<label class="data-label">новое строительство</label>
-																<input type="checkbox" class="form-check-input" checked>
-															</div>
-															<div class="data-item">
-																<label class="data-label">реконструкция</label>
-																<input type="checkbox" class="form-check-input">
-															</div>
-															<div class="data-item">
-																<label class="data-label">консервация</label>
-																<input type="checkbox" class="form-check-input">
-															</div>
-															<div class="data-item">
-																<label class="data-label">техперевооружение</label>
-																<input type="checkbox" class="form-check-input">
-															</div>
-															<div class="data-item">
-																<label class="data-label">вывод из эксплуатации</label>
-																<input type="checkbox" class="form-check-input">
-															</div>
+						      								<label class="data-item">
+																<span class="data-label">новое строительство</span>
+																<input type="checkbox" class="data-check" checked>
+															</label>
+															<label class="data-item">
+																<span class="data-label">реконструкция</span>
+																<input type="checkbox" class="data-check">
+															</label>
+															<label class="data-item">
+																<span class="data-label">консервация</span>
+																<input type="checkbox" class="data-check">
+															</label>
+															<label class="data-item">
+																<span class="data-label">техперевооружение</span>
+																<input type="checkbox" class="data-check">
+															</label>
+															<label class="data-item">
+																<span class="data-label">вывод из эксплуатации</span>
+																<input type="checkbox" class="data-check">
+															</label>
 						      							</div>
 						      						</div>
 						      						<div class="data-row">
-						      							<h5 class="text-end" style="width: 325px;">Сроки реализации мероприятия (проекта):</h5>
+						      							<h5 class="text-end lm-fix" >Сроки реализации мероприятия (проекта):</h5>
 						      							<div class="data-row stretch">
-						      								<div class="data-item stretch">
+						      								<div class="data-item ">
 																<label class="data-label">начало</label>
 																<input type="text" class="data-value smx-stretch" placeholder="год начала">
 															</div>
-															<div class="data-item stretch">
+															<div class="data-item ">
 																<label class="data-label">окончание</label>
 																<input type="text" class="data-value smx-stretch" placeholder="год окончания">
 															</div>
 						      							</div>
-														<div class="data-item stretch">
-															<label class="data-label fix-325">Назначение мероприятия (проекта):</label>
-						      								<select class="selectpicker data-value stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите назначение">
+														<div class="data-item ">
+															<label class="data-label lm-fix">Назначение мероприятия (проекта):</label>
+						      								<select class="selectpicker data-value stretch"  data-live-search="true" placeholder="Выберите назначение">
 															  	<option value="2020">Назначение 1</option>
 															  	<option value="2021">Назначение 2</option>
 															  	<option value="2022">Назначение 3</option>
@@ -3591,18 +3591,18 @@
 						      							<button type="button" class="bttn ms-auto">Расчёт КВ</button>
 						      						</div>
 						      						<div class="data-row">
-						      							<div class="data-item stretch">
-															<label class="data-label fix-325">Капитальные вложения в реализацию</label>
+						      							<div class="data-item ">
+															<label class="data-label lm-fix">Капитальные вложения в реализацию</label>
 															<input type="text" class="data-value smx-stretch">
 															<span class="data-unit">тыс. руб. без НДС</span>
 														</div>
 														<div class="data-row stretch">
-															<div class="data-item stretch">
+															<div class="data-item ">
 																<label class="data-label">в том числе ПИР</label>
 																<input type="text" class="data-value smx-stretch" >
 																<span class="data-unit">тыс. руб. без НДС</span>
 															</div>
-															<div class="data-item stretch">
+															<div class="data-item ">
 																<label class="data-label">и СМР</label>
 																<input type="text" class="data-value smx-stretch" >
 																<span class="data-unit">тыс. руб. без НДС</span>
@@ -3611,19 +3611,19 @@
 														
 						      						</div>
 						      						<div class="data-row">
-						      							<div class="data-item stretch">
-															<label class="data-label fix-325">Профинансировано до начала реализации схемы:</label>
+						      							<div class="data-item ">
+															<label class="data-label lm-fix">Профинансировано до начала реализации схемы:</label>
 															<input type="text" class="data-value smx-stretch">
 															<span class="data-unit">тыс. руб. без НДС</span>
 														</div>
-														<div class="data-item stretch">
-															<label class="data-label fix-325">Остаток финансирования:</label>
+														<div class="data-item ">
+															<label class="data-label lm-fix">Остаток финансирования:</label>
 															<input type="text" class="data-value smx-stretch" >
 															<span class="data-unit">тыс. руб. без НДС</span>
 														</div>
 						      						</div>
 						      						<div class="data-row">
-						      							<h5 class="align-self-start" style="width: 325px;">Источники финансирования реализации мероприятия:</h5>
+						      							<h5 class="align-self-start lm-fix">Источники финансирования реализации мероприятия:</h5>
 						      							<div class="data-row stretch">
 						      								<div class="data-table-block stretch">
 						      									<div class="data-item">
@@ -3763,28 +3763,28 @@
 								      				<div class="data-block border-block">
 								      					<h4>Основные сведения:</h4>
 								      					<div class="data-row">
-								      						<div class="data-item stretch">
-																<label class="data-label fix-325">Наименование проекта программы:</label>
+								      						<div class="data-item ">
+																<label class="data-label lm-fix">Наименование проекта программы:</label>
 																<input type="text" class="data-value xxl-stretch" disabled placeholder="Наименование мероприятия программы развития энрегообъектов">
 															</div>
-								      						<div class="data-item">
-								      							<label class="data-label fix-325">Программа развития утверждена:</label>
-																<input type="checkbox" class="form-check-input" checked disabled>
-								      						</div>
-															<div class="data-item stretch">
+								      						<label class="data-item">
+								      							<span class="data-label lm-fix">Программа развития утверждена:</span>
+																<input type="checkbox" class="data-check" checked disabled>
+								      						</label>
+															<div class="data-item ">
 																<label class="data-label">Группа проектов:</label>
 																<input type="text" class="data-value smx-stretch" placeholder="Номер группы" disabled>
 															</div>
 								      					</div>
 														<div class="data-row">
-							      							<h5 class="text-end" style="width: 325px">Изменение технических параметров по программе:</h5>
+							      							<h5 class="text-end lm-fix">Изменение технических параметров по программе:</h5>
 						      								<div class="data-row stretch">
-						      									<div class="data-item stretch">
+						      									<div class="data-item ">
 						      										<label class="data-label">суммарная тепловая мощность: <span class="sublabel">до:</span></label>
 																	<input type="text" class="data-value smx-stretch" disabled>
 																	<span class="data-unit">Гкал/ч</span>
 						      									</div>
-																<div class="data-item stretch">
+																<div class="data-item ">
 																	<label class="data-label"><span class="sublabel">после:</span></label>
 																	<input type="text" class="data-value smx-stretch" disabled>
 																	<span class="data-unit">Гкал/ч</span>
@@ -3793,31 +3793,31 @@
 								      						<div class="data-row flex-nowrap">
 								      							<h5 class="text-end" style="width: 325px">Вид мероприятия (проекта) программы:</h5>
 								      							<div class="data-row">
-								      								<div class="data-item">
-																		<label class="data-label">новое строительство</label>
-																		<input type="checkbox" class="form-check-input" checked disabled>
-																	</div>
-																	<div class="data-item">
-																		<label class="data-label">реконструкция</label>
-																		<input type="checkbox" class="form-check-input" disabled>
-																	</div>
-																	<div class="data-item">
-																		<label class="data-label">консервация</label>
-																		<input type="checkbox" class="form-check-input" disabled>
-																	</div>
-																	<div class="data-item">
-																		<label class="data-label">техперевооружение</label>
-																		<input type="checkbox" class="form-check-input" disabled>
-																	</div>
-																	<div class="data-item">
-																		<label class="data-label">вывод из эксплуатации</label>
-																		<input type="checkbox" class="form-check-input" disabled>
-																	</div>
+								      								<label class="data-item">
+																		<span class="data-label">новое строительство</span>
+																		<input type="checkbox" class="data-check" checked disabled>
+																	</label>
+																	<label class="data-item">
+																		<span class="data-label">реконструкция</span>
+																		<input type="checkbox" class="data-check" disabled>
+																	</label>
+																	<label class="data-item">
+																		<span class="data-label">консервация</span>
+																		<input type="checkbox" class="data-check" disabled>
+																	</label>
+																	<label class="data-item">
+																		<span class="data-label">техперевооружение</span>
+																		<input type="checkbox" class="data-check" disabled>
+																	</label>
+																	<label class="data-item">
+																		<span class="data-label">вывод из эксплуатации</span>
+																		<input type="checkbox" class="data-check" disabled>
+																	</label>
 								      							</div>
 								      						</div>
 							      						</div>
 							      						<div class="data-row">
-							      							<h5 class="text-end" style="width: 325px">Сроки реализации мероприятия (проекта) по программе:</h5>
+							      							<h5 class="text-end lm-fix" >Сроки реализации мероприятия (проекта) по программе:</h5>
 							      							<div class="data-item">
 																<label class="data-label">начало</label>
 																<input type="text" class="data-value" placeholder="год начала" disabled>
@@ -3828,14 +3828,14 @@
 															</div>
 														</div>
 							      						<div class="data-row">
-															<div class="data-item">
-																<label class="data-label fix-325">Проект включен в концессионное соглашение</label>
-																<input type="checkbox" class="form-check-input" disabled>
-															</div>
-															<div class="data-item">
-																<label class="data-label  fix-325">Проект исключён из программы</label>
-																<input type="checkbox" class="form-check-input" disabled>
-															</div>
+															<label class="data-item">
+																<span class="data-label lm-fix">Проект включен в концессионное соглашение</span>
+																<input type="checkbox" class="data-check" disabled>
+															</label>
+															<label class="data-item">
+																<span class="data-label lm-fix">Проект исключён из программы</span>
+																<input type="checkbox" class="data-check" disabled>
+															</label>
 															<div class="data-item">
 																<label class="data-label">в</label>
 																<input type="text"class="data-value" placeholder="год исключения" disabled>
@@ -3847,17 +3847,17 @@
 								      					<h4>Финансирование:</h4>
 								      					<div class="data-row">
 							      							<div class="data-item">
-																<label class="data-label fix-325">Плановые расходы на реализацию проекта</label>
+																<label class="data-label lm-fix">Плановые расходы на реализацию проекта</label>
 																<input type="text" class="data-value smx-stretch" disabled>
 																<span class="data-unit">тыс. руб. без НДС</span>
 															</div>
 															<div class="data-row stretch">
-																<div class="data-item stretch">
+																<div class="data-item ">
 																	<label class="data-label">в том числе ПИР</label>
 																	<input type="text" class="data-value smx-stretch" disabled>
 																	<span class="data-unit">тыс. руб. без НДС</span>
 																</div>
-																<div class="data-item stretch">
+																<div class="data-item ">
 																	<label class="data-label">и СМР</label>
 																	<input type="text" class="data-value smx-stretch" disabled>
 																	<span class="data-unit">тыс. руб. без НДС</span>
@@ -3865,7 +3865,7 @@
 															</div>	
 							      						</div>
 							      						<div class="data-row">
-							      							<h5 class="align-self-start" style="width: 325px;">Источники финансирования реализации проекта:</h5>
+							      							<h5 class="align-self-start lm-fix" >Источники финансирования реализации проекта:</h5>
 							      							<div class="data-row stretch">
 							      								<div class="data-table-block stretch">
 							      									<div class="data-item">
@@ -3904,19 +3904,19 @@
 							      							</div>
 							      						</div>
 							      						<div class="data-row">
-							      							<div class="data-item stretch">
-																<label class="data-label fix-325">Профинансировано до начала реализации программы:</label>
+							      							<div class="data-item ">
+																<label class="data-label lm-fix">Профинансировано до начала реализации программы:</label>
 																<input type="text" class="data-value smx-stretch" disabled>
 																<span class="data-unit">тыс. руб. без НДС</span>
 															</div>
-															<div class="data-item stretch">
-																<label class="data-label fix-325">Остаток финансирования:</label>
+															<div class="data-item ">
+																<label class="data-label lm-fix">Остаток финансирования:</label>
 																<input type="text" class="data-value smx-stretch" disabled>
 																<span class="data-unit">тыс. руб. без НДС</span>
 															</div>
 							      						</div>
 							      						<div class="data-row">
-							      							<h5 class="align-self-start" style="width: 325px;">Финансирование проекта в процессе действия программы:</h5>
+							      							<h5 class="align-self-start lm-fix">Финансирование проекта в процессе действия программы:</h5>
 							      							<div class="data-row stretch">
 							      								<div class="data-table-block stretch">
 							      									<div class="data-item ">
@@ -4025,20 +4025,20 @@
 			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			    </div>
 			    <div class="modal-body">
-	      			<div class="data-block static-block data-params">
+	      			<div class="data-block static-block">
 	      				<div class="data-row">
-	      					<div class="data-item stretch">
+	      					<div class="data-item ">
 		      					<label class="data-label">Уникальне номера ТП</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" multiple="true" placeholder="Выберите УНОМы тепловых пунктов">
+	      						<select class="selectpicker data-value xxl-stretch"  data-live-search="true" multiple="true" placeholder="Выберите УНОМы тепловых пунктов">
 								  	<option value="2020">2020</option>
 								  	<option value="2021">2021</option>
 								  	<option value="2022" >2022</option>
 								  	<option value="2023">2023</option>
 								</select>
 							</div>
-							<div class="data-item stretch">
+							<div class="data-item ">
 		      					<label class="data-label">Номера ТП</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" multiple="true" placeholder="Выберите номера тепловых пунктов">
+	      						<select class="selectpicker data-value xxl-stretch" data-live-search="true" multiple="true" placeholder="Выберите номера тепловых пунктов">
 								  	<option value="2020">2020</option>
 								  	<option value="2021">2021</option>
 								  	<option value="2022">2022</option>
@@ -4052,53 +4052,53 @@
 	      					<div class="data-block border-block">
 	      						<h4>Основные сведения:</h4>
 	      						<div class="data-row">
-	      							<div class="data-item stretch">
-		      							<label class="data-label fix-325">Наименование мероприятия (проекта)</label>
+	      							<div class="data-item ">
+		      							<label class="data-label lm-fix">Наименование мероприятия (проекта)</label>
 		      							<input type="text" class="data-value xxl-stretch">
 		      						</div>
-		      						<div class="data-item">
-										<label class="data-label fix-325">Включить в наименование номер ТП</label>
-										<input type="checkbox" class="data-switcher" role="switch">
-									</div>
+		      						<label class="data-item">
+										<span class="data-label lm-fix">Включить в наименование номер ТП</span>
+										<input type="checkbox" class="data-check">
+									</label>
 	      						</div>
 	      						<div class="data-row flex-nowrap">
-	      							<h5 style="width: 325px" class="text-end">Вид мероприятия (проекта):</h5>
+	      							<h5 class="text-end lm-fix">Вид мероприятия (проекта):</h5>
 	      							<div class="data-row">
-	      								<div class="data-item">
-											<label class="data-label">новое строительство</label>
-											<input type="checkbox" class="form-check-input" checked>
-										</div>
-										<div class="data-item">
-											<label class="data-label">реконструкция</label>
-											<input type="checkbox" class="form-check-input">
-										</div>
-										<div class="data-item">
-											<label class="data-label">консервация</label>
-											<input type="checkbox" class="form-check-input">
-										</div>
-										<div class="data-item">
-											<label class="data-label">техперевооружение</label>
-											<input type="checkbox" class="form-check-input">
-										</div>
-										<div class="data-item">
-											<label class="data-label">вывод из эксплуатации</label>
-											<input type="checkbox" class="form-check-input">
-										</div>
+	      								<label class="data-item">
+											<span class="data-label">новое строительство</span>
+											<input type="checkbox" class="data-check" checked>
+										</label>
+										<label class="data-item">
+											<span class="data-label">реконструкция</span>
+											<input type="checkbox" class="data-check">
+										</label>
+										<label class="data-item">
+											<span class="data-label">консервация</span>
+											<input type="checkbox" class="data-check">
+										</label>
+										<label class="data-item">
+											<span class="data-label">техперевооружение</span>
+											<input type="checkbox" class="data-check">
+										</label>
+										<label class="data-item">
+											<span class="data-label">вывод из эксплуатации</span>
+											<input type="checkbox" class="data-check">
+										</label>
 	      							</div>
 	      						</div>
 	      						<div class="data-row">
-	      							<h5 style="width: 325px" class="text-end">Сроки реализации мероприятия (проекта):</h5>
-	      							<div class="data-item stretch">
+	      							<h5 class="text-end lm-fix">Сроки реализации мероприятия (проекта):</h5>
+	      							<div class="data-item ">
 										<label class="data-label">начало</label>
 										<input type="text" class="data-value smx-stretch" placeholder="год начала">
 									</div>
-									<div class="data-item stretch">
+									<div class="data-item ">
 										<label class="data-label">окончание</label>
 										<input type="text" class="data-value smx-stretch" placeholder="год окончания">
 									</div>
-									<div class="data-item stretch">
-										<label class="data-label fix-325">Назначение мероприятия (проекта):</label>
-	      								<select class="selectpicker data-value xl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите назначение">
+									<div class="data-item ">
+										<label class="data-label lm-fix">Назначение мероприятия (проекта):</label>
+	      								<select class="selectpicker data-value xl-stretch"  data-live-search="true" placeholder="Выберите назначение">
 										  	<option value="2020">Назначение 1</option>
 										  	<option value="2021">Назначение 2</option>
 										  	<option value="2022" >Назначение 3</option>
@@ -4113,29 +4113,29 @@
 	      							<button type="button" class="bttn ms-auto">Расчёт КВ</button>
 	      						</div>
 	      						<div class="data-row">
-	      							<h5 style="width: 325px" class="text-end">Способ распределения капитальных вложений:</h5>
-	      							<div class="data-item">
-										<label class="data-label">равномерно по количеству</label>
-										<input type="checkbox" class="form-check-input">
-									</div>
-									<div class="data-item">
-										<label class="data-label">по величине установленной мощности</label>
-										<input type="checkbox" class="form-check-input" checked>
-									</div>
+	      							<h5 class="text-end lm-fix">Способ распределения капитальных вложений:</h5>
+	      							<label class="data-item">
+										<span class="data-label">равномерно по количеству</span>
+										<input type="checkbox" class="data-check">
+									</label>
+									<label class="data-item">
+										<span class="data-label">по величине установленной мощности</span>
+										<input type="checkbox" class="data-check" checked>
+									</label>
 	      						</div>
 	      						<div class="data-row">
 	      							<div class="data-item">
-										<label class="data-label fix-325">Суммарные капитальные вложения в реализацию</label>
+										<label class="data-label lm-fix">Суммарные капитальные вложения в реализацию</label>
 										<input type="text" class="data-value">
 										<span class="data-unit">тыс. руб. без НДС</span>
 									</div>
 									<div class="data-row stretch">
-										<div class="data-item stretch">
+										<div class="data-item ">
 											<label class="data-label">в том числе ПИР</label>
 											<input type="text" class="data-value smx-stretch" >
 											<span class="data-unit">тыс. руб. без НДС</span>
 										</div>
-										<div class="data-item stretch">
+										<div class="data-item ">
 											<label class="data-label">и СМР</label>
 											<input type="text" class="data-value smx-stretch" >
 											<span class="data-unit">тыс. руб. без НДС</span>
@@ -4144,19 +4144,19 @@
 									
 	      						</div>
 	      						<div class="data-row">
-	      							<div class="data-item stretch">
-										<label class="data-label fix-325">Профинансировано до начала реализации схемы:</label>
+	      							<div class="data-item ">
+										<label class="data-label lm-fix">Профинансировано до начала реализации схемы:</label>
 										<input type="text" class="data-value smx-stretch">
 										<span class="data-unit">тыс. руб. без НДС</span>
 									</div>
-									<div class="data-item stretch">
+									<div class="data-item ">
 										<label class="data-label">Остаток финансирования:</label>
 										<input type="text" class="data-value smx-stretch" >
 										<span class="data-unit">тыс. руб. без НДС</span>
 									</div>
 	      						</div>
 	      						<div class="data-row">
-	      							<h5 class="align-self-start text-end" style="width: 325px;">Источники финансирования реализации мероприятия:</h5>
+	      							<h5 class="align-self-start text-end lm-fix">Источники финансирования реализации мероприятия:</h5>
 	      							<div class="data-row">
 	      								<div class="data-table-block stretch">
 	      									<div class="data-item">

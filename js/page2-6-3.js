@@ -28,6 +28,15 @@ $(document).ready(function () {
       modal: '',
       tab: false,
       firstTab: false
+    },
+    {
+      name: 'TZdistricts',
+      type: 'simple-scroll',
+      columns: [],
+      height: '22vh',
+      modal: 'editData',
+      tab: false,
+      firstTab: true
     }
   ];
 

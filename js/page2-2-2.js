@@ -27,6 +27,7 @@ $(document).ready(function () {
       name: 'tsoServ',
       type: 'full',
       columns: [],
+      height:'55vh',
       modal: '',
       tab: true,
       firstTab: true
@@ -35,6 +36,7 @@ $(document).ready(function () {
       name: 'srcList',
       type: 'full',
       columns: [],
+      height:'57vh',
       modal: '',
       tab: true,
       firstTab: false
@@ -43,6 +45,7 @@ $(document).ready(function () {
       name: 'heatPoint',
       type: 'full',
       columns: [],
+      height:'59vh',
       modal: '',
       tab: true,
       firstTab: false
@@ -51,6 +54,7 @@ $(document).ready(function () {
       name: 'extraData',
       type: 'full',
       columns: [],
+      height:'59vh',
       modal: '',
       tab: true,
       firstTab: false

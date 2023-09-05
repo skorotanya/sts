@@ -24,6 +24,7 @@ $(document).ready(function () {
       name: 'eco',
       type: 'full',
       columns: [],
+      height: '63vh',
       modal: '',
       tab: false,
       firstTab: false
@@ -37,6 +38,11 @@ $(document).ready(function () {
 
     /* Double click on row ecoTable */
     $('#ecoTable tbody').on('dblclick', 'tr', function () {
+      showModal('editEcoData');
+    } );
+
+    /* Click on Add button */
+     $('.bttn-edit-data').on('click', (e) => {
       showModal('editEcoData');
     } );
 

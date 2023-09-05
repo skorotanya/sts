@@ -24,6 +24,7 @@ $(document).ready(function () {
       name: 'hpProduction',
       type: 'full',
       columns: [],
+      height: '59vh',
       modal: '',
       tab: true,
       firstTab: true
@@ -32,6 +33,7 @@ $(document).ready(function () {
       name: 'hpTransfer',
       type: 'full',
       columns: [],
+      height: '59vh',
       modal: '',
       tab: true,
       firstTab: false

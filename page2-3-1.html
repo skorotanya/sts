@@ -9,14 +9,40 @@
 	
 	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="css/datatables.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/css/bootstrap-select.min.css">
 
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 
 </head>
 <body>
-	
-	<div class="main-container welcome d-flex">
+	<div class="preloader">
+		<div class="preloader-img">
+			<svg version="1.1" id="L2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+				<circle fill="none" stroke="#292e32" stroke-width="4" stroke-miterlimit="10" cx="50" cy="50" r="48"/>
+				<line fill="none" stroke-linecap="round" stroke="#5f2fe7" stroke-width="4" stroke-miterlimit="10" x1="50" y1="50" x2="85" y2="50.5">
+				  <animateTransform 
+				       attributeName="transform" 
+				       dur="2s"
+				       type="rotate"
+				       from="0 50 50"
+				       to="360 50 50"
+				       repeatCount="indefinite" />
+				</line>
+				<line fill="none" stroke-linecap="round" stroke="#5f2fe7" stroke-width="4" stroke-miterlimit="10" x1="50" y1="50" x2="49.5" y2="74">
+				  <animateTransform 
+				       attributeName="transform" 
+				       dur="15s"
+				       type="rotate"
+				       from="0 50 50"
+				       to="360 50 50"
+				       repeatCount="indefinite" />
+				</line>
+			</svg>
+		</div>
+	</div>
+	<div class="main-container d-flex">
 		<div class="sidebar offcanvas offcanvas-start" id="offcanvas-sidebar" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1">
 			<div class="user d-flex">
 				<img src="images/user-logo.png" title="Пользователь" alt="Логотип">
@@ -164,22 +190,3105 @@
 				</svg>
 			</a>
 		</div>
-		<div class="data-block text-center justify-content-center align-items-center w-100">
+		<div class="data-block workspace">
 			<div class="data-block title-block">
-				<h2 class="text-white text-opacity-50">Автоматизированная информационная система</h2>
-				<h1 class="text-white fs-1">"Схема теплоснабжения"</h1>
+				<div class="data-row">
+					<ul class="breadcrumb">
+						<li class="breadcrumb-item"><a class="ref-color" href="#">Главная</a></li>
+						<li class="breadcrumb-item">Источники тепловой энергии - Перечень источников</li>
+					</ul>
+				</div>
+				<div class="data-row">
+					<h1 class="title">Источники тепловой энергии</h1>
+					
+					<div class="data-item data-item-right">
+						<button class="bttn bttn-color bttn-edit-data" type="button">Добавить/Удалить</button>
+						<a class="bttn bttn-color bttn-load-data" type="button" href="page2-2-1-2.html">Загрузить данные</a>
+						<button class="bttn bttn-color bttn-excel-export" type="button">Выгрузить в Excel</button>
+					</div>
+				</div>
+				<div class="data-block static-block">
+		  			<div class="data-row">
+						<div class="data-item">
+							<label class="data-label">Выберите год:</label>
+							<select class="selectpicker md-fix param-calc-year">
+							  <option value="2020">01.01.2021</option>
+							  <option value="2021">01.01.2022</option>
+							  <option value="2022" selected>01.01.2023</option>
+							  <option value="2023">01.01.2024</option>
+							</select>
+						</div>
+						<div class="note">Базовый год -&nbsp;<span class="note-base-year">2022 (01.01.2023)</span>; следующие года - перспективные.</div>
+						<div class="note">Обновление связей данных -&nbsp;<span class="note-update-date">14.11.2022</span>.</div>
+					</div>
+					<div class="data-row">
+						<div class="data-item ">
+							<label class="data-label">Эксплуатирующая ТСО:</label>
+							<select class="selectpicker data-value lg-stretch" data-live-search="true" placeholder="Выберите наименование ТСО">
+							  	<option value="1">ТСО 1</option>
+							  	<option value="2">ТСО 2</option>
+							  	<option value="3">ТСО 3</option>
+							  	<option value="4">ТСО 4</option>
+							</select>
+						</div>
+						<div class="data-item ">
+							<label class="data-label">Тип источника:</label>
+							<select class="selectpicker data-value lg-stretch" data-live-search="true" placeholder="Выберите наименование источника">
+							  	<option value="1">Тип 1</option>
+							  	<option value="2">Тип 2</option>
+							  	<option value="3">Тип 3</option>
+							 	<option value="4">Тип 4</option>
+							</select>
+						</div>
+						<div class="data-item d-none">
+							<label class="data-label">Параметр источника:</label>
+							<select class="selectpicker data-value lg-stretch" data-live-search="true" placeholder="Выберите наименование источника">
+							  	<option value="1">Параметр 1</option>
+							  	<option value="2">Параметр 2</option>
+							  	<option value="3">Параметр 3</option>
+							 	<option value="4">Параметр 4</option>
+							</select>
+						</div>
+					</div>
+					<div class="data-row">
+		  				<div class="data-row">
+							<label class="data-item">
+								<span class="data-label">Регулируемые</span>
+								<input type="checkbox" class="data-check">
+							</label>
+						</div>
+						<div class="data-row">
+							<label class="data-item">
+								<span class="data-label">ТЭС</span>
+								<input type="checkbox" class="data-check">
+							</label>
+							<label class="data-item">
+								<span class="data-label">Котельные</span>
+								<input type="checkbox" class="data-check">
+							</label>
+						</div>
+						<div class="data-row">
+							<label class="data-item">
+								<span class="data-label">Перспективные</span>
+								<input type="checkbox" class="data-check">
+							</label>
+							<label class="data-item">
+								<span class="data-label">Выводимые из эксплуатации</span>
+								<input type="checkbox" class="data-check">
+							</label>
+						</div>
+					</div>
+		  		</div>
 			</div>
-			<div class="data-block text-white w-50 align-self-center mt-4 mb-3">
-				<h3 class="text-white text-opacity-75">Данная страница ещё находится в разработке.</h3>
-				<p>Попробуйте пока выбрать другой пункт меню или вернитесь к <a href="javascript:history.back()" style="color: var(--action-color);">предыдущей странице</a>.</p>
+		  	<div class="data-block main-content">
+				<div class="tab-content">
+					<div class="dropdown">
+					  	<button class="bttn bttn-square bttn-burger" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+					    	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 160h352M80 256h352M80 352h352"/></svg>
+					  	</button>
+					  	<ul class="dropdown-menu" role="tablist">
+						    <li>
+						    	<button class="dropdown-item active" data-bs-toggle="tab" data-bs-target="#sourceListTab" type="button" role="tab" aria-controls="sourceListTab" aria-selected="false">Перечень источников на расчетный год</button>
+						  	</li>
+						  	<li>
+						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#sourceByYearTab" type="button" role="tab" aria-controls="sourceByYearTab" aria-selected="false">Перечень источников по годам</button>
+						  	</li>
+						  	<li>
+						    	<button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#powerTab" type="button" role="tab" aria-controls="powerTab" aria-selected="false">Мощность и нагрузки</button>
+						  	</li>
+					  	</ul>
+					</div>
+				  	<div class="tab-pane fade show active" id="sourceListTab" role="tabpanel" >
+				  		<div class="data-block">
+				  			<h3>Перечень источников на расчетный год</h3>
+				  			<div class="table-block">
+								<div class="table-buttons sourceListTable-buttons"></div>
+						  		<table id="sourceListTable" class="display compact table-clicked" style="width:100%">
+								    <thead>
+								        <tr>
+								            <th>УНОМ ТП</th>
+								            <th>Наименование</th>
+								            <th>Адрес</th>
+								            <th>Дата</th>
+								            <th>Тип</th>
+								            <th>Округ</th>
+								            <th>Состояние</th>
+								            <th>Полезная энергия<span class="data-unit">(Гкал)</span></th>
+								            <th>Тепловая энергия<span class="data-unit">(Гкал)</span></th>
+								            <th>Источники</th>
+								        </tr>
+								        <tr class="filter-row ">
+								            <th class="dtfc-fixed-left" style="left:0; position:sticky;"><input type="text" class="filter-col-0"/></th>
+								            <th><input type="text" class="filter-col-1"/></th>
+								            <th><input type="text" class="filter-col-2"/></th>
+								            <th><input type="text" class="filter-col-3"/></th>
+								            <th><input type="text" class="filter-col-4"/></th>
+								            <th><input type="text" class="filter-col-5"/></th>
+								            <th><input type="text" class="filter-col-6"/></th>
+								            <th><input type="text" class="filter-col-7"/></th>
+								            <th><input type="text" class="filter-col-8"/></th>
+								            <th><input type="text" class="filter-col-9"/></th>
+								        </tr>
+								    </thead>
+								    <tbody>
+								        <tr>
+								            <td>1</td>
+								            <td>ТСО 1</td>
+								            <td>Row 1 Data 3</td>
+								            <td>Row 1 Data 4</td>
+								            <td>Row 1 Data 5</td>
+								            <td>Row 1 Data 6</td>
+								            <td>Row 1 Data 7</td>
+								            <td>Row 1 Data 8</td>
+								            <td>Row 1 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>2</td>
+								            <td>ТСО 2</td>
+								            <td>Row 2 Data 3</td>
+								            <td>Row 2 Data 4</td>
+								            <td>Row 2 Data 5</td>
+								            <td>Row 2 Data 6</td>
+								            <td>Row 2 Data 7</td>
+								            <td>Row 2 Data 8</td>
+								            <td>Row 2 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>3</td>
+								            <td>ТСО 3</td>
+								            <td>Row 3 Data 3</td>
+								            <td>Row 3 Data 4</td>
+								            <td>Row 3 Data 5</td>
+								            <td>Row 3 Data 6</td>
+								            <td>Row 3 Data 7</td>
+								            <td>Row 3 Data 8</td>
+								            <td>Row 3 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>4</td>
+								            <td>ТСО 4</td>
+								            <td>Row 4 Data 3</td>
+								            <td>Row 4 Data 4</td>
+								            <td>Row 4 Data 5</td>
+								            <td>Row 4 Data 6</td>
+								            <td>Row 4 Data 7</td>
+								            <td>Row 4 Data 8</td>
+								            <td>Row 4 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>5</td>
+								            <td>ТСО 5</td>
+								            <td>Row 5 Data 3</td>
+								            <td>Row 5 Data 4</td>
+								            <td>Row 5 Data 5</td>
+								            <td>Row 5 Data 6</td>
+								            <td>Row 5 Data 7</td>
+								            <td>Row 5 Data 8</td>
+								            <td>Row 5 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>6</td>
+								            <td>ТСО 6</td>
+								            <td>Row 6 Data 3</td>
+								            <td>Row 6 Data 4</td>
+								            <td>Row 6 Data 5</td>
+								            <td>Row 6 Data 6</td>
+								            <td>Row 6 Data 7</td>
+								            <td>Row 6 Data 8</td>
+								            <td>Row 6 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>7</td>
+								            <td>ТСО 7</td>
+								            <td>Row 7 Data 3</td>
+								            <td>Row 7 Data 4</td>
+								            <td>Row 7 Data 5</td>
+								            <td>Row 7 Data 6</td>
+								            <td>Row 7 Data 7</td>
+								            <td>Row 7 Data 8</td>
+								            <td>Row 7 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>8</td>
+								            <td>ТСО 8</td>
+								            <td>Row 8 Data 3</td>
+								            <td>Row 8 Data 4</td>
+								            <td>Row 8 Data 5</td>
+								            <td>Row 8 Data 6</td>
+								            <td>Row 8 Data 7</td>
+								            <td>Row 8 Data 8</td>
+								            <td>Row 8 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>9</td>
+								            <td>ТСО 9</td>
+								            <td>Row 9 Data 3</td>
+								            <td>Row 9 Data 4</td>
+								            <td>Row 9 Data 5</td>
+								            <td>Row 9 Data 6</td>
+								            <td>Row 9 Data 7</td>
+								            <td>Row 9 Data 8</td>
+								            <td>Row 9 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>10</td>
+								            <td>ТСО 10</td>
+								            <td>Row 10 Data 3</td>
+								            <td>Row 10 Data 4</td>
+								            <td>Row 10 Data 5</td>
+								            <td>Row 10 Data 6</td>
+								            <td>Row 10 Data 7</td>
+								            <td>Row 10 Data 8</td>
+								            <td>Row 10 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>1</td>
+								            <td>ТСО 1</td>
+								            <td>Row 1 Data 3</td>
+								            <td>Row 1 Data 4</td>
+								            <td>Row 1 Data 5</td>
+								            <td>Row 1 Data 6</td>
+								            <td>Row 1 Data 7</td>
+								            <td>Row 1 Data 8</td>
+								            <td>Row 1 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>2</td>
+								            <td>ТСО 2</td>
+								            <td>Row 2 Data 3</td>
+								            <td>Row 2 Data 4</td>
+								            <td>Row 2 Data 5</td>
+								            <td>Row 2 Data 6</td>
+								            <td>Row 2 Data 7</td>
+								            <td>Row 2 Data 8</td>
+								            <td>Row 2 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>3</td>
+								            <td>ТСО 3</td>
+								            <td>Row 3 Data 3</td>
+								            <td>Row 3 Data 4</td>
+								            <td>Row 3 Data 5</td>
+								            <td>Row 3 Data 6</td>
+								            <td>Row 3 Data 7</td>
+								            <td>Row 3 Data 8</td>
+								            <td>Row 3 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>4</td>
+								            <td>ТСО 4</td>
+								            <td>Row 4 Data 3</td>
+								            <td>Row 4 Data 4</td>
+								            <td>Row 4 Data 5</td>
+								            <td>Row 4 Data 6</td>
+								            <td>Row 4 Data 7</td>
+								            <td>Row 4 Data 8</td>
+								            <td>Row 4 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>5</td>
+								            <td>ТСО 5</td>
+								            <td>Row 5 Data 3</td>
+								            <td>Row 5 Data 4</td>
+								            <td>Row 5 Data 5</td>
+								            <td>Row 5 Data 6</td>
+								            <td>Row 5 Data 7</td>
+								            <td>Row 5 Data 8</td>
+								            <td>Row 5 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>6</td>
+								            <td>ТСО 6</td>
+								            <td>Row 6 Data 3</td>
+								            <td>Row 6 Data 4</td>
+								            <td>Row 6 Data 5</td>
+								            <td>Row 6 Data 6</td>
+								            <td>Row 6 Data 7</td>
+								            <td>Row 6 Data 8</td>
+								            <td>Row 6 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>7</td>
+								            <td>ТСО 7</td>
+								            <td>Row 7 Data 3</td>
+								            <td>Row 7 Data 4</td>
+								            <td>Row 7 Data 5</td>
+								            <td>Row 7 Data 6</td>
+								            <td>Row 7 Data 7</td>
+								            <td>Row 7 Data 8</td>
+								            <td>Row 7 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>8</td>
+								            <td>ТСО 8</td>
+								            <td>Row 8 Data 3</td>
+								            <td>Row 8 Data 4</td>
+								            <td>Row 8 Data 5</td>
+								            <td>Row 8 Data 6</td>
+								            <td>Row 8 Data 7</td>
+								            <td>Row 8 Data 8</td>
+								            <td>Row 8 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>9</td>
+								            <td>ТСО 9</td>
+								            <td>Row 9 Data 3</td>
+								            <td>Row 9 Data 4</td>
+								            <td>Row 9 Data 5</td>
+								            <td>Row 9 Data 6</td>
+								            <td>Row 9 Data 7</td>
+								            <td>Row 9 Data 8</td>
+								            <td>Row 9 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>10</td>
+								            <td>ТСО 10</td>
+								            <td>Row 10 Data 3</td>
+								            <td>Row 10 Data 4</td>
+								            <td>Row 10 Data 5</td>
+								            <td>Row 10 Data 6</td>
+								            <td>Row 10 Data 7</td>
+								            <td>Row 10 Data 8</td>
+								            <td>Row 10 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								    </tbody>
+								</table>
+							</div>
+							<div class="data-row table-summary">
+								<div class="data-item rows-count">
+									<h5>Всего записей:</h5>
+									<p><span class="mark-color">1 000</span></p>
+								</div>
+								<div class="data-table-block">
+									<h5>Установленная мощность:</h5>
+									<p class="data-item">- электрическая: <span class="mark-color">321</span><span class="data-unit">Гкал/ч</span></p>
+									<p class="data-item">- тепловая: <span class="mark-color">123</span><span class="data-unit">Гкал/ч</span></p>
+								</div>
+								<div class="data-table-block">
+									<p class="data-item">Тепловая мощность нетто: <span class="mark-color">321</span><span class="data-unit">Гкал/ч</span></p>
+									<p class="data-item">Резерв (+) / дефицит (-) тепловой мощности:<span class="mark-color">123</span><span class="data-unit">Гкал/ч</span></p>
+								</div>
+								<div class="data-table-block">
+									<h5>Расчетная тепловая нагрузка:</h5>
+									<p class="data-item">- горячая вода: <span class="mark-color">321</span><span class="data-unit">Гкал/ч</span></p>
+									<p class="data-item">- пар: <span class="mark-color">321</span><span class="data-unit">т/ч</span></p>
+								</div>
+							</div>
+				  		</div>	
+					</div>
+				  	<div class="tab-pane fade" id="sourceByYearTab" role="tabpanel" >
+				  		<div class="data-block">
+				  			<h3>Перечень источников по годам</h3>
+				  			<div class="table-block">
+								<div class="table-buttons sourceByYearTable-buttons"></div>
+						  		<table id="sourceByYearTable" class="tableblock-table display compact" style="width:100%">
+								    <thead>
+								        <tr>
+								            <th>УНОМ ТП</th>
+								            <th>УНОМ ИСТ</th>
+								            <th>Адрес</th>
+								            <th>Дата</th>
+								            <th>Тип</th>
+								            <th>Округ</th>
+								            <th>Состояние</th>
+								            <th>Полезная энергия</th>
+								            <th>Тепловая энергия</th>
+								            <th>Источники</th>
+								        </tr>
+								        <tr class="filter-row ">
+								            <th class="dtfc-fixed-left" style="left:0; position:sticky;"><input type="text" class="filter-col-0"/></th>
+								            <th><input type="text" class="filter-col-1"/></th>
+								            <th><input type="text" class="filter-col-2"/></th>
+								            <th><input type="text" class="filter-col-3"/></th>
+								            <th><input type="text" class="filter-col-4"/></th>
+								            <th><input type="text" class="filter-col-5"/></th>
+								            <th><input type="text" class="filter-col-6"/></th>
+								            <th><input type="text" class="filter-col-7"/></th>
+								            <th><input type="text" class="filter-col-8"/></th>
+								            <th><input type="text" class="filter-col-9"/></th>
+								        </tr>
+								    </thead>
+								    <tbody>
+								        <tr>
+								            <td>1</td>
+								            <td>ТСО 1</td>
+								            <td>Row 1 Data 3</td>
+								            <td>Row 1 Data 4</td>
+								            <td>Row 1 Data 5</td>
+								            <td>Row 1 Data 6</td>
+								            <td>Row 1 Data 7</td>
+								            <td>Row 1 Data 8</td>
+								            <td>Row 1 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>2</td>
+								            <td>ТСО 2</td>
+								            <td>Row 2 Data 3</td>
+								            <td>Row 2 Data 4</td>
+								            <td>Row 2 Data 5</td>
+								            <td>Row 2 Data 6</td>
+								            <td>Row 2 Data 7</td>
+								            <td>Row 2 Data 8</td>
+								            <td>Row 2 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>3</td>
+								            <td>ТСО 3</td>
+								            <td>Row 3 Data 3</td>
+								            <td>Row 3 Data 4</td>
+								            <td>Row 3 Data 5</td>
+								            <td>Row 3 Data 6</td>
+								            <td>Row 3 Data 7</td>
+								            <td>Row 3 Data 8</td>
+								            <td>Row 3 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>4</td>
+								            <td>ТСО 4</td>
+								            <td>Row 4 Data 3</td>
+								            <td>Row 4 Data 4</td>
+								            <td>Row 4 Data 5</td>
+								            <td>Row 4 Data 6</td>
+								            <td>Row 4 Data 7</td>
+								            <td>Row 4 Data 8</td>
+								            <td>Row 4 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>5</td>
+								            <td>ТСО 5</td>
+								            <td>Row 5 Data 3</td>
+								            <td>Row 5 Data 4</td>
+								            <td>Row 5 Data 5</td>
+								            <td>Row 5 Data 6</td>
+								            <td>Row 5 Data 7</td>
+								            <td>Row 5 Data 8</td>
+								            <td>Row 5 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>6</td>
+								            <td>ТСО 6</td>
+								            <td>Row 6 Data 3</td>
+								            <td>Row 6 Data 4</td>
+								            <td>Row 6 Data 5</td>
+								            <td>Row 6 Data 6</td>
+								            <td>Row 6 Data 7</td>
+								            <td>Row 6 Data 8</td>
+								            <td>Row 6 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>7</td>
+								            <td>ТСО 7</td>
+								            <td>Row 7 Data 3</td>
+								            <td>Row 7 Data 4</td>
+								            <td>Row 7 Data 5</td>
+								            <td>Row 7 Data 6</td>
+								            <td>Row 7 Data 7</td>
+								            <td>Row 7 Data 8</td>
+								            <td>Row 7 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>8</td>
+								            <td>ТСО 8</td>
+								            <td>Row 8 Data 3</td>
+								            <td>Row 8 Data 4</td>
+								            <td>Row 8 Data 5</td>
+								            <td>Row 8 Data 6</td>
+								            <td>Row 8 Data 7</td>
+								            <td>Row 8 Data 8</td>
+								            <td>Row 8 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>9</td>
+								            <td>ТСО 9</td>
+								            <td>Row 9 Data 3</td>
+								            <td>Row 9 Data 4</td>
+								            <td>Row 9 Data 5</td>
+								            <td>Row 9 Data 6</td>
+								            <td>Row 9 Data 7</td>
+								            <td>Row 9 Data 8</td>
+								            <td>Row 9 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>10</td>
+								            <td>ТСО 10</td>
+								            <td>Row 10 Data 3</td>
+								            <td>Row 10 Data 4</td>
+								            <td>Row 10 Data 5</td>
+								            <td>Row 10 Data 6</td>
+								            <td>Row 10 Data 7</td>
+								            <td>Row 10 Data 8</td>
+								            <td>Row 10 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>1</td>
+								            <td>ТСО 1</td>
+								            <td>Row 1 Data 3</td>
+								            <td>Row 1 Data 4</td>
+								            <td>Row 1 Data 5</td>
+								            <td>Row 1 Data 6</td>
+								            <td>Row 1 Data 7</td>
+								            <td>Row 1 Data 8</td>
+								            <td>Row 1 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>2</td>
+								            <td>ТСО 2</td>
+								            <td>Row 2 Data 3</td>
+								            <td>Row 2 Data 4</td>
+								            <td>Row 2 Data 5</td>
+								            <td>Row 2 Data 6</td>
+								            <td>Row 2 Data 7</td>
+								            <td>Row 2 Data 8</td>
+								            <td>Row 2 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>3</td>
+								            <td>ТСО 3</td>
+								            <td>Row 3 Data 3</td>
+								            <td>Row 3 Data 4</td>
+								            <td>Row 3 Data 5</td>
+								            <td>Row 3 Data 6</td>
+								            <td>Row 3 Data 7</td>
+								            <td>Row 3 Data 8</td>
+								            <td>Row 3 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>4</td>
+								            <td>ТСО 4</td>
+								            <td>Row 4 Data 3</td>
+								            <td>Row 4 Data 4</td>
+								            <td>Row 4 Data 5</td>
+								            <td>Row 4 Data 6</td>
+								            <td>Row 4 Data 7</td>
+								            <td>Row 4 Data 8</td>
+								            <td>Row 4 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>5</td>
+								            <td>ТСО 5</td>
+								            <td>Row 5 Data 3</td>
+								            <td>Row 5 Data 4</td>
+								            <td>Row 5 Data 5</td>
+								            <td>Row 5 Data 6</td>
+								            <td>Row 5 Data 7</td>
+								            <td>Row 5 Data 8</td>
+								            <td>Row 5 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>6</td>
+								            <td>ТСО 6</td>
+								            <td>Row 6 Data 3</td>
+								            <td>Row 6 Data 4</td>
+								            <td>Row 6 Data 5</td>
+								            <td>Row 6 Data 6</td>
+								            <td>Row 6 Data 7</td>
+								            <td>Row 6 Data 8</td>
+								            <td>Row 6 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>7</td>
+								            <td>ТСО 7</td>
+								            <td>Row 7 Data 3</td>
+								            <td>Row 7 Data 4</td>
+								            <td>Row 7 Data 5</td>
+								            <td>Row 7 Data 6</td>
+								            <td>Row 7 Data 7</td>
+								            <td>Row 7 Data 8</td>
+								            <td>Row 7 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>8</td>
+								            <td>ТСО 8</td>
+								            <td>Row 8 Data 3</td>
+								            <td>Row 8 Data 4</td>
+								            <td>Row 8 Data 5</td>
+								            <td>Row 8 Data 6</td>
+								            <td>Row 8 Data 7</td>
+								            <td>Row 8 Data 8</td>
+								            <td>Row 8 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>9</td>
+								            <td>ТСО 9</td>
+								            <td>Row 9 Data 3</td>
+								            <td>Row 9 Data 4</td>
+								            <td>Row 9 Data 5</td>
+								            <td>Row 9 Data 6</td>
+								            <td>Row 9 Data 7</td>
+								            <td>Row 9 Data 8</td>
+								            <td>Row 9 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>10</td>
+								            <td>ТСО 10</td>
+								            <td>Row 10 Data 3</td>
+								            <td>Row 10 Data 4</td>
+								            <td>Row 10 Data 5</td>
+								            <td>Row 10 Data 6</td>
+								            <td>Row 10 Data 7</td>
+								            <td>Row 10 Data 8</td>
+								            <td>Row 10 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								    </tbody>
+								</table>
+							</div>
+							<div class="data-row table-summary">
+								<div class="data-item rows-count">
+									<h5>Всего записей:</h5>
+									<p><span class="mark-color">10</span></p>
+								</div>
+								<div class="scroll-table-wrapper stretch">
+									<table style="white-space: nowrap; width: 100%;">
+										<thead>
+											<tr>
+			  									<th colspan="2">Расчётный год</th>
+			  									<th>01.01.2022</th>
+			  									<th>01.01.2023</th>
+			  									<th>01.01.2024</th>
+			  									<th>01.01.2025</th>
+			  									<th>01.01.2026</th>
+			  									<th>01.01.2027</th>
+			  									<th>01.01.2028</th>
+			  									<th>01.01.2029</th>
+			  									<th>01.01.2030</th>
+			  									<th>01.01.2031</th>
+			  									<th>01.01.2032</th>
+			  									<th>01.01.2033</th>
+			  									<th>01.01.2034</th>
+			  									<th>01.01.2035</th>
+			  								</tr>
+										</thead>
+										<tbody>
+											<tr>
+			  									<td colspan="2">Количество источников всего, <span class="data-unit">шт.</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  								</tr>
+			  								<tr>
+			  									<td colspan="2">- включая регулируемые</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  								</tr>
+			  								<tr>
+			  									<td rowspan="2">- в том числе:</td>
+			  									<td>ТЭС</td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  								</tr>
+			  								<tr>
+			  									<td>котельные</td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  								</tr>
+			  								<tr>
+			  									<td colspan="2">∑ N<sub>уст</sub>, <span class="data-unit">МВт</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  								</tr>
+			  								<tr>
+			  									<td colspan="2">∑ Q<sub>уст</sub>, <span class="data-unit">Гкал/ч</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  								</tr>
+										</tbody> 
+		  							</table>
+								</div>
+							</div>
+				  		</div>	
+					</div>
+				  	<div class="tab-pane fade" id="powerTab" role="tabpanel">
+				  		<div class="data-block">
+				  			<h3>Мощность и нагрузки</h3>
+				  			<div class="table-block">
+								<div class="table-buttons powerTable-buttons"></div>
+						  		<table id="powerTable" class="display compact" style="width:100%">
+								    <thead>
+								        <tr>
+								            <th>УНОМ ТЗ</th>
+								            <th>УНОМ ТП</th>
+								            <th>Адрес</th>
+								            <th>Дата</th>
+								            <th>Тип</th>
+								            <th>Округ</th>
+								            <th>Состояние</th>
+								            <th>Полезная энергия</th>
+								            <th>Тепловая энергия</th>
+								            <th>Источники</th>
+								        </tr>
+								        <tr class="filter-row ">
+								            <th class="dtfc-fixed-left" style="left:0; position:sticky;"><input type="text" class="filter-col-0"/></th>
+								            <th><input type="text" class="filter-col-1"/></th>
+								            <th><input type="text" class="filter-col-2"/></th>
+								            <th><input type="text" class="filter-col-3"/></th>
+								            <th><input type="text" class="filter-col-4"/></th>
+								            <th><input type="text" class="filter-col-5"/></th>
+								            <th><input type="text" class="filter-col-6"/></th>
+								            <th><input type="text" class="filter-col-7"/></th>
+								            <th><input type="text" class="filter-col-8"/></th>
+								            <th><input type="text" class="filter-col-9"/></th>
+								        </tr>
+								    </thead>
+								    <tbody>
+								        <tr>
+								            <td>1</td>
+								            <td>ТСО 1</td>
+								            <td>Row 1 Data 3</td>
+								            <td>Row 1 Data 4</td>
+								            <td>Row 1 Data 5</td>
+								            <td>Row 1 Data 6</td>
+								            <td>Row 1 Data 7</td>
+								            <td>Row 1 Data 8</td>
+								            <td>Row 1 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>2</td>
+								            <td>ТСО 2</td>
+								            <td>Row 2 Data 3</td>
+								            <td>Row 2 Data 4</td>
+								            <td>Row 2 Data 5</td>
+								            <td>Row 2 Data 6</td>
+								            <td>Row 2 Data 7</td>
+								            <td>Row 2 Data 8</td>
+								            <td>Row 2 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>3</td>
+								            <td>ТСО 3</td>
+								            <td>Row 3 Data 3</td>
+								            <td>Row 3 Data 4</td>
+								            <td>Row 3 Data 5</td>
+								            <td>Row 3 Data 6</td>
+								            <td>Row 3 Data 7</td>
+								            <td>Row 3 Data 8</td>
+								            <td>Row 3 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>4</td>
+								            <td>ТСО 4</td>
+								            <td>Row 4 Data 3</td>
+								            <td>Row 4 Data 4</td>
+								            <td>Row 4 Data 5</td>
+								            <td>Row 4 Data 6</td>
+								            <td>Row 4 Data 7</td>
+								            <td>Row 4 Data 8</td>
+								            <td>Row 4 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>5</td>
+								            <td>ТСО 5</td>
+								            <td>Row 5 Data 3</td>
+								            <td>Row 5 Data 4</td>
+								            <td>Row 5 Data 5</td>
+								            <td>Row 5 Data 6</td>
+								            <td>Row 5 Data 7</td>
+								            <td>Row 5 Data 8</td>
+								            <td>Row 5 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>6</td>
+								            <td>ТСО 6</td>
+								            <td>Row 6 Data 3</td>
+								            <td>Row 6 Data 4</td>
+								            <td>Row 6 Data 5</td>
+								            <td>Row 6 Data 6</td>
+								            <td>Row 6 Data 7</td>
+								            <td>Row 6 Data 8</td>
+								            <td>Row 6 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>7</td>
+								            <td>ТСО 7</td>
+								            <td>Row 7 Data 3</td>
+								            <td>Row 7 Data 4</td>
+								            <td>Row 7 Data 5</td>
+								            <td>Row 7 Data 6</td>
+								            <td>Row 7 Data 7</td>
+								            <td>Row 7 Data 8</td>
+								            <td>Row 7 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>8</td>
+								            <td>ТСО 8</td>
+								            <td>Row 8 Data 3</td>
+								            <td>Row 8 Data 4</td>
+								            <td>Row 8 Data 5</td>
+								            <td>Row 8 Data 6</td>
+								            <td>Row 8 Data 7</td>
+								            <td>Row 8 Data 8</td>
+								            <td>Row 8 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>9</td>
+								            <td>ТСО 9</td>
+								            <td>Row 9 Data 3</td>
+								            <td>Row 9 Data 4</td>
+								            <td>Row 9 Data 5</td>
+								            <td>Row 9 Data 6</td>
+								            <td>Row 9 Data 7</td>
+								            <td>Row 9 Data 8</td>
+								            <td>Row 9 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>10</td>
+								            <td>ТСО 10</td>
+								            <td>Row 10 Data 3</td>
+								            <td>Row 10 Data 4</td>
+								            <td>Row 10 Data 5</td>
+								            <td>Row 10 Data 6</td>
+								            <td>Row 10 Data 7</td>
+								            <td>Row 10 Data 8</td>
+								            <td>Row 10 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>1</td>
+								            <td>ТСО 1</td>
+								            <td>Row 1 Data 3</td>
+								            <td>Row 1 Data 4</td>
+								            <td>Row 1 Data 5</td>
+								            <td>Row 1 Data 6</td>
+								            <td>Row 1 Data 7</td>
+								            <td>Row 1 Data 8</td>
+								            <td>Row 1 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>2</td>
+								            <td>ТСО 2</td>
+								            <td>Row 2 Data 3</td>
+								            <td>Row 2 Data 4</td>
+								            <td>Row 2 Data 5</td>
+								            <td>Row 2 Data 6</td>
+								            <td>Row 2 Data 7</td>
+								            <td>Row 2 Data 8</td>
+								            <td>Row 2 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>3</td>
+								            <td>ТСО 3</td>
+								            <td>Row 3 Data 3</td>
+								            <td>Row 3 Data 4</td>
+								            <td>Row 3 Data 5</td>
+								            <td>Row 3 Data 6</td>
+								            <td>Row 3 Data 7</td>
+								            <td>Row 3 Data 8</td>
+								            <td>Row 3 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>4</td>
+								            <td>ТСО 4</td>
+								            <td>Row 4 Data 3</td>
+								            <td>Row 4 Data 4</td>
+								            <td>Row 4 Data 5</td>
+								            <td>Row 4 Data 6</td>
+								            <td>Row 4 Data 7</td>
+								            <td>Row 4 Data 8</td>
+								            <td>Row 4 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>5</td>
+								            <td>ТСО 5</td>
+								            <td>Row 5 Data 3</td>
+								            <td>Row 5 Data 4</td>
+								            <td>Row 5 Data 5</td>
+								            <td>Row 5 Data 6</td>
+								            <td>Row 5 Data 7</td>
+								            <td>Row 5 Data 8</td>
+								            <td>Row 5 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>6</td>
+								            <td>ТСО 6</td>
+								            <td>Row 6 Data 3</td>
+								            <td>Row 6 Data 4</td>
+								            <td>Row 6 Data 5</td>
+								            <td>Row 6 Data 6</td>
+								            <td>Row 6 Data 7</td>
+								            <td>Row 6 Data 8</td>
+								            <td>Row 6 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>7</td>
+								            <td>ТСО 7</td>
+								            <td>Row 7 Data 3</td>
+								            <td>Row 7 Data 4</td>
+								            <td>Row 7 Data 5</td>
+								            <td>Row 7 Data 6</td>
+								            <td>Row 7 Data 7</td>
+								            <td>Row 7 Data 8</td>
+								            <td>Row 7 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>8</td>
+								            <td>ТСО 8</td>
+								            <td>Row 8 Data 3</td>
+								            <td>Row 8 Data 4</td>
+								            <td>Row 8 Data 5</td>
+								            <td>Row 8 Data 6</td>
+								            <td>Row 8 Data 7</td>
+								            <td>Row 8 Data 8</td>
+								            <td>Row 8 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>9</td>
+								            <td>ТСО 9</td>
+								            <td>Row 9 Data 3</td>
+								            <td>Row 9 Data 4</td>
+								            <td>Row 9 Data 5</td>
+								            <td>Row 9 Data 6</td>
+								            <td>Row 9 Data 7</td>
+								            <td>Row 9 Data 8</td>
+								            <td>Row 9 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								        <tr>
+								            <td>10</td>
+								            <td>ТСО 10</td>
+								            <td>Row 10 Data 3</td>
+								            <td>Row 10 Data 4</td>
+								            <td>Row 10 Data 5</td>
+								            <td>Row 10 Data 6</td>
+								            <td>Row 10 Data 7</td>
+								            <td>Row 10 Data 8</td>
+								            <td>Row 10 Data 9</td>
+								            <td><a href="#">>></a></td>
+								        </tr>
+								    </tbody>
+								</table>
+							</div>
+							<div class="data-row table-summary">
+								<div class="data-item rows-count">
+									<h5>Всего записей:</h5>
+									<p><span class="mark-color">10</span></p>
+								</div>
+								<div class="scroll-table-wrapper stretch">
+									<table style="white-space: nowrap; width: 100%;">
+										<thead>
+											<tr>
+			  									<th>Расчётный год</th>
+			  									<th>01.01.2022</th>
+			  									<th>01.01.2023</th>
+			  									<th>01.01.2024</th>
+			  									<th>01.01.2025</th>
+			  									<th>01.01.2026</th>
+			  									<th>01.01.2027</th>
+			  									<th>01.01.2028</th>
+			  									<th>01.01.2029</th>
+			  									<th>01.01.2030</th>
+			  									<th>01.01.2031</th>
+			  									<th>01.01.2032</th>
+			  									<th>01.01.2033</th>
+			  									<th>01.01.2034</th>
+			  									<th>01.01.2035</th>
+			  								</tr>
+										</thead>
+										<tbody>
+											<tr>
+			  									<td>∑ N<sub>уст</sub>, <span class="data-unit">МВт</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  								</tr>
+			  								<tr>
+			  									<td>∑ Q<sub>уст</sub>, <span class="data-unit">Гкал/ч</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  								</tr>
+			  								<tr>
+			  									<td>∑ Q<sub>нетто</sub>, <span class="data-unit">Гкал/ч</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  								</tr>
+			  								<tr>
+			  									<td>∑ Q<sub>пр</sub><sup>пар</sup>, <span class="data-unit">т/ч</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  								</tr>
+			  								<tr>
+			  									<td>∑ Q<sub>пр</sub><sup>ГВ</sup>, <span class="data-unit">Гкал/ч</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  								</tr>
+			  								<tr>
+			  									<td>∑ Q<sub>резерв</sub>, <span class="data-unit">Гкал/ч</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  									<td><span class="mark-color">10</span></td>
+			  								</tr>
+										</tbody> 
+		  							</table>
+								</div>
+							</div>
+				  		</div>
+					</div>
+				</div>
 			</div>
 		</div>
+	</div>
+
+	<!-- Modal infoUser -->
+	<div class="modal fade" id="infoUser" tabindex="-1" aria-labelledby="infoUserLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h3 class="modal-title" id="infoUserLabel">Информация о пользователе</h3>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body">
+	        Фамилия Имя Отчество
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Закрыть</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- Modal exitUser -->
+	<div class="modal fade" id="exitUser" tabindex="-1" aria-labelledby="exitUserLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h3 class="modal-title" id="exitUserLabel">Предупреждение</h3>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body">
+	        Вы уверены, что хотите выйти из системы?
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
+	        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Да</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Modal Load Data -->
+	<div class="modal wide-modal fade" id="editData" data-bs-backdrop="static" tabindex="-1" aria-labelledby="editDataLabel" aria-hidden="true">
+	  	<div class="modal-dialog modal-dialog-centered">
+	    	<div class="modal-content">
+	      		<div class="modal-header"> 
+			        <h3 class="modal-title" id="editDataLabel">Редактирование данных источника тепловой энергии</h3>
+			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			    </div>
+			    <div class="modal-body">
+	      			<div class="data-block static-block data-params">
+	      				<div class="data-row">
+	      					<div class="data-item ">
+		      					<label class="data-label md-fix">Уникальный номер источника</label>
+	      						<select class="selectpicker data-value xxl-stretch" data-live-search="true" placeholder="Выберите..." title="УНОМ сети + наименование нач. и кон. камеры">
+								  	<option value="2020">2020</option>
+								  	<option value="2021">2021</option>
+								  	<option value="2022">2022</option>
+								  	<option value="2023">2023</option>
+								</select>
+							</div>
+							<div class="data-item ">
+		      					<label class="data-label md-fix">Наименование</label>
+	      						<select class="selectpicker data-value xxl-stretch" data-live-search="true" placeholder="Выберите..." title="УНОМ сети + наименование нач. и кон. камеры">
+								  	<option value="2020">Наименование 1</option>
+								  	<option value="2021">Наименование 2</option>
+								  	<option value="2022">Наименование 3</option>
+								  	<option value="2023">Наименование 4</option>
+								</select>
+							</div>
+							<div class="data-item ">
+		      					<label class="data-label md-fix">Адрес</label>
+	      						<select class="selectpicker data-value xxl-stretch" data-live-search="true" placeholder="Выберите..." title="УНОМ сети + наименование нач. и кон. камеры">
+								  	<option value="2020">Адрес 1</option>
+								  	<option value="2021">Адрес 2</option>
+								  	<option value="2022">Адрес 3</option>
+								  	<option value="2023">Адрес 4</option>
+								</select>
+							</div>
+							<div class="data-item ">
+		      					<label class="data-label md-fix">Тип источника</label>
+	      						<select class="selectpicker data-value xxl-stretch" data-live-search="true" placeholder="Выберите..." title="УНОМ сети + наименование нач. и кон. камеры">
+								  	<option value="2020">Тип 1</option>
+								  	<option value="2021">Тип 2</option>
+								  	<option value="2022">Тип 3</option>
+								  	<option value="2023">Тип 4</option>
+								</select>
+							</div>
+							<div class="data-item ">
+		      					<label class="data-label md-fix">Тарифная зона</label>
+	      						<select class="selectpicker data-value lg-stretch" data-live-search="true" placeholder="Выберите..." title="УНОМ сети + наименование нач. и кон. камеры">
+								  	<option value="2020">ТЗ 1</option>
+								  	<option value="2021">ТЗ 2</option>
+								  	<option value="2022">ТЗ 3</option>
+								  	<option value="2023">ТЗ 4</option>
+								</select>
+							</div>
+							<div class="data-row justify-content-end">
+								<div class="data-item">
+			      					<label class="data-label">∑ N<sub>уст</sub></label> = <span class="data-value mark-color">10</span><span class="data-unit">МВт</span>
+								</div>
+								<div class="data-item">
+			      					<label class="data-label">∑ Q<sub>уст</sub></label> = <span class="data-value mark-color">10</span><span class="data-unit">Гкал/ч</span>
+								</div>
+							</div>
+							
+						</div>
+		      		</div>
+	      			<div class="scroll-block-wrapper" style="max-height: 68vh;">
+	      				<div class="data-block scroll-block">
+					  		<div class="accordion data-block">
+							  	<div class="border-block">
+						      		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel1" aria-expanded="false">Общие сведения</button>
+								    <div id="panel1" class="accordion-collapse collapse">
+								      	<div class="accordion-body">
+								      		<div class="data-block">
+								      			<div class="data-row">
+								      				<div class="col-12 col-lg-6">
+								      					<div class="data-block me-lg-3">
+															<div class="data-item">
+										      					<label class="data-label xl-fix">Организация собственник</label>
+									      						<select class="selectpicker data-value stretch" data-live-search="true">
+																  	<option value="2020">2020</option>
+																  	<option value="2021">2021</option>
+																  	<option value="2022">2022</option>
+																  	<option value="2023">2023</option>
+																</select>
+															</div>
+															<div class="data-item">
+										      					<label class="data-label xl-fix">ИНН организации</label>
+									      						<select class="selectpicker data-value stretch" data-live-search="true">
+																  	<option value="2020">2020</option>
+																  	<option value="2021">2021</option>
+																  	<option value="2022">2022</option>
+																  	<option value="2023">2023</option>
+																</select>
+															</div>
+															<div class="data-row">
+																<label class="data-item">
+																	<span class="data-label xl-fix">Бесхозяйный источник</span>
+																	<input type="checkbox" class="data-check">
+																</label>
+																<label class="data-item">
+																	<span class="data-label xl-fix">Ветхий источник</span>
+																	<input type="checkbox" class="data-check">
+																</label>
+															</div>
+															<div class="data-row">
+																<div class="data-item ">
+										      						<label class="data-label xl-fix">Физический износ</label>
+										      						<input type="text" class="data-value smx-stretch" placeholder="Введите...">
+										      						<span class="data-unit">%</span>
+										      					</div>
+										      					<div class="data-item ">
+										      						<label class="data-label xl-fix">Амортизационный износ</label>
+										      						<input type="text" class="data-value smx-stretch" placeholder="Введите...">
+										      						<span class="data-unit">%</span>
+										      					</div>
+															</div>
+															<div class="data-row">
+																<div class="data-item ">
+										      						<label class="data-label xl-fix">Год ввода в эксплуатацию</label>
+										      						<input type="date" class="data-value md-stretch" placeholder="Введите дату">
+										      					</div>
+										      					<div class="data-item ">
+										      						<label class="data-label xl-fix" >Год ликвидации/демонтажа</label>
+										      						<input type="date" class="data-value md-stretch" placeholder="Введите дату">
+										      					</div>
+															</div>
+								      					</div>
+								      				</div>
+								      				<div class="col-12 col-lg-6">
+								      					<div class="data-block ms-lg-3">
+								      						<div class="data-item">
+										      					<label class="data-label xl-fix">Округ</label>
+									      						<select class="selectpicker data-value stretch" data-live-search="true" placeholder="Выберите...">
+																  	<option value="2020">2020</option>
+																  	<option value="2021">2021</option>
+																  	<option value="2022">2022</option>
+																  	<option value="2023">2023</option>
+																</select>
+															</div>
+								      						<div class="data-item">
+										      					<label class="data-label xl-fix">Район (поселение)</label>
+									      						<select class="selectpicker data-value stretch" data-live-search="true" placeholder="Выберите...">
+																  	<option value="2020">2020</option>
+																  	<option value="2021">2021</option>
+																  	<option value="2022">2022</option>
+																  	<option value="2023">2023</option>
+																</select>
+															</div>
+															<div class="data-item">
+									      						<label class="data-label xl-fix">Кадастровый номер ЗУ</label>
+									      						<input type="text" class="data-value stretch" placeholder="Введите кадастровый номер ЗУ">
+									      					</div>
+									      					<div class="data-item">
+									      						<label class="data-label xl-fix">Кадастровый номер ОКС</label>
+									      						<input type="text" class="data-value stretch" placeholder="Введите кадастровый номер ОКС">
+									      					</div>
+									      					<div class="data-item">
+									      						<label class="data-label xl-fix">ФИАС ЗУ</label>
+									      						<input type="text" class="data-value stretch" placeholder="Введите номер ФИАС ЗУ">
+									      					</div>
+									      					<div class="data-item">
+									      						<label class="data-label xl-fix">ФИАС ОКС</label>
+									      						<input type="text" class="data-value stretch" placeholder="Введите номер ОКС">
+									      					</div>
+								      					</div>
+								      				</div>
+								      			</div>
+								      		</div>
+								      	</div>
+								    </div>
+								</div>
+								<div class="border-block">
+								    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel2" aria-expanded="false">Параметры по годам реализации схемы</button>
+								    <div id="panel2" class="accordion-collapse collapse">
+								      	<div class="accordion-body">
+								      		<div class="data-block">
+								      			<div class="data-row">
+								      				<div class="data-item data-item-right">
+								      					<button class="bttn bttn-square bttn-icon-save" type="button"></button>
+														<button class="bttn" type="button">Привязать данные электронной модели</button>
+								      				</div>
+								      			</div>
+								      			<div class="scroll-table-wrapper">
+							      					<table class="table-inp-stretch" style="width:100%;">
+									      				<thead>
+									      					<tr>
+									      						<th>Год</th>
+										      					<th>Статус</th>
+										      					<th >УНОМ СТ</th>
+										      					<th>УНОМ ТСО</th>
+										      					<th >Наименование эксплуатирующей ТСО</th>
+										      					<th >N<sub>у</sub>, <span class="data-unit">МВт</span></th>
+										      					<th >Q<sub>у</sub>, <span class="data-unit">Гкал/ч</span></th>
+										      					<th >Q<sub>н</sub>, <span class="data-unit">Гкал/ч</span></th>
+										      					<th >∑ Q<sub>пр</sub><sup>ПАР</sup>, <span class="data-unit">т/ч</span></th>
+										      					<th >∑ Q<sub>пр</sub><sup>ГВ</sup>, <span class="data-unit">Гкал/ч</span></th>
+										      					<th >Q<sub>резер</sub>, <span class="data-unit">Гкал/ч</span></th>
+										      					<th >∑ Q<sub>Пр.</sub><sup>пред</sup>, <span class="data-unit">Гкал/ч</span></th>
+										      				</tr>
+									      				</thead>
+									      				<tbody>
+									      					<tr>
+									      						<td>01.01.2022</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>в работе</option>
+																	  	<option value="2">на консер.</option>
+																	  	<option value="3">демонтаж</option>
+																	</select>
+																</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>1</option>
+																	  	<option value="2">2</option>
+																	  	<option value="3">3</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="076" selected>076</option>
+																	  	<option value="077">077</option>
+																	  	<option value="078">078</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>ПАО «МОСЭНЕРГО»</option>
+																	  	<option value="2">ПАО «ВОРОНЕЖЭНЕРГО»</option>
+																	  	<option value="3">ПАО «МОСОБЛЭНЕРГО»</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="1200" disabled></td>
+									      						<td><input type="text" class="data-value" value="4200" disabled></td>
+									      						<td><input type="text" class="data-value" value="3800" disabled></td>
+									      						<td><input type="text" class="data-value" value="30" disabled></td>
+									      						<td><input type="text" class="data-value" value="3000" disabled></td>
+									      						<td><input type="text" class="data-value" value="782" disabled></td>
+									      						<td><input type="text" class="data-value" value="3400" disabled></td>
+									      					</tr>
+									      					<tr>
+									      						<td>01.01.2023</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>в работе</option>
+																	  	<option value="2">на консер.</option>
+																	  	<option value="3">демонтаж</option>
+																	</select>
+																</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>1</option>
+																	  	<option value="2">2</option>
+																	  	<option value="3">3</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="076" selected>076</option>
+																	  	<option value="077">077</option>
+																	  	<option value="078">078</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>ПАО «МОСЭНЕРГО»</option>
+																	  	<option value="2">ПАО «ВОРОНЕЖЭНЕРГО»</option>
+																	  	<option value="3">ПАО «МОСОБЛЭНЕРГО»</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="1200" disabled></td>
+									      						<td><input type="text" class="data-value" value="4200" disabled></td>
+									      						<td><input type="text" class="data-value" value="3800" disabled></td>
+									      						<td><input type="text" class="data-value" value="30" disabled></td>
+									      						<td><input type="text" class="data-value" value="3000" disabled></td>
+									      						<td><input type="text" class="data-value" value="782" disabled></td>
+									      						<td><input type="text" class="data-value" value="3400" disabled></td>
+									      					</tr>
+									      					<tr>
+									      						<td>01.01.2024</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>в работе</option>
+																	  	<option value="2">на консер.</option>
+																	  	<option value="3">демонтаж</option>
+																	</select>
+																</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>1</option>
+																	  	<option value="2">2</option>
+																	  	<option value="3">3</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="076" selected>076</option>
+																	  	<option value="077">077</option>
+																	  	<option value="078">078</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>ПАО «МОСЭНЕРГО»</option>
+																	  	<option value="2">ПАО «ВОРОНЕЖЭНЕРГО»</option>
+																	  	<option value="3">ПАО «МОСОБЛЭНЕРГО»</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="1200" disabled></td>
+									      						<td><input type="text" class="data-value" value="4200" disabled></td>
+									      						<td><input type="text" class="data-value" value="3800" disabled></td>
+									      						<td><input type="text" class="data-value" value="30" disabled></td>
+									      						<td><input type="text" class="data-value" value="3000" disabled></td>
+									      						<td><input type="text" class="data-value" value="782" disabled></td>
+									      						<td><input type="text" class="data-value" value="3400" disabled></td>
+									      					</tr>
+									      					<tr>
+									      						<td>01.01.2025</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>в работе</option>
+																	  	<option value="2">на консер.</option>
+																	  	<option value="3">демонтаж</option>
+																	</select>
+																</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>1</option>
+																	  	<option value="2">2</option>
+																	  	<option value="3">3</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="076" selected>076</option>
+																	  	<option value="077">077</option>
+																	  	<option value="078">078</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>ПАО «МОСЭНЕРГО»</option>
+																	  	<option value="2">ПАО «ВОРОНЕЖЭНЕРГО»</option>
+																	  	<option value="3">ПАО «МОСОБЛЭНЕРГО»</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="1200" disabled></td>
+									      						<td><input type="text" class="data-value" value="4200" disabled></td>
+									      						<td><input type="text" class="data-value" value="3800" disabled></td>
+									      						<td><input type="text" class="data-value" value="30" disabled></td>
+									      						<td><input type="text" class="data-value" value="3000" disabled></td>
+									      						<td><input type="text" class="data-value" value="782" disabled></td>
+									      						<td><input type="text" class="data-value" value="3400" disabled></td>
+									      					</tr>
+									      					<tr>
+									      						<td>01.01.2026</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>в работе</option>
+																	  	<option value="2">на консер.</option>
+																	  	<option value="3">демонтаж</option>
+																	</select>
+																</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>1</option>
+																	  	<option value="2">2</option>
+																	  	<option value="3">3</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="076" selected>076</option>
+																	  	<option value="077">077</option>
+																	  	<option value="078">078</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>ПАО «МОСЭНЕРГО»</option>
+																	  	<option value="2">ПАО «ВОРОНЕЖЭНЕРГО»</option>
+																	  	<option value="3">ПАО «МОСОБЛЭНЕРГО»</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="1200" disabled></td>
+									      						<td><input type="text" class="data-value" value="4200" disabled></td>
+									      						<td><input type="text" class="data-value" value="3800" disabled></td>
+									      						<td><input type="text" class="data-value" value="30" disabled></td>
+									      						<td><input type="text" class="data-value" value="3000" disabled></td>
+									      						<td><input type="text" class="data-value" value="782" disabled></td>
+									      						<td><input type="text" class="data-value" value="3400" disabled></td>
+									      					</tr>
+									      					<tr>
+									      						<td>01.01.2027</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>в работе</option>
+																	  	<option value="2">на консер.</option>
+																	  	<option value="3">демонтаж</option>
+																	</select>
+																</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>1</option>
+																	  	<option value="2">2</option>
+																	  	<option value="3">3</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="076" selected>076</option>
+																	  	<option value="077">077</option>
+																	  	<option value="078">078</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>ПАО «МОСЭНЕРГО»</option>
+																	  	<option value="2">ПАО «ВОРОНЕЖЭНЕРГО»</option>
+																	  	<option value="3">ПАО «МОСОБЛЭНЕРГО»</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="1200" disabled></td>
+									      						<td><input type="text" class="data-value" value="4200" disabled></td>
+									      						<td><input type="text" class="data-value" value="3800" disabled></td>
+									      						<td><input type="text" class="data-value" value="30" disabled></td>
+									      						<td><input type="text" class="data-value" value="3000" disabled></td>
+									      						<td><input type="text" class="data-value" value="782" disabled></td>
+									      						<td><input type="text" class="data-value" value="3400" disabled></td>
+									      					</tr>
+									      					<tr>
+									      						<td>01.01.2028</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>в работе</option>
+																	  	<option value="2">на консер.</option>
+																	  	<option value="3">демонтаж</option>
+																	</select>
+																</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>1</option>
+																	  	<option value="2">2</option>
+																	  	<option value="3">3</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="076" selected>076</option>
+																	  	<option value="077">077</option>
+																	  	<option value="078">078</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>ПАО «МОСЭНЕРГО»</option>
+																	  	<option value="2">ПАО «ВОРОНЕЖЭНЕРГО»</option>
+																	  	<option value="3">ПАО «МОСОБЛЭНЕРГО»</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="1200" disabled></td>
+									      						<td><input type="text" class="data-value" value="4200" disabled></td>
+									      						<td><input type="text" class="data-value" value="3800" disabled></td>
+									      						<td><input type="text" class="data-value" value="30" disabled></td>
+									      						<td><input type="text" class="data-value" value="3000" disabled></td>
+									      						<td><input type="text" class="data-value" value="782" disabled></td>
+									      						<td><input type="text" class="data-value" value="3400" disabled></td>
+									      					</tr>
+									      					<tr>
+									      						<td>01.01.2029</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>в работе</option>
+																	  	<option value="2">на консер.</option>
+																	  	<option value="3">демонтаж</option>
+																	</select>
+																</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>1</option>
+																	  	<option value="2">2</option>
+																	  	<option value="3">3</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="076" selected>076</option>
+																	  	<option value="077">077</option>
+																	  	<option value="078">078</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>ПАО «МОСЭНЕРГО»</option>
+																	  	<option value="2">ПАО «ВОРОНЕЖЭНЕРГО»</option>
+																	  	<option value="3">ПАО «МОСОБЛЭНЕРГО»</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="1200" disabled></td>
+									      						<td><input type="text" class="data-value" value="4200" disabled></td>
+									      						<td><input type="text" class="data-value" value="3800" disabled></td>
+									      						<td><input type="text" class="data-value" value="30" disabled></td>
+									      						<td><input type="text" class="data-value" value="3000" disabled></td>
+									      						<td><input type="text" class="data-value" value="782" disabled></td>
+									      						<td><input type="text" class="data-value" value="3400" disabled></td>
+									      					</tr>
+									      					<tr>
+									      						<td>01.01.2030</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>в работе</option>
+																	  	<option value="2">на консер.</option>
+																	  	<option value="3">демонтаж</option>
+																	</select>
+																</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>1</option>
+																	  	<option value="2">2</option>
+																	  	<option value="3">3</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="076" selected>076</option>
+																	  	<option value="077">077</option>
+																	  	<option value="078">078</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>ПАО «МОСЭНЕРГО»</option>
+																	  	<option value="2">ПАО «ВОРОНЕЖЭНЕРГО»</option>
+																	  	<option value="3">ПАО «МОСОБЛЭНЕРГО»</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="1200" disabled></td>
+									      						<td><input type="text" class="data-value" value="4200" disabled></td>
+									      						<td><input type="text" class="data-value" value="3800" disabled></td>
+									      						<td><input type="text" class="data-value" value="30" disabled></td>
+									      						<td><input type="text" class="data-value" value="3000" disabled></td>
+									      						<td><input type="text" class="data-value" value="782" disabled></td>
+									      						<td><input type="text" class="data-value" value="3400" disabled></td>
+									      					</tr>
+									      					<tr>
+									      						<td>01.01.2031</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>в работе</option>
+																	  	<option value="2">на консер.</option>
+																	  	<option value="3">демонтаж</option>
+																	</select>
+																</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>1</option>
+																	  	<option value="2">2</option>
+																	  	<option value="3">3</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="076" selected>076</option>
+																	  	<option value="077">077</option>
+																	  	<option value="078">078</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>ПАО «МОСЭНЕРГО»</option>
+																	  	<option value="2">ПАО «ВОРОНЕЖЭНЕРГО»</option>
+																	  	<option value="3">ПАО «МОСОБЛЭНЕРГО»</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="1200" disabled></td>
+									      						<td><input type="text" class="data-value" value="4200" disabled></td>
+									      						<td><input type="text" class="data-value" value="3800" disabled></td>
+									      						<td><input type="text" class="data-value" value="30" disabled></td>
+									      						<td><input type="text" class="data-value" value="3000" disabled></td>
+									      						<td><input type="text" class="data-value" value="782" disabled></td>
+									      						<td><input type="text" class="data-value" value="3400" disabled></td>
+									      					</tr>
+									      					<tr>
+									      						<td>01.01.2032</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>в работе</option>
+																	  	<option value="2">на консер.</option>
+																	  	<option value="3">демонтаж</option>
+																	</select>
+																</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>1</option>
+																	  	<option value="2">2</option>
+																	  	<option value="3">3</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="076" selected>076</option>
+																	  	<option value="077">077</option>
+																	  	<option value="078">078</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>ПАО «МОСЭНЕРГО»</option>
+																	  	<option value="2">ПАО «ВОРОНЕЖЭНЕРГО»</option>
+																	  	<option value="3">ПАО «МОСОБЛЭНЕРГО»</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="1200" disabled></td>
+									      						<td><input type="text" class="data-value" value="4200" disabled></td>
+									      						<td><input type="text" class="data-value" value="3800" disabled></td>
+									      						<td><input type="text" class="data-value" value="30" disabled></td>
+									      						<td><input type="text" class="data-value" value="3000" disabled></td>
+									      						<td><input type="text" class="data-value" value="782" disabled></td>
+									      						<td><input type="text" class="data-value" value="3400" disabled></td>
+									      					</tr>
+									      					<tr>
+									      						<td>01.01.2033</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>в работе</option>
+																	  	<option value="2">на консер.</option>
+																	  	<option value="3">демонтаж</option>
+																	</select>
+																</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>1</option>
+																	  	<option value="2">2</option>
+																	  	<option value="3">3</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="076" selected>076</option>
+																	  	<option value="077">077</option>
+																	  	<option value="078">078</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>ПАО «МОСЭНЕРГО»</option>
+																	  	<option value="2">ПАО «ВОРОНЕЖЭНЕРГО»</option>
+																	  	<option value="3">ПАО «МОСОБЛЭНЕРГО»</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="1200" disabled></td>
+									      						<td><input type="text" class="data-value" value="4200" disabled></td>
+									      						<td><input type="text" class="data-value" value="3800" disabled></td>
+									      						<td><input type="text" class="data-value" value="30" disabled></td>
+									      						<td><input type="text" class="data-value" value="3000" disabled></td>
+									      						<td><input type="text" class="data-value" value="782" disabled></td>
+									      						<td><input type="text" class="data-value" value="3400" disabled></td>
+									      					</tr>
+									      					<tr>
+									      						<td>01.01.2034</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>в работе</option>
+																	  	<option value="2">на консер.</option>
+																	  	<option value="3">демонтаж</option>
+																	</select>
+																</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>1</option>
+																	  	<option value="2">2</option>
+																	  	<option value="3">3</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="076" selected>076</option>
+																	  	<option value="077">077</option>
+																	  	<option value="078">078</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1" selected>ПАО «МОСЭНЕРГО»</option>
+																	  	<option value="2">ПАО «ВОРОНЕЖЭНЕРГО»</option>
+																	  	<option value="3">ПАО «МОСОБЛЭНЕРГО»</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="1200" disabled></td>
+									      						<td><input type="text" class="data-value" value="4200" disabled></td>
+									      						<td><input type="text" class="data-value" value="3800" disabled></td>
+									      						<td><input type="text" class="data-value" value="30" disabled></td>
+									      						<td><input type="text" class="data-value" value="3000" disabled></td>
+									      						<td><input type="text" class="data-value" value="782" disabled></td>
+									      						<td><input type="text" class="data-value" value="3400" disabled></td>
+									      					</tr>
+									      					<tr>
+									      						<td>01.01.2035</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+																	  	<option value="1">в работе</option>
+																	  	<option value="2">на консер.</option>
+																	  	<option value="3" selected>демонтаж</option>
+																	</select>
+																</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">1</option>
+																	  	<option value="2">2</option>
+																	  	<option value="3">3</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="076">076</option>
+																	  	<option value="077">077</option>
+																	  	<option value="078">078</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">ПАО «МОСЭНЕРГО»</option>
+																	  	<option value="2">ПАО «ВОРОНЕЖЭНЕРГО»</option>
+																	  	<option value="3">ПАО «МОСОБЛЭНЕРГО»</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="0" disabled></td>
+									      						<td><input type="text" class="data-value" value="0" disabled></td>
+									      						<td><input type="text" class="data-value" value="0" disabled></td>
+									      						<td><input type="text" class="data-value" value="0" disabled></td>
+									      						<td><input type="text" class="data-value" value="0" disabled></td>
+									      						<td><input type="text" class="data-value" value="0" disabled></td>
+									      						<td><input type="text" class="data-value" value="0" disabled></td>
+									      					</tr>
+									      				</tbody>
+									      			</table>
+									      		</div>
+								      		</div>
+								      	</div>
+								    </div>
+								</div>
+								<div class="border-block">
+								    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel3" aria-expanded="false">Выдача тепловой мощности</button>
+								    <div id="panel3" class="accordion-collapse collapse">
+								      	<div class="accordion-body">
+								      		<div class="data-block">
+								      			<div class="data-row">
+								      				<div class="data-item data-item-right">
+								      					<button class="bttn bttn-square bttn-icon-save" type="button"></button>
+														<button class="bttn" type="button">Привязать данные к электронной модели</button>
+								      				</div>
+								      			</div>
+								      			<div class="scroll-table-wrapper">
+							      					<table class="table-inp-stretch" style="width:100%;">
+									      				<thead>
+									      					<tr>
+									      						<th rowspan="2">Год</th>
+									      						<th rowspan="2">Тип схемы</th>
+									      						<th rowspan="2">Выводы, <span class="data-unit">шт.</span></th>
+									      						<th rowspan="2">Секции ТФУ, <span class="data-unit">шт.</span></th>
+										      					<th colspan="3">Проектный температурный график, <span class="data-unit">°С</span></th>
+										      					<th colspan="6">Фактический температурный график, <span class="data-unit">°С</span></th>
+										      					<th colspan="4">Расчетное давление теплоносителя, <span class="data-unit">кгс/см<sup>2</sup></span></th>
+										      					<th colspan="3">Параметры пара внешним потребителям</th>
+									      					</tr>
+									      					<tr>
+									      						<th style="position: static;">T<sub>1</sub>/T<sub>2</sub></th>
+									      						<th>T<sub>3</sub>/T<sub>4 отопл</sub></th>
+									      						<th>T<sub>5</sub>/T<sub>5 ГВС</sub></th>
+									      						<th>T<sub>1</sub><sup>факт</sup></th>
+									      						<th>T<sub>2</sub><sup>факт</sup></th>
+									      						<th>T<sub>3</sub><sup>факт</sup></th>
+									      						<th>T<sub>4</sub><sup>факт</sup></th>
+									      						<th>T<sub>5</sub><sup>факт</sup></th>
+									      						<th>T<sub>6</sub><sup>факт</sup></th>
+									      						<th>P<sub>1</sub><sup>секц1</sup></th>
+									      						<th>P<sub>2</sub><sup>секц1</sup></th>
+									      						<th>P<sub>1</sub><sup>секц2</sup></th>
+									      						<th>P<sub>2</sub><sup>секц2</sup></th>
+										      					<th>T<sub>пар</sub>, <span class="data-unit">°С</span></th>
+										      					<th>P<sub>пар</sub>, <span class="data-unit">кгс/см<sup>2</sup></span></th>
+										      					<th>Конденсатопровод</th>
+									      					</tr>
+									      				</thead>
+									      				<tbody>
+									      					<tr>
+									      						<td>01.01.2022</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0">-</option>
+																	  	<option value="1" selected>2х трубная</option>
+																	  	<option value="2">4х трубная</option>
+																	  	<option value="3">6ти трубная</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="4"></td>
+									      						<td><input type="text" class="data-value" value="1"></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0">-</option>
+																	  	<option value="1" selected>150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="128"></td>
+									      						<td><input type="text" class="data-value" value="74"></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value="11,0" disabled></td>
+									      						<td><input type="text" class="data-value" value="5,0" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="150,0"></td>
+									      						<td><input type="text" class="data-value" value="13,0"></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" >-</option>
+																	  	<option value="1">да</option>
+																	  	<option value="2" selected>нет</option>
+																	</select>
+									      						</td>
+									      					</tr>
+									      					<tr>
+									      						<td>01.01.2023</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0">-</option>
+																	  	<option value="1" selected>2х трубная</option>
+																	  	<option value="2">4х трубная</option>
+																	  	<option value="3">6ти трубная</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="4"></td>
+									      						<td><input type="text" class="data-value" value="1"></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0">-</option>
+																	  	<option value="1" selected>150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value="11,0" disabled></td>
+									      						<td><input type="text" class="data-value" value="5,0" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="150,0"></td>
+									      						<td><input type="text" class="data-value" value="13,0"></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" >-</option>
+																	  	<option value="1">да</option>
+																	  	<option value="2" selected>нет</option>
+																	</select>
+									      						</td>
+									      					</tr>
+									      					<tr>
+									      						<td>01.01.2024</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0">-</option>
+																	  	<option value="1" selected>2х трубная</option>
+																	  	<option value="2">4х трубная</option>
+																	  	<option value="3">6ти трубная</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="4"></td>
+									      						<td><input type="text" class="data-value" value="1"></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0">-</option>
+																	  	<option value="1" selected>150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value="11,0" disabled></td>
+									      						<td><input type="text" class="data-value" value="5,0" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="150,0"></td>
+									      						<td><input type="text" class="data-value" value="13,0"></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" >-</option>
+																	  	<option value="1">да</option>
+																	  	<option value="2" selected>нет</option>
+																	</select>
+									      						</td>
+									      					</tr>
+									      					<tr>
+									      						<td>01.01.2025</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0">-</option>
+																	  	<option value="1" selected>2х трубная</option>
+																	  	<option value="2">4х трубная</option>
+																	  	<option value="3">6ти трубная</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="4"></td>
+									      						<td><input type="text" class="data-value" value="1"></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0">-</option>
+																	  	<option value="1" selected>150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value="11,0" disabled></td>
+									      						<td><input type="text" class="data-value" value="5,0" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="150,0"></td>
+									      						<td><input type="text" class="data-value" value="13,0"></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" >-</option>
+																	  	<option value="1">да</option>
+																	  	<option value="2" selected>нет</option>
+																	</select>
+									      						</td>
+									      					</tr>
+									      					<tr>
+									      						<td>01.01.2026</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0">-</option>
+																	  	<option value="1" selected>2х трубная</option>
+																	  	<option value="2">4х трубная</option>
+																	  	<option value="3">6ти трубная</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="4"></td>
+									      						<td><input type="text" class="data-value" value="1"></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0">-</option>
+																	  	<option value="1" selected>150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value="11,0" disabled></td>
+									      						<td><input type="text" class="data-value" value="5,0" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="150,0"></td>
+									      						<td><input type="text" class="data-value" value="13,0"></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" >-</option>
+																	  	<option value="1">да</option>
+																	  	<option value="2" selected>нет</option>
+																	</select>
+									      						</td>
+									      					</tr>
+									      					<tr>
+									      						<td>01.01.2027</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0">-</option>
+																	  	<option value="1" selected>2х трубная</option>
+																	  	<option value="2">4х трубная</option>
+																	  	<option value="3">6ти трубная</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="4"></td>
+									      						<td><input type="text" class="data-value" value="1"></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0">-</option>
+																	  	<option value="1" selected>150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value="11,0" disabled></td>
+									      						<td><input type="text" class="data-value" value="5,0" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="150,0"></td>
+									      						<td><input type="text" class="data-value" value="13,0"></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" >-</option>
+																	  	<option value="1">да</option>
+																	  	<option value="2" selected>нет</option>
+																	</select>
+									      						</td>
+									      					</tr>
+									      					<tr>
+									      						<td>01.01.2028</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0">-</option>
+																	  	<option value="1" selected>2х трубная</option>
+																	  	<option value="2">4х трубная</option>
+																	  	<option value="3">6ти трубная</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="4"></td>
+									      						<td><input type="text" class="data-value" value="1"></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0">-</option>
+																	  	<option value="1" selected>150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value="11,0" disabled></td>
+									      						<td><input type="text" class="data-value" value="5,0" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="150,0"></td>
+									      						<td><input type="text" class="data-value" value="13,0"></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" >-</option>
+																	  	<option value="1">да</option>
+																	  	<option value="2" selected>нет</option>
+																	</select>
+									      						</td>
+									      					</tr>
+									      					<tr>
+									      						<td>01.01.2029</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0">-</option>
+																	  	<option value="1" selected>2х трубная</option>
+																	  	<option value="2">4х трубная</option>
+																	  	<option value="3">6ти трубная</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="4"></td>
+									      						<td><input type="text" class="data-value" value="1"></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0">-</option>
+																	  	<option value="1" selected>150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value="11,0" disabled></td>
+									      						<td><input type="text" class="data-value" value="5,0" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="150,0"></td>
+									      						<td><input type="text" class="data-value" value="13,0"></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" >-</option>
+																	  	<option value="1">да</option>
+																	  	<option value="2" selected>нет</option>
+																	</select>
+									      						</td>
+									      					</tr>
+									      					<tr>
+									      						<td>01.01.2030</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0">-</option>
+																	  	<option value="1" selected>2х трубная</option>
+																	  	<option value="2">4х трубная</option>
+																	  	<option value="3">6ти трубная</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="4"></td>
+									      						<td><input type="text" class="data-value" value="1"></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0">-</option>
+																	  	<option value="1" selected>150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value="11,0" disabled></td>
+									      						<td><input type="text" class="data-value" value="5,0" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="150,0"></td>
+									      						<td><input type="text" class="data-value" value="13,0"></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" >-</option>
+																	  	<option value="1">да</option>
+																	  	<option value="2" selected>нет</option>
+																	</select>
+									      						</td>
+									      					</tr>
+									      					<tr>
+									      						<td>01.01.2031</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0">-</option>
+																	  	<option value="1" selected>2х трубная</option>
+																	  	<option value="2">4х трубная</option>
+																	  	<option value="3">6ти трубная</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="4"></td>
+									      						<td><input type="text" class="data-value" value="1"></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0">-</option>
+																	  	<option value="1" selected>150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value="11,0" disabled></td>
+									      						<td><input type="text" class="data-value" value="5,0" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="150,0"></td>
+									      						<td><input type="text" class="data-value" value="13,0"></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" >-</option>
+																	  	<option value="1">да</option>
+																	  	<option value="2" selected>нет</option>
+																	</select>
+									      						</td>
+									      					</tr>
+									      					<tr>
+									      						<td>01.01.2032</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0">-</option>
+																	  	<option value="1" selected>2х трубная</option>
+																	  	<option value="2">4х трубная</option>
+																	  	<option value="3">6ти трубная</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="4"></td>
+									      						<td><input type="text" class="data-value" value="1"></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0">-</option>
+																	  	<option value="1" selected>150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value="11,0" disabled></td>
+									      						<td><input type="text" class="data-value" value="5,0" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="150,0"></td>
+									      						<td><input type="text" class="data-value" value="13,0"></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" >-</option>
+																	  	<option value="1">да</option>
+																	  	<option value="2" selected>нет</option>
+																	</select>
+									      						</td>
+									      					</tr>
+									      					<tr>
+									      						<td>01.01.2033</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0">-</option>
+																	  	<option value="1" selected>2х трубная</option>
+																	  	<option value="2">4х трубная</option>
+																	  	<option value="3">6ти трубная</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="4"></td>
+									      						<td><input type="text" class="data-value" value="1"></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0">-</option>
+																	  	<option value="1" selected>150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value="11,0" disabled></td>
+									      						<td><input type="text" class="data-value" value="5,0" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="150,0"></td>
+									      						<td><input type="text" class="data-value" value="13,0"></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" >-</option>
+																	  	<option value="1">да</option>
+																	  	<option value="2" selected>нет</option>
+																	</select>
+									      						</td>
+									      					</tr>
+									      					<tr>
+									      						<td>01.01.2034</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0">-</option>
+																	  	<option value="1" selected>2х трубная</option>
+																	  	<option value="2">4х трубная</option>
+																	  	<option value="3">6ти трубная</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value="4"></td>
+									      						<td><input type="text" class="data-value" value="1"></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0">-</option>
+																	  	<option value="1" selected>150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value="11,0" disabled></td>
+									      						<td><input type="text" class="data-value" value="5,0" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="150,0"></td>
+									      						<td><input type="text" class="data-value" value="13,0"></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" >-</option>
+																	  	<option value="1">да</option>
+																	  	<option value="2" selected>нет</option>
+																	</select>
+									      						</td>
+									      					</tr>
+									      					<tr>
+									      						<td>01.01.2035</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1" >2х трубная</option>
+																	  	<option value="2">4х трубная</option>
+																	  	<option value="3">6ти трубная</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">150/70</option>
+																	  	<option value="2">130/90</option>
+																	  	<option value="3">180/50</option>
+																	</select>
+									      						</td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value="" disabled></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td><input type="text" class="data-value" value=""></td>
+									      						<td>
+									      							<select class="selectpicker data-value" data-live-search="true">
+									      								<option value="0" selected>-</option>
+																	  	<option value="1">да</option>
+																	  	<option value="2">нет</option>
+																	</select>
+									      						</td>
+									      					</tr>
+									      				</tbody>
+									      			</table>
+									      		</div>
+								      		</div>
+								      	</div>
+								    </div>
+								</div>
+								<div class="border-block">
+								    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel6" aria-expanded="false">Привязка источника тепловой энергии к слоям электронной модели </button>
+								    <div id="panel6" class="accordion-collapse collapse">
+								      	<div class="accordion-body">
+								      		<div class="data-row">
+								      			<div class="data-block stretch ">
+								      				<div class="data-row ">
+								      					<div class="data-item ">
+									      					<label class="data-label lg-fix">Уникальный номер слоя</label>
+								      						<select class="selectpicker data-value xxl-stretch" data-live-search="true"  placeholder="Выберите значение">
+															  	<option value="2020">2020</option>
+															  	<option value="2021">2021</option>
+															  	<option value="2022">2022</option>
+															  	<option value="2023">2023</option>
+															</select>
+														</div>
+														<div class="data-item">
+															<label class="data-label lg-fix">Расчетный год слоя</label>
+															<input type="text" class="data-value md-fix" disabled>
+														</div>
+								      				</div>
+								      				<div class="data-row">
+								      					<div class="data-item">
+															<label class="data-label lg-fix">Наименование слоя</label>
+															<input type="text" class="data-value stretch" disabled>
+														</div>
+								      				</div>
+													<div class="data-row">
+														<div class="data-item ">
+															<label class="data-label lg-fix">Номер SYS объекта</label>
+															<input type="text" class="data-value stretch">
+														</div>
+														<div class="data-item">
+															<button class="bttn bttn-color bttn-edit-data" type="button">Выполнить</button>
+															<button class="bttn bttn-color bttn-edit-data" type="button">Показать</button>
+														</div>
+														
+													</div>
+								      			</div>
+								      			<div class="data-block stretch">
+								      				<h4>Перечень привязанных слоев электронной модели</h4>
+								      				<table style="width: 100%">
+								      					<thead>
+								      						<tr>
+								      							<th>Год</th>
+								      							<th>УНОМ слоя</th>
+								      							<th>Наименование слоя</th>
+								      							<th>SYS объекта в слое</th>
+								      						</tr>
+								      					</thead>
+								      					<tbody>
+								      						<tr>
+								      							<td>01.01.2022</td>
+								      							<td>1.2022</td>
+								      							<td>Moscow_2022_aktual_Osnovnoi</td>
+								      							<td><a href="#">125489</a></td>
+								      						</tr>
+								      						<tr>
+								      							<td>01.01.2023</td>
+								      							<td>2.2022</td>
+								      							<td>Moscow_2023_aktual_Osnovnoi</td>
+								      							<td><a href="#">125489</a></td>
+								      						</tr>
+								      						<tr>
+								      							<td>01.01.2024</td>
+								      							<td>3.2022</td>
+								      							<td>Moscow_2024_aktual_Osnovnoi</td>
+								      							<td><a href="#">257846</a></td>
+								      						</tr>
+								      						<tr>
+								      							<td>01.01.2025</td>
+								      							<td>4.2022</td>
+								      							<td>Moscow_2025_aktual_Osnovnoi</td>
+								      							<td><a href="#">355478</a></td>
+								      						</tr>
+								      						<tr>
+								      							<td>01.01.2026</td>
+								      							<td>5.2022</td>
+								      							<td>Moscow_2026_aktual_Osnovnoi</td>
+								      							<td><a href="#">854673</a></td>
+								      						</tr>
+								      						<tr>
+								      							<td>01.01.2027</td>
+								      							<td>6.2022</td>
+								      							<td>Moscow_2027_aktual_Osnovnoi</td>
+								      							<td><a href="#">214643</a></td>
+								      						</tr>
+								      						<tr>
+								      							<td>01.01.2028</td>
+								      							<td>-</td>
+								      							<td>Moscow_2028_aktual_Osnovnoi</td>
+								      							<td><a href="#">896543</a></td>
+								      						</tr>
+								      						<tr>
+								      							<td>01.01.2029</td>
+								      							<td>-</td>
+								      							<td>-</td>
+								      							<td><a href="#">-</a></td>
+								      						</tr>
+								      						<tr>
+								      							<td>01.01.2030</td>
+								      							<td>-</td>
+								      							<td>-</td>
+								      							<td><a href="#">-</a></td>
+								      						</tr>
+								      						<tr>
+								      							<td>01.01.2031</td>
+								      							<td>-</td>
+								      							<td>-</td>
+								      							<td><a href="#">-</a></td>
+								      						</tr>
+								      						<tr>
+								      							<td>01.01.2032</td>
+								      							<td>-</td>
+								      							<td>-</td>
+								      							<td><a href="#">-</a></td>
+								      						</tr>
+								      						<tr>
+								      							<td>01.01.2033</td>
+								      							<td>7.2022</td>
+								      							<td>Moscow_2033_aktual_Osnovnoi</td>
+								      							<td><a href="#">2354354</a></td>
+								      						</tr>
+								      						<tr>
+								      							<td>01.01.2034</td>
+								      							<td>8.2022</td>
+								      							<td>Moscow_2034_aktual_Osnovnoi</td>
+								      							<td><a href="#">2438735</a></td>
+								      						</tr>
+								      						<tr>
+								      							<td>01.01.2035</td>
+								      							<td>9.2022</td>
+								      							<td>Moscow_2035_aktual_Osnovnoi</td>
+								      							<td><a href="#">2587513</a></td>
+								      						</tr>
+								      					</tbody>
+								      				</table>
+								      			</div>
+
+								      		</div>
+								      	</div>
+								    </div>
+								</div>
+								<div class="border-block">
+								    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel7" aria-expanded="false">Номера и обозначения источника тепловой энергии в других базах данных</button>
+								    <div id="panel7" class="accordion-collapse collapse">
+								      	<div class="accordion-body">
+								      		<div class="data-block">
+								      			<div class="data-row">
+								      				<div class="data-item ">
+							      						<label class="data-label lg-fix">MUID</label>
+							      						<input type="text" class="data-value stretch" placeholder="Наименование номер MUID">
+							      					</div>
+							      					<div class="data-item ">
+							      						<label class="data-label lg-fix">LOTUS ID</label>
+							      						<input type="text" class="data-value stretch" placeholder="Наименование номер LOTUS ID">
+							      					</div>
+							      					<div class="data-item ">
+							      						<label class="data-label lg-fix">KASU_ID</label>
+							      						<input type="text" class="data-value stretch" placeholder="Наименование номер KASU_ID">
+							      					</div>
+								      			</div>
+								      			<div class="data-row">
+								      				<div class="data-item ">
+							      						<label class="data-label lg-fix">KASU_COMPOSITE_ID</label>
+							      						<input type="text" class="data-value stretch" placeholder="Наименование номер KASU_COMPOSITE_ID">
+							      					</div>
+							      					<div class="data-item ">
+							      						<label class="data-label lg-fix">KASU_MAP_ID</label>
+							      						<input type="text" class="data-value stretch" placeholder="Наименование номер KASU_MAP_ID">
+							      					</div>
+								      			</div>
+								      		</div>
+								      	</div>
+								    </div>
+							    </div>
+								<div class="border-block">
+								    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel8" aria-expanded="false">Документация и фотоматериалы по источнику тепловой энергии</button>
+								    <div id="panel8" class="accordion-collapse collapse">
+								      	<div class="accordion-body">
+								      		<div class="data-block">
+								      			<table id="docsFotosTable" class="display compact table-inp-stretch" style="width:100%">
+												    <thead>
+												        <tr>
+												            <th>№ п/п</th>
+												            <th>Тип материала</th>
+												            <th>Краткое описание материала</th>
+												            <th>Ссылка на файл материала</th>
+												            <th></th>
+												        </tr>
+												    </thead>
+												    <tbody>
+												    	<tr>
+												    		<td>1.</td>
+												    		<td>
+											    				<select class="selectpicker data-value" data-live-search="true" data-container="#editData" placeholder="Выберите значение">
+																  	<option value="2020">Тип 1</option>
+																  	<option value="2021">Тип 2</option>
+																  	<option value="2022">Тип 3</option>
+																  	<option value="2023">Тип 4</option>
+																</select>
+												    		</td>
+												    		<td><textarea class="data-value" ></textarea></td>
+												    		<td><input type="file" class="data-value"></td>
+												    		<td>
+												    			<button class="bttn bttn-square bttn-icon-save" type="button" title="Сохранить"></button>
+												    			<button class="bttn bttn-square bttn-icon-del" type="button" title="Удалить"></button>
+												    		</td>
+												    	</tr>
+												    </tbody>
+												</table>
+								      		</div>
+								      	</div>
+								    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+	    		</div>
+	    		<div class="modal-footer">
+	    			<div class="dropdown bttn-dropdown me-auto">
+	    				<button class="bttn bttn-color dropdown-toggle" data-bs-toggle="dropdown">Перейти на</button>
+	    				<ul class="dropdown-menu">
+	    					<li><a href="#" class="dropdown-item" >Оборудование</a></li>
+	    					<li><a href="#" class="dropdown-item">Ресурсосбережение</a></li>
+	    					<li><a href="#" class="dropdown-item">ВПУ</a></li>
+	    					<li><a href="#" class="dropdown-item">ТЭПы</a></li>
+	    					<li><a href="#" class="dropdown-item">Отказы</a></li>
+	    					<li><a href="#" class="dropdown-item">Калькуляция затрат</a></li>
+	    					<li><a href="#" class="dropdown-item">Экологические показатели</a></li>
+	    				</ul>
+	    			</div>
+			        <button type="button" class="bttn" data-bs-dismiss="modal">Отмена</button>
+			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Сохранить</button>
+			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Создать копию</button>
+			        <button type="button" class="bttn bttn-color" data-bs-dismiss="modal">Удалить</button>
+			    </div>
+	    	</div>
+	    </div>
 	</div>
 	
 	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 
+	<!-- direct link for DataTables Library's File -->
+	<script type="text/javascript" src="js/datatables.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
+	<script type="text/javascript" charset="utf8" src="js/main.js"></script>
+	<script type="text/javascript" charset="utf8" src="js/page2-3-1.js"></script>
 	
 </body>
 </html>

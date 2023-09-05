@@ -210,7 +210,7 @@
 				</div>
 				<div class="data-row static-block">
 					<div class="data-item">
-						<label for="paramCalcYear" class="data-label">Выберите год:</label>
+						<label for="paramCalcYear" class="data-label">Выберите год</label>
 						<select class="selectpicker md-fix param-calc-year" id="paramCalcYear">
 						  <option value="2020">01.01.2021</option>
 						  <option value="2021">01.01.2022</option>
@@ -1437,11 +1437,11 @@
 			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			     </div>
 			     <div class="modal-body">
-	      			<div class="data-block static-block data-params">
+	      			<div class="data-block static-block">
 	      				<div class="data-row">
-	      					<div class="data-item stretch">
+	      					<div class="data-item ">
 		      					<label class="data-label">Наименование ТСО</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="УНОМ ТСО - Наименование">
+	      						<select class="selectpicker data-value xxl-stretch"  data-live-search="true" placeholder="УНОМ ТСО - Наименование">
 								  	<option value="2020">2020</option>
 								  	<option value="2021">2021</option>
 								  	<option value="2022" selected>2022</option>
@@ -1449,8 +1449,8 @@
 								</select>  	
 							</div>
 							<div class="data-item">
-								<label for="paramCalcYear" class="data-label">Расчётный год:</label>
-								<select class="selectpicker md-fix param-calc-year" id="paramCalcYear">
+								<label class="data-label">Расчётный год</label>
+								<select class="selectpicker data-value md-fix ">
 								  <option value="2020">01.01.2021</option>
 								  <option value="2021">01.01.2022</option>
 								  <option value="2022" selected>01.01.2023</option>
@@ -1468,76 +1468,82 @@
 								  	<input type="text" name="" class="data-value stretch">
 								</div>
 	      						<div class="data-row border-block">
-		      						<h5>Виды деятельности в границах ТЗ:</h5>
+		      						<h4>Виды деятельности в границах ТЗ</h4>
 		      						<div class="data-block stretch">
-		      							<div class="data-item">
-											<label class="data-label">Комбинированное производство, более 25 МВт</label>
-											<input type="checkbox" class="form-check-input">
-										</div>
-										<div class="data-item">
-											<label class="data-label">Комбинированное производство, менее 25 МВт</label>
-											<input type="checkbox" class="form-check-input">
-										</div>
+		      							<label class="data-item data-item-right">
+											<span class="data-label">Комбинированное производство, более 25 МВт</span>
+											<input type="checkbox" class="data-check">
+										</label>
+										<label class="data-item data-item-right">
+											<span class="data-label">Комбинированное производство, менее 25 МВт</span>
+											<input type="checkbox" class="data-check">
+										</label>
 									</div>
 		      						<div class="data-block stretch">	
-										<div class="data-item">
-											<label class="data-label">Некомбинированное производство</label>
-											<input type="checkbox" class="form-check-input">
-										</div>
+										<label class="data-item data-item-right">
+											<span class="data-label">Некомбинированное производство</span>
+											<input type="checkbox" class="data-check">
+										</label>
 		      						
-		      							<div class="data-item">
-											<label class="data-label">Договор поставки</label>
-											<input type="checkbox" class="form-check-input">
-										</div>
+		      							<label class="data-item data-item-right">
+											<span class="data-label">Договор поставки</span>
+											<input type="checkbox" class="data-check">
+										</label>
 									</div>
 		      						<div class="data-block stretch">
-										<div class="data-item">
-											<label class="data-label">Передача</label>
-											<input type="checkbox" class="form-check-input">
-										</div>
-										<div class="data-item">
-											<label class="data-label">Сбыт</label>
-											<input type="checkbox" class="form-check-input">
-										</div>
+										<label class="data-item data-item-right">
+											<span class="data-label">Передача</span>
+											<input type="checkbox" class="data-check">
+										</label>
+										<label class="data-item data-item-right">
+											<span class="data-label">Сбыт</span>
+											<input type="checkbox" class="data-check">
+										</label>
 		      						</div>
 		      					</div>
 	      					</div>
 	      					<div class="data-block data-xxl-row">
-								<h5>Дифференциация тарифов:</h5>
-								<div class="data-item">
-									<label class="data-label">без дифференциации</label>
-									<input type="checkbox" class="form-check-input">
-								</div>
-								<div class="data-item">
-									<label class="data-label">до тепловых пунктов</label>
-									<input type="checkbox" class="form-check-input">
-								</div>
-								<div class="data-item">
-									<label class="data-label">после тепловых пунктов</label>
-									<input type="checkbox" class="form-check-input">
-								</div>
+								<h4>Дифференциация тарифов</h4>
+								<label class="data-item data-item-right">
+									<span class="data-label">без дифференциации</span>
+									<input type="checkbox" class="data-check">
+								</label>
+								<label class="data-item data-item-right">
+									<span class="data-label">до тепловых пунктов</span>
+									<input type="checkbox" class="data-check">
+								</label>
+								<label class="data-item data-item-right">
+									<span class="data-label">после тепловых пунктов</span>
+									<input type="checkbox" class="data-check">
+								</label>
 							</div>
 	      				</div>
 	      				<div class="data-row">
 	      					<div class="data-row">
-	      						<div class="data-item justify-content-start">
-		      						<label class="data-label">Решение от</label>
-		      						<input class="data-value">
-		      					</div>
-		      					<div class="data-item justify-content-start">
-		      						<label class="data-label">№</label>
-		      						<input class="data-value">
-		      					</div>
+	      						<label class="data-label">Решение:</label>
+	      						<div class="data-row">
+	      							<div class="data-item">
+	      								<label class="data-label sublabel">от</label>
+		      							<input type="date" class="data-value md-fix">
+		      						</div>
+		      						<div class="data-item">
+		      							<label class="data-label sublabel">№</label>
+		      							<input type="text" class="data-value lg-fix">
+		      						</div>
+	      						</div>		
 	      					</div>
 	      					<div class="data-row">
-	      						<div class="data-item justify-content-start">
-		      						<label class="data-label">Протокол от</label>
-		      						<input class="data-value">
-		      					</div>
-		      					<div class="data-item justify-content-start">
-		      						<label class="data-label">№</label>
-		      						<input class="data-value">
-		      					</div>
+	      						<label class="data-label">Протокол:</label>
+	      						<div class="data-row">
+	      							<div class="data-item">
+			      						<label class="data-label sublabel">от</label>
+			      						<input type="date" class="data-value md-fix">
+			      					</div>
+			      					<div class="data-item">
+			      						<label class="data-label sublabel">№</label>
+			      						<input type="text" class="data-value lg-fix">
+			      					</div>
+	      						</div>
 	      					</div>
 			      		</div>
 		      		</div>
@@ -1602,19 +1608,19 @@
 												      							<td><input type="text" name="" class="data-value" disabled></td>
 												      						</tr>
 												      						<tr>
-												      							<td>бюджетные потребители, <span class="data-unit">руб./Гкал без НДС</span></td>
+												      							<td>- бюджетные потребители, <span class="data-unit">руб./Гкал без НДС</span></td>
 												      							<td><input type="text" name="" class="data-value"></td>
 												      							<td><input type="text" name="" class="data-value"></td>
 												      							<td><input type="text" name="" class="data-value" disabled></td>
 												      						</tr>
 												      						<tr>
-												      							<td>население, <span class="data-unit">руб./Гкал без НДС</span></td>
+												      							<td>- население, <span class="data-unit">руб./Гкал без НДС</span></td>
 												      							<td><input type="text" name="" class="data-value" ></td>
 												      							<td><input type="text" name="" class="data-value" ></td>
 												      							<td><input type="text" name="" class="data-value" disabled></td>
 												      						</tr>
 												      						<tr>
-												      							<td>прочие, <span class="data-unit">руб./Гкал без НДС</span></td>
+												      							<td>- прочие, <span class="data-unit">руб./Гкал без НДС</span></td>
 												      							<td><input type="text" name="" class="data-value"></td>
 												      							<td><input type="text" name="" class="data-value"></td>
 												      							<td><input type="text" name="" class="data-value" disabled></td>
@@ -1796,19 +1802,19 @@
 							      							<td><input type="text" name="" class="data-value" disabled></td>
 							      						</tr>
 							      						<tr>
-							      							<td>бюджетные потребители, <span class="data-unit">руб./Гкал без НДС</span></td>
+							      							<td>- бюджетные потребители, <span class="data-unit">руб./Гкал без НДС</span></td>
 							      							<td><input type="text" name="" class="data-value"></td>
 							      							<td><input type="text" name="" class="data-value"></td>
 							      							<td><input type="text" name="" class="data-value" disabled></td>
 							      						</tr>
 							      						<tr>
-							      							<td>население, <span class="data-unit">руб./Гкал без НДС</span></td>
+							      							<td>- население, <span class="data-unit">руб./Гкал без НДС</span></td>
 							      							<td><input type="text" name="" class="data-value"></td>
 							      							<td><input type="text" name="" class="data-value"></td>
 							      							<td><input type="text" name="" class="data-value" disabled></td>
 							      						</tr>
 							      						<tr>
-							      							<td>прочие, <span class="data-unit">руб./Гкал без НДС</span></td>
+							      							<td>- прочие, <span class="data-unit">руб./Гкал без НДС</span></td>
 							      							<td><input type="text" name="" class="data-value"></td>
 							      							<td><input type="text" name="" class="data-value"></td>
 							      							<td><input type="text" name="" class="data-value" disabled></td>
@@ -2030,19 +2036,19 @@
 							      							<td><input type="text" name="" class="data-value" disabled></td>
 							      						</tr>
 							      						<tr>
-							      							<td>бюджетные потребители, <span class="data-unit">тыс. руб.</span></td>
+							      							<td>- бюджетные потребители, <span class="data-unit">тыс. руб.</span></td>
 							      							<td><input type="text" name="" class="data-value"></td>
 							      							<td><input type="text" name="" class="data-value"></td>
 							      							<td><input type="text" name="" class="data-value" disabled></td>
 							      						</tr>
 							      						<tr>
-							      							<td>население, <span class="data-unit">тыс. руб.</span></td>
+							      							<td>- население, <span class="data-unit">тыс. руб.</span></td>
 							      							<td><input type="text" name="" class="data-value"></td>
 							      							<td><input type="text" name="" class="data-value"></td>
 							      							<td><input type="text" name="" class="data-value" disabled></td>
 							      						</tr>
 							      						<tr>
-							      							<td>прочие, <span class="data-unit">тыс. руб.</span></td>
+							      							<td>- прочие, <span class="data-unit">тыс. руб.</span></td>
 							      							<td><input type="text" name="" class="data-value" ></td>
 							      							<td><input type="text" name="" class="data-value" ></td>
 							      							<td><input type="text" name="" class="data-value" disabled></td>
@@ -2160,7 +2166,7 @@
 								      							<td><input type="text" name="" class="data-value" disabled></td>
 								      						</tr>
 								      						<tr>
-								      							<td>бюджетные потребители,<br><span class="data-unit">руб./Гкал без НДС</span></td>
+								      							<td>- бюджетные потребители,<br><span class="data-unit">руб./Гкал без НДС</span></td>
 								      							<td><input type="text" name="" class="data-value"></td>
 								      							<td><input type="text" name="" class="data-value"></td>
 								      							<td><input type="text" name="" class="data-value" disabled></td>
@@ -2175,7 +2181,7 @@
 								      							<td><input type="text" name="" class="data-value" disabled></td>
 								      						</tr>
 								      						<tr>
-								      							<td>население, <span class="data-unit">руб./Гкал без НДС</span></td>
+								      							<td>- население, <span class="data-unit">руб./Гкал без НДС</span></td>
 								      							<td><input type="text" name="" class="data-value"></td>
 								      							<td><input type="text" name="" class="data-value"></td>
 								      							<td><input type="text" name="" class="data-value" disabled></td>
@@ -2190,7 +2196,7 @@
 								      							<td><input type="text" name="" class="data-value" disabled></td>
 								      						</tr>
 								      						<tr>
-								      							<td>прочие, <span class="data-unit">руб./Гкал без НДС</span></td>
+								      							<td>- прочие, <span class="data-unit">руб./Гкал без НДС</span></td>
 								      							<td><input type="text" name="" class="data-value"></td>
 								      							<td><input type="text" name="" class="data-value"></td>
 								      							<td><input type="text" name="" class="data-value" disabled></td>
@@ -2234,9 +2240,9 @@
 			     <div class="modal-body">
 	      			<div class="data-row static-block data-params">
 	      			
-      					<div class="data-item stretch">
+      					<div class="data-item ">
 	      					<label class="data-label">Наименование ТСО</label>
-      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="УНОМ ТСО - Наименование">
+      						<select class="selectpicker data-value xxl-stretch" data-live-search="true" placeholder="УНОМ ТСО - Наименование">
 							  	<option value="2020">2020</option>
 							  	<option value="2021">2021</option>
 							  	<option value="2022" selected>2022</option>
@@ -2248,47 +2254,45 @@
 	      				<div class="data-block">
 	      					<div class="data-item">
 	      						<label class="data-label">Уникальный номер перспективного потребителя</label>
-      							<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="УНОМ ТСО - Наименование">
+      							<select class="selectpicker data-value xxl-stretch" data-live-search="true" placeholder="УНОМ П">
 								  	<option value="2020">2020</option>
 								  	<option value="2021">2021</option>
 								  	<option value="2022" selected>2022</option>
 								  	<option value="2023">2023</option>
 								</select>
 	      					</div>
-	      					<div class="data-item justify-content-start">
+	      					<div class="data-item">
 	      						<label class="data-label">Наименование заявителя</label>
-	      						<input class="data-value stretch">
+	      						<input type="text" class="data-value xxl-stretch">
 	      					</div>
 	      					<div class="data-table-block">
 	      						<div class="data-item">
 		      						<label class="data-label">Заявленная тепловая нагрузка (всего с учетом ГВС<sub>max</sub>)</label>
-		      						<input class="data-value">
+		      						<input class="data-value smx-stretch">
 		      						<span class="data-unit">Гкал/ч</span>
 		      					</div>
 		      					<div class="data-item">
 		      						<label class="data-label">Утвержденный размер платы за подключение</label>
-		      						<input class="data-value">
+		      						<input class="data-value smx-stertch">
 		      						<span class="data-unit">тыс. руб. без НДС</span>
 		      					</div>
 		      					<div class="data-item">
 		      						<label class="data-label"></label>
-		      						<input class="data-value">
+		      						<input class="data-value smx-stertch">
 		      						<span class="data-unit">руб./(Гкал/ч) без НДС</span>
 		      					</div>
 	      					</div>
 					      	
 	      					<div class="data-row">
-	      						<div class="data-item justify-content-start">
-		      						<label class="data-label">Решение от</label>
-		      						<input class="data-value">
+	      						<div class="data-item">
+		      						<label class="data-label">Решение: <span class="sublabel">от</span></label>
+		      						<input type="date" class="data-value md-fix">
 		      					</div>
-		      					<div class="data-item justify-content-start">
-		      						<label class="data-label">№</label>
-		      						<input class="data-value">
+		      					<div class="data-item">
+		      						<label class="data-label"><span class="sublabel">№</span></label>
+		      						<input type="text" class="data-value lg-fix">
 		      					</div>
 	      					</div>
-	      					
-	      					
 	      				</div>
 					</form>
 	    		</div>
@@ -2311,9 +2315,9 @@
 			     <div class="modal-body">
 	      			<div class="data-row static-block data-params">
 	      			
-      					<div class="data-item stretch">
+      					<div class="data-item ">
 	      					<label class="data-label">Наименование ТСО</label>
-      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="УНОМ ТСО - Наименование">
+      						<select class="selectpicker data-value xxl-stretch" data-live-search="true" placeholder="УНОМ ТСО - Наименование">
 							  	<option value="2020">2020</option>
 							  	<option value="2021">2021</option>
 							  	<option value="2022" selected>2022</option>
@@ -2322,7 +2326,7 @@
 						</div>
 						<div class="data-item">
 							<label class="data-label">на</label>
-							<select class="selectpicker data-value md-fix" id="paramNumberTso" placeholder="Расчётный год">
+							<select class="selectpicker data-value md-fix" placeholder="Расчётный год">
 							  	<option value="2020">2020</option>
 							  	<option value="2021">2021</option>
 							  	<option value="2022" selected>2022</option>
@@ -2334,70 +2338,76 @@
 	      			<form>
 	      				<div class="data-block">
 	      					<div class="data-row">
-	      						<div class="data-item justify-content-start">
-		      						<label class="data-label">Решение от</label>
-		      						<input class="data-value">
-		      					</div>
-		      					<div class="data-item justify-content-start">
-		      						<label class="data-label">№</label>
-		      						<input class="data-value">
-		      					</div>
-		      					<div class="data-item justify-content-start">
-		      						<label class="data-label">Протокол от</label>
-		      						<input class="data-value">
-		      					</div>
-		      					<div class="data-item justify-content-start">
-		      						<label class="data-label">№</label>
-		      						<input class="data-value">
-		      					</div>
+	      						<label class="data-label">Решение:</label>
+	      						<div class="data-row">
+	      							<div class="data-item">
+			      						<label class="data-label sublabel">от</label>
+			      						<input type="date" class="data-value md-fix">
+			      					</div>
+			      					<div class="data-item">
+			      						<label class="data-label sublabel">№</label>
+			      						<input type="text" class="data-value lg-fix">
+			      					</div>
+	      						</div>
+	      						<label class="data-label">Протокол:</label>
+	      						<div class="data-row">
+	      							<div class="data-item">
+			      						<label class="data-label sublabel">от</label>
+			      						<input type="date" class="data-value md-fix">
+			      					</div>
+			      					<div class="data-item">
+			      						<label class="data-label sublabel">№</label>
+			      						<input type="text" class="data-value lg-fix">
+			      					</div>
+	      						</div>
 	      					</div>
-	      					<div class="data-item justify-content-start">
+	      					<div class="data-item">
 	      						<label class="data-label">Расходы на проведение мероприятий по подключению</label>
-	      						<input class="data-value">
+	      						<input type="text" class="data-value smx-stretch">
 	      						<span class="data-unit">руб. /(Гкал/ч) без НДС</span>
 	      					</div>
 	      					<div class="data-block border-block">
 	      						<h4>Расходы на создание (реконструкцию) тепловых сетей:</h4>
 	      						<div class="data-table-block">
-      								<div class="data-row">
+      								<div class="data-item">
       									<h5 class="data-label">1. Подземная прокладка Д<sub>у</sub>:</h5>
       									<h5 class="data-label">1.1. Канальная прокладка: </h5>
       									<h5 class="data-label">1.2. Бесканальная прокладка:</h5>
       									<h5 class="data-label"></h5>
       								</div>
-      								<div class="data-row">
+      								<div class="data-item">
       									<label class="data-label">до 250 мм</label>
-      									<div class="data-value"><input type="text" name=""></div>
-      									<div class="data-value"><input type="text" name=""></div>
+      									<div class="data-value"><input type="text"></div>
+      									<div class="data-value"><input type="text"></div>
       									<span class="data-unit">руб. /(Гкал/ч) без НДС</span>
       								</div>
-      								<div class="data-row">
+      								<div class="data-item">
       									<label class="data-label">251-400 мм</label>
-      									<div class="data-value"><input type="text" name=""></div>
-      									<div class="data-value"><input type="text" name=""></div>
+      									<div class="data-value"><input type="text"></div>
+      									<div class="data-value"><input type="text"></div>
       									<span class="data-unit">руб. /(Гкал/ч) без НДС</span>
       								</div>
-      								<div class="data-row">
+      								<div class="data-item">
       									<label class="data-label">401-550 мм</label>
-      									<div class="data-value"><input type="text" name=""></div>
-      									<div class="data-value"><input type="text" name=""></div>
+      									<div class="data-value"><input type="text"></div>
+      									<div class="data-value"><input type="text"></div>
       									<span class="data-unit">руб. /(Гкал/ч) без НДС</span>
       								</div>
-      								<div class="data-row">
+      								<div class="data-item">
       									<label class="data-label">551-700 мм</label>
-      									<div class="data-value"><input type="text" name=""></div>
-      									<div class="data-value"><input type="text" name=""></div>
+      									<div class="data-value"><input type="text"></div>
+      									<div class="data-value"><input type="text"></div>
       									<span class="data-unit">руб. /(Гкал/ч) без НДС</span>
       								</div>
-      								<div class="data-row">
+      								<div class="data-item">
       									<label class="data-label">701 и выше мм</label>
-      									<div class="data-value"><input type="text" name=""></div>
-      									<div class="data-value"><input type="text" name=""></div>
+      									<div class="data-value"><input type="text"></div>
+      									<div class="data-valuel"><input type="text"></div>
       									<span class="data-unit">руб. /(Гкал/ч) без НДС</span>
       								</div>
 	      						</div>
 	      						<div class="data-table-block"> 
-      								<div class="data-row">
+      								<div class="data-item">
       									<h5>2. Надземная прокладка Д<sub>у</sub></h5>
       								</div>
       								<div class="data-item">
@@ -2458,9 +2468,9 @@
 			     </div>
 			     <div class="modal-body">
 	      			<div class="data-row static-block data-params">
-      					<div class="data-item stretch">
+      					<div class="data-item ">
 	      					<label class="data-label">Наименование ТСО</label>
-      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="УНОМ ТСО - Наименование">
+      						<select class="selectpicker data-value xxl-stretch" data-live-search="true" placeholder="УНОМ ТСО - Наименование">
 							  	<option value="2020">2020</option>
 							  	<option value="2021">2021</option>
 							  	<option value="2022" selected>2022</option>
@@ -2469,7 +2479,7 @@
 						</div>
 						<div class="data-item">
 							<label class="data-label">на</label>
-							<select class="selectpicker data-value md-fix" id="paramNumberTso" placeholder="Расчётный год">
+							<select class="selectpicker data-value md-fix" placeholder="Расчётный год">
 							  	<option value="2020">2020</option>
 							  	<option value="2021">2021</option>
 							  	<option value="2022" selected>2022</option>
@@ -2482,39 +2492,44 @@
 	      				<div class="data-block">
 	      					<h5>Плата за услуги по поддержанию резервной тепловой мощности:</h5>
 	      					<div class="data-table-block">
-	      						<div class="data-item justify-content-start">
+	      						<div class="data-item">
 		      						<label class="data-label">до тепловых пунктов</label>
-		      						<input class="data-value">
+		      						<input type="text" class="data-value">
 		      						<span class="data-unit">руб./(Гкал/ч) в месяц</span>
 		      					</div>
-		      					<div class="data-item justify-content-start">
+		      					<div class="data-item">
 		      						<label class="data-label">после тепловых пунктов</label>
-		      						<input class="data-value">
+		      						<input type="text" class="data-value">
 		      						<span class="data-unit">руб./(Гкал/ч) в месяц</span>
 		      					</div>
 	      					</div>
 	      					
 	      					<div class="data-row">
-	      						<div class="data-item justify-content-start">
-		      						<label class="data-label">Решение от</label>
-		      						<input class="data-value">
-		      					</div>
-		      					<div class="data-item justify-content-start">
-		      						<label class="data-label">№</label>
-		      						<input class="data-value">
-		      					</div>
+	      						<label class="data-label">Решение:</label>
+	      						<div class="data-row">
+	      							<div class="data-item">
+			      						<label class="data-label sublabel">от</label>
+			      						<input type="date" class="data-value md-fix">
+			      					</div>
+			      					<div class="data-item">
+			      						<label class="data-label sublabel">№</label>
+			      						<input type="text" class="data-value lg-fix">
+			      					</div>
+	      						</div>
 	      					</div>
 	      					<div class="data-row">
-	      						<div class="data-item justify-content-start">
-		      						<label class="data-label">Протокол от</label>
-		      						<input class="data-value">
-		      					</div>
-		      					<div class="data-item justify-content-start">
-		      						<label class="data-label">№</label>
-		      						<input class="data-value">
-		      					</div>
+	      						<label class="data-label">Протокол</label>
+	      						<div class="data-row">
+	      							<div class="data-item">
+			      						<label class="data-label sublabel">от</label>
+			      						<input type="date" class="data-value md-fix">
+			      					</div>
+			      					<div class="data-item">
+			      						<label class="data-label sublabel">№</label>
+			      						<input type="text" class="data-value lg-fix">
+			      					</div>
+	      						</div>
 	      					</div>
-	      					
 	      				</div>
 					</form>
 	    		</div>

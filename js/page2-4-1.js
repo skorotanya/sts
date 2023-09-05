@@ -27,7 +27,7 @@ $(document).ready(function () {
       name: 'hnList',
       type: 'full',
       columns: [],
-      height:'52vh',
+      height:'51vh',
       modal: '',
       tab: true,
       firstTab: true,
@@ -37,7 +37,7 @@ $(document).ready(function () {
       name: 'hnByYear',
       type: 'full',
       columns: [],
-      height:'41vh',
+      height:'42vh',
       modal: '',
       tab: true,
       firstTab: false,
@@ -47,7 +47,7 @@ $(document).ready(function () {
       name: 'losses',
       type: 'full',
       columns: [],
-      height:'44vh',
+      height:'43vh',
       modal: '',
       tab: true,
       firstTab: false,
@@ -57,7 +57,7 @@ $(document).ready(function () {
       name: 'damage',
       type: 'full',
       columns: [],
-      height: '44vh',
+      height: '45vh',
       modal: '',
       tab: true,
       firstTab: false,
@@ -67,7 +67,7 @@ $(document).ready(function () {
       name: 'protection',
       type: 'full',
       columns: [],
-      height: '51vh',
+      height: '56vh',
       modal: '',
       tab: true,
       firstTab: false,
@@ -77,7 +77,7 @@ $(document).ready(function () {
       name: 'development',
       type: 'full',
       columns: [],
-      height: '41vh',
+      height: '42vh',
       modal: '',
       tab: true,
       firstTab: false,
@@ -116,28 +116,6 @@ $(document).ready(function () {
   ];
   
   initPageTables(pageTables);
-
-/*
-    // Double click on row tsoServTable 
-    $('#tsoServTable tbody').on('dblclick', 'tr', function () {
-      showModal('editData');
-    } );
-
-    // Double click on row srcListTable 
-    $('#srcListTable tbody').on('dblclick', 'tr', function () {
-      showModal('editData');
-    } );
-
-    // Double click on row heatPointTable 
-    $('#heatPointTable tbody').on('dblclick', 'tr', function () {
-      showModal('editData');
-    } );
-
-    // Double click on row extraDataTable 
-    $('#extraDataTable tbody').on('dblclick', 'tr', function () {
-      showModal('editExtraData');
-    } );
-*/
 
     // show modal window for edit data
     $('.bttn-edit-group').on('click', (e) => {
@@ -191,20 +169,6 @@ $(document).ready(function () {
     // Enabled / disabled form controls on popup "editGroupHN" by checkboxes
     for (let i = 1; i <= 6; i++) {
       setEnableElements('checkData' + i);
-      /*$('#checkData' + i).on('change', function () {
-        let check = this.checked;
-        $('.checkData' + i).each(function(){
-          if($(this).attr('type')=='text'){
-            this.disabled = !check;
-          }
-          if($(this).hasClass('selectpicker')) {
-            $(this).prop('disabled', !check);
-            $(this).selectpicker('destroy');
-            $(this).selectpicker();
-            $(this).addClass('selectpicker');
-          }
-        });
-      });*/
     }
 
     setEnableElements('checkEHZ');

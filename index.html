@@ -210,8 +210,8 @@
 				<div class="data-row static-block">
 					<div class="data-row">
 						<div class="data-item">
-							<label for="paramCalcYear" class="data-label">Выберите год:</label>
-							<select class="selectpicker md-fix param-calc-year" id="paramCalcYear" >
+							<label class="data-label">Выберите год</label>
+							<select class="selectpicker md-fix">
 							  <option value="2020">01.01.2021</option>
 							  <option value="2021">01.01.2022</option>
 							  <option value="2022" selected>01.01.2023</option>
@@ -223,14 +223,12 @@
 						</div>
 					</div>
 					<div class="data-row">
-						<div class="data-item">
-							<label for="paramCalcYear" class="data-label">Только регулируемые и договор поставки</label>
-							<input type="checkbox" name="check1" class="form-check-input">
-						</div>
-						<div class="data-item">
-							<label for="paramCalcYear" class="data-label">Показать ликвидированные</label>
-							<input type="checkbox" name="check2" class="form-check-input">
-						</div>
+						<label class="data-item">
+							<span class="data-label">Только регулируемые и договор поставки</span><input type="checkbox" class="data-check">
+						</label>
+						<label class="data-item">
+							<span class="data-label">Показать ликвидированные</span><input type="checkbox" class="data-check">
+						</label>
 					</div>
 				</div>
 			</div>
@@ -507,34 +505,32 @@
 					            <td><a href="#">>></a></td>
 					        </tr>
 					    </tbody>
-					</table>
-						
+					</table>				
 				</div>
-
 				<div class="data-row table-summary">
 					<div class="data-item rows-count">
 						<h5>Всего записей:</h5>
 						<p><span class="mark-color">10</span></p>
 					</div>
-					<div class="data-block">
+					<div class="data-row">
 						<h5 >Количество организаций:</h5>
 						<div class="data-table-block">
-							<p class="data-item">регулируемые - <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
-							<p class="data-item">нерегулируемые - <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
-							<p class="data-item">договор поставки - <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
+							<p class="data-item">- регулируемые: <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
+							<p class="data-item">- нерегулируемые: <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
+							<p class="data-item">- договор поставки: <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
 						</div>
 					</div>
-					<div class="data-block">
+					<div class="data-row">
 						<h5>В том числе по видам деятельности:</h5>
 						<div class="data-row">
 							<div class="data-table-block">
-								<p class="data-item">комбинированное производство, более 25 МВт - <span class="mark-color">4</span><span class="data-unit">шт.</span></p>
-								<p class="data-item">комбинированное производство менее 25 МВт - <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
-								<p class="data-item">некомбинированное производство - <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
+								<p class="data-item">- комбинированное производство, более 25 МВт: <span class="mark-color">4</span><span class="data-unit">шт.</span></p>
+								<p class="data-item">- комбинированное производство менее 25 МВт: <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
+								<p class="data-item">- некомбинированное производство: <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
 							</div>
 							<div class="data-table-block">
-								<p class="data-item">передача - <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
-								<p class="data-item">сбыт - <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
+								<p class="data-item">- передача: <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
+								<p class="data-item">- сбыт: <span class="mark-color">10</span><span class="data-unit">шт.</span></p>
 							</div>
 
 						</div>
@@ -610,9 +606,9 @@
 			     <div class="modal-body ">
 			     	<div class="data-block">
 			     		<div class="data-row static-block">
-		      				<div class="data-item stretch">
+		      				<div class="data-item">
 		      					<label class="data-label">Уникальный номер ТСО</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true">
+	      						<select class="selectpicker data-value xxl-stretch" data-live-search="true">
 								  	<option value="2020">2020</option>
 								  	<option value="2021">2021</option>
 								  	<option value="2022">2022</option>
@@ -625,62 +621,61 @@
 			      		</div>
 			      		<div class="scroll-block-wrapper" style="max-height: calc(95vh - 250px);">
 				      		<div class="data-block scroll-block">
-				      			<form>
+				      			<form id="form1" class="needs-validation" novalidate>
 					      			<div class="data-block border-block">
 					      				<h4>Общие сведения об организации:</h4>
 					      				<div class="data-row">
 				      						<div class="data-block stretch me-xxl-3">
 					      						<div class="data-row">
-					      							<div class="col-12 col-lg-3 order-lg-5">
+					      							<div class="col-5 col-lg-3 order-lg-5 ms-auto">
 					      								<div class="data-item ms-lg-3">
 															<label class="data-label">Код ТСО</label>
-															<input type="text" class="data-value md-auto" name="">
+															<input type="text" class="data-value md-stretch" name="">
 														</div>
 					      							</div>
 					      							<div class="col-12 col-lg-9">
 					      								<div class="data-item me-lg-3">
-															<label class="data-label xl-auto">Наименование ТСО: <span class="sublabel">краткое</span></label>
-															<input type="text" class="data-value stretch" name="">
+															<label class="data-label xl-fix">Наименование ТСО: <span class="sublabel">краткое</span></label>
+															<input type="text" class="data-value stretch" required >
+															<a class="invalid-tooltip error" data-bs-toggle="tooltip" data-bs-custom-class="error-tooltip" data-bs-html="false" data-bs-title="Это поле должно быть заполнено"></a>
 														</div>
 					      							</div>
-					      							
-													
 					      						</div>
 						  						<div class="data-row">
-						  							<div class="data-item stretch">
-														<label class="data-label xl-auto"><span class="sublabel">полное</span></label>
-														<textarea class="data-value stretch" style="height: 62px;"></textarea>
+						  							<div class="data-item ">
+														<label class="data-label xl-fix"><span class="sublabel">полное</span></label>
+														<textarea class="data-value stretch" style="height: 62px;" required></textarea>
+														<a class="invalid-tooltip error" data-bs-toggle="tooltip" data-bs-custom-class="error-tooltip" data-bs-html="false" data-bs-title="Это поле должно быть заполнено"></a>
 													</div>
-													<div class="data-item stretch">
-														<label class="data-label md-auto">Примечание</label>
+													<div class="data-item">
+														<label class="data-label md-fix">Примечание</label>
 														<textarea class="data-value stretch" style="height: 62px;"></textarea>
 													</div>
 						  						</div>
-												
 												<div class="data-row">
-					      							<div class="data-item stretch">
-														<label class="data-label">Организация является структурным подразделением</label>
-														<input type="checkbox" class="form-check-input">
-													</div>
-													<div class="data-item stretch">
-														<label class="data-label">Организация является плательщиком НДС</label>
-														<input type="checkbox" class="form-check-input">
-													</div>
+					      							<label class="data-item data-item-right">
+														<span class="data-label">Организация является структурным подразделением</span>
+														<input type="checkbox" class="data-value data-check">
+													</label>
+													<label class="data-item data-item-right">
+														<span class="data-label">Организация является плательщиком НДС</span>
+														<input type="checkbox" class="data-check">
+													</label>
 					      						</div>
 						      				</div>
 				      					
-				      						<div class="data-block ms-xxl-3 data-xxl-row fix-80">
+				      						<div class="data-block ms-xxl-3 data-xxl-row">
 					      					
-												<div class="data-item stretch">
-													<label class="data-label">ИНН</label>
+												<div class="data-item ">
+													<label class="data-label smx-fix">ИНН</label>
 													<input type="text" class="data-value md-stretch" name="">
 												</div>
-												<div class="data-item stretch">
-													<label class="data-label">ОГРН</label>
+												<div class="data-item ">
+													<label class="data-label smx-fix">ОГРН</label>
 													<input type="text" class="data-value md-stretch" name="">
 												</div>
-												<div class="data-item stretch">
-													<label class="data-label">КПП</label>
+												<div class="data-item ">
+													<label class="data-label smx-fix">КПП</label>
 													<input type="text" class="data-value md-stretch" name="">
 												</div>
 						      				</div>
@@ -696,31 +691,31 @@
 														<div class="data-block me-md-3">
 															<div class="data-item">
 																<label class="data-label sm-fix">Должность</label>
-																<input type="text" class="data-value stretch" name="">
+																<input type="text" class="data-value md-stretch" name="">
 															</div>
 															<div class="data-item">
 																<label class="data-label sm-fix">Фамилия</label>
-																<input type="text" class="data-value stretch" name="">
+																<input type="text" class="data-value md-stretch" name="">
 															</div>
 															<div class="data-item">
 																<label class="data-label sm-fix">Имя</label>
-																<input type="text" class="data-value stretch" name="">
+																<input type="text" class="data-value md-stretch" name="">
 															</div>
 														</div>
 													</div>
 													<div class="col-12 col-md-6">
-														<div class="data-block ms-md-3 fix-110">
+														<div class="data-block ms-md-3">
 															<div class="data-item">
-																<label class="data-label">Отчество</label>
-																<input type="text" class="data-value stretch" name="">
+																<label class="data-label sm-fix">Отчество</label>
+																<input type="text" class="data-value md-stretch" name="">
 															</div>
 															<div class="data-item">
-																<label class="data-label">Контактный телефон</label>
-																<input type="tel" class="data-value stretch" name="">
+																<label class="data-label sm-fix">Контактный телефон</label>
+																<input type="tel" class="data-value md-stretch" name="">
 															</div>
 															<div class="data-item">
-																<label class="data-label">Эл. почта</label>
-																<input type="email" class="data-value stretch" name="">
+																<label class="data-label sm-fix">Эл. почта</label>
+																<input type="email" class="data-value md-stretch" name="">
 															</div>
 														</div>
 													</div>
@@ -744,37 +739,34 @@
 															</div>
 															<div class="data-item">
 																<label class="data-label md-fix">Вид собственности</label>
-
-																  	<select class="selectpicker data-value stretch" id="paramPropertyType" data-live-search="true" placeholder="Выберите значение">
-																	  	<option value="1">частная</option>
-																	  	<option value="2">государственная</option>
-																	</select>
-
+															  	<select class="selectpicker data-value stretch" required data-live-search="true" placeholder="Выберите...">
+																  	<option value="1">частная</option>
+																  	<option value="2">государственная</option>
+																</select>
+																<a class="invalid-tooltip error" data-bs-toggle="tooltip" data-bs-custom-class="error-tooltip" data-bs-html="false" data-bs-title="Выберите значение из списка"></a>
 															</div>
 														</div>
 													</div>
 													<div class="col-12 col-md-6">
 														<div class="data-block ms-md-3">
-
 															<div class="data-item">
 																<label class="data-label md-fix">Способ отправки писем</label>
-																  	<select class="selectpicker data-value stretch" id="paramPostMethod" data-live-search="true" placeholder="Выберите значение">
-																	  	<option value="1">частная</option>
-																	  	<option value="2">государственная</option>
-																	</select>
+															  	<select class="selectpicker data-value stretch"data-live-search="true" placeholder="Выберите значение">
+																  	<option value="1">частная</option>
+																  	<option value="2">государственная</option>
+																</select>
 															</div>
 															<div class="data-item">
 																<label class="data-label md-fix">Организация действует в зоне(нах) ЕТО</label>
-																
-																  	<select class="selectpicker data-value stretch" id="paramEtoZone" multiple data-live-search="true" placeholder="Выберите значение">
-																	  	<option value="1">частная</option>
-																	  	<option value="2">государственная</option>
-																	</select>
+															  	<select class="selectpicker data-value stretch" multiple data-live-search="true" placeholder="Выберите значение">
+																  	<option value="1">частная</option>
+																  	<option value="2">государственная</option>
+																</select>
 															</div>
 															<div class="data-item">
 																<label class="data-label md-fix">Статус ЕТО</label>
 																<div class="input-group stretch">
-																  	<select class="selectpicker data-value stretch" id="paramEtoStatus" placeholder="Выберите значение">
+																  	<select class="selectpicker data-value stretch" placeholder="Выберите значение">
 																	  	<option value="1">частная</option>
 																	  	<option value="2">государственная</option>
 																	</select>
@@ -795,7 +787,7 @@
 												<h4>Параметры ТСО по годам расчетного периода схемы</h4>
 												<button class="bttn bttn-square bttn-icon-save ms-auto" type="button" title="Сохранить"></button>
 											</div>
-											<table id="yearParamTable" class="display nowrap compact table-inp-stretch" style="width:100%">
+											<table class="table-inp-stretch" style="width:100%; white-space: nowrap;">
 											    <thead>
 											        <tr>
 											            <th>Год схемы</th>
@@ -900,6 +892,177 @@
 											    			3.1; 3.2
 											    		</td>
 											    	</tr>
+											    	<tr>
+											    		<td>01.01.2027</td>
+											    		<td>
+											    			<select class="data-value selectpicker " placeholder="Выберите значение">
+															  <option value="1" selected>Действует</option>
+															  <option value="2">Ликвидированная</option>
+															</select>
+											    		</td>
+											    		<td>
+											    			<select class="data-value selectpicker " placeholder="Выберите значение">
+															  <option value="1" selected>Регулируемая</option>
+															  <option value="2">Договор поставки</option>
+															  <option value="3">Не регулируемая</option>
+															</select>
+											    		</td>
+											    		<td>
+											    			3.1; 3.2
+											    		</td>
+											    	</tr>
+											    	<tr>
+											    		<td>01.01.2028</td>
+											    		<td>
+											    			<select class="data-value selectpicker " placeholder="Выберите значение">
+															  <option value="1" selected>Действует</option>
+															  <option value="2">Ликвидированная</option>
+															</select>
+											    		</td>
+											    		<td>
+											    			<select class="data-value selectpicker " placeholder="Выберите значение">
+															  <option value="1" selected>Регулируемая</option>
+															  <option value="2">Договор поставки</option>
+															  <option value="3">Не регулируемая</option>
+															</select>
+											    		</td>
+											    		<td>
+											    			3.1; 3.2
+											    		</td>
+											    	</tr>
+											    	<tr>
+											    		<td>01.01.2029</td>
+											    		<td>
+											    			<select class="data-value selectpicker " placeholder="Выберите значение">
+															  <option value="1" selected>Действует</option>
+															  <option value="2">Ликвидированная</option>
+															</select>
+											    		</td>
+											    		<td>
+											    			<select class="data-value selectpicker " placeholder="Выберите значение">
+															  <option value="1" selected>Регулируемая</option>
+															  <option value="2">Договор поставки</option>
+															  <option value="3">Не регулируемая</option>
+															</select>
+											    		</td>
+											    		<td>
+											    			3.1; 3.2
+											    		</td>
+											    	</tr>
+											    	<tr>
+											    		<td>01.01.2030</td>
+											    		<td>
+											    			<select class="data-value selectpicker " placeholder="Выберите значение">
+															  <option value="1" selected>Действует</option>
+															  <option value="2">Ликвидированная</option>
+															</select>
+											    		</td>
+											    		<td>
+											    			<select class="data-value selectpicker " placeholder="Выберите значение">
+															  <option value="1" selected>Регулируемая</option>
+															  <option value="2">Договор поставки</option>
+															  <option value="3">Не регулируемая</option>
+															</select>
+											    		</td>
+											    		<td>
+											    			3.1; 3.2
+											    		</td>
+											    	</tr>
+											    	<tr>
+											    		<td>01.01.2031</td>
+											    		<td>
+											    			<select class="data-value selectpicker " placeholder="Выберите значение">
+															  <option value="1" selected>Действует</option>
+															  <option value="2">Ликвидированная</option>
+															</select>
+											    		</td>
+											    		<td>
+											    			<select class="data-value selectpicker " placeholder="Выберите значение">
+															  <option value="1" selected>Регулируемая</option>
+															  <option value="2">Договор поставки</option>
+															  <option value="3">Не регулируемая</option>
+															</select>
+											    		</td>
+											    		<td>
+											    			3.1; 3.2
+											    		</td>
+											    	</tr>
+											    	<tr>
+											    		<td>01.01.2032</td>
+											    		<td>
+											    			<select class="data-value selectpicker " placeholder="Выберите значение">
+															  <option value="1" selected>Действует</option>
+															  <option value="2">Ликвидированная</option>
+															</select>
+											    		</td>
+											    		<td>
+											    			<select class="data-value selectpicker " placeholder="Выберите значение">
+															  <option value="1" selected>Регулируемая</option>
+															  <option value="2">Договор поставки</option>
+															  <option value="3">Не регулируемая</option>
+															</select>
+											    		</td>
+											    		<td>
+											    			3.1; 3.2
+											    		</td>
+											    	</tr>
+											    	<tr>
+											    		<td>01.01.2033</td>
+											    		<td>
+											    			<select class="data-value selectpicker " placeholder="Выберите значение">
+															  <option value="1" selected>Действует</option>
+															  <option value="2">Ликвидированная</option>
+															</select>
+											    		</td>
+											    		<td>
+											    			<select class="data-value selectpicker " placeholder="Выберите значение">
+															  <option value="1" selected>Регулируемая</option>
+															  <option value="2">Договор поставки</option>
+															  <option value="3">Не регулируемая</option>
+															</select>
+											    		</td>
+											    		<td>
+											    			3.1; 3.2
+											    		</td>
+											    	</tr>
+											    	<tr>
+											    		<td>01.01.2034</td>
+											    		<td>
+											    			<select class="data-value selectpicker " placeholder="Выберите значение">
+															  <option value="1" selected>Действует</option>
+															  <option value="2">Ликвидированная</option>
+															</select>
+											    		</td>
+											    		<td>
+											    			<select class="data-value selectpicker " placeholder="Выберите значение">
+															  <option value="1" selected>Регулируемая</option>
+															  <option value="2">Договор поставки</option>
+															  <option value="3">Не регулируемая</option>
+															</select>
+											    		</td>
+											    		<td>
+											    			3.1; 3.2
+											    		</td>
+											    	</tr>
+											    	<tr>
+											    		<td>01.01.2035</td>
+											    		<td>
+											    			<select class="data-value selectpicker " placeholder="Выберите значение">
+															  <option value="1" selected>Действует</option>
+															  <option value="2">Ликвидированная</option>
+															</select>
+											    		</td>
+											    		<td>
+											    			<select class="data-value selectpicker " placeholder="Выберите значение">
+															  <option value="1" selected>Регулируемая</option>
+															  <option value="2">Договор поставки</option>
+															  <option value="3">Не регулируемая</option>
+															</select>
+											    		</td>
+											    		<td>
+											    			3.1; 3.2
+											    		</td>
+											    	</tr>
 											    </tbody>
 											</table>
 										</div>
@@ -948,16 +1111,14 @@
 											    </tbody>
 											</table>
 										</div>
-										
 									</div>
 								</div>
 							</div>
 						</div>
 			     	</div>
-		      		
 			     </div>
 			     <div class="modal-footer">
-			      	<button type="button" class="bttn bttn-color">Сохранить</button>
+			      	<button type="submit" form="form1" class="bttn bttn-color">Сохранить</button>
 			      	<button type="button" class="bttn bttn-color">Создать копию</button>
 			      	<button type="button" class="bttn bttn-color">Удалить</button>
 			     </div>

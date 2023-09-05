@@ -1179,10 +1179,10 @@
 										<h5>Всего записей:</h5>
 										<p><span class="mark-color">10</span></p>
 									</div>
-									<div class="data-item">
-										<label for="paramCalcYear" class="data-label">Показать нарастающим итогом</label>
-										<input type="checkbox" class="form-check-input">
-									</div>
+									<label class="data-item">
+										<span class="data-label">Показать нарастающим итогом</span>
+										<input type="checkbox" class="data-check">
+									</label>
 								</div>
 								<div class="scroll-table-wrapper">
 									<table>
@@ -1705,20 +1705,20 @@
 			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			     </div>
 			     <div class="modal-body">
-	      			<div class="data-block static-block data-params">
+	      			<div class="data-block static-block">
 		      			<div class="data-row">
-		      				<div class="data-item stretch">
-		      					<label class="data-label fix-325">Уникальный(ые) номер(а) потребителей:</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" multiple="true" placeholder="Выберите один или несколько УНОМ П, которые будут переключаться">
+		      				<div class="data-item ">
+		      					<label class="data-label lm-fix">Уникальный(ые) номер(а) потребителей:</label>
+	      						<select class="selectpicker data-value xxl-stretch"  data-live-search="true" multiple="true" placeholder="Выберите один или несколько УНОМ П, которые будут переключаться">
 								  	<option value="ТП 1">Потребитель 1</option>
 								  	<option value="ТП 2">Потребитель 2</option>
 								  	<option value="ТП 3">Потребитель 3</option>
 								  	<option value="ТП 4">Потребитель 4</option>
 								</select>
 							</div>
-							<div class="data-item stretch">
-		      					<label class="data-label fix-325">Уникальный номер теплового пункта и номер после переключений:</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="УНОМ ТП - Номер на схеме">
+							<div class="data-item ">
+		      					<label class="data-label lm-fix">Уникальный номер теплового пункта и номер после переключений:</label>
+	      						<select class="selectpicker data-value xxl-stretch"  data-live-search="true" placeholder="УНОМ ТП - Номер на схеме">
 								  	<option value="ТП 1">ТП 1</option>
 								  	<option value="ТП 2">ТП 2</option>
 								  	<option value="ТП 3">ТП 3</option>
@@ -1727,11 +1727,11 @@
 							</div>
 		      			</div>
 		      			<div class="data-row">
-		      				<h5 style="width: 325px" class="text-end">Расчётный год схемы:</h5>
+		      				<h5  class="text-end lm-fix">Расчётный год схемы:</h5>
 		      				<div class="data-row">
 		      					<div class="data-item">
-									<label for="paramCalcYear" class="data-label">начало переключений - </label>
-									<select class="selectpicker md-fix param-calc-year" id="paramCalcYear">
+									<label class="data-label">начало переключений - </label>
+									<select class="selectpicker md-fix " >
 									  <option value="2020">01.01.2021</option>
 									  <option value="2021">01.01.2022</option>
 									  <option value="2022" selected>01.01.2023</option>
@@ -1739,8 +1739,8 @@
 									</select>
 								</div>
 								<div class="data-item">
-									<label for="paramCalcYear" class="data-label">окончание переключений - </label>
-									<select class="selectpicker md-fix param-calc-year" id="paramCalcYear">
+									<label class="data-label">окончание переключений - </label>
+									<select class="selectpicker md-fix">
 									  <option value="2020">01.01.2021</option>
 									  <option value="2021">01.01.2022</option>
 									  <option value="2022">01.01.2023</option>
@@ -2020,18 +2020,18 @@
 			     <div class="modal-body">
 	      			<div class="data-block static-block data-params">
 	      				<div class="data-row">
-	      					<div class="data-item stretch">
+	      					<div class="data-item ">
 		      					<label class="data-label">Уникальный номер потребителя:</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите УНОМ потребителя">
+	      						<select class="selectpicker data-value xxl-stretch"  data-live-search="true" placeholder="Выберите УНОМ потребителя">
 								  	<option value="2020">2020</option>
 								  	<option value="2021">2021</option>
 								  	<option value="2022" >2022</option>
 								  	<option value="2023">2023</option>
 								</select>
 							</div>
-							<div class="data-item stretch">
+							<div class="data-item ">
 		      					<label class="data-label">Адрес потребителя:</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите или введите адрес потребителя">
+	      						<select class="selectpicker data-value xxl-stretch"  data-live-search="true" placeholder="Выберите или введите адрес потребителя">
 								  	<option value="2020">2020</option>
 								  	<option value="2021">2021</option>
 								  	<option value="2022" >2022</option>
@@ -2040,18 +2040,18 @@
 							</div>
 	      				</div>
 	      				<div class="data-row">
-	      					<div class="data-item stretch">
+	      					<div class="data-item ">
 		      					<label class="data-label">Округ:</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите округ потребителя">
+	      						<select class="selectpicker data-value xxl-stretch"  data-live-search="true" placeholder="Выберите округ потребителя">
 								  	<option value="2020">2020</option>
 								  	<option value="2021">2021</option>
 								  	<option value="2022" >2022</option>
 								  	<option value="2023">2023</option>
 								</select>
 							</div>
-							<div class="data-item stretch">
+							<div class="data-item ">
 		      					<label class="data-label">Район (поселение):</label>
-	      						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите район или населённый пункт потребителя">
+	      						<select class="selectpicker data-value xxl-stretch"  data-live-search="true" placeholder="Выберите район или населённый пункт потребителя">
 								  	<option value="2020">2020</option>
 								  	<option value="2021">2021</option>
 								  	<option value="2022" >2022</option>
@@ -2060,37 +2060,37 @@
 							</div>
 	      				</div>
       					<div class="data-row">
-      						<div class="data-item stretch">
+      						<div class="data-item ">
 	      						<label class="data-label">Наименование:</label>
 	      						<input type="text" class="data-value xl-stretch" placeholder="Введите наименование или назначение потебителя">
 	      					</div>
-	      					<div class="data-item ">
-	      						<label class="data-label">Существующий потребитель</label>
-	      						<input type="checkbox" class="form-check-input">
-	      					</div>
-	      					<div class="data-item ">
-	      						<label class="data-label">Перспективный потребитель</label>
-	      						<input type="checkbox" class="form-check-input" checked>
-	      					</div>
+	      					<label class="data-item ">
+	      						<span class="data-label">Существующий потребитель</span>
+	      						<input type="checkbox" class="data-check">
+	      					</label>
+	      					<label class="data-item ">
+	      						<span class="data-label">Перспективный потребитель</span>
+	      						<input type="checkbox" class="data-check" checked>
+	      					</label>
       					</div>
       					<div class="data-row">
-      						<div class="data-item stretch">
+      						<div class="data-item ">
 	      						<label class="data-label">Обозначение на схеме:</label>
-	      						<select class="selectpicker data-value xl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите УНОМ ПП">
+	      						<select class="selectpicker data-value xl-stretch"  data-live-search="true" placeholder="Выберите УНОМ ПП">
 								  	<option value="2020">2020</option>
 								  	<option value="2021">2021</option>
 								  	<option value="2022">2022</option>
 								  	<option value="2023">2023</option>
 								</select>
 	      					</div>
-	      					<div class="data-item stretch">
+	      					<div class="data-item ">
 	      						<label class="data-label">∑ Q<sub>р</sub>:</label>
 	      						<input type="text" class="data-value sm-stretch" disabled>
 	      						<span class="data-unit">т/ч</span>
 	      						<input type="text" class="data-value sm-stretch" disabled>
 	      						<span class="data-unit">Гкал/ч</span>
 	      					</div>
-	      					<div class="data-item stretch">
+	      					<div class="data-item ">
 	      						<label class="data-label">∑ Q<sub>д</sub>:</label>
 	      						<input type="text" class="data-value sm-stretch" disabled>
 	      						<span class="data-unit">Гкал/ч</span>
@@ -2108,11 +2108,11 @@
 								      	<div class="accordion-body">
 								      		<div class="data-block">
 								      			<div class="data-row col-12 col-xxl-6 pe-xxl-3">
-								      				<div class="data-item stretch">
+								      				<div class="data-item ">
 							      						<label class="data-label">Договор на теплоснабжение: <span class="sublable"> от</span></label>
 							      						<input type="date" class="data-value stretch" placeholder="Дата">
 							      					</div>
-							      					<div class="data-item stretch">
+							      					<div class="data-item ">
 							      						<label class="data-label"><span class="sublable">№</span></label>
 							      						<input type="text" class="data-value stretch" placeholder="Номер">
 							      					</div>
@@ -2121,31 +2121,31 @@
 								      			<div class="data-row">
 								      				<div class="col-12 col-lg-6">
 								      					<div class="data-block me-lg-3">
-									      					<div class="data-item fix-180 stretch">
-										      					<label class="data-label">Адрес потребителя:</label>
+									      					<div class="data-item">
+										      					<label class="data-label lg-fix">Адрес потребителя:</label>
 									      						<input type="text" class="data-value stretch" placeholder="Адрес">
 															</div>
-															<div class="data-item fix-180">
-										      					<label class="data-label">Управляющая организация:</label>
-									      						<select class="selectpicker data-value stretch" id="paramNumberTso" data-live-search="true">
+															<div class="data-item">
+										      					<label class="data-label lg-fix">Управляющая организация:</label>
+									      						<select class="selectpicker data-value stretch"  data-live-search="true">
 																  	<option value="2020">2020</option>
 																  	<option value="2021">2021</option>
 																  	<option value="2022">2022</option>
 																  	<option value="2023">2023</option>
 																</select>
 															</div>
-															<div class="data-item fix-180">
-										      					<label class="data-label">ИНН организации:</label>
-									      						<select class="selectpicker data-value stretch" id="paramNumberTso" data-live-search="true">
+															<div class="data-item">
+										      					<label class="data-label lg-fix">ИНН организации:</label>
+									      						<select class="selectpicker data-value stretch"  data-live-search="true">
 																  	<option value="2020">2020</option>
 																  	<option value="2021">2021</option>
 																  	<option value="2022">2022</option>
 																  	<option value="2023">2023</option>
 																</select>
 															</div>
-															<div class="data-item fix-180">
-										      					<label class="data-label">Номер функциональной зоны Генерального плана:</label>
-									      						<select class="selectpicker data-value stretch" id="paramNumberTso" data-live-search="true">
+															<div class="data-item ">
+										      					<label class="data-label lg-fix">Номер функциональной зоны Генерального плана:</label>
+									      						<select class="selectpicker data-value stretch"  data-live-search="true">
 																  	<option value="2020">2020</option>
 																  	<option value="2021">2021</option>
 																  	<option value="2022">2022</option>
@@ -2155,21 +2155,21 @@
 								      					</div>
 								      				</div>
 								      				<div class="col-12 col-lg-6">
-								      					<div class="data-block fix-180 ms-lg-3">
+								      					<div class="data-block ms-lg-3">
 															<div class="data-item">
-									      						<label class="data-label">Кадастровый номер ЗУ:</label>
+									      						<label class="data-label lg-fix">Кадастровый номер ЗУ:</label>
 									      						<input type="text" class="data-value stretch" placeholder="Введите кадастровый номер ЗУ">
 									      					</div>
 									      					<div class="data-item">
-									      						<label class="data-label">Кадастровый номер ОКС:</label>
+									      						<label class="data-label lg-fix">Кадастровый номер ОКС:</label>
 									      						<input type="text" class="data-value stretch" placeholder="Введите кадастровый номер ОКС">
 									      					</div>
 									      					<div class="data-item">
-									      						<label class="data-label">ФИАС ЗУ:</label>
+									      						<label class="data-label lg-fix">ФИАС ЗУ:</label>
 									      						<input type="text" class="data-value stretch" placeholder="Введите номер ФИАС ЗУ">
 									      					</div>
 									      					<div class="data-item">
-									      						<label class="data-label">ФИАС ОКС:</label>
+									      						<label class="data-label lg-fix">ФИАС ОКС:</label>
 									      						<input type="text" class="data-value stretch" placeholder="Введите номер ОКС">
 									      					</div>
 								      					</div>
@@ -2188,19 +2188,19 @@
 									      			<div class="col-12 col-xxl-3">
 									      				<div class="data-block me-xxl-3">
 									      					<div class="data-row">
-									      						<div class="data-item stretch">
+									      						<div class="data-item ">
 											      					<label class="data-label">Этажность:</label>
-										      						<select class="selectpicker data-value smx-stretch" id="paramNumberTso" data-live-search="true">
+										      						<select class="selectpicker data-value smx-stretch"  data-live-search="true">
 																	  	<option value="1">1</option>
 																	  	<option value="2">2</option>
 																	  	<option value="3">3</option>
 																	  	<option value="4">4</option>
 																	</select>
 																</div>
-																<div class="data-item">
-										      						<label class="data-label">Потребитель относится к социальному объекту</label>
-										      						<input type="checkbox" class="form-check-input">
-										      					</div>
+																<label class="data-item">
+										      						<span class="data-label">Потребитель относится к социальному объекту</span>
+										      						<input type="checkbox" class="data-check">
+										      					</label>
 									      					</div>
 								      					</div>
 									      			</div>
@@ -2208,60 +2208,60 @@
 									      				<div class="data-row border-block ms-xxl-3">
 											      			<div class="data-block stretch">
 											      				<h5 class="text-end">Категория надежности:</h5>
-											      				<div class="data-item">
-										      						<label class="data-label">1 категория</label>
-										      						<input type="radio" name="radioGroup1" class="form-check-input">
-										      					</div>
-										      					<div class="data-item">
-										      						<label class="data-label">2 категория</label>
-										      						<input type="radio" name="radioGroup1" class="form-check-input" checked>
-										      					</div>
-										      					<div class="data-item">
-										      						<label class="data-label">3 категория</label>
-										      						<input type="radio" name="radioGroup1" class="form-check-input">
-										      					</div>
+											      				<label class="data-item">
+										      						<span class="data-label">1 категория</span>
+										      						<input type="radio" name="radioGroup1" class="data-check">
+										      					</label>
+										      					<label class="data-item">
+										      						<span class="data-label">2 категория</span>
+										      						<input type="radio" name="radioGroup1" class="data-check" checked>
+										      					</label>
+										      					<label class="data-item">
+										      						<span class="data-label">3 категория</span>
+										      						<input type="radio" name="radioGroup1" class="data-check">
+										      					</label>
 											      			</div>
 											      			<div class="data-block stretch">
 											      				<h5 class="text-end">Назначение потребителя (нагрузка):</h5>
-											      				<div class="data-item">
-										      						<label class="data-label">жилое</label>
-										      						<input type="radio" name="radioGroup2" class="form-check-input" checked>
-										      					</div>
-										      					<div class="data-item">
-										      						<label class="data-label">общественное</label>
-										      						<input type="radio" name="radioGroup2" class="form-check-input">
-										      					</div>
-										      					<div class="data-item">
-										      						<label class="data-label">промышленное</label>
-										      						<input type="radio" name="radioGroup2" class="form-check-input">
-										      					</div>
-										      					<div class="data-item">
-										      						<label class="data-label">индивидуальное жилое (ИЖС)</label>
-										      						<input type="radio" name="radioGroup2" class="form-check-input">
-										      					</div>
+											      				<label class="data-item">
+										      						<span class="data-label">жилое</span>
+										      						<input type="radio" name="radioGroup2" class="data-check" checked>
+										      					</label>
+										      					<label class="data-item">
+										      						<span class="data-label">общественное</span>
+										      						<input type="radio" name="radioGroup2" class="data-check">
+										      					</label>
+										      					<label class="data-item">
+										      						<span class="data-label">промышленное</span>
+										      						<input type="radio" name="radioGroup2" class="data-check">
+										      					</label>
+										      					<label class="data-item">
+										      						<span class="data-label">индивидуальное жилое (ИЖС)</span>
+										      						<input type="radio" name="radioGroup2" class="data-check">
+										      					</label>
 											      			</div>
 											      			<div class="data-block stretch">
 											      				<h5 class="text-end">Назначение потребителя (потребление):</h5>
-											      				<div class="data-item">
-										      						<label class="data-label">население</label>
-										      						<input type="radio" name="radioGroup3" class="form-check-input" checked>
-										      					</div>
-										      					<div class="data-item">
-										      						<label class="data-label">бюджетный потребитель</label>
-										      						<input type="radio" name="radioGroup3" class="form-check-input">
-										      					</div>
-										      					<div class="data-item">
-										      						<label class="data-label">прочие</label>
-										      						<input type="radio" name="radioGroup3" class="form-check-input">
-										      					</div>
+											      				<label class="data-item">
+										      						<span class="data-label">население</span>
+										      						<input type="radio" name="radioGroup3" class="data-check" checked>
+										      					</label>
+										      					<label class="data-item">
+										      						<span class="data-label">бюджетный потребитель</span>
+										      						<input type="radio" name="radioGroup3" class="data-check">
+										      					</label>
+										      					<label class="data-item">
+										      						<span class="data-label">прочие</span>
+										      						<input type="radio" name="radioGroup3" class="data-check">
+										      					</label>
 											      			</div>
 											      		</div>
 									      			</div>
 									      		</div>
 									      		<div class="data-row">
-									      			<div class="data-item stretch">
+									      			<div class="data-item ">
 								      					<label class="data-label">Назначение потребителя подробно:</label>
-							      						<select class="selectpicker data-value lg-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите назначение потребителя">
+							      						<select class="selectpicker data-value lg-stretch"  data-live-search="true" placeholder="Выберите назначение потребителя">
 														  	<option value="1">Назначение 1</option>
 														  	<option value="2">Назначение 2</option>
 														  	<option value="3">Назначение 3</option>
@@ -2343,22 +2343,22 @@
 								      			</div>
 								      			<div class="data-row">
 								      				<h5>Способ определения расчетной тепловой нагрузки:</h5>
-								      				<div class="data-item">
-							      						<label class="data-label">автоматизированный расчет</label>
-							      						<input type="radio" name="radioGroup4" class="form-check-input" checked>
-							      					</div>
-							      					<div class="data-item">
-							      						<label class="data-label">ввод в ручную</label>
-							      						<input type="radio" name="radioGroup4" class="form-check-input">
-							      					</div>
-							      					<div class="data-item">
-							      						<label class="data-label">принять по договору на теплоснабжение</label>
-							      						<input type="radio" name="radioGroup4" class="form-check-input">
-							      					</div>
-							      					<div class="data-item">
-							      						<label class="data-label">принять по программе развития</label>
-							      						<input type="radio" name="radioGroup4" class="form-check-input">
-							      					</div>
+								      				<label class="data-item">
+							      						<span class="data-label">автоматизированный расчет</span>
+							      						<input type="radio" name="radioGroup4" class="data-check" checked>
+							      					</label>
+							      					<label class="data-item">
+							      						<span class="data-label">ввод в ручную</span>
+							      						<input type="radio" name="radioGroup4" class="data-check">
+							      					</label>
+							      					<label class="data-item">
+							      						<span class="data-label">принять по договору на теплоснабжение</span>
+							      						<input type="radio" name="radioGroup4" class="data-check">
+							      					</label>
+							      					<label class="data-item">
+							      						<span class="data-label">принять по программе развития</span>
+							      						<input type="radio" name="radioGroup4" class="data-check">
+							      					</label>
 								      			</div>
 								      			<div class="scroll-table-wrapper">
 							      					<table class="table-inp-stretch" style="width:100%;">
@@ -2927,14 +2927,14 @@
 								      			</div>
 								      			<div class="data-row">
 								      				<h5>Способ определения полезного отпуска:</h5>
-								      				<div class="data-item">
-							      						<label class="data-label">нормативный климат</label>
-							      						<input type="checkbox" class="form-check-input" checked>
-							      					</div>
-							      					<div class="data-item">
-							      						<label class="data-label">учесть поправочные коэффициенты</label>
-							      						<input type="checkbox" class="form-check-input">
-							      					</div>
+								      				<label class="data-item">
+							      						<span class="data-label">нормативный климат</span>
+							      						<input type="checkbox" class="data-check" checked>
+							      					</label>
+							      					<label class="data-item">
+							      						<span class="data-label">учесть поправочные коэффициенты</span>
+							      						<input type="checkbox" class="data-check">
+							      					</label>
 								      			</div>
 								      			<div class="scroll-table-wrapper">
 							      					<table class="table-inp-stretch" style="width:100%;">
@@ -3292,10 +3292,10 @@
 												    <div id="panel6-1" class="accordion-collapse collapse">
 												      	<div class="accordion-body">
 												      		<div class="data-row">
-												      			<div class="data-item">
-										      						<label class="data-label">Потребитель учтён в программе капремонта / энергосбережения</label>
-										      						<input type="checkbox" id="checkInProgram" class="form-check-input">
-										      					</div>
+												      			<label class="data-item">
+										      						<span class="data-label">Потребитель учтён в программе капремонта / энергосбережения</span>
+										      						<input type="checkbox" id="checkInProgram" class="data-check">
+										      					</label>
 										      					<div class="data-item">
 										      						<label class="data-label">Год программы:</label>
 										      						<input type="text" id="inpProgramYear" class="data-value" placeholder="Введите год" disabled>
@@ -3313,36 +3313,36 @@
 												      				<div class="col-12 col-xl-5">
 												      					<div class="data-block me-xl-3">
 												      						<div class="data-item">
-													      						<label class="data-label fix-180">Программа развития:</label>
+													      						<label class="data-label lg-fix">Программа развития:</label>
 													      						<input type="text" class="data-value stretch" placeholder="Наименование типа программы" disabled>
 													      					</div>
 													      					<div class="data-item">
-													      						<label class="data-label fix-180">Уникальный номер объекта по программе:</label>
+													      						<label class="data-label lg-fix">Уникальный номер объекта по программе:</label>
 													      						<input type="text" class="data-value stretch" placeholder="Номер объекта в программе" disabled>
 													      					</div>
 													      					<div class="data-row">
-													      						<div class="data-item stretch">
-														      						<label class="data-label fix-180">Заявка о подключении: </label><label class="data-label"><span class="sublabel">от</span></label>
+													      						<div class="data-item ">
+														      						<label class="data-label lg-fix">Заявка о подключении: </label><label class="data-label sublabel">от</label>
 														      						<input type="date" class="data-value smx-stretch" placeholder="Дата" disabled>
 														      					</div>
-														      					<div class="data-item stretch">
-														      						<label class="data-label"> <span class="sublabel">№</span></label>
+														      					<div class="data-item ">
+														      						<label class="data-label sublabel">№</label>
 														      						<input type="text" class="data-value smx-stretch" placeholder="Номер" disabled>
 														      					</div>
 													      					</div>
 													      					<div class="data-row">
-													      						<div class="data-item stretch">
-														      						<label class="data-label fix-180">Договор о подключении: </label><label class="data-label"><span class="sublabel">от</span></label>
+													      						<div class="data-item ">
+														      						<label class="data-label lg-fix">Договор о подключении: </label><label class="data-label sublabel">от</label>
 														      						<input type="date" class="data-value smx-stretch" placeholder="Дата" disabled>
 														      					</div>
-														      					<div class="data-item stretch">
-														      						<label class="data-label"> <span class="sublabel">№</span></label>
+														      					<div class="data-item ">
+														      						<label class="data-label sublabel">№</label>
 														      						<input type="text" class="data-value smx-stretch" placeholder="Номер" disabled>
 														      					</div>
 													      					</div>
 													      					
 													      					<div class="data-item">
-													      						<label class="data-label fix-180">Общий объем строительства:</label>
+													      						<label class="data-label lg-fix">Общий объем строительства:</label>
 													      						<input type="text" class="data-value stretch" placeholder="Общая площадь" >
 													      					</div>
 												      					</div>
@@ -3350,46 +3350,46 @@
 												      				<div class="col-12 col-xl-7">
 												      					<div class="data-block ms-xl-3">
 												      						<div class="data-row">
-												      							<div class="data-item stretch">
-														      						<label class="data-label fix-180">Год программы:</label>
+												      							<div class="data-item ">
+														      						<label class="data-label lg-fix">Год программы:</label>
 														      						<input type="text" class="data-value smx-stretch" placeholder="Год" disabled>
 														      					</div>
 														      					<div class="data-row stretch">
-														      						<div class="data-item stretch">
-															      						<label class="data-label fix-180">Решение: </label><label class="data-label"><span class="sublabel">от</span></label>
+														      						<div class="data-item ">
+															      						<label class="data-label lg-fix">Решение: </label><label class="data-label sublabel">от</label>
 															      						<input type="date" class="data-value md-fix" placeholder="Дата" disabled>
 															      					</div>
-															      					<div class="data-item stretch">
-															      						<label class="data-label"> <span class="sublabel">№</span></label>
+															      					<div class="data-item ">
+															      						<label class="data-label sublabel">№</label>
 															      						<input type="text" class="data-value sm-stretch" placeholder="Номер" disabled>
 															      					</div>
 														      					</div>
 													      					</div>
 													      					<div class="data-item">
-													      						<label class="data-label fix-180">Наименование заявителя:</label>
+													      						<label class="data-label lg-fix">Наименование заявителя:</label>
 													      						<input type="text" class="data-value xl-stretch" placeholder="Наименование заявителя по объекту" disabled>
 													      					</div>
 													      					<div class="data-row">
 													      						<div class="data-item">
-														      						<label class="data-label fix-180">Условие на подключение: </label><label class="data-label"><span class="sublabel">от</span></label>
+														      						<label class="data-label lg-fix">Условие на подключение: </label><label class="data-label sublabel">от</label>
 														      						<input type="date" class="data-value md-fix" placeholder="Дата" disabled>
 														      					</div>
-														      					<div class="data-item stretch">
-														      						<label class="data-label"> <span class="sub-label">№</span></label>
+														      					<div class="data-item ">
+														      						<label class="data-label sublabel">№</label>
 														      						<input type="text" class="data-value sm-stretch" placeholder="Номер" disabled>
 														      					</div>
 													      					</div>
 													      					<div class="data-item">
-													      						<label class="data-label fix-180">Точка присоединения:</label>
+													      						<label class="data-label lg-fix">Точка присоединения:</label>
 													      						<input type="text" class="data-value stretch" placeholder="Наименование точки на присоединение" disabled>
 													      					</div>
 													      					<div class="data-row">
-													      						<div class="data-item stretch">
-														      						<label class="data-label fix-180">Года реализации строительства: </label><label class="data-label"><span class="sublabel">год начала</span></label>
+													      						<div class="data-item ">
+														      						<label class="data-label lg-fix">Года реализации строительства: </label><label class="data-label sublabel">год начала</label>
 														      						<input type="text" class="data-value smx-stretch" placeholder="Год" >
 														      					</div>
-														      					<div class="data-item stretch">
-														      						<label class="data-label fix-80"><span class="sublabel">год окончания</span></label>
+														      					<div class="data-item ">
+														      						<label class="data-label lg-fix sublabel">год окончания</label>
 														      						<input type="text" class="data-value smx-stretch" placeholder="Год" >
 														      					</div>
 													      					</div>
@@ -3621,7 +3621,7 @@
 												      						</thead>
 												      						<tbody>
 												      							<tr>
-												      								<td><input type="checkbox" class="form-check-input m-auto"></td>
+												      								<td><input type="checkbox" class="data-check"></td>
 												      								<td>А01234.2022</td>
 												      								<td>АИП</td>
 												      								<td>12345642</td>
@@ -3633,7 +3633,7 @@
 												      								<td>1,603</td>
 												      							</tr>
 												      							<tr>
-												      								<td><input type="checkbox" class="form-check-input m-auto"></td>
+												      								<td><input type="checkbox" class="data-check"></td>
 												      								<td>Т01234.2021</td>
 												      								<td>УП</td>
 												      								<td>Т-УП1-01-210122/0</td>
@@ -3645,7 +3645,7 @@
 												      								<td>1,523</td>
 												      							</tr>
 												      							<tr>
-												      								<td><input type="checkbox" class="form-check-input m-auto"></td>
+												      								<td><input type="checkbox" class="data-check"></td>
 												      								<td>G01234.2023</td>
 												      								<td>Ген. план</td>
 												      								<td>1108015</td>
@@ -3672,28 +3672,28 @@
 								    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel7" aria-expanded="false">Номера и обозначения потребителя в других базах данных</button>
 								    <div id="panel7" class="accordion-collapse collapse">
 								      	<div class="accordion-body">
-								      		<div class="data-block fix-110">
+								      		<div class="data-block">
 								      			<div class="data-row">
-								      				<div class="data-item stretch">
-							      						<label class="data-label">MUID</label>
+								      				<div class="data-item ">
+							      						<label class="data-label sm-fix">MUID</label>
 							      						<input type="text" class="data-value smx-stretch" placeholder="Введите номер MUID">
 							      					</div>
-							      					<div class="data-item stretch">
-							      						<label class="data-label">UNOM</label>
+							      					<div class="data-item ">
+							      						<label class="data-label sm-fix">UNOM</label>
 							      						<input type="text" class="data-value smx-stretch" placeholder="Введите номер UNOM">
 							      					</div>
-							      					<div class="data-item stretch">
-							      						<label class="data-label">CON_CODE</label>
+							      					<div class="data-item ">
+							      						<label class="data-label sm-fix">CON_CODE</label>
 							      						<input type="text" class="data-value smx-stretch" placeholder="Введите номер CON_CODE">
 							      					</div>
 								      			</div>
 								      			<div class="data-row">
-								      				<div class="data-item stretch">
-							      						<label class="data-label">KOD_DP_M</label>
+								      				<div class="data-item ">
+							      						<label class="data-label sm-fix">KOD_DP_M</label>
 							      						<input type="text" class="data-value smx-stretch" placeholder="Введите номер KOD_DP_M">
 							      					</div>
-							      					<div class="data-item stretch">
-							      						<label class="data-label">KKS_M</label>
+							      					<div class="data-item ">
+							      						<label class="data-label sm-fix">KKS_M</label>
 							      						<input type="text" class="data-value smx-stretch" placeholder="Введите номер KKS_M">
 							      					</div>
 								      			</div>
@@ -3727,7 +3727,7 @@
 	        	<div class="data-block static-block">
         			<div class="data-item">
 		        		<label class="data-label">Уникальные номера потребителей:</label>
-  						<select class="selectpicker data-value xxl-stretch" id="paramNumberTso" data-live-search="true" multiple="true" placeholder="Выберите перечень УНОМ П">
+  						<select class="selectpicker data-value xxl-stretch"  data-live-search="true" multiple="true" placeholder="Выберите перечень УНОМ П">
 						  	<option value="2020">2020</option>
 						  	<option value="2021">2021</option>
 						  	<option value="2022">2022</option>
@@ -3742,9 +3742,9 @@
 						</select>
 		        	</div>
 	        		<div class="data-row">
-	        			<div class="data-item stretch">
+	        			<div class="data-item ">
 			        		<label class="data-label">Уникальные номера потребителей:</label>
-      						<select class="selectpicker data-value xl-stretch" id="paramNumberTso" data-live-search="true" placeholder="Выберите УНОМ ПР">
+      						<select class="selectpicker data-value xl-stretch"  data-live-search="true" placeholder="Выберите УНОМ ПР">
 							  	<option value="2020">2020</option>
 							  	<option value="2021">2021</option>
 							  	<option value="2022">2022</option>
@@ -3758,7 +3758,7 @@
 							  	<option value="2023">2030</option>
 							</select>
 			        	</div>
-			        	<div class="data-item stretch">
+			        	<div class="data-item ">
 			        		<label class="data-label">Наименование программы</label>
 							<input type="text" class="data-value xl-stretch" disabled placeholder="Наименование программы">
 			        	</div>
@@ -3901,10 +3901,10 @@
 	      	<div class="scroll-block-wrapper" style="max-height: 78vh;">
 	      		<div class="data-block scroll-block">
 	        		<div class="data-row border-block">
-			        	<div class="data-item stretch">
+			        	<div class="data-item ">
 			        		<label class="data-label">Расчетный(е) год(а) схемы:</label>
 	      					<div class="data-value stretch">
-	      						<select class="selectpicker" id="paramNumberTso" data-live-search="true" multiple="true" placeholder="Выберите год(а)">
+	      						<select class="selectpicker"  data-live-search="true" multiple="true" placeholder="Выберите год(а)">
 								  	<option value="2020">2020</option>
 								  	<option value="2021">2021</option>
 								  	<option value="2022">2022</option>
@@ -3919,18 +3919,18 @@
 								</select>
 	      					</div>
 			        	</div>
-			        	<div class="data-item">
-							<label class="data-label">Года расчетного периода схемы</label>
-							<input type="checkbox" class="form-check-input">
-						</div>
-						<div class="data-item">
-							<label class="data-label">Года за расчетным периодом схемы</label>
-							<input type="checkbox" class="form-check-input">
-						</div>
-						<div class="data-item">
-							<label class="data-label">Ретроспективный период</label>
-							<input type="checkbox" class="form-check-input">
-						</div>
+			        	<label class="data-item">
+							<span class="data-label">Года расчетного периода схемы</span>
+							<input type="checkbox" class="data-check">
+						</label>
+						<label class="data-item">
+							<span class="data-label">Года за расчетным периодом схемы</span>
+							<input type="checkbox" class="data-check">
+						</label>
+						<label class="data-item">
+							<span class="data-label">Ретроспективный период</span>
+							<input type="checkbox" class="data-check">
+						</label>
 			        </div>
 			        <div class="data-row">
 			        	<div class="col-12 col-xxl-6">
@@ -3938,30 +3938,30 @@
 				        		<h4>Типы нагрузок:</h4>
 				        		<div class="data-row">
 				        			<div class="data-block stretch">
-				        				<div class="data-item">
-				        					<label class="data-label">в паре</label>
-											<input type="checkbox" class="form-check-input">
-				        				</div>
-										<div class="data-item">
-											<label class="data-label">в горячей воде</label>
-											<input type="checkbox" class="form-check-input">
-										</div>
+				        				<label class="data-item">
+				        					<span class="data-label">в паре</span>
+											<input type="checkbox" class="data-check">
+				        				</label>
+										<label class="data-item">
+											<span class="data-label">в горячей воде</span>
+											<input type="checkbox" class="data-check">
+										</label>
 									</div>
 									<div class="data-block stretch">
-										<div class="data-item">
-											<label class="data-label">расчетные нагрузки</label>
-											<input type="checkbox" class="form-check-input">
-										</div>
-										<div class="data-item">
-											<label class="data-label">зарасчетное похолодание</label>
-											<input type="checkbox" class="form-check-input">
-										</div>
+										<label class="data-item">
+											<span class="data-label">расчетные нагрузки</span>
+											<input type="checkbox" class="data-check">
+										</label>
+										<label class="data-item">
+											<span class="data-label">зарасчетное похолодание</span>
+											<input type="checkbox" class="data-check">
+										</label>
 									</div>
 									<div class="data-block stretch">
-										<div class="data-item">
-											<label class="data-label">по договорам на теплоснабжение</label>
-											<input type="checkbox" class="form-check-input">
-										</div>	
+										<label class="data-item">
+											<span class="data-label">по договорам на теплоснабжение</span>
+											<input type="checkbox" class="data-check">
+										</label>	
 			        				</div>
 				        		</div>
 				        	</div>
@@ -3971,44 +3971,44 @@
 				        		<h4>Виды потребителей:</h4>
 				        		<div class="data-row">
 				        			<div class="data-block stretch">
-				        				<div class="data-item">
-				        					<label class="data-label">существующие</label>
-											<input type="checkbox" class="form-check-input" checked>
-				        				</div>
-				        				<div class="data-item">
-				        					<label class="data-label">перспективные</label>
-											<input type="checkbox" class="form-check-input" checked>
-				        				</div>
+				        				<label class="data-item">
+				        					<span class="data-label">существующие</span>
+											<input type="checkbox" class="data-check" checked>
+				        				</label>
+				        				<label class="data-item">
+				        					<span class="data-label">перспективные</span>
+											<input type="checkbox" class="data-check" checked>
+				        				</label>
 									</div>	
 									<div class="data-block stretch">
-										<div class="data-item">
-											<label class="data-label">снос</label>
-											<input type="checkbox" class="form-check-input" checked>
-										</div>
-										<div class="data-item">
-											<label class="data-label">рекосн.</label>
-											<input type="checkbox" class="form-check-input" checked>
-										</div>
+										<label class="data-item">
+											<span class="data-label">снос</span>
+											<input type="checkbox" class="data-check" checked>
+										</label>
+										<label class="data-item">
+											<span class="data-label">рекосн.</span>
+											<input type="checkbox" class="data-check" checked>
+										</label>
 									</div>
 									<div class="data-block stretch">
-										<div class="data-item">
-											<label class="data-label">жилые</label>
-											<input type="checkbox" class="form-check-input" checked>
-										</div>
-										<div class="data-item">
-											<label class="data-label">ИЖС</label>
-											<input type="checkbox" class="form-check-input" checked>
-										</div>
+										<label class="data-item">
+											<span class="data-label">жилые</span>
+											<input type="checkbox" class="data-check" checked>
+										</label>
+										<label class="data-item">
+											<span class="data-label">ИЖС</span>
+											<input type="checkbox" class="data-check" checked>
+										</label>
 									</div>
 									<div class="data-block stretch">
-										<div class="data-item">
-											<label class="data-label">общественные</label>
-											<input type="checkbox" class="form-check-input" checked>
-										</div>
-										<div class="data-item">
-											<label class="data-label">промышленность</label>
-											<input type="checkbox" class="form-check-input" checked>
-										</div>
+										<label class="data-item">
+											<span class="data-label">общественные</span>
+											<input type="checkbox" class="data-check" checked>
+										</label>
+										<label class="data-item">
+											<span class="data-label">промышленность</span>
+											<input type="checkbox" class="data-check" checked>
+										</label>
 									</div>
 								</div>
 				        	</div>
@@ -4019,13 +4019,11 @@
 		        			<h4 class="align-self-center w-50">Программа(ы) развития города (поселения):</h4>
 		        			<div class="data-item ">
 				        		<label class="data-label">Тип программы:</label>
-		      					<div class="data-value unom-name">
-		      						<select class="selectpicker" id="paramNumberTso" data-live-search="true" placeholder="Выберите тип">
-									  	<option value="1">Тип 1</option>
-									  	<option value="2">Тип 2</option>
-									  	<option value="3">Тип 3</option>
-									</select>
-		      					</div>
+	      						<select class="selectpicker data-value lg-stretch"  data-live-search="true" placeholder="Выберите тип">
+								  	<option value="1">Тип 1</option>
+								  	<option value="2">Тип 2</option>
+								  	<option value="3">Тип 3</option>
+								</select>
 				        	</div>
 		        		</div>
 		        		<div class="data-row">
@@ -4211,7 +4209,7 @@
 					        			</thead>
 					        			<tbody>
 					        				<tr>
-					        					<td><input type="checkbox" class="form-check-input m-auto"></td>
+					        					<td><input type="checkbox" class="data-check"></td>
 					        					<td>1</td>
 					        					<td>ГЭС-1</td>
 					        					<td>в работе</td>
@@ -4221,7 +4219,7 @@
 					        					<td>Садовническая ул., д.11</td>
 					        				</tr>
 					        				<tr>
-					        					<td><input type="checkbox" class="form-check-input m-auto"></td>
+					        					<td><input type="checkbox" class="data-check"></td>
 					        					<td>2</td>
 					        					<td>ГЭС-1</td>
 					        					<td>в работе</td>
@@ -4231,7 +4229,7 @@
 					        					<td>Садовническая ул., д.11</td>
 					        				</tr>
 					        				<tr>
-					        					<td><input type="checkbox" class="form-check-input m-auto"></td>
+					        					<td><input type="checkbox" class="data-check"></td>
 					        					<td>3</td>
 					        					<td>ГЭС-1</td>
 					        					<td>в работе</td>
@@ -4241,7 +4239,7 @@
 					        					<td>Садовническая ул., д.11</td>
 					        				</tr>
 					        				<tr>
-					        					<td><input type="checkbox" class="form-check-input m-auto"></td>
+					        					<td><input type="checkbox" class="data-check"></td>
 					        					<td>4</td>
 					        					<td>ГЭС-1</td>
 					        					<td>в работе</td>
@@ -4251,7 +4249,7 @@
 					        					<td>Садовническая ул., д.11</td>
 					        				</tr>
 					        				<tr>
-					        					<td><input type="checkbox" class="form-check-input m-auto"></td>
+					        					<td><input type="checkbox" class="data-check"></td>
 					        					<td>5</td>
 					        					<td>ГЭС-1</td>
 					        					<td>в работе</td>
@@ -4261,7 +4259,7 @@
 					        					<td>Садовническая ул., д.11</td>
 					        				</tr>
 					        				<tr>
-					        					<td><input type="checkbox" class="form-check-input m-auto"></td>
+					        					<td><input type="checkbox" class="data-check"></td>
 					        					<td>6</td>
 					        					<td>ГЭС-1</td>
 					        					<td>в работе</td>
@@ -4271,7 +4269,7 @@
 					        					<td>Садовническая ул., д.11</td>
 					        				</tr>
 					        				<tr>
-					        					<td><input type="checkbox" class="form-check-input m-auto"></td>
+					        					<td><input type="checkbox" class="data-check"></td>
 					        					<td>7</td>
 					        					<td>ГЭС-1</td>
 					        					<td>в работе</td>
@@ -4281,7 +4279,7 @@
 					        					<td>Садовническая ул., д.11</td>
 					        				</tr>
 					        				<tr>
-					        					<td><input type="checkbox" class="form-check-input m-auto"></td>
+					        					<td><input type="checkbox" class="data-check"></td>
 					        					<td>8</td>
 					        					<td>ГЭС-1</td>
 					        					<td>в работе</td>
@@ -4291,7 +4289,7 @@
 					        					<td>Садовническая ул., д.11</td>
 					        				</tr>
 					        				<tr>
-					        					<td><input type="checkbox" class="form-check-input m-auto"></td>
+					        					<td><input type="checkbox" class="data-check"></td>
 					        					<td>9</td>
 					        					<td>ГЭС-1</td>
 					        					<td>в работе</td>
@@ -4301,7 +4299,7 @@
 					        					<td>Садовническая ул., д.11</td>
 					        				</tr>
 					        				<tr>
-					        					<td><input type="checkbox" class="form-check-input m-auto"></td>
+					        					<td><input type="checkbox" class="data-check"></td>
 					        					<td>10</td>
 					        					<td>ГЭС-1</td>
 					        					<td>в работе</td>
@@ -4395,7 +4393,7 @@
 					        			</thead>
 					        			<tbody>
 					        				<tr>
-					        					<td><input type="checkbox" class="form-check-input m-auto" ></td>
+					        					<td><input type="checkbox" class="data-check" ></td>
 					        					<td>2445</td>
 					        					<td>06-10-1101/094</td>
 					        					<td>в работе</td>
@@ -4405,7 +4403,7 @@
 					        					<td>Востряковский пр., д.11, корп.2, стр.3</td>
 					        				</tr>
 					        				<tr>
-					        					<td><input type="checkbox" class="form-check-input m-auto" ></td>
+					        					<td><input type="checkbox" class="data-check" ></td>
 					        					<td>2446</td>
 					        					<td>06-10-1101/094</td>
 					        					<td>в работе</td>
@@ -4415,7 +4413,7 @@
 					        					<td>Востряковский пр., д.11, корп.2, стр.3</td>
 					        				</tr>
 					        				<tr>
-					        					<td><input type="checkbox" class="form-check-input m-auto" ></td>
+					        					<td><input type="checkbox" class="data-check" ></td>
 					        					<td>2447</td>
 					        					<td>06-10-1101/094</td>
 					        					<td>в работе</td>
@@ -4425,7 +4423,7 @@
 					        					<td>Востряковский пр., д.11, корп.2, стр.3</td>
 					        				</tr>
 					        				<tr>
-					        					<td><input type="checkbox" class="form-check-input m-auto" ></td>
+					        					<td><input type="checkbox" class="data-check" ></td>
 					        					<td>2448</td>
 					        					<td>06-10-1101/094</td>
 					        					<td>в работе</td>
@@ -4435,7 +4433,7 @@
 					        					<td>Востряковский пр., д.11, корп.2, стр.3</td>
 					        				</tr>
 					        				<tr>
-					        					<td><input type="checkbox" class="form-check-input m-auto" ></td>
+					        					<td><input type="checkbox" class="data-check" ></td>
 					        					<td>2449</td>
 					        					<td>06-10-1101/094</td>
 					        					<td>в работе</td>
@@ -4445,7 +4443,7 @@
 					        					<td>Востряковский пр., д.11, корп.2, стр.3</td>
 					        				</tr>
 					        				<tr>
-					        					<td><input type="checkbox" class="form-check-input m-auto" ></td>
+					        					<td><input type="checkbox" class="data-check" ></td>
 					        					<td>2450</td>
 					        					<td>06-10-1101/094</td>
 					        					<td>в работе</td>
@@ -4455,7 +4453,7 @@
 					        					<td>Востряковский пр., д.11, корп.2, стр.3</td>
 					        				</tr>
 					        				<tr>
-					        					<td><input type="checkbox" class="form-check-input m-auto" ></td>
+					        					<td><input type="checkbox" class="data-check" ></td>
 					        					<td>2451</td>
 					        					<td>06-10-1101/094</td>
 					        					<td>в работе</td>
@@ -4465,7 +4463,7 @@
 					        					<td>Востряковский пр., д.11, корп.2, стр.3</td>
 					        				</tr>
 					        				<tr>
-					        					<td><input type="checkbox" class="form-check-input m-auto" ></td>
+					        					<td><input type="checkbox" class="data-check" ></td>
 					        					<td>2452</td>
 					        					<td>06-10-1101/094</td>
 					        					<td>в работе</td>
@@ -4475,7 +4473,7 @@
 					        					<td>Востряковский пр., д.11, корп.2, стр.3</td>
 					        				</tr>
 					        				<tr>
-					        					<td><input type="checkbox" class="form-check-input m-auto" ></td>
+					        					<td><input type="checkbox" class="data-check" ></td>
 					        					<td>2453</td>
 					        					<td>06-10-1101/094</td>
 					        					<td>в работе</td>
@@ -4485,7 +4483,7 @@
 					        					<td>Востряковский пр., д.11, корп.2, стр.3</td>
 					        				</tr>
 					        				<tr>
-					        					<td><input type="checkbox" class="form-check-input m-auto" ></td>
+					        					<td><input type="checkbox" class="data-check" ></td>
 					        					<td>2454</td>
 					        					<td>06-10-1101/094</td>
 					        					<td>в работе</td>
@@ -4571,30 +4569,30 @@
 			        		<div class="data-block border-block ms-1">
 				        		<h4>Дополнительные столбцы таблицы</h4>
 				        		<div class="data-table-block">
-				        			<div class="data-item">
-										<label class="data-label">Наименование источников тепловой энергии по годам</label>
-										<input type="checkbox" class="data-switcher" role="switch">
-									</div>
-									<div class="data-item">
-										<label class="data-label">Статус источников тепловой энергии по годам</label>
-										<input type="checkbox" class="data-switcher" role="switch">
-									</div>
-									<div class="data-item">
-										<label class="data-label">Наименование тепловых пунктов по годам</label>
-										<input type="checkbox" class="data-switcher" role="switch">
-									</div>
-									<div class="data-item">
-										<label class="data-label">Статус тепловых пунктов по годам</label>
-										<input type="checkbox" class="data-switcher" role="switch">
-									</div>
-									<div class="data-item">
-										<label class="data-label">Структура тепловой нагрузки по годам</label>
-										<input type="checkbox" class="data-switcher" role="switch">
-									</div>
-									<div class="data-item">
-										<label class="data-label">Удельные расходы тепла на 1 м<sup>2</sup> по годам</label>
-										<input type="checkbox" class="data-switcher" role="switch">
-									</div>
+				        			<label class="data-item">
+										<span class="data-label">Наименование источников тепловой энергии по годам</span>
+										<input type="checkbox" class="data-check">
+									</label>
+									<label class="data-item">
+										<span class="data-label">Статус источников тепловой энергии по годам</span>
+										<input type="checkbox" class="data-check">
+									</label>
+									<label class="data-item">
+										<span class="data-label">Наименование тепловых пунктов по годам</span>
+										<input type="checkbox" class="data-check">
+									</label>
+									<label class="data-item">
+										<span class="data-label">Статус тепловых пунктов по годам</span>
+										<input type="checkbox" class="data-check">
+									</label>
+									<label class="data-item">
+										<span class="data-label">Структура тепловой нагрузки по годам</span>
+										<input type="checkbox" class="data-check">
+									</label>
+									<label class="data-item">
+										<span class="data-label">Удельные расходы тепла на 1 м<sup>2</sup> по годам</span>
+										<input type="checkbox" class="data-check">
+									</label>
 				        		</div>
 				        	</div>
 			        	</div>

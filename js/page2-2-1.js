@@ -24,11 +24,12 @@ $(document).ready(function () {
       name: 'tso',
       type: 'full',
       columns: [],
+      height: '65vh',
       modal: '',
       tab: false,
       firstTab: false
     },
-    {
+    /*{
       name: 'yearParam',
       type: 'simple-scroll',
       height: '170px',
@@ -36,7 +37,7 @@ $(document).ready(function () {
       modal: 'editData',
       tab: false,
       firstTab: true
-    },
+    },*/
     {
       name: 'response',
       type: 'simple-scroll',
