@@ -524,11 +524,16 @@ input[type='file']::-webkit-file-upload-button{
 	border-color: var(--border-color);
 }
 
+.data-check[type=radio] {
+	border-radius: 50%;
+}
+
 .data-check[type=radio]:checked {
 	background-color: #fff;
 	background-image: url(../images/ellipse.svg);
 	border-color: var(--border-color);
-	background-size: auto;
+	background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .data-check:active {
