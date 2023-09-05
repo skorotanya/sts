@@ -675,8 +675,8 @@
 		      		<div class="scroll-block-wrapper" style="max-height: 72vh;">
 	      				<div class="data-block scroll-block">
 	      					<div class="data-row">
-	      						<div class="col-12 col-lg-6">
-	      							<div class="data-block border-block me-lg-3">
+	      						<div class="col-12 col-lg-5">
+	      							<div class="data-block border-block me-lg-1">
 	      								<table class="table-inp-stretch" style="width: 100%;">
 			      							<thead>
 			      								<tr>
@@ -832,8 +832,8 @@
 			      						</table>
 	      							</div>
 	      						</div>
-	      						<div class="col-12 col-lg-6">
-	      							<div class="data-block ms-lg-3">
+	      						<div class="col-12 col-lg-7">
+	      							<div class="data-block ms-lg-1">
 	      								<div class="data-item">
 						      				<label class="data-label">№ тарифной зоны в исходном файле</label>
 						      				<input type="text" class="data-value md-stretch">
@@ -868,7 +868,7 @@
 												</label>
 											</div>
 										</div>
-										<div class="data-block border-block">
+										<div class="data-row border-block">
 											<h4>Дифференциация тарифов:</h4>
 											<div class="data-row">
 												<label class="data-item">
@@ -886,10 +886,10 @@
 											</div>
 											
 										</div>
-										<div class="data-block border-block">
+										<div class="data-row border-block">
 											<div class="data-item">
 						      					<label class="data-label">Уникальный номер слоя электронной модели</label>
-						      					<select class="selectpicker data-value lg-stretch" data-live-search="true" placeholder="Выберите...">
+						      					<select class="selectpicker data-value sm-stretch" data-live-search="true" placeholder="Выберите...">
 												  	<option value="2020">2020</option>
 												  	<option value="2021">2021</option>
 												  	<option value="2022">2022</option>
@@ -898,40 +898,66 @@
 						      				</div>
 						      				<div class="data-item">
 							      				<label class="data-label">SYS объекта в электронном слое</label>
-							      				<input type="text" class="data-value md-stretch">
+							      				<input type="text" class="data-value sm-stretch">
 							      			</div>
 						      			</div>
 						      			<div class="data-block border-block">
+						      				<div class="data-row">
+						      					<div class="data-item">
+						      						<label class="data-label">Округ</label>
+						      						<select class="selectpicker data-value lg-stretch" data-live-search="true" placeholder="Выберите..." multiple="true">
+													  	<option value="1">Округ 1</option>
+													  	<option value="2">Округ 2</option>
+													  	<option value="3">Округ 3</option>
+													  	<option value="4">Округ 4</option>
+													</select>
+						      					</div>
+						      					<div class="data-item">
+						      						<label class="data-label">Район (поселение)</label>
+						      						<select class="selectpicker data-value lg-stretch" data-live-search="true" placeholder="Выберите..." multiple="true">
+													  	<option value="1">Район 1</option>
+													  	<option value="2">Район 2</option>
+													  	<option value="3">Район 3</option>
+													  	<option value="4">Район 4</option> 
+													</select>
+						      					</div>
+						      					
+						      				</div>
 						      				<table id="TZdistrictsTable" class="display compact table-inp-stretch" style="width:100%">
 						      					<thead>
 						      						<tr>
-						      							<th>Район</th>
 						      							<th>Округ</th>
-						      							<th></th>
+						      							<th>Районы</th>
 						      						</tr>
 						      					</thead>
 						      					<tbody>
 						      						<tr>
-						      							<td>
-						      								<select class="selectpicker data-value" data-live-search="true" data-container="#editData" placeholder="Выберите...">
-															  	<option value="1">Район 1</option>
-															  	<option value="2">Район 2</option>
-															  	<option value="3">Район 3</option>
-															  	<option value="4">Район 4</option>data-container="#editData" 
-															</select>
-						      							</td>
-						      							<td>
-						      								<select class="selectpicker data-value" data-live-search="true" data-container="#editData" placeholder="Выберите...">
-															  	<option value="1">Округ 1</option>
-															  	<option value="2">Округ 2</option>
-															  	<option value="3">Округ 3</option>
-															  	<option value="4">Округ 4</option>
-															</select>
-						      							</td>
-						      							<td>
-											    			<button class="bttn bttn-square bttn-icon-save" type="button" title="Сохранить"></button>
-											    			<button class="bttn bttn-square bttn-icon-del" type="button" title="Удалить"></button>
-											    		</td>
+						      							<td>СВАО</td>
+						      							<td>Лианозовский, Алтуфьевский</td>
+						      						</tr>
+						      						<tr>
+						      							<td>СВАО</td>
+						      							<td>Лианозовский, Алтуфьевский</td>
+						      						</tr>
+						      						<tr>
+						      							<td>СВАО</td>
+						      							<td>Лианозовский, Алтуфьевский</td>
+						      						</tr>
+						      						<tr>
+						      							<td>СВАО</td>
+						      							<td>Лианозовский, Алтуфьевский</td>
+						      						</tr>
+						      						<tr>
+						      							<td>СВАО</td>
+						      							<td>Лианозовский, Алтуфьевский</td>
+						      						</tr>
+						      						<tr>
+						      							<td>СВАО</td>
+						      							<td>Лианозовский, Алтуфьевский</td>
+						      						</tr>
+						      						<tr>
+						      							<td>СВАО</td>
+						      							<td>Лианозовский, Алтуфьевский</td>
 						      						</tr>
 						      					</tbody>
 						      				</table>

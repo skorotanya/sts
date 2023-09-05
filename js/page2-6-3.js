@@ -33,7 +33,7 @@ $(document).ready(function () {
       name: 'TZdistricts',
       type: 'simple-scroll',
       columns: [],
-      height: '22vh',
+      height: '16vh',
       modal: 'editData',
       tab: false,
       firstTab: true
