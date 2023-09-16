@@ -29,6 +29,13 @@
  --width-xxl: 400px;
 }
 
+/*@media(resolution: 1.25dppx) {
+	:root {
+	--fsize: 14px;
+	--base-height: 26px;
+	}
+}*/
+
 body {
 	margin: 0;
 	padding: 0;
@@ -38,6 +45,10 @@ body {
 	font-size: var(--fsize);
 	color: var(--text-color);
 	font-weight: 400;
+}
+
+p {
+	margin-bottom: 0;
 }
 
 /* Preloader */
@@ -103,17 +114,18 @@ a {
 h1, h2, h3, h4, h5{ 
 	font-weight: 600; 
 	color: var(--action-color);
-	line-height: 1.1;
+	line-height: 1.25;
+	margin-bottom: 0;
 }
 
 h1{
 	font-size: 2rem;
-	margin-bottom: 0.5rem;
+	
 }
 
 h2{
 	font-size: 1.7rem;
-	margin-bottom: 0.5rem;
+	
 }
 
 h3 {
@@ -122,15 +134,19 @@ h3 {
 
 h4 {
 	font-size: 1.1rem;
-	margin-bottom: 0.2rem;
+	
 }
 h5 {
 	color: var(--text-color);
 	font-size: 1em;
-	margin-bottom: 0;
-	margin-top: 0.2rem;
 	align-self: start;
 }
+
+.data-item h5, h5.data-label {
+	align-self: center;
+}
+
+
 
 /* Buttons */
 .bttn, button.dt-button, div.dtsb-searchBuilder button.dtsb-button { /* common styles for buttons = buttons with outline*/
@@ -297,7 +313,7 @@ button:disabled, .bttn.disabled{
 
 .data-row {
 	display: flex;
-	/*align-items: center;*/
+	align-items: baseline;
 	row-gap: 10px;
 }
 
@@ -317,7 +333,7 @@ button:disabled, .bttn.disabled{
 
 .data-row > .data-item {
 	align-self: center;
-	min-height: 31px;
+	/*min-height: 1.93rem;*/
 }
 
 .data-row:not(:has(*[class*=col-])) {
@@ -330,7 +346,7 @@ button:disabled, .bttn.disabled{
 
 
 .data-row:not(:has(.data-block)) {
-	align-items: center;
+	/*align-items: center;*/
 }
 
 /*.data-label {
@@ -343,8 +359,7 @@ button:disabled, .bttn.disabled{
 .data-item .data-label {
 	text-align: right;
     line-height: 1.25;
-    margin-bottom: 2px;
-    margin-right: 15px;
+    margin-right: 0.5rem;
 }
 
 .data-value > .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
@@ -956,6 +971,13 @@ border-left: 6px solid var(--action-color);
 	
 }
 
+.dropdown-title.dropdown-toggle:after {
+	content: url(../images/chevron-down-dark.svg);
+	margin-top: 0.2rem;
+	margin-left: 0.5rem;
+} 
+
+
 .tab-content {
 	padding: 15px;
     border: 1px solid var(--action-color);
@@ -1336,7 +1358,6 @@ td.dtfc-fixed-left{
 
 /* Table summary */
 .table-summary {
-	align-items: baseline;
 	font-size: 0.9rem;
 	padding-right:34px;
 }
@@ -1347,22 +1368,24 @@ td.dtfc-fixed-left{
 
 .table-summary .data-item {
 	font-size: 0.9rem;
+	align-self: start;
+    min-height: auto;
 }
 
-.table-summary .rows-count, h4 {
+.table-summary .rows-count {
 	align-self: baseline;
     align-items: baseline;
 }
 
 .table-summary .data-table-block {
-	border-spacing: 0.3rem 0;
-    margin: 0 -0.3rem;
+	border-spacing: 0.5rem 0;
+    margin: 0 -0.5rem;
 }
 
 .data-table-block {
 	display: table;
-	border-spacing: 1rem 0.6rem;
-    margin:-0.6rem -1rem;
+	border-spacing: 0.5rem 0.5rem;
+    margin:-0.5rem -0.5rem;
     width: fit-content;
     align-self: start;
 }
@@ -1507,7 +1530,7 @@ table .bttn:not(:last-child) {
 	background-color: #fff;
 	box-shadow: none;
 	border-width: 0px;
-	padding: 0.5rem 0.3rem;
+	padding: 0;
 }
 .accordion-button:after {
 	background-image: url(../images/chevron-down-dark.svg);
@@ -1524,7 +1547,7 @@ table .bttn:not(:last-child) {
 	background-color: #fff;
 	color: var(--action-color);
 	border-bottom: 1px solid var(--bs-border-color);
-	padding-bottom: 1.1rem;
+	padding-bottom: 0.6rem;
 	box-shadow: none;
 }
 

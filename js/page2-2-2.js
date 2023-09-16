@@ -63,6 +63,7 @@ $(document).ready(function () {
       name: 'zoneSrcList',
       type: 'full',
       columns: [],
+      height:'31vh',
       modal: 'editData',
       tab: true,
       firstTab: true
@@ -71,6 +72,7 @@ $(document).ready(function () {
       name: 'zoneNetParts',
       type: 'full',
       columns: [],
+      height:'321vh',
       modal: 'editData',
       tab: true,
       firstTab: false
@@ -79,6 +81,7 @@ $(document).ready(function () {
       name: 'zoneNPS',
       type: 'full',
       columns: [],
+      height:'31vh',
       modal: 'editData',
       tab: true,
       firstTab: false
@@ -87,6 +90,7 @@ $(document).ready(function () {
       name: 'zoneHeatPoint',
       type: 'full',
       columns: [],
+      height:'31vh',
       modal: 'editData',
       tab: true,
       firstTab: false
