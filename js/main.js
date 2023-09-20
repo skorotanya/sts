@@ -239,8 +239,9 @@ const loadFilterFromState = (tId) => {
 // adjust dataTable columns width by table id
 //need call after table bacome visibile, example pass on tab or show modal window
 const adjustColumns = (tId) => {
-    let table = $('#'+tId).DataTable();
+    let table = $('#' + tId).DataTable();
     table.columns.adjust().draw();
+    console.log("Adjust table '" + tId + "'")
 };
 
 // execution all functions and addind eventListeners to page tables, defining in the 'pageTables' object
@@ -278,6 +279,7 @@ const initPageTables = (pageTables) => {
             let accEl = document.querySelector('#' + tbl.accordionId);
             accEl.addEventListener('shown.bs.collapse', event => {
                 adjustColumns(tblId);
+
             });
         };
         if(tbl.modal !='' && tbl.firstTab) {

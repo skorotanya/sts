@@ -1709,3 +1709,17 @@ form.was-validated .data-item:has(.bs-invalid) > .invalid-tooltip {
 		display: flex;
 	}
 }
+
+@media (max-width: 1700px) {
+	.data-xxxl-row {
+		flex-direction: row;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		display: flex;
+		width: 100%;
+	}
+
+	.data-xxxl-row > .data-item {
+		display: flex;
+	}
+}

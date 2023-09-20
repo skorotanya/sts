@@ -78,7 +78,88 @@ $(document).ready(function () {
       modal: '',
       tab: true,
       firstTab: false
+    },
+    {
+      name: 'waterInputs',
+      type: 'simple-scroll',
+      columns: [],
+      height: '22vh',
+      modal: 'editData',
+      tab: false,
+      firstTab: false,
+      accordionId: 'panel1'
+    },
+    {
+      name: 'electroInputs',
+      type: 'simple-scroll',
+      columns: [],
+      height: '22vh',
+      modal: 'editData',
+      tab: false,
+      firstTab: false,
+      accordionId: 'panel2'
+    },
+    {
+      name: 'gasOutputs',
+      type: 'simple-scroll',
+      columns: [],
+      height: '22vh',
+      modal: 'editData',
+      tab: false,
+      firstTab: false,
+      accordionId: 'panel3-2'
+    },
+    {
+      name: 'gasPoints',
+      type: 'simple-scroll',
+      columns: [],
+      height: '22vh',
+      modal: 'editData',
+      tab: false,
+      firstTab: false,
+      accordionId: 'panel3-3'
+    },
+    {
+      name: 'mazutTanks',
+      type: 'simple-scroll',
+      columns: [],
+      height: '22vh',
+      modal: 'editData',
+      tab: false,
+      firstTab: false,
+      accordionId: 'panel4-2'
+    },
+    {
+      name: 'dieselTanks',
+      type: 'simple-scroll',
+      columns: [],
+      height: '22vh',
+      modal: 'editData',
+      tab: false,
+      firstTab: false,
+      accordionId: 'panel5-2'
+    },
+    {
+      name: 'coilStorageTanks',
+      type: 'simple-scroll',
+      columns: [],
+      height: '22vh',
+      modal: 'editData',
+      tab: false,
+      firstTab: false,
+      accordionId: 'panel6-2'
+    },
+    {
+      name: 'biogasInputs',
+      type: 'simple-scroll',
+      columns: [],
+      height: '22vh',
+      modal: 'editData',
+      tab: false,
+      firstTab: false,
+      accordionId: 'panel7-2'
     }
+
   ];
 
   initPageTables(pageTables);
