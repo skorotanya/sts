@@ -241,7 +241,7 @@ const loadFilterFromState = (tId) => {
 const adjustColumns = (tId) => {
     let table = $('#' + tId).DataTable();
     table.columns.adjust().draw();
-    console.log("Adjust table '" + tId + "'")
+    //console.log("Adjust table '" + tId + "'")
 };
 
 // execution all functions and addind eventListeners to page tables, defining in the 'pageTables' object
@@ -309,15 +309,16 @@ const initPageTables = (pageTables) => {
         }
         
         $('.' + checkId).each(function(){
-          if(this.tagName=='INPUT'){
-            this.disabled = !check;
-          }
           if($(this).hasClass('selectpicker')) {
             $(this).prop('disabled', !check);
             $(this).selectpicker('destroy');
             $(this).selectpicker();
             $(this).addClass('selectpicker');
           }
+          else {
+            this.disabled = !check;
+          }
+          
         });
     });
   };
