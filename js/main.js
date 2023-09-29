@@ -217,6 +217,21 @@ const initDataTable = (tId, oType, height = '55vh', colsDefs) => {
 
             table.buttons().container().appendTo('.'+tId + '-buttons');
             break;
+        case 'scroll-colvis' : // simple table with scrolling and adjusting visible columns
+            table = $('#'+ tId).DataTable({
+                scrollY: height,
+                ordering: false,
+                searching: false,
+                stateSave: true,
+                searchBuilder: null,
+                dom: 'Brt'
+            });
+            //console.log(table.buttons().pop());
+            //console.log(table.buttons().container().children()[1]);
+            table.buttons().container().children()[1].remove();
+            table.buttons().container().appendTo('.'+tId + '-buttons');
+            break;
+
     }
 };
 

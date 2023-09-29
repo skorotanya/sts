@@ -619,7 +619,6 @@ span.data-array {
 	border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     padding: 0.3rem;
-    line-height: 20px;
     text-align: left;
     min-height: 22vh;
     line-height: 29px;
@@ -639,6 +638,18 @@ textarea.data-array {
     overflow-y: hidden;
     line-height: 29px;
     font-weight: 300;
+}
+
+/* progress bar*/
+
+.data-progress {
+	background: var(--light-color);
+	border-radius: var(--border-radius);
+	margin-right: 0.5rem;
+	height: 20px;
+}
+.data-progress > .progress-bar {
+	background: var(--action-color);
 }
 
 /* new bootstrap-select */
@@ -1695,6 +1706,7 @@ form.was-validated .data-item:has(.bs-invalid) > .invalid-tooltip {
 	display: block;
 	opacity: 0.9;
 }
+
 
 @media (max-width: 1400px) {
 	.data-xxl-row {
