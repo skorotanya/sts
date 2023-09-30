@@ -305,7 +305,17 @@ $(document).ready(function () {
     });
 */
 
-    setEnableElements('checkEHZ');
+     // show modal window for edit data
+    $('.bttn-goto-card').on('click', (e) => {
+        showModal('editEquipmentData');
+    });
+  
+    let etype = '00';
+
+    //$('.select-etype').on('change', function() {
+
+    //})
+
     
 });
 
