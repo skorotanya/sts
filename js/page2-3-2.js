@@ -305,16 +305,53 @@ $(document).ready(function () {
     });
 */
 
+    let etype = 'A0';
+    // T1 - паровые теплоагрегаты
+    // T2 - газотурбинные теплоагрегаты
+    // K1 - паровые котлоагрегаты
+    // K2 - котлоагрегаты, сжигающие уголь
+    // K3 - водогрейные котлоагрегаты
+    // P - поршневые установки
      // show modal window for edit data
-    $('.bttn-goto-card').on('click', (e) => {
+    $('.bttn-goto-card').on('click', function(e) {
+      etype = $(this)
+                .closest('tr')
+                .find('select.select-etype option:selected')
+                .attr('data-etype');
+        //console.log(etype);
         showModal('editEquipmentData');
+        let enabledValues = $('#editEquipmentData [class*=enable-value]');
+        enabledValues.each((idx,elem)=>{
+          //console.log(typeof elem);
+          if(elem.tagName = 'input') elem.disabled = false;
+          if(elem.tagName = 'select') setDisabledSelect(elem, false);
+          if(etype != 'T1' && $(elem).hasClass('enable-value1')){
+            if(elem.tagName = 'input') elem.disabled = true;
+            if(elem.tagName = 'select') setDisabledSelect(elem, true);
+          } 
+          if((etype == 'K1' || etype == 'K2') && $(elem).hasClass('enable-value2')){
+            if(elem.tagName = 'input') elem.disabled = true;
+            if(elem.tagName = 'select') setDisabledSelect(elem, true);
+          } 
+          if(etype == 'T2' && $(elem).hasClass('enable-value3')){
+            if(elem.tagName = 'input') elem.disabled = true;
+            if(elem.tagName = 'select') setDisabledSelect(elem, true);
+          }
+          if(etype == 'K3' && $(elem).hasClass('enable-value4')){
+            if(elem.tagName = 'input') elem.disabled = true;
+            if(elem.tagName = 'select') setDisabledSelect(elem, true);
+          }
+          if(etype != 'K2' && $(elem).hasClass('enable-value5')){
+            if(elem.tagName = 'input') elem.disabled = true;
+            if(elem.tagName = 'select') setDisabledSelect(elem, true);
+          } 
+          if((etype != 'K1' || etype != 'K2' || etype != 'K3') && $(elem).hasClass('enable-value6')){
+            if(elem.tagName = 'input') elem.disabled = true;
+            if(elem.tagName = 'select') setDisabledSelect(elem, true);
+          } 
+
+        });
     });
-  
-    let etype = '00';
-
-    //$('.select-etype').on('change', function() {
-
-    //})
 
     
 });

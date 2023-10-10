@@ -325,10 +325,11 @@ const initPageTables = (pageTables) => {
         
         $('.' + checkId).each(function(){
           if($(this).hasClass('selectpicker')) {
-            $(this).prop('disabled', !check);
-            $(this).selectpicker('destroy');
-            $(this).selectpicker();
-            $(this).addClass('selectpicker');
+            setDisabledSelect(this,!check);
+           // $(this).prop('disabled', !check);
+           // $(this).selectpicker('destroy');
+          //  $(this).selectpicker();
+           // $(this).addClass('selectpicker');
           }
           else {
             this.disabled = !check;
@@ -337,6 +338,18 @@ const initPageTables = (pageTables) => {
         });
     });
   };
+  // select -  HTMLElement <select>!!! not JQuery object
+  const setDisabledSelect = (select, value) => {
+    //console.log(typeof select);
+
+    let jqSelect = $(select);
+    jqSelect.prop('disabled', value);
+    jqSelect.selectpicker('destroy');
+    jqSelect.selectpicker();
+    jqSelect.addClass('selectpicker');
+  }
+
+
 
 
 

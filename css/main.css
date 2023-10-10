@@ -1393,6 +1393,10 @@ td.dtfc-fixed-left{
     margin: 0 -0.5rem;
 }
 
+.table-summary table td, .table-summary table th {
+	padding: 0.1rem 0.2rem
+}
+
 .data-table-block {
 	display: table;
 	border-spacing: 0.5rem 0.5rem;
