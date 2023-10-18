@@ -1,9 +1,7 @@
 $(document).ready(function () {
 
     // javascript functions for current page
-
-
-
+ 
      // init dataTables on current page
 
     const pageTables = [
@@ -141,7 +139,7 @@ $(document).ready(function () {
       modal: '',
       tab: true,
       firstTab: false
-    },
+    }/*,
     {
       name: 'electroIntake',
       type: 'simple-scroll',
@@ -151,13 +149,11 @@ $(document).ready(function () {
       tab: false,
       firstTab: true,
       accordionId: ''
-    }
+    }*/
 
   ];
 
   initPageTables(pageTables);
-
-
 
     // event listeners on current page
 
@@ -201,7 +197,6 @@ $(document).ready(function () {
                  $('.fuel2').hide();
                  $('.fuel3').show();
                  break;
-
       }
      });
 
@@ -212,21 +207,48 @@ $(document).ready(function () {
     } );
 
 
-  //   $('#hnEquipmentTable tbody').on('dblclick', 'tr', function () {
-  //    showModal('editEquipmentData');
-  //    $('#checkHeatNetworkType').prop('checked', true);
-   //   $('#checkBoilerType').prop('checked', false);
-   // } );
+    $('[name="dataInputPeriod"]').on('change', () => {
+      let colvis = $('[class*=colvis]');
+      let checkVal = $('[name="dataInputPeriod"]:checked').val();
+      console.log(colvis.length);
+      colvis.css('display','none');
+      $('.colvis-' + checkVal).attr('style','');
+    })
 
-   //  $('#bEquipmentTable tbody').on('dblclick', 'tr', function () {
-   //   showModal('editEquipmentData');
-  //    $('#checkHeatNetworkType').prop('checked', false);
-  //    $('#checkBoilerType').prop('checked', true);
-  //  } );
 
-  //   setEnableElements('checkBoiler');
+    $('.clicker .dropdown-toggle').on('click', function(){
+      let tdElem = $(this);
+      let action = tdElem.hasClass('show'); // true = close branch, false = open branch
+      //console.log('Action = ' + (action?'Close':'Open'));
+      tdElem.toggleClass('show');
+      let lvl = parseInt(tdElem.parent().data('lvl'));
+      //console.log('level = ' + lvl);
+      var selString = '';
+      for(let i = lvl; i > 0; i--) {
+        if(selString != '') selString += ', ';
+        selString += 'tr[data-lvl="' + i + '"]';
+        //console.log(i);
+        //console.log(selString);
+      }
+      let branch = tdElem.parent().nextUntil(selString); //.slideToggle('normal');
+      //console.log('Branch elements count = ' + branch.length);
 
-  //   setEnableElements('checkHeatNetwork');
+      branch.each(function(index, elem){
+         if(action) { // close branch
+          if($(elem).hasClass('clicker')) {
+            $(elem).children(':first-child').removeClass('show');
+          }
+          $(elem).fadeOut(50);
+         }
+         else { // open branch
+          //console.log( index + 'row level = ' + $(elem).data('lvl'));
+          if($(elem).data('lvl') == lvl+1) {
+            $(elem).fadeIn();
+          }
+         }
+      });
+
+    });
 
 
 });

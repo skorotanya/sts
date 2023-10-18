@@ -1614,10 +1614,6 @@ table .bttn:not(:last-child) {
     font-size: 1.1rem;
 }
 
-.unom-name {
-	min-width: 450px;
-}
-
 .radio-up, .radio-down {
 	display: inline-block;
     appearance: none;
@@ -1687,6 +1683,7 @@ a.error {
 	--bs-tooltip-bg: var(--red-color);
 	transition: opacity ease 150ms;
 	--bs-tooltip-color: #fff;
+	z-index: 1205;
 }
 
 .was-validated .bootstrap-select select:valid+.dropdown-toggle {

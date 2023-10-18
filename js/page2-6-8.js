@@ -66,9 +66,9 @@ $(document).ready(function () {
       showModal('editData');
     } );
 
-    $('.clicker').click(function(){
-      $(this).children(0).toggleClass('show');
-      $(this).nextUntil('.clicker').slideToggle('normal');
+    $('.clicker td.dropdown-toggle').on('click', function(){
+      $(this).toggleClass('show');
+      $(this).parent().nextUntil('.clicker').fadeToggle(150);
     });
 
      /* Double click on row ecoTable */

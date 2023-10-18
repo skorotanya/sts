@@ -943,7 +943,6 @@
 							</div>	
 						</div>
 			     	</div>
-	      			<form>
 		      		<div class="scroll-block-wrapper" style="max-height:66vh">
 			      		<div class="data-row scroll-block">
 			      			<div class="col-12 col-xxl-7">
@@ -1602,7 +1601,6 @@
 							</div>	
 						</div>	
 			     	</div>
-	      			<form>
 		      		<div class="scroll-block-wrapper" style="max-height:66vh">
 			      		<div class="data-block scroll-block">
 		      				<div class="data-block border-block">
@@ -1849,18 +1847,18 @@
 	</div>
 
 	<!-- Modal Load Data -->
-	<div class=" modal modal-2 wide-modal fade " id="editOutputProductionData" data-bs-backdrop="static" tabindex="-1" aria-labelledby="loadDataLabel" aria-hidden="true">
+	<div class=" modal modal-2 wide-modal fade " id="editOutputProductionData" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
 	  	<div class="modal-dialog modal-dialog-centered">
 	    	<div class="modal-content">
 	      		<div class="modal-header"> 
-			        <h3 class="modal-title" id="editDataLabel">Исходящая тепловая энергия</h3>
+			        <h3 class="modal-title">Исходящая тепловая энергия</h3>
 			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			     </div>
 			     <div class="modal-body">
 			     	<div class="data-row static-block">
 						<div class="data-item ">
 	      					<label class="data-label">Наименование ТСО</label>
-	      					<input type="text" class="data-value xxl-stretch" disabled></input>
+	      					<input type="text" class="data-value xxl-stretch" disabled>
 						</div>
 						<div class="data-item">
 							<label class="data-label">Расчётный год</label>
@@ -1977,113 +1975,119 @@
 				      				</table>
 			      				</div>
 			      			</div>
-			      			<div class="data-block border-block">
-			      				<h4>Источник, в зоне действия которого осуществляется поставка тепловой энергии</h4>
-			      				<div class="data-row">
-			      					<div class="data-item ">
-				      					<label class="data-label">УНОМ тарифной зоны и наименование ТСО</label>
-		      							<select class="selectpicker data-value xxl-stretch" data-live-search="true" placeholder="УНОМ ТЗ - краткое наименвание ТСО">
-										  	<option value="2020">2020</option>
-										  	<option value="2021">2021</option>
-										  	<option value="2022" selected>2022</option>
-										  	<option value="2023">2023</option>
-										</select>
-									</div>
-									<div class="data-item ">
-				      					<label class="data-label">УНОМ и наименование источника</label>
-		      							<select class="selectpicker data-value xxl-stretch" data-live-search="true" placeholder="УНОМ ИСТ - Наименование источника тепловой энергии">
-										  	<option value="2020">2020</option>
-										  	<option value="2021">2021</option>
-										  	<option value="2022" selected>2022</option>
-										  	<option value="2023">2023</option>
-										</select>
-									</div>
-			      				</div>
-			      				<div class="data-row">
-			      					<label class="data-value">Покупка тепловой энергии осуществляется:</label>
-			      					<div class="data-row">
-			      						<label class="data-item">
-			      							<span class="data-label sublabel">с коллекторов источников тепла</span>
-				      						<input type="radio" name="heatBuyType" class="data-check">
-				      					</label>
-				      					<label class="data-item">
-				      						<span class="data-label sublabel">из тепловой сети</span>
-				      						<input type="radio" name="heatBuyType" class="data-check">
-				      					</label>
-			      					</div>
-			      				</div>
-			      				<div class="data-block">
-			      					<div class="data-row">
-			      						<button class="bttn bttn-square bttn-icon-save ms-auto" type="button" title="Сохранить"></button>
-			      					</div>
-			      					<div class="scroll-table-wrapper">
-				      					<table class="table-inp-stretch"  style="width:100%">
-					      					<thead>
-					      						<tr>
-					      							<th rowspan="2">Показатель, <span class="data-unit">Гкал</span></h4></th>
-					      							<th colspan="3">Факт</th>
-					      							<th colspan="3">План</th>
-					      						</tr>
-					      						<tr>
-					      							<th style="position: static;">I полугодие</th>
-					      							<th>II полугодие</th>
-					      							<th>Год</th>
-					      							<th>I полугодие</th>
-					      							<th>II полугодие</th>
-					      							<th>Год</th>
-					      						</tr>
-					      					</thead>
-					      					<tbody>
-					      						<tr>
-					      							<td>Покупная тепловая энергия, всего</td>
-					      							<td><input type="text" name="" class="data-value" disabled></td>
-					      							<td><input type="text" name="" class="data-value" disabled></td>
-					      							<td><input type="text" name="" class="data-value" disabled></td>
-					      							<td><input type="text" name="" class="data-value" disabled></td>
-					      							<td><input type="text" name="" class="data-value" disabled></td>
-					      							<td><input type="text" name="" class="data-value" disabled></td>
-					      						</tr>
-					      						<tr>
-					      							<td>а) на технологические нужды</td>
-					      							<td><input type="text" name="" class="data-value"></td>
-					      							<td><input type="text" name="" class="data-value"></td>
-					      							<td><input type="text" name="" class="data-value" disabled></td>
-					      							<td><input type="text" name="" class="data-value"></td>
-					      							<td><input type="text" name="" class="data-value"></td>
-					      							<td><input type="text" name="" class="data-value" disabled></td>
-					      						</tr>
-					      						<tr>
-					      							<td>- включая покупку потерь</td>
-					      							<td><input type="text" name="" class="data-value"></td>
-					      							<td><input type="text" name="" class="data-value"></td>
-					      							<td><input type="text" name="" class="data-value" disabled></td>
-					      							<td><input type="text" name="" class="data-value"></td>
-					      							<td><input type="text" name="" class="data-value"></td>
-					      							<td><input type="text" name="" class="data-value" disabled></td>
-					      						</tr>
-					      						<tr>
-					      							<td>б) на хозяйственные нужды</td>
-					      							<td><input type="text" name="" class="data-value"></td>
-					      							<td><input type="text" name="" class="data-value"></td>
-					      							<td><input type="text" name="" class="data-value" disabled></td>
-					      							<td><input type="text" name="" class="data-value"></td>
-					      							<td><input type="text" name="" class="data-value"></td>
-					      							<td><input type="text" name="" class="data-value" disabled></td>
-					      						</tr>
-					      						<tr>
-					      							<td>- включая покупку потерь</td>
-					      							<td><input type="text" name="" class="data-value"></td>
-					      							<td><input type="text" name="" class="data-value"></td>
-					      							<td><input type="text" name="" class="data-value" disabled></td>
-					      							<td><input type="text" name="" class="data-value"></td>
-					      							<td><input type="text" name="" class="data-value"></td>
-					      							<td><input type="text" name="" class="data-value" disabled></td>
-					      						</tr>
-					      					</tbody>
-					      				</table>
+			      			<form id="form123" class="needs-validation" novalidate>
+				      			<div class="data-block border-block">
+				      				
+				      				<h4>Источник, в зоне действия которого осуществляется поставка тепловой энергии</h4>
+				      				<div class="data-row">
+				      					<div class="data-item ">
+					      					<label class="data-label">УНОМ тарифной зоны и наименование ТСО</label>
+			      							<select class="selectpicker data-value xxl-stretch" data-live-search="true" placeholder="УНОМ ТЗ - краткое наименвание ТСО" required>
+											  	<option value="2020">2020</option>
+											  	<option value="2021">2021</option>
+											  	<option value="2022">2022</option>
+											  	<option value="2023">2023</option>
+											</select>
+											<a class="invalid-tooltip error" data-bs-toggle="tooltip" data-bs-custom-class="error-tooltip" data-bs-html="false" data-bs-title="Выберите значение из списка"></a>
+										</div>
+										<div class="data-item ">
+					      					<label class="data-label">УНОМ и наименование источника</label>
+			      							<select class="selectpicker data-value xxl-stretch" data-live-search="true" placeholder="УНОМ ИСТ - Наименование источника тепловой энергии">
+											  	<option value="2020">2020</option>
+											  	<option value="2021">2021</option>
+											  	<option value="2022">2022</option>
+											  	<option value="2023">2023</option>
+											</select>
+										</div>
+				      				</div>
+				      				<div class="data-row">
+				      					<label class="data-value">Покупка тепловой энергии осуществляется:</label>
+				      					<div class="data-row">
+				      						<label class="data-item">
+				      							<span class="data-label sublabel">с коллекторов источников тепла</span>
+					      						<input type="radio" name="heatBuyType" class="data-check" required>
+					      						<a class="invalid-tooltip error" data-bs-toggle="tooltip" data-bs-custom-class="error-tooltip" data-bs-html="false" data-bs-title="Выберите значение"></a>
+					      					</label>
+					      					<label class="data-item">
+					      						<span class="data-label sublabel">из тепловой сети</span>
+					      						<input type="radio" name="heatBuyType" class="data-check">
+					      					</label>
+				      					</div>
+				      				</div>
+				      				<div class="data-block">
+				      					<div class="data-row">
+				      						<button class="bttn bttn-square bttn-icon-save ms-auto" type="submit" form="form123" title="Сохранить"></button>
+				      					</div>
+				      					<div class="scroll-table-wrapper">
+					      					<table class="table-inp-stretch"  style="width:100%">
+						      					<thead>
+						      						<tr>
+						      							<th rowspan="2">Показатель, <span class="data-unit">Гкал</span></th>
+						      							<th colspan="3">Факт</th>
+						      							<th colspan="3">План</th>
+						      						</tr>
+						      						<tr>
+						      							<th style="position: static;">I полугодие</th>
+						      							<th>II полугодие</th>
+						      							<th>Год</th>
+						      							<th>I полугодие</th>
+						      							<th>II полугодие</th>
+						      							<th>Год</th>
+						      						</tr>
+						      					</thead>
+						      					<tbody>
+						      						<tr>
+						      							<td>Покупная тепловая энергия, всего</td>
+						      							<td><input type="text" name="" class="data-value" disabled></td>
+						      							<td><input type="text" name="" class="data-value" disabled></td>
+						      							<td><input type="text" name="" class="data-value" disabled></td>
+						      							<td><input type="text" name="" class="data-value" disabled></td>
+						      							<td><input type="text" name="" class="data-value" disabled></td>
+						      							<td><input type="text" name="" class="data-value" disabled></td>
+						      						</tr>
+						      						<tr>
+						      							<td>а) на технологические нужды</td>
+						      							<td><input type="text" name="" class="data-value"></td>
+						      							<td><input type="text" name="" class="data-value"></td>
+						      							<td><input type="text" name="" class="data-value" disabled></td>
+						      							<td><input type="text" name="" class="data-value"></td>
+						      							<td><input type="text" name="" class="data-value"></td>
+						      							<td><input type="text" name="" class="data-value" disabled></td>
+						      						</tr>
+						      						<tr>
+						      							<td>- включая покупку потерь</td>
+						      							<td><input type="text" name="" class="data-value"></td>
+						      							<td><input type="text" name="" class="data-value"></td>
+						      							<td><input type="text" name="" class="data-value" disabled></td>
+						      							<td><input type="text" name="" class="data-value"></td>
+						      							<td><input type="text" name="" class="data-value"></td>
+						      							<td><input type="text" name="" class="data-value" disabled></td>
+						      						</tr>
+						      						<tr>
+						      							<td>б) на хозяйственные нужды</td>
+						      							<td><input type="text" name="" class="data-value"></td>
+						      							<td><input type="text" name="" class="data-value"></td>
+						      							<td><input type="text" name="" class="data-value" disabled></td>
+						      							<td><input type="text" name="" class="data-value"></td>
+						      							<td><input type="text" name="" class="data-value"></td>
+						      							<td><input type="text" name="" class="data-value" disabled></td>
+						      						</tr>
+						      						<tr>
+						      							<td>- включая покупку потерь</td>
+						      							<td><input type="text" name="" class="data-value"></td>
+						      							<td><input type="text" name="" class="data-value"></td>
+						      							<td><input type="text" name="" class="data-value" disabled></td>
+						      							<td><input type="text" name="" class="data-value"></td>
+						      							<td><input type="text" name="" class="data-value"></td>
+						      							<td><input type="text" name="" class="data-value" disabled></td>
+						      						</tr>
+						      					</tbody>
+						      				</table>
+						      			</div>
 					      			</div>
+					      			
 				      			</div>
-			      			</div>
+			      			</form>
 			      		</div>	
 
 	    			</div>
