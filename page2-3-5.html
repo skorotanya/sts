@@ -5616,7 +5616,7 @@
       				<div class="data-row static-block">
       					<div class="data-item ">
 	      					<label class="data-label md-fix">Уникальный номер источника</label>
-      						<select class="selectpicker data-value xxl-stretch" data-live-search="true" placeholder="Выберите..." title="УНОМ источника">
+      						<select class="selectpicker data-value xxl-stretch" data-live-search="true" placeholder="Выберите...">
 							  	<option value="2020">2020</option>
 							  	<option value="2021">2021</option>
 							  	<option value="2022">2022</option>
@@ -5625,7 +5625,7 @@
 						</div>
 						<div class="data-item ">
 	      					<label class="data-label md-fix">Наименование</label>
-      						<select class="selectpicker data-value xxl-stretch" data-live-search="true" placeholder="Выберите..." title="Наименование сточника">
+      						<select class="selectpicker data-value xxl-stretch" data-live-search="true" placeholder="Выберите...">
 							  	<option value="2020">Наименование 1</option>
 							  	<option value="2021">Наименование 2</option>
 							  	<option value="2022">Наименование 3</option>
@@ -5634,7 +5634,7 @@
 						</div>
 						<div class="data-item ">
 	      					<label class="data-label md-fix">Адрес</label>
-      						<select class="selectpicker data-value xxl-stretch" data-live-search="true" placeholder="Выберите..." title="Адрес источника">
+      						<select class="selectpicker data-value xxl-stretch" data-live-search="true" placeholder="Выберите...">
 							  	<option value="2020">Адрес 1</option>
 							  	<option value="2021">Адрес 2</option>
 							  	<option value="2022">Адрес 3</option>
@@ -5643,7 +5643,7 @@
 						</div>
 						<div class="data-item ">
 	      					<label class="data-label md-fix">Тип источника</label>
-      						<select class="selectpicker data-value lg-stretch" data-live-search="true" placeholder="Выберите..." title="Тип источника">
+      						<select class="selectpicker data-value lg-stretch" data-live-search="true" placeholder="Выберите...">
 							  	<option value="2020">Тип 1</option>
 							  	<option value="2021">Тип 2</option>
 							  	<option value="2022">Тип 3</option>
@@ -5652,7 +5652,7 @@
 						</div>
 						<div class="data-item">
 	      					<label class="data-label md-fix">Тарифная зона</label>
-      						<select class="selectpicker data-value lg-stretch" data-live-search="true" placeholder="Выберите..." title="Тарифная зона">
+      						<select class="selectpicker data-value lg-stretch" data-live-search="true" placeholder="Выберите...">
 							  	<option value="2020">ТЗ 1</option>
 							  	<option value="2021">ТЗ 2</option>
 							  	<option value="2022">ТЗ 3</option>
@@ -5727,12 +5727,11 @@
 	      							<button type="button" class="bttn bttn-color">Выгрузить в Excel</button>
 	      						</div>
 	      					</div>
-					  		Здесь скоро будет огромная и сложная таблица
 					  		<div class="scroll-table-wrapper stretch">
 						  		<table class="table-inp-stretch" style="white-space: nowrap; width: 100%;">
 						  			<thead>
 						  				<tr>
-						  					<th rowspan="2" class="smx-fix">№ п/п</th>
+						  					<th rowspan="2" class="sm-fix">№ п/п</th>
 						  					<th rowspan="2">Наименование показателя</th>
 						  					<th rowspan="2">Обозначение</th>
 						  					<th rowspan="2">Размерность</th>
@@ -5783,12 +5782,12 @@
 						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  				</tr>
-						  				<tr data-lvl="3">
-						  					<td></td>
-						  					<td colspan="18">в том числе по группе оборудования:</td>
-						  				</tr>
 						  				<tr class="clicker" data-lvl="3">
 						  					<td class="dropdown-toggle">1.1</td>
+						  					<td colspan="18">по группе оборудования:</td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="4" style="display:none;">
+						  					<td class="dropdown-toggle">1.1.1</td>
 						  					<td class="ps-2">- турбоагрегаты ПСУ</td>
 						  					<td>N<sub>уст</sub><sup>ПСУ</sup></td>
 						  					<td><span class="data-unit">МВт</span></td>
@@ -5808,12 +5807,12 @@
 						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  				</tr>
-						  				<tr data-lvl="4" style="display:none;">
+						  				<!--tr data-lvl="4" style="display:none;">
 						  					<td></td>
 						  					<td colspan="18" class="ps-2">включая:</td>
-						  				</tr>
-						  				<tr data-lvl="4" style="display:none;">
-						  					<td>1.1.1</td>
+						  				</tr-->
+						  				<tr data-lvl="5" style="display:none;">
+						  					<td>1.1.1.1</td>
 						  					<td class="ps-3">- ПСУ-40</td>
 						  					<td>N<sub>уст</sub><sup>ПСУ-40</sup></td>
 						  					<td><span class="data-unit">МВт</span></td>
@@ -5833,8 +5832,8 @@
 						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  				</tr>
-						  				<tr data-lvl="4" style="display:none;">
-						  					<td>1.1.2</td>
+						  				<tr data-lvl="5" style="display:none;">
+						  					<td>1.1.1.2</td>
 						  					<td class="ps-3">- ПСУ-90</td>
 						  					<td>N<sub>уст</sub><sup>ПСУ-90</sup></td>
 						  					<td><span class="data-unit">МВт</span></td>
@@ -5854,8 +5853,8 @@
 						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  				</tr>
-						  				<tr data-lvl="4" style="display:none;">
-						  					<td>1.1.3</td>
+						  				<tr data-lvl="5" style="display:none;">
+						  					<td>1.1.1.3</td>
 						  					<td class="ps-3">- ПСУ-130</td>
 						  					<td>N<sub>уст</sub><sup>ПСУ-130</sup></td>
 						  					<td><span class="data-unit">МВт</span></td>
@@ -5875,8 +5874,8 @@
 						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  				</tr>
-						  				<tr data-lvl="4" style="display:none;">
-						  					<td>1.1.4</td>
+						  				<tr data-lvl="5" style="display:none;">
+						  					<td>1.1.1.4</td>
 						  					<td class="ps-3">- ПСУ-240</td>
 						  					<td>N<sub>уст</sub><sup>ПСУ-240</sup></td>
 						  					<td><span class="data-unit">МВт</span></td>
@@ -5896,8 +5895,8 @@
 						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  				</tr>
-						  				<tr data-lvl="3">
-						  					<td>1.2</td>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td>1.1.2</td>
 						  					<td class="ps-2">- турбоагрегаты ПГУ</td>
 						  					<td>N<sub>уст</sub><sup>ПГУ</sup></td>
 						  					<td><span class="data-unit">МВт</span></td>
@@ -5917,8 +5916,8 @@
 						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  				</tr>
-						  				<tr data-lvl="3">
-						  					<td>1.3</td>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td>1.1.3</td>
 						  					<td class="ps-2">- газовые турбины ГТУ с КУВ</td>
 						  					<td>N<sub>уст</sub><sup>ГТУ</sup></td>
 						  					<td><span class="data-unit">МВт</span></td>
@@ -5938,9 +5937,9 @@
 						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  				</tr>
-						  				<tr data-lvl="3">
-						  					<td>1.4</td>
-						  					<td class="ps-2">-  поршневые агрегаты:</td>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td>1.1.4</td>
+						  					<td class="ps-2">- поршневые агрегаты</td>
 						  					<td>N<sub>уст</sub><sup>ПА</sup></td>
 						  					<td><span class="data-unit">МВт</span></td>
 						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
@@ -5980,15 +5979,522 @@
 						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  				</tr>
-						  				<tr data-lvl="3">
-						  					<td></td>
-						  					<td colspan="18">в том числе по группе оборудования:</td>
-						  				</tr>
 						  				<tr class="clicker" data-lvl="3">
 						  					<td class="dropdown-toggle">2.1</td>
+						  					<td colspan="18">по группе оборудования:</td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="4" style="display:none;">
+						  					<td class="dropdown-toggle">2.1.1</td>
 						  					<td class="ps-2">- турбоагрегаты ПСУ</td>
 						  					<td>N<sub>рас</sub><sup>ПСУ</sup></td>
 						  					<td><span class="data-unit">МВт</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<!--tr data-lvl="4" style="display:none;">
+						  					<td></td>
+						  					<td colspan="18" class="ps-2">включая:</td>
+						  				</tr-->
+						  				<tr data-lvl="5" style="display:none;">
+						  					<td>2.1.1.1</td>
+						  					<td class="ps-3">- ПСУ-40</td>
+						  					<td>N<sub>рас</sub><sup>ПСУ-40</sup></td>
+						  					<td><span class="data-unit">МВт</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="5" style="display:none;">
+						  					<td>2.1.1.2</td>
+						  					<td class="ps-3">- ПСУ-90</td>
+						  					<td>N<sub>рас</sub><sup>ПСУ-90</sup></td>
+						  					<td><span class="data-unit">МВт</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="5" style="display:none;">
+						  					<td>2.1.1.3</td>
+						  					<td class="ps-3">- ПСУ-130</td>
+						  					<td>N<sub>рас</sub><sup>ПСУ-130</sup></td>
+						  					<td><span class="data-unit">МВт</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="5" style="display:none;">
+						  					<td>2.1.1.4</td>
+						  					<td class="ps-3">- ПСУ-240</td>
+						  					<td>N<sub>рас</sub><sup>ПСУ-240</sup></td>
+						  					<td><span class="data-unit">МВт</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td>2.1.2</td>
+						  					<td class="ps-2">- турбоагрегаты ПГУ</td>
+						  					<td>N<sub>рас</sub><sup>ПГУ</sup></td>
+						  					<td><span class="data-unit">МВт</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td>2.1.3</td>
+						  					<td class="ps-2">- газовые турбины ГТУ с КУВ</td>
+						  					<td>N<sub>рас</sub><sup>ГТУ</sup></td>
+						  					<td><span class="data-unit">МВт</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td>2.1.4</td>
+						  					<td class="ps-2">- поршневые агрегаты</td>
+						  					<td>N<sub>рас</sub><sup>ПА</sup></td>
+						  					<td><span class="data-unit">МВт</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="2">
+						  					<td class="dropdown-toggle show"><h5 style="display: inline;">3</h5></td>
+						  					<td><h5>Установленная тепловая мощность, всего</h5></td>
+						  					<td><h5>Q<sub>уст</sub></h5></td>
+						  					<td><h5><span class="data-unit">Гкал/ч</span></h5></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" /></td>
+						  				</tr>
+						  				<!--tr data-lvl="3">
+						  					<td></td>
+						  					<td colspan="18">в том числе:</td>
+						  				</tr-->
+						  				<tr class="clicker" data-lvl="3">
+						  					<td class="dropdown-toggle">3.1</td>
+						  					<td>- турбоагрегаты, всего</td>
+						  					<td>Q<sub>уст</sub><sup>т/а</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="4" style="display:none;">
+						  					<td class="dropdown-toggle">3.1.1</td>
+						  					<td colspan="18" class="ps-2">по видам отборов:</td>
+						  				</tr>
+						  				<tr data-lvl="5" style="display:none;">
+						  					<td>3.1.1.1</td>
+						  					<td class="ps-3">- теплофикационные отборы турбоагрегатов</td>
+						  					<td>Q<sub>уст</sub><sup>т/а,т</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="5" style="display:none;">
+						  					<td>3.1.1.2</td>
+						  					<td class="ps-3">- производственные отборы турбоагрегатов</td>
+						  					<td>Q<sub>уст</sub><sup>т/а,п</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="4" style="display:none;">
+						  					<td class="dropdown-toggle">3.1.2</td>
+						  					<td colspan="18" class="ps-2">по группе оборудования:</td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="5" style="display:none;">
+						  					<td class="dropdown-toggle">3.1.2.1</td>
+						  					<td class="ps-3">- турбоагрегаты ПСУ, всего</td>
+						  					<td>Q<sub>уст</sub><sup>т/а,ПСУ</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<!--tr data-lvl="5" style="display:none;">
+						  					<td></td>
+						  					<td colspan="18" class="ps-3">включая:</td>
+						  				</tr-->
+						  				<tr data-lvl="6" style="display:none;">
+						  					<td>3.1.2.1.1</td>
+						  					<td class="ps-4">- ПСУ-40</td>
+						  					<td>Q<sub>уст</sub><sup>т/а,ПСУ-40</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="6" style="display:none;">
+						  					<td>3.1.2.1.2</td>
+						  					<td class="ps-4">- ПСУ-90</td>
+						  					<td>Q<sub>уст</sub><sup>т/а,ПСУ-90</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="6" style="display:none;">
+						  					<td>3.1.2.1.3</td>
+						  					<td class="ps-4">- ПСУ-130</td>
+						  					<td>Q<sub>уст</sub><sup>т/а,ПСУ-130</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="6" style="display:none;">
+						  					<td>3.1.2.1.4</td>
+						  					<td class="ps-4">- ПСУ-240</td>
+						  					<td>Q<sub>уст</sub><sup>т/а,ПСУ-240</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="5" style="display:none;">
+						  					<td>3.1.2.2</td>
+						  					<td class="ps-3">- турбоагрегаты ПГУ</td>
+						  					<td>Q<sub>уст</sub><sup>т/а,ПГУ</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td>3.2</td>
+						  					<td class="ps-2">- водогрейные котлы-утилизаторы ГТУ</td>
+						  					<td>Q<sub>уст</sub><sup>КУВ</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td>3.3</td>
+						  					<td class="ps-2">- утилизаторы ГПА</td>
+						  					<td>Q<sub>уст</sub><sup>ГПА</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td>3.4</td>
+						  					<td class="ps-2">- водогрейные котлы</td>
+						  					<td>Q<sub>уст</sub><sup>ВК</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td>3.5</td>
+						  					<td class="ps-2">- пиковые водогрейные котлы</td>
+						  					<td>Q<sub>уст</sub><sup>ПВК</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="2">
+						  					<td class="dropdown-toggle show"><h5 style="display: inline;">4</h5></td>
+						  					<td><h5>Установленная тепловая мощность, всего</h5></td>
+						  					<td><h5>Q<sub>рас</sub></h5></td>
+						  					<td><h5><span class="data-unit">Гкал/ч</span></h5></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" /></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td></td>
+						  					<td colspan="18">в том числе:</td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="3">
+						  					<td class="dropdown-toggle">4.1</td>
+						  					<td class="ps-2">- турбоагрегаты, всего</td>
+						  					<td>Q<sub>рас</sub><sup>т/а</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
 						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
@@ -6010,10 +6516,827 @@
 						  					<td colspan="18" class="ps-2">включая:</td>
 						  				</tr>
 						  				<tr data-lvl="4" style="display:none;">
-						  					<td>2.1.1</td>
+						  					<td>4.1.1</td>
+						  					<td class="ps-3">- теплофикационные отборы турбоагрегатов</td>
+						  					<td>Q<sub>рас</sub><sup>т/а,т</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td>4.1.2</td>
+						  					<td class="ps-3">- производственные отборы турбоагрегатов</td>
+						  					<td>Q<sub>рас</sub><sup>т/а,п</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td></td>
+						  					<td colspan="18" class="ps-2">в том числе по группе оборудования:</td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="4" style="display:none;">
+						  					<td class="dropdown-toggle">4.1.1</td>
+						  					<td class="ps-3">- турбоагрегаты ПСУ, всего</td>
+						  					<td>Q<sub>рас</sub><sup>т/а,ПСУ</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="5" style="display:none;">
+						  					<td></td>
+						  					<td colspan="18" class="ps-3">включая:</td>
+						  				</tr>
+						  				<tr data-lvl="5" style="display:none;">
+						  					<td>4.1.1.1</td>
+						  					<td class="ps-4">- ПСУ-40</td>
+						  					<td>Q<sub>рас</sub><sup>т/а,ПСУ-40</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="5" style="display:none;">
+						  					<td>4.1.1.2</td>
+						  					<td class="ps-4">- ПСУ-90</td>
+						  					<td>Q<sub>рас</sub><sup>т/а,ПСУ-90</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="5" style="display:none;">
+						  					<td>4.1.1.3</td>
+						  					<td class="ps-4">- ПСУ-130</td>
+						  					<td>Q<sub>рас</sub><sup>т/а,ПСУ-130</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="5" style="display:none;">
+						  					<td>4.1.1.4</td>
+						  					<td class="ps-4">- ПСУ-240</td>
+						  					<td>Q<sub>рас</sub><sup>т/а,ПСУ-240</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td>4.1.2</td>
+						  					<td class="ps-3">- турбоагрегаты ПГУ</td>
+						  					<td>Q<sub>рас</sub><sup>т/а,ПГУ</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td>4.2</td>
+						  					<td class="ps-2">- водогрейные котлы-утилизаторы ГТУ</td>
+						  					<td>Q<sub>рас</sub><sup>КУВ</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td>4.3</td>
+						  					<td class="ps-2">- утилизаторы ГПА</td>
+						  					<td>Q<sub>рас</sub><sup>ГПА</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td>4.4</td>
+						  					<td class="ps-2">- водогрейные котлы</td>
+						  					<td>Q<sub>рас</sub><sup>ВК</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td>4.5</td>
+						  					<td class="ps-2">- пиковые водогрейные котлы</td>
+						  					<td>Q<sub>рас</sub><sup>ПВК</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="2">
+						  					<td class="dropdown-toggle show"><h5 style="display: inline;">5</h5></td>
+						  					<td><h5>Потребление тепловой мощности на собственные нужды</h5></td>
+						  					<td><h5>Q<sub>р,пр</sub><sup>сн</sup></h5></td>
+						  					<td><h5><span class="data-unit">Гкал/ч</span></h5></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td></td>
+						  					<td colspan="18">в том числе:</td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td>5.1</td>
+						  					<td class="ps-2">- в паре</td>
+						  					<td>Q<sub>р,пр</sub><sup>сн,пар</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" /></td>
+						  				</tr>
+						  				<trdata-lvl="3">
+						  					<td >5.2</td>
+						  					<td class="ps-2">- в горячей воде</td>
+						  					<td>Q<sub>р,пр</sub><sup>сн,гв</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" /></td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="2">
+						  					<td class="dropdown-toggle show"><h5 style="display: inline;">6</h5></td>
+						  					<td><h5>Потребление тепловой мощности на хозяйственные нужды</h5></td>
+						  					<td><h5>Q<sub>р,пр</sub><sup>хн</sup></h5></td>
+						  					<td><h5><span class="data-unit">Гкал/ч</span></h5></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td></td>
+						  					<td colspan="18">в том числе:</td>
+						  				</tr>
+						  				<trdata-lvl="3">
+						  					<td>6.1</td>
+						  					<td class="ps-2">- в паре</td>
+						  					<td>Q<sub>р,пр</sub><sup>хн,пар</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" /></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td>6.2</td>
+						  					<td class="ps-2">- в горячей воде</td>
+						  					<td>Q<sub>р,пр</sub><sup>хн,гв</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" /></td>
+						  				</tr>
+						  				<tr data-lvl="2">
+						  					<td ><h5>7</h5></td>
+						  					<td><h5>Тепловая мощность нетто</h5></td>
+						  					<td><h5>Q<sub>нетто</sub></h5></td>
+						  					<td><h5><span class="data-unit">Гкал/ч</span></h5></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="2">
+						  					<td class="dropdown-toggle show"><h5 style="display: inline;">8</h5></td>
+						  					<td><h5>Расчетная подключенная тепловая нагрузка, всего</h5></td>
+						  					<td><h5>Q<sub>р</sub></h5></td>
+						  					<td><h5><span class="data-unit">Гкал/ч</span></h5></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td></td>
+						  					<td colspan="18">в том числе:</td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="3">
+						  					<td class="dropdown-toggle">8.1</td>
+						  					<td class="ps-2">- в паре, всего</td>
+						  					<td>Q<sub>р</sub><sup>пар</sup></td>
+						  					<td><span class="data-unit">т/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td></td>
+						  					<td colspan="18" class="ps-2">включая:</td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td>8.1.1</td>
+						  					<td class="ps-3">- технология</td>
+						  					<td>Q<sub>р</sub><sup>пар,тех</sup></td>
+						  					<td><span class="data-unit">т/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td>8.1.2</td>
+						  					<td class="ps-3">- отопление</td>
+						  					<td>Q<sub>р</sub><sup>пар,отоп</sup></td>
+						  					<td><span class="data-unit">т/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td>8.1.3</td>
+						  					<td class="ps-3">- вентиляция</td>
+						  					<td>Q<sub>р</sub><sup>пар,вент</sup></td>
+						  					<td><span class="data-unit">т/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td>8.1.4</td>
+						  					<td class="ps-3">- ср. часовое горячее водоснабжение</td>
+						  					<td>N<sub>р</sub><sup>пар,ГВС</sup></td>
+						  					<td><span class="data-unit">т/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="3">
+						  					<td class="dropdown-toggle">8.2</td>
+						  					<td class="ps-2">- в горячей воде, всего</td>
+						  					<td>Q<sub>р</sub><sup>ГВ</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td></td>
+						  					<td colspan="18" class="ps-2">включая:</td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td>8.2.1</td>
+						  					<td class="ps-3">- технология</td>
+						  					<td>Q<sub>р</sub><sup>ГВ,тех</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td>8.2.2</td>
+						  					<td class="ps-3">- отопление</td>
+						  					<td>Q<sub>р</sub><sup>ГВ,отоп</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td>8.2.3</td>
+						  					<td class="ps-3">- вентиляция</td>
+						  					<td>Q<sub>р</sub><sup>ГВ,вент</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td>8.2.4</td>
+						  					<td class="ps-3">- ср. часовое горячее водоснабжение</td>
+						  					<td>N<sub>р</sub><sup>ГВ,ГВС</sup></td>
+						  					<td><span class="data-unit">Гкал/ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="2">
+						  					<td ><h5>9</h5></td>
+						  					<td><h5>Резерв (+) / дефицит (-) тепловой мощности</h5></td>
+						  					<td><h5>Q<sub>резерв</sub></h5></td>
+						  					<td><h5><span class="data-unit">Гкал/ч</span></h5></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="2">
+						  					<td class="dropdown-toggle show"><h5 style="display: inline;">10</h5></td>
+						  					<td><h5>Максимальные фактическая электрическая нагрузка</h5></td>
+						  					<td><h5>N<sub>факт</sub><sup>max</sup></h5></td>
+						  					<td><h5><span class="data-unit">МВт</span></h5></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" /></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td>10.1</td>
+						  					<td class="ps-2">Дата фиксации максимальной фактической электрической нагрузки</td>
+						  					<td></td>
+						  					<td>-</td>
+						  					<td class="colvis-1"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="date" class="data-value" /></td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="2">
+						  					<td class="dropdown-toggle show"><h5 style="display: inline;">11</h5></td>
+						  					<td><h5>Максимальные фактическая тепловая нагрузка</h5></td>
+						  					<td><h5>Q<sub>факт</sub><sup>max</sup></h5></td>
+						  					<td><h5><span class="data-unit">Гкал/ч</span></h5></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" /></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td>11.1</td>
+						  					<td class="ps-2">Дата фиксации максимальной фактической тепловой нагрузки</td>
+						  					<td></td>
+						  					<td>-</td>
+						  					<td class="colvis-1"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="date" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="date" class="data-value" /></td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="1">
+						  					<td class="dropdown-toggle show"><h4 style="display: inline;">II</h4></td>
+						  					<td colspan="18"><h4>Электрическая энергия</h4></td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="2">
+						  					<td class="dropdown-toggle show"><h5 style="display: inline;">12</h5></td>
+						  					<td><h5>Выработка электрической энергии, всего</h5></td>
+						  					<td><h5>W<sub>уст</sub></h5></td>
+						  					<td><h5><span class="data-unit">тыс. кВ.ч</span></h5></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td></td>
+						  					<td colspan="18">в том числе по группе оборудования:</td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="3">
+						  					<td class="dropdown-toggle">12.1</td>
+						  					<td class="ps-2">- турбоагрегаты ПСУ</td>
+						  					<td>W<sup>ПСУ</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td></td>
+						  					<td colspan="18" class="ps-2">включая:</td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td>12.1.1</td>
 						  					<td class="ps-3">- ПСУ-40</td>
-						  					<td>N<sub>рас</sub><sup>ПСУ-40</sup></td>
-						  					<td><span class="data-unit">МВт</span></td>
+						  					<td>W<sup>ПСУ-40</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
 						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
@@ -6031,10 +7354,10 @@
 						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  				</tr>
 						  				<tr data-lvl="4" style="display:none;">
-						  					<td>2.1.2</td>
+						  					<td>12.1.2</td>
 						  					<td class="ps-3">- ПСУ-90</td>
-						  					<td>N<sub>рас</sub><sup>ПСУ-90</sup></td>
-						  					<td><span class="data-unit">МВт</span></td>
+						  					<td>W<sup>ПСУ-90</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
 						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
@@ -6052,10 +7375,10 @@
 						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  				</tr>
 						  				<tr data-lvl="4" style="display:none;">
-						  					<td>2.1.3</td>
+						  					<td>12.1.3</td>
 						  					<td class="ps-3">- ПСУ-130</td>
-						  					<td>N<sub>рас</sub><sup>ПСУ-130</sup></td>
-						  					<td><span class="data-unit">МВт</span></td>
+						  					<td>W<sup>ПСУ-130</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
 						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
@@ -6073,10 +7396,10 @@
 						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  				</tr>
 						  				<tr data-lvl="4" style="display:none;">
-						  					<td>2.1.4</td>
+						  					<td>12.1.4</td>
 						  					<td class="ps-3">- ПСУ-240</td>
-						  					<td>N<sub>рас</sub><sup>ПСУ-240</sup></td>
-						  					<td><span class="data-unit">МВт</span></td>
+						  					<td>W<sup>ПСУ-240</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
 						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
@@ -6093,11 +7416,57 @@
 						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  				</tr>
-						  				<tr data-lvl="3">
-						  					<td>2.2</td>
+						  				<tr class="clicker" data-lvl="3">
+						  					<td class="dropdown-toggle">12.2</td>
 						  					<td class="ps-2">- турбоагрегаты ПГУ</td>
-						  					<td>N<sub>рас</sub><sup>ПГУ</sup></td>
-						  					<td><span class="data-unit">МВт</span></td>
+						  					<td>W<sup>ПГУ</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td></td>
+						  					<td colspan="18" class="ps-2">включая:</td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td>12.2.1</td>
+						  					<td class="ps-3">- газовые турбины</td>
+						  					<td>W<sup>ПГУ-ГТУ</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td>12.2.2</td>
+						  					<td class="ps-3">- паровые турбины</td>
+						  					<td>W<sup>ПГУ-ПТ</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
 						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
@@ -6115,10 +7484,10 @@
 						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  				</tr>
 						  				<tr data-lvl="3">
-						  					<td>2.3</td>
+						  					<td>12.3</td>
 						  					<td class="ps-2">- газовые турбины ГТУ с КУВ</td>
-						  					<td>N<sub>рас</sub><sup>ГТУ</sup></td>
-						  					<td><span class="data-unit">МВт</span></td>
+						  					<td>W<sup>ГТУ</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
 						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
@@ -6136,10 +7505,10 @@
 						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  				</tr>
 						  				<tr data-lvl="3">
-						  					<td>2.4</td>
-						  					<td class="ps-2">-  поршневые агрегатыУ</td>
-						  					<td>N<sub>рас</sub><sup>ПА</sup></td>
-						  					<td><span class="data-unit">МВт</span></td>
+						  					<td>12.4</td>
+						  					<td class="ps-2">-  поршневые агрегаты</td>
+						  					<td>W<sup>ПА</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
 						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
@@ -6155,6 +7524,1020 @@
 						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
 						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td></td>
+						  					<td colspan="18">включая:</td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="3">
+						  					<td class="dropdown-toggle">12.1</td>
+						  					<td class="ps-2">- по теплофикационному циклу</td>
+						  					<td>W<sub>т</sub></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td></td>
+						  					<td class="ps-3">тоже в % от суммарной выработки</td>
+						  					<td>W<sub>т</sub></td>
+						  					<td><span class="data-unit">%</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td></td>
+						  					<td colspan="18" class="ps-2">в том числе по группам оборудования:</td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="4">
+						  					<td class="dropdown-toggle">12.1.1</td>
+						  					<td class="ps-2">- турбоагрегаты ПСУ</td>
+						  					<td>W<sub>т</sub><sup>ПСУ</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="5" style="display:none;">
+						  					<td></td>
+						  					<td colspan="18" class="ps-2">включая:</td>
+						  				</tr>
+						  				<tr data-lvl="5" style="display:none;">
+						  					<td>12.1.1.1</td>
+						  					<td class="ps-3">- ПСУ-40</td>
+						  					<td>W<sub>т</sub><sup>ПСУ-40</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="5" style="display:none;">
+						  					<td>12.1.1.2</td>
+						  					<td class="ps-3">- ПСУ-90</td>
+						  					<td>W<sub>т</sub><sup>ПСУ-90</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="5" style="display:none;">
+						  					<td>12.1.1.3</td>
+						  					<td class="ps-3">- ПСУ-130</td>
+						  					<td>W<sub>т</sub><sup>ПСУ-130</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="5" style="display:none;">
+						  					<td>12.1.1.4</td>
+						  					<td class="ps-3">- ПСУ-240</td>
+						  					<td>W<sub>т</sub><sup>ПСУ-240</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4">
+						  					<td >12.1.2</td>
+						  					<td class="ps-2">- турбоагрегаты ПГУ</td>
+						  					<td>W<sub>т</sub><sup>ПГУ</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4">
+						  					<td>12.1.3</td>
+						  					<td class="ps-2">- газовые турбины ГТУ с КУВ</td>
+						  					<td>W<sub>т</sub><sup>ГТУ</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4">
+						  					<td>12.1.4</td>
+						  					<td class="ps-2">- поршневые агрегаты</td>
+						  					<td>W<sub>т</sub><sup>ПА</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td></td>
+						  					<td colspan="18" class="ps-2">включая выработано в теплофик. цикле отборами турбоагрегатов:</td>
+						  				</tr>
+						  				<tr data-lvl="4">
+						  					<td >12.1.1</td>
+						  					<td class="ps-2">- производственными и нерегулированными отборами</td>
+						  					<td>W<sub>т</sub><sup>т/а, ПО и НО</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4">
+						  					<td >12.1.1</td>
+						  					<td class="ps-2">- теплофикационными отборами</td>
+						  					<td>W<sub>т</sub><sup>т/а, ТО</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4">
+						  					<td >12.1.1</td>
+						  					<td class="ps-2">- за счет ухудшенного вакуума</td>
+						  					<td>W<sub>т</sub><sup>т/а, УВ</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="3">
+						  					<td class="dropdown-toggle">12.2</td>
+						  					<td class="ps-2">- по конденсационному циклу</td>
+						  					<td>W<sub>к</sub></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td></td>
+						  					<td class="ps-3">тоже в % от суммарной выработки</td>
+						  					<td>W<sub>к</sub></td>
+						  					<td><span class="data-unit">%</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td></td>
+						  					<td colspan="18" class="ps-2">в том числе по группам оборудования:</td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="4">
+						  					<td class="dropdown-toggle">12.2.1</td>
+						  					<td class="ps-2">- турбоагрегаты ПСУ</td>
+						  					<td>W<sub>к</sub><sup>ПСУ</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="5" style="display:none;">
+						  					<td></td>
+						  					<td colspan="18" class="ps-2">включая:</td>
+						  				</tr>
+						  				<tr data-lvl="5" style="display:none;">
+						  					<td>12.2.1.1</td>
+						  					<td class="ps-3">- ПСУ-40</td>
+						  					<td>W<sub>к</sub><sup>ПСУ-40</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="5" style="display:none;">
+						  					<td>12.2.1.2</td>
+						  					<td class="ps-3">- ПСУ-90</td>
+						  					<td>W<sub>к</sub><sup>ПСУ-90</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="5" style="display:none;">
+						  					<td>12.2.1.3</td>
+						  					<td class="ps-3">- ПСУ-130</td>
+						  					<td>W<sub>к</sub><sup>ПСУ-130</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="5" style="display:none;">
+						  					<td>12.2.1.4</td>
+						  					<td class="ps-3">- ПСУ-240</td>
+						  					<td>W<sub>к</sub><sup>ПСУ-240</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4">
+						  					<td >12.2.2</td>
+						  					<td class="ps-2">- турбоагрегаты ПГУ</td>
+						  					<td>W<sub>к</sub><sup>ПГУ</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4">
+						  					<td>12.2.3</td>
+						  					<td class="ps-2">- газовые турбины ГТУ с КУВ</td>
+						  					<td>W<sub>к</sub><sup>ГТУ</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4">
+						  					<td>12.2.4</td>
+						  					<td class="ps-2">- поршневые агрегаты</td>
+						  					<td>W<sub>к</sub><sup>ПА</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="2">
+						  					<td class="dropdown-toggle show"><h5 style="display: inline;">13</h5></td>
+						  					<td><h5>Расход электроэнергии на собственные нужды, всего</h5></td>
+						  					<td><h5>W<sub>сн</sub></h5></td>
+						  					<td><h5><span class="data-unit">тыс. кВ.ч</span></h5></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td></td>
+						  					<td colspan="18">в том числе физический метод:</td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td >13.1</td>
+						  					<td class="ps-2">- на выработку электрической энергии</td>
+						  					<td>W<sub>сн,ф</sub><sup>э/э</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" /></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td >13.2</td>
+						  					<td class="ps-2">- на отпуск тепловой энергии</td>
+						  					<td>W<sub>сн,ф</sub><sup>т/э</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" /></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td></td>
+						  					<td colspan="18">в том числе пропорциональный метод:</td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td >13.1</td>
+						  					<td class="ps-2">- на выработку электрической энергии</td>
+						  					<td>W<sub>сн,п</sub><sup>э/э</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" /></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td >13.2</td>
+						  					<td class="ps-2">- на отпуск тепловой энергии</td>
+						  					<td>W<sub>сн,п</sub><sup>т/э</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" /></td>
+						  				</tr>
+						  				<tr data-lvl="2">
+						  					<td ><h5>14</h5></td>
+						  					<td><h5>Расход электроэнергии на собственные нужды ТФУ</h5></td>
+						  					<td><h5>W<sub>сн</sub><sup>ТФУ</sup></h5></td>
+						  					<td><h5><span class="data-unit">тыс. кВ.ч</span></h5></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" /></td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="2">
+						  					<td class="dropdown-toggle show"><h5 style="display: inline;">15</h5></td>
+						  					<td><h5>Расход электроэнергии на собственные нужды турбоагрегатов, всего</h5></td>
+						  					<td><h5>W<sub>сн</sub><sup>т/а</sup></h5></td>
+						  					<td><h5><span class="data-unit">тыс. кВ.ч</span></h5></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td></td>
+						  					<td colspan="18">в том числе:</td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="3">
+						  					<td class="dropdown-toggle">15.1</td>
+						  					<td class="ps-2">- турбоагрегаты ПСУ, всего</td>
+						  					<td>W<sub>сн</sub><sup>т/а,ПСУ</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td></td>
+						  					<td colspan="18" class="ps-2">включая:</td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td >15.1.1</td>
+						  					<td class="ps-3">- ПСУ-40</td>
+						  					<td>W<sub>сн</sub><sup>т/а,ПСУ-40</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" /></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td >15.1.2</td>
+						  					<td class="ps-3">- ПСУ-90</td>
+						  					<td>W<sub>сн</sub><sup>т/а,ПСУ-90</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" /></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td >15.1.3</td>
+						  					<td class="ps-3">- ПСУ-130</td>
+						  					<td>W<sub>сн</sub><sup>т/а,ПСУ-130</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" /></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td >15.1.4</td>
+						  					<td class="ps-3">- ПСУ-240</td>
+						  					<td>W<sub>сн</sub><sup>т/а,ПСУ-240</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" /></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td >15.2</td>
+						  					<td class="ps-2">- турбоагрегаты ПГУ</td>
+						  					<td>W<sub>сн</sub><sup>т/а,ПГУ</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" /></td>
+						  				</tr>
+						  				<tr data-lvl="2">
+						  					<td ><h5>16</h5></td>
+						  					<td><h5>Расход электроэнергии на собственные нужды энергетических котлоагрегатов</h5></td>
+						  					<td><h5>W<sub>сн</sub><sup>к/а</sup></h5></td>
+						  					<td><h5><span class="data-unit">тыс. кВ.ч</span></h5></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" /></td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="2">
+						  					<td class="dropdown-toggle show"><h5 style="display: inline;">17</h5></td>
+						  					<td><h5>Отпуск электрической энергии с шин, всего</h5></td>
+						  					<td><h5>W<sub>от</sub></h5></td>
+						  					<td><h5><span class="data-unit">тыс. кВ.ч</span></h5></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td></td>
+						  					<td colspan="18">в том числе:</td>
+						  				</tr>
+						  				<tr class="clicker" data-lvl="3">
+						  					<td class="dropdown-toggle">17.1</td>
+						  					<td class="ps-2">- турбоагрегаты ПСУ, всего</td>
+						  					<td>W<sub>от</sub><sup>ПСУ</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" disabled/></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td></td>
+						  					<td colspan="18" class="ps-2">включая:</td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td >17.1.1</td>
+						  					<td class="ps-3">- ПСУ-40</td>
+						  					<td>W<sub>от</sub><sup>ПСУ-40</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" /></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td >17.1.2</td>
+						  					<td class="ps-3">- ПСУ-90</td>
+						  					<td>W<sub>от</sub><sup>ПСУ-90</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" /></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td >17.1.3</td>
+						  					<td class="ps-3">- ПСУ-130</td>
+						  					<td>W<sub>от</sub><sup>ПСУ-130</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" /></td>
+						  				</tr>
+						  				<tr data-lvl="4" style="display:none;">
+						  					<td >17.1.4</td>
+						  					<td class="ps-3">- ПСУ-240</td>
+						  					<td>W<sub>от</sub><sup>ПСУ-240</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" /></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td >17.2</td>
+						  					<td class="ps-2">- турбоагрегаты ПГУ</td>
+						  					<td>W<sub>от</sub><sup>ПГУ</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" /></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td >17.3</td>
+						  					<td class="ps-2">- газовые турбины ГТУ с КУВ</td>
+						  					<td>W<sub>от</sub><sup>ГТУ</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" /></td>
+						  				</tr>
+						  				<tr data-lvl="3">
+						  					<td >17.4</td>
+						  					<td class="ps-2">- поршневые агрегаты</td>
+						  					<td>W<sub>от</sub><sup>ПА</sup></td>
+						  					<td><span class="data-unit">тыс. кВ.ч</span></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-1"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-2" style="display:none;"><input type="text" class="data-value" /></td>
+						  					<td class="colvis-3" style="display:none;"><input type="text" class="data-value" /></td>
 						  				</tr>
 						  			</tbody>
 						  		</table>

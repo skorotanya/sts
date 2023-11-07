@@ -648,7 +648,7 @@
 														<a class="invalid-tooltip error" data-bs-toggle="tooltip" data-bs-custom-class="error-tooltip" data-bs-html="false" data-bs-title="Это поле должно быть заполнено"></a>
 													</div>
 													<div class="data-item">
-														<label class="data-label md-fix">Примечание</label>
+														<label class="data-label md-fix">Примечание<a class="info data-info" data-bs-toggle="tooltip" data-bs-custom-class="info-tooltip" data-bs-html="false" data-bs-title="Примечанием могут выступать архивные сведения, например о предыдущем наименовании."></a></label>
 														<textarea class="data-value stretch" style="height: 62px;"></textarea>
 													</div>
 						  						</div>
@@ -667,8 +667,9 @@
 				      						<div class="data-block ms-xxl-3 data-xxl-row">
 					      					
 												<div class="data-item ">
-													<label class="data-label smx-fix">ИНН</label>
+													<label class="data-label smx-fix">ИНН<a class="info data-info" data-bs-toggle="tooltip" data-bs-custom-class="info-tooltip" data-bs-html="false" data-bs-title="Индивидуальный номер налогоплательщика"></a></label>
 													<input type="text" class="data-value md-stretch" name="">
+
 												</div>
 												<div class="data-item ">
 													<label class="data-label smx-fix">ОГРН</label>
@@ -729,9 +730,11 @@
 												<div class="data-row">
 													<div class="col-12 col-md-6">
 														<div class="data-block me-md-3">
-															<div class="data-item">
-																<label class="data-label md-fix">Размер собственного капитала</label>
-																<input type="text" class="data-value stretch" name=""><span class="data-unit"> тыс.р.</span>
+															<div class="data-item tooltip-show">
+																<label class="data-label md-fix">Размер собственного капитала<a class="info data-info" data-bs-toggle="tooltip" data-bs-custom-class="info-tooltip" data-bs-html="false" data-bs-title="Размер капитала без учёта субсидий и дотаций"></a></label>
+																<input type="text" class="data-value stretch" name="">
+																<a class="invalid-tooltip error" data-bs-toggle="tooltip" data-bs-custom-class="error-tooltip" data-bs-html="false" data-bs-title="Поле должно содержать число."></a>
+																<span class="data-unit"> тыс.р.</span>
 															</div>
 															<div class="data-item">
 																<label class="data-label md-fix">по состоянию на</label>
@@ -751,14 +754,14 @@
 														<div class="data-block ms-md-3">
 															<div class="data-item">
 																<label class="data-label md-fix">Способ отправки писем</label>
-															  	<select class="selectpicker data-value stretch"data-live-search="true" placeholder="Выберите значение">
+															  	<select class="selectpicker data-value stretch"data-live-search="true" placeholder="Выберите...">
 																  	<option value="1">частная</option>
 																  	<option value="2">государственная</option>
 																</select>
 															</div>
 															<div class="data-item">
 																<label class="data-label md-fix">Организация действует в зоне(нах) ЕТО</label>
-															  	<select class="selectpicker data-value stretch" multiple data-live-search="true" placeholder="Выберите значение">
+															  	<select class="selectpicker data-value stretch" multiple data-live-search="true" placeholder="Выберите...">
 																  	<option value="1">частная</option>
 																  	<option value="2">государственная</option>
 																</select>
@@ -766,7 +769,7 @@
 															<div class="data-item">
 																<label class="data-label md-fix">Статус ЕТО</label>
 																<div class="input-group stretch">
-																  	<select class="selectpicker data-value stretch" placeholder="Выберите значение">
+																  	<select class="selectpicker data-value stretch" placeholder="Выберите...">
 																	  	<option value="1">частная</option>
 																	  	<option value="2">государственная</option>
 																	</select>

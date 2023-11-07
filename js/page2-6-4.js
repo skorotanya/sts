@@ -33,7 +33,7 @@ $(document).ready(function () {
       name: 'ETOdistricts',
       type: 'simple-scroll',
       columns: [],
-      height: '16vh',
+      height: '46vh',
       modal: 'editData',
       tab: false,
       firstTab: true

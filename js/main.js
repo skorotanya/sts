@@ -405,12 +405,12 @@ window.onload = () => {
   // Loop over them and prevent submission
   Array.from(forms).forEach(form => {
     form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
+     if (!form.checkValidity()) {
         event.preventDefault(false);
         event.stopPropagation();
       }
 
-      form.classList.add('was-validated');
+      form.classList.add('is-validated');
     }, false);
   });
 
