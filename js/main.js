@@ -350,10 +350,35 @@ const initPageTables = (pageTables) => {
   }
 
 
+  // Functions for work with form's tooltips
 
 
+ $.fn.showErrorTooltip = function() {
+    let el = $(this);
+      if(el.hasClass('data-value')){
+        el.addClass('tooltip-show');
+      }
+   };
 
+ $.fn.hideErrorTooltip = function() {
+    let el = $(this);
+      if(el.hasClass('data-value')){
+        el.removeClass('tooltip-show');
+        el.setErrorText(); // Возвращаем тексту значение по умолчанию
+      }
+   };
 
+$.fn.setErrorText = function(errText) {
+    let el = $(this);
+    let tooltip = el.next('.invalid-tooltip.error');
+    
+    if(el.hasClass('data-value') && tooltip !== null) {
+        let tooltipObj = bootstrap.Tooltip.getInstance(tooltip);
+        errText = errText!==undefined?errText:tooltip.attr('data-bs-title'); // если текста нет, то берём его изначальное значение из элемента DOM
+        tooltipObj.setContent({ '.tooltip-inner': errText }); // меняем текст непосредственно у объекта bootstrap
+        
+    }
+   };
 
 /* COMMON EVENT LISTENERS FOR ALL PAGES */
 
@@ -403,6 +428,7 @@ window.onload = () => {
  // Fetch all the forms we want to apply custom Bootstrap validation styles to
   const forms = document.querySelectorAll('.needs-validation');
   // Loop over them and prevent submission
+  //console.log(forms.length);
   Array.from(forms).forEach(form => {
     form.addEventListener('submit', event => {
      if (!form.checkValidity()) {
@@ -411,6 +437,12 @@ window.onload = () => {
       }
 
       form.classList.add('is-validated');
+
+      //console.log(event);
+      if(form.classList.contains('form-row')) {
+        event.submitter.closest('tr').classList.add('is-validated');
+      }
+
     }, false);
   });
 

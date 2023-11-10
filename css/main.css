@@ -665,6 +665,11 @@ textarea.data-array {
     font-weight: 300;
 }
 
+input[type="date" i]::-webkit-calendar-picker-indicator {
+	background-image: url(../images/calendar.svg);
+    padding-right: 0.5rem;
+}
+
 /* progress bar*/
 
 .data-progress {
@@ -1721,6 +1726,18 @@ tr[data-lvl="6"] {
 	opacity: 0;
 	transition: opacity ease 500ms;
 }
+td:has(a.invalid-tooltip) {
+	position: relative;
+}
+
+td >.invalid-tooltip {
+	position: absolute;
+	top:0;
+	right: 0;
+	margin-top: 0;
+    margin-right: -0.25rem;
+    z-index: 0;
+}
 
 a.error {
 	width: 1rem;
@@ -1743,8 +1760,7 @@ a.error {
 	border-color: var(--border-color);
 }
 
-
-form.is-validated :invalid, form.is-validated .bootstrap-select > .bs-invalid, form.needs-validation .data-item.tooltip-show > .data-value, form.needs-validation .data-item.tooltip-show > .bootstrap-select .dropdown-toggle {
+.is-validated :invalid, .is-validated .bootstrap-select > .bs-invalid, .data-value.tooltip-show {/*, .data-value.tooltip-show ~ .bootstrap-select .dropdown-toggle {*/
 	border-color: var(--red-color);
 }
 
@@ -1752,16 +1768,12 @@ form.is-validated :invalid, form.is-validated .bootstrap-select > .bs-invalid, f
 	position: relative;
 }*/
 
-
-form.is-validated :invalid~.invalid-tooltip, form.is-validated .data-item:has(.bs-invalid) > .invalid-tooltip, form.needs-validation .data-item.tooltip-show > .invalid-tooltip {
+.is-validated :invalid~.invalid-tooltip, .is-validated .data-item:has(.bs-invalid) > .invalid-tooltip, .data-value.tooltip-show ~ .invalid-tooltip {
 	display: block;
 	opacity: 0.9;
 }
 
-
-
-
-@media (max-width: 1400px) {
+@media (max-width: 1400px) { 
 	.data-xxl-row {
 		flex-direction: row;
 		align-items: flex-start;

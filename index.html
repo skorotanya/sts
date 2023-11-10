@@ -668,8 +668,8 @@
 					      					
 												<div class="data-item ">
 													<label class="data-label smx-fix">ИНН<a class="info data-info" data-bs-toggle="tooltip" data-bs-custom-class="info-tooltip" data-bs-html="false" data-bs-title="Индивидуальный номер налогоплательщика"></a></label>
-													<input type="text" class="data-value md-stretch" name="">
-
+													<input type="text" class="data-value md-stretch" required id="tsoINN">
+													<a class="invalid-tooltip error" data-bs-toggle="tooltip" data-bs-custom-class="error-tooltip" data-bs-html="false" data-bs-title="Это поле должно быть заполнено"></a>
 												</div>
 												<div class="data-item ">
 													<label class="data-label smx-fix">ОГРН</label>
@@ -730,9 +730,9 @@
 												<div class="data-row">
 													<div class="col-12 col-md-6">
 														<div class="data-block me-md-3">
-															<div class="data-item tooltip-show">
+															<div class="data-item">
 																<label class="data-label md-fix">Размер собственного капитала<a class="info data-info" data-bs-toggle="tooltip" data-bs-custom-class="info-tooltip" data-bs-html="false" data-bs-title="Размер капитала без учёта субсидий и дотаций"></a></label>
-																<input type="text" class="data-value stretch" name="">
+																<input type="text" class="data-value stretch tooltip-show" name="">
 																<a class="invalid-tooltip error" data-bs-toggle="tooltip" data-bs-custom-class="error-tooltip" data-bs-html="false" data-bs-title="Поле должно содержать число."></a>
 																<span class="data-unit"> тыс.р.</span>
 															</div>
@@ -741,7 +741,7 @@
 																<input type="date" class="data-value stretch" name="">
 															</div>
 															<div class="data-item">
-																<label class="data-label md-fix">Вид собственности</label>
+																<label class="data-label md-fix">Вид собственности<a data-bs-toggle="tooltip" data-bs-custom-class="info-tooltip" data-bs-html="false" data-bs-title="Это поле обязательно для заполнения" style="color: var(--red-color);">*</a><a class="info data-info" data-bs-toggle="tooltip" data-bs-custom-class="info-tooltip" data-bs-html="false" data-bs-title="По ОКФС"></a></label>
 															  	<select class="selectpicker data-value stretch" required data-live-search="true" placeholder="Выберите...">
 																  	<option value="1">частная</option>
 																  	<option value="2">государственная</option>
@@ -754,7 +754,7 @@
 														<div class="data-block ms-md-3">
 															<div class="data-item">
 																<label class="data-label md-fix">Способ отправки писем</label>
-															  	<select class="selectpicker data-value stretch"data-live-search="true" placeholder="Выберите...">
+															  	<select class="selectpicker data-value stretch" data-live-search="true" placeholder="Выберите...">
 																  	<option value="1">частная</option>
 																  	<option value="2">государственная</option>
 																</select>
@@ -1073,40 +1073,45 @@
 									</div>
 									<div class="col-xxl-6 col-12">
 										<div class="data-block border-block ms-1">
+											<div class="forms-block">
+												<form class="needs-validation form-row" id="formRow1" novalidate></form>
+												<!-- По добавлению строки добавляется и форма -->
+											</div>
+											
 											<div class="data-row pb-1 mt-1">
 												<h4>Ответственное лицо за подготовку данных по схеме</h4>
 											</div>
 											<table id="responseTable" class="display nowrap compact table-inp-stretch" style="width:100%">
 											    <thead>
 											        <tr>
-											            <th>Должность</th>
-											            <th>Фамилия</th>
-											            <th>Имя</th>
-											            <th>Отчество</th>
-											            <th>Телефон</th>
-											            <th>Адрес эл. почты</th>
+											            <th class="xl-fix">Должность<a data-bs-toggle="tooltip" data-bs-custom-class="info-tooltip" data-bs-html="false" data-bs-title="Это поле обязательно для заполнения" style="color: var(--red-color);">*</a></th>
+											            <th class="lg-fix">Фамилия<a data-bs-toggle="tooltip" data-bs-custom-class="info-tooltip" data-bs-html="false" data-bs-title="Это поле обязательно для заполнения" style="color: var(--red-color);">*</a></th>
+											            <th class="md-fix">Имя<a data-bs-toggle="tooltip" data-bs-custom-class="info-tooltip" data-bs-html="false" data-bs-title="Это поле обязательно для заполнения" style="color: var(--red-color);">*</a></th>
+											            <th class="lg-fix">Отчество</th>
+											            <th class="xxl-fix">Телефон</th>
+											            <th class="xl-fix">Адрес эл. почты</th>
 											            <th></th>
 											        </tr>
 											    </thead>
 											    <tbody>
 											    	<tr>
-											    		<td><input type="text" class="data-value" value="Главный инженер"></td>
-											    		<td><input type="text" class="data-value" value="Иванов"></td>
-											    		<td><input type="text" class="data-value" value="Иван"></td>
-											    		<td><input type="text" class="data-value" value="Иванович"></td>
-											    		<td><input type="tel" class="data-value" value="+7(945)456-65-78"></td>
-											    		<td><input type="email" class="data-value" value="ivanov@mail.ru"></td>
-											    		<td><button class="bttn bttn-square bttn-icon-save" type="button" title="Сохранить">
-														</button><button class="bttn bttn-square bttn-icon-del" type="button" title="Удалить">
+											    		<td><input type="text" form="formRow1" class="data-value" required value="Главный инженер"><a class="invalid-tooltip error" data-bs-toggle="tooltip" data-bs-custom-class="error-tooltip" data-bs-html="false" data-bs-title="Вы пропустили это поле"></a></td>
+											    		<td><input type="text" form="formRow1" class="data-value" required value=""><a class="invalid-tooltip error" data-bs-toggle="tooltip" data-bs-custom-class="error-tooltip" data-bs-html="false" data-bs-title="Вы пропустили это поле"></a></td>
+											    		<td><input type="text" form="formRow1" class="data-value" required value="Иван"><a class="invalid-tooltip error" data-bs-toggle="tooltip" data-bs-custom-class="error-tooltip" data-bs-html="false" data-bs-title="Вы пропустили это поле"></a></td>
+											    		<td><input type="text" form="formRow1" class="data-value" value="Иванович"></td>
+											    		<td><input type="tel" form="formRow1" class="data-value" value="+7(945)456-65-78"></td>
+											    		<td><input type="email" form="formRow1" class="data-value" value="ivanov@mail.ru"></td>
+											    		<td><button class="bttn bttn-square bttn-icon-save" type="submit" form="formRow1" title="Сохранить">
+														</button><button class="bttn bttn-square bttn-icon-del" type="button" form="formRow1" title="Удалить">
 														</button></td>
 											    	</tr>
 											    	<tr class="add-row">
-											    		<td><input type="text" class="data-value xl-full" value=""></td>
-											    		<td><input type="text" class="data-value lg-full" value=""></td>
-											    		<td><input type="text" class="data-value md-full" value=""></td>
-											    		<td><input type="text" class="data-value lg-full" value=""></td>
-											    		<td><input type="tel" class="data-value xxl-full" value=""></td>
-											    		<td><input type="email" class="data-value xl-full" value=""></td>
+											    		<td><input type="text" class="data-value" value=""></td>
+											    		<td><input type="text" class="data-value" value=""></td>
+											    		<td><input type="text" class="data-value" value=""></td>
+											    		<td><input type="text" class="data-value" value=""></td>
+											    		<td><input type="tel" class="data-value" value=""></td>
+											    		<td><input type="email" class="data-value" value=""></td>
 											    		<td><button class="bttn bttn-square bttn-icon-save" type="button" title="Сохранить">
 														</button><button class="bttn bttn-square bttn-icon-del" type="button" title="Удалить">
 														</button></td>

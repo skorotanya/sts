@@ -68,5 +68,18 @@ $(document).ready(function () {
        showMessage('Данные для экспорта ещё не выбраны.', 'fault');
     });
 
+
+    // tests for work with tooltips
+
+    $('#tsoINN').on('change', function () {
+      if(this.value.length != 10 && this.value.length != 0){
+        $(this).setErrorText('ИНН должен содержать 10 цифр');
+        $(this).showErrorTooltip();
+      }
+      else {
+        $(this).hideErrorTooltip();
+      }
+    })
+
 });
 
