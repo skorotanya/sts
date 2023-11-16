@@ -201,21 +201,34 @@ $(document).ready(function () {
      });
 
 
-     /* Click on Add button */
+     /* Click on button */
      $('.bttn-set-intake').on('click', (e) => {
       showModal('setIntakeData');
     } );
 
 
-    $('[name="dataInputPeriod"]').on('change', () => {
+    // Show/hide table columns dependant on checked data entry period
+    $('[name="dataEntryPeriod"]').on('change', () => {
       let colvis = $('[class*=colvis]');
-      let checkVal = $('[name="dataInputPeriod"]:checked').val();
-      console.log(colvis.length);
+      let checkVal = $('[name="dataEntryPeriod"]:checked').val();
+      //console.log(colvis.length);
       colvis.css('display','none');
       $('.colvis-' + checkVal).attr('style','');
     })
 
+    // Show/hide table rows dependant on checked data entry way
+    $('[name="dataEntryWay"]').on('change', () => {
+      let rowvis = $('[class*=rowvis]');
+      let nodrop = $('[class*=nodrop]');
+      let checkVal = $('[name="dataEntryWay"]:checked').val();
+      console.log(rowvis.length);
+      rowvis.removeClass('d-none');
+      $('.rowvis-' + checkVal).addClass('d-none');
+      nodrop.addClass('dropdown-toggle');
+      $('.nodrop-' + checkVal).removeClass('dropdown-toggle');
+    })
 
+    // Show/hide table rows by tree hierarchy
     $('.clicker .dropdown-toggle').on('click', function(){
       let tdElem = $(this);
       let action = tdElem.hasClass('show'); // true = close branch, false = open branch

@@ -990,6 +990,7 @@ border-left: 6px solid var(--action-color);
 	overflow-y: auto;
 	overflow-x: hidden;
 	padding-right: 10px;
+	flex-grow: 1;
 }
 
 /* Tabs */
