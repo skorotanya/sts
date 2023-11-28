@@ -202,50 +202,50 @@
 				<div class="data-row">
 					<h1 class="title">Расчёты</h1>
 				</div>
-				<div class="data-block main-content">
-					<h4>Параметры расчёта</h4>
+			</div>
+			<div class="data-block main-content">
+				<h4>Параметры расчёта</h4>
+				<div class="data-item">
+					<label class="data-label md-fix">Раздел</label>
+					<select class="selectpicker xxl-fix" placeholder="Выберите..." data-container="body">
+						<option value="1">Город (поселение)</option>
+						<option value="2">Источники тепловой энергии</option>
+						<option value="3">Тепловые сети и объекты</option>
+						<option value="4">Потребители</option>
+						<option value="5">Индикаторы схемы</option>
+						<option value="6">Экономика и экология</option>
+					</select>
+				</div>
+				<div class="data-item">
+					<label class="data-label md-fix">Наименование расчёта</label>
+					<select class="selectpicker xxl-fix" placeholder="Выберите..." data-container="body">
+						<option value="1">Расчёт 1</option>
+						<option value="2">Расчёт 2</option>
+						<option value="3">Расчёт 3</option>
+						<option value="4">Расчёт 4</option>
+					</select>
+				</div>
+				<div class="data-row">
 					<div class="data-item">
-						<label class="data-label md-fix">Раздел</label>
+						<label class="data-label md-fix">Расчётный год</label>
 						<select class="selectpicker xxl-fix" placeholder="Выберите..." data-container="body">
-							<option value="1">Город (поселение)</option>
-							<option value="2">Источники тепловой энергии</option>
-							<option value="3">Тепловые сети и объекты</option>
-							<option value="4">Потребители</option>
-							<option value="5">Индикаторы схемы</option>
-							<option value="6">Экономика и экология</option>
+							<option value="2020">01.01.2021</option>
+							<option value="2021">01.01.2022</option>
+							<option value="2022">01.01.2023</option>
+							<option value="2023">01.01.2024</option>
 						</select>
 					</div>
 					<div class="data-item">
-						<label class="data-label md-fix">Наименование расчёта</label>
-						<select class="selectpicker xxl-fix" placeholder="Выберите..." data-container="body">
-							<option value="1">Расчёт 1</option>
-							<option value="2">Расчёт 2</option>
-							<option value="3">Расчёт 3</option>
-							<option value="4">Расчёт 4</option>
-						</select>
+						<div class="note">Базовый год - <span class="note-base-year">2022 (01.01.2023)</span>; следующие года - перспективные.</div>
 					</div>
-					<div class="data-row">
-						<div class="data-item">
-							<label class="data-label md-fix">Расчётный год</label>
-							<select class="selectpicker xxl-fix" placeholder="Выберите..." data-container="body">
-								<option value="2020">01.01.2021</option>
-								<option value="2021">01.01.2022</option>
-								<option value="2022">01.01.2023</option>
-								<option value="2023">01.01.2024</option>
-							</select>
+				</div>
+				<div class="data-row">
+					<button type="button" class="bttn bttn-color" style="margin-left: 435px;">Выполнить</button>
+					<div class="data-item xxl-fix">
+						<div class="progress data-progress w-100" role="progressbar">
+						  	<div class="progress-bar" style="width: 25%"></div>
 						</div>
-						<div class="data-item">
-							<div class="note">Базовый год - <span class="note-base-year">2022 (01.01.2023)</span>; следующие года - перспективные.</div>
-						</div>
-					</div>
-					<div class="data-row">
-						<button type="button" class="bttn bttn-color" style="margin-left: 435px;">Выполнить</button>
-						<div class="data-item xxl-fix">
-							<div class="progress data-progress w-100" role="progressbar">
-							  	<div class="progress-bar" style="width: 25%"></div>
-							</div>
-							<label class="data-label progress-value">25%</label>
-						</div>
+						<label class="data-label progress-value">25%</label>
 					</div>
 				</div>
 			</div>
