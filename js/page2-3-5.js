@@ -211,58 +211,54 @@ $(document).ready(function () {
     $('[name="dataEntryPeriod"]').on('change', () => {
       let colvis = $('[class*=colvis]');
       let checkVal = $('[name="dataEntryPeriod"]:checked').val();
-      //console.log(colvis.length);
-      colvis.css('display','none');
-      $('.colvis-' + checkVal).attr('style','');
+      colvis.css('display','none'); // hide all cells
+      $('.colvis-' + checkVal).attr('style',''); // display chosen cells
     })
 
     // Show/hide table rows dependant on checked data entry way
     $('[name="dataEntryWay"]').on('change', () => {
-      let rowvis = $('[class*=rowvis]');
-      let nodrop = $('[class*=nodrop]');
-      let checkVal = $('[name="dataEntryWay"]:checked').val();
-      console.log(rowvis.length);
-      rowvis.removeClass('d-none');
-      $('.rowvis-' + checkVal).addClass('d-none');
-      nodrop.addClass('dropdown-toggle');
-      $('.nodrop-' + checkVal).removeClass('dropdown-toggle');
+      let rowhide = $('[class*=rowhide]'); // all rows with 'rowhide-' class
+      let nodrop = $('[class*=nodrop]'); // all cells with 'nodrop-' class
+      let checkVal = $('[name="dataEntryWay"]:checked').val(); // current checked value at radio buttons of data entry way
+      rowhide.removeClass('d-none'); // remove bootstrap hiding elements class = show rows
+      $('.rowhide-' + checkVal).addClass('d-none'); // add hiding class to chosen rows according to checked value = hide rows
+      nodrop.addClass('dropdown-toggle'); // add class to cells for dropdown action
+      $('.nodrop-' + checkVal).removeClass('dropdown-toggle'); // remove dropdown arrow from chosen cells according to checked value
     })
 
     // Show/hide table rows by tree hierarchy
-    $('.clicker .dropdown-toggle').on('click', function(){
+    $('.clicker > td:first-child').on('click', function(){
+
       let tdElem = $(this);
+
+      if (!tdElem.hasClass('dropdown-toggle')) return;
       let action = tdElem.hasClass('show'); // true = close branch, false = open branch
-      //console.log('Action = ' + (action?'Close':'Open'));
       tdElem.toggleClass('show');
       let lvl = parseInt(tdElem.parent().data('lvl'));
-      //console.log('level = ' + lvl);
       var selString = '';
       for(let i = lvl; i > 0; i--) {
         if(selString != '') selString += ', ';
         selString += 'tr[data-lvl="' + i + '"]';
-        //console.log(i);
-        //console.log(selString);
       }
-      let branch = tdElem.parent().nextUntil(selString); //.slideToggle('normal');
-      //console.log('Branch elements count = ' + branch.length);
-
+      // ex: for row with data-lvl='2' selString = 'tr[data-lvl=2], tr[data-lvl=1]''
+      let branch = tdElem.parent().nextUntil(selString);
+      // ex: select all rows to next row with data-lvl=2 or data-lvl=1 or table end
       branch.each(function(index, elem){
          if(action) { // close branch
           if($(elem).hasClass('clicker')) {
-            $(elem).children(':first-child').removeClass('show');
+            $(elem).children(':first-child').removeClass('show'); // close all children branches
           }
           $(elem).fadeOut(50);
          }
          else { // open branch
-          //console.log( index + 'row level = ' + $(elem).data('lvl'));
+          
           if($(elem).data('lvl') == lvl+1) {
-            $(elem).fadeIn();
+            $(elem).fadeIn(); //open the only high level children branch relative to the target row
           }
          }
       });
 
     });
-
 
 });
 

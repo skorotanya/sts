@@ -40,7 +40,7 @@
 			</svg>
 		</div>
 	</div>
-	<div class="main-container welcome d-flex justify-content-center align-items-center">
+	<div class="main-container welcome justify-content-center align-items-center">
 		<div class="data-block registration text-center">
 			<div class="data-block title-block">
 				<h2 class="text-white text-opacity-50">Автоматизированная информационная система</h2>
@@ -48,7 +48,7 @@
 			</div>
 			<div class="data-block text-white w-75 align-self-center mt-4 mb-3">
 				<h3 class="text-white text-opacity-75">Вход в личный кабинет</h3>
-				<form class="needs-validation" novalidate>
+				<form class="needs-validation" novalidate id="formAutorisation">
 					<div class="data-row mb-2">
 						<div class="data-item stretch">
 							<label class="data-label text-opacity-75 lg-fix">Тип личного кабинета</label>
@@ -75,9 +75,8 @@
 						</div>
 					</div>
 					<div class="data-row">
-
 						<a role="button" class="bttn stretch m-0 bg-transparent border-white text-white border-opacity-75" href="#">Зарегистрироваться</a>
-						<button type="submit" class="bttn bttn-color stretch m-0" value="Войти">Войти</button>
+						<button type="submit" id="btnEnter" class="bttn bttn-color stretch m-0" value="Войти">Войти</button>
 						<!--a role="button" class="bttn bttn-color stretch m-0" href="index.html">Войти</a-->
 					</div>
 				</form>
@@ -85,7 +84,6 @@
 			
 		</div>
 	</div>
-	
 	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 
