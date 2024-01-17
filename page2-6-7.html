@@ -206,22 +206,44 @@
 		  	<div class="data-block main-content">
 		  		<div class="accordion data-block">
 				  	<div class="border-block">
-			      		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel1" aria-expanded="false">Нормы расхода тепла зданий по их назначению</button>
+			      		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel1" aria-expanded="false">Укрупнённые удельные расходы тепла на 1 м<sup>2</sup> площади</button>
 					    <div id="panel1" class="accordion-collapse collapse">
 					      	<div class="accordion-body">
 					      		<div class="data-block">
-					      			<div class="scroll-table-wrapper">
-					      				<table class="table-inp-stretch" style="width:100%;">
+					      			<div class="data-row">
+					      				<div class="data-item-right">
+					      					<button class="bttn bttn-color" type="button">Рассчитать и сохранить</button>
+					      					<button class="bttn bttn-color" type="button">Выгрузить</button>
+					      				</div>
+					      			</div>
+					      			<div class="data-row">
+					      				<div class="data-item">
+					      					<label class="data-label">Округ / район (поселение)</label>
+				      						<select class="selectpicker data-value xxl-stretch" data-live-search="true" placeholder="Выберите...">
+											  	<option value="1">Округ 1 - Район 1</option>
+											  	<option value="2">Округ 1 - Район 2</option>
+											  	<option value="3">Округ 2 - Район 1</option>
+											  	<option value="4">Округ 3 - Район 1</option>
+											</select> 
+					      				</div>
+					      				<div class="data-row">
+					      					<label class="data-label">Размерность:</label>
+						      				<label class="data-item">
+						      					<span class="data-label sublabel">ккал/(ч · м<sup>2</sup>)</span>
+						      					<input type="radio" name="consumptionUnit" checked class="data-check">
+						      				</label>
+						      				<label class="data-item">
+						      					<span class="data-label sublabel">Гкал/(год · м<sup>2</sup>)</span>
+						      					<input type="radio" name="consumptionUnit" class="data-check">
+						      				</label>
+					      				</div>
+					      			</div>
+					      			<div class="data-block border-block">
+					      				<h4>А) Суммарные укрупнённые удельные расходы тепла на 1 м<sup>2</sup> площади (отопление, вентиляция и горячее водоснабжение) <a class="info" data-bs-toggle="tooltip" data-bs-custom-class="info-tooltip" data-bs-html="false" data-bs-title='Справочная информация'></a></h4>
+					      				<table id="totalConsumptionTable" class="display compact table-inp-stretch" style="width:100%;">
 										    <thead>
 										        <tr>
-										            <th rowspan="2">Назначение</th>
-										            <th rowspan="2">Средняя высота одного этажа здания, <span class="data-unit">м</span></th>
-										            <th rowspan="2">Средняя обеспеченность здания, <span class="data-unit">чел./м<sup>2</sup></span></th>
-										            <th rowspan="2">Среднесуточный расход горячей воды потребителем, <span class="data-unit">л/сут.</span></th>
-										            <th colspan="8">Базовые удельные укрупнённые расходы тепла на 1 м<sup>2</sup> площади, <span class="data-unit">ккал/(ч х м<sup>2</sup>)</span></th>
-										            <th rowspan="2"></th>
-										        </tr>
-										        <tr>
+										            <th>Назначение ОКС</th>
 										        	<th>1 этажные</th>
 										        	<th>2 этажные</th>
 										        	<th>3 этажные</th>
@@ -234,38 +256,176 @@
 										    </thead>
 										    <tbody>
 										    	<tr>
-										    		<td><input type="text" class="data-value" value="жилое"></td>
-										    		<td><input type="text" class="data-value" value="1"></td>
-										    		<td><input type="text" class="data-value" value="1"></td>
-										    		<td><input type="text" class="data-value" value="1"></td>
-										    		<td><input type="text" class="data-value" value="1"></td>
-										    		<td><input type="text" class="data-value" value="1"></td>
-										    		<td><input type="text" class="data-value" value="1"></td>
-										    		<td><input type="text" class="data-value" value="1"></td>
-										    		<td><input type="text" class="data-value" value="1"></td>
-										    		<td><input type="text" class="data-value" value="1"></td>
-										    		<td><input type="text" class="data-value" value="1"></td>
-										    		<td><input type="text" class="data-value" value="1"></td>
-										    		<td><button class="bttn bttn-square bttn-icon-save" type="button" title="Сохранить">
-													</button><button class="bttn bttn-square bttn-icon-del" type="button" title="Удалить">
-													</button></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
 										    	</tr>
-										    	<tr class="add-row">
-										    		<td><input type="text" class="data-value" value=""></td>
-										    		<td><input type="text" class="data-value" value=""></td>
-										    		<td><input type="text" class="data-value" value=""></td>
-										    		<td><input type="text" class="data-value" value=""></td>
-										    		<td><input type="text" class="data-value" value=""></td>
-										    		<td><input type="text" class="data-value" value=""></td>
-										    		<td><input type="text" class="data-value" value=""></td>
-										    		<td><input type="text" class="data-value" value=""></td>
-										    		<td><input type="text" class="data-value" value=""></td>
-										    		<td><input type="text" class="data-value" value=""></td>
-										    		<td><input type="text" class="data-value" value=""></td>
-										    		<td><input type="text" class="data-value" value=""></td>
-										    		<td><button class="bttn bttn-square bttn-icon-save" type="button" title="Сохранить">
-													</button><button class="bttn bttn-square bttn-icon-del" type="button" title="Удалить">
-													</button></td>
+										    	<tr>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    	</tr>
+										    	<tr>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    	</tr>
+										    	<tr>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    	</tr>
+										    </tbody>
+										</table>
+									</div>
+									<div class="data-block border-block">
+										<h4>Б) Укрупнённые удельные расходы тепла на нужды отопления и вентиляции</h4>
+					      				<table id="consumption1Table" class="display compact table-inp-stretch" style="width:100%;">
+										    <thead>
+										        <tr>
+										            <th>Назначение ОКС</th>
+										        	<th>1 этажные</th>
+										        	<th>2 этажные</th>
+										        	<th>3 этажные</th>
+										        	<th>4-5 этажные</th>
+										        	<th>6-7 этажные</th>
+										        	<th>8-9 этажные</th>
+										        	<th>10-11 этажные</th>
+										        	<th>12 этажные и выше</th>
+										        </tr>
+										    </thead>
+										    <tbody>
+										    	<tr>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    	</tr>
+										    	<tr>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    	</tr>
+										    	<tr>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    	</tr>
+										    	<tr>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    	</tr>
+										    </tbody>
+										</table>
+									</div>
+									<div class="data-block border-block">
+										<h4>В) Укрупнённые удельные расходы тепла на нужды горячего водоснабжения (среднечасовое значение)</h4>
+					      				<table id="consumption2Table" class="display compact table-inp-stretch" style="width:100%;">
+										    <thead>
+										        <tr>
+										            <th rowspan="3">Назначение ОКС</th>
+										        	<th colspan="3">при наличии разводящих сетей ГВС после ЦТП</th>
+										        	<th colspan="3">без разводящих ГВС</th>
+										        </tr>
+										        <tr>
+										        	<th colspan="2">с изолированными стояками</th>
+										        	<th>с неизолированными стояками</th>
+										        	<th colspan="2">с изолированными стояками</th>
+										        	<th>с неизолированными стояками</th>
+										        </tr>
+										        <tr>
+										        	<th>без полотенцесушителей</th>
+										        	<th>с полотенцесушителями</th>
+										        	<th>с полотенцесушителями</th>
+										        	<th>без полотенцесушителей</th>
+										        	<th>с полотенцесушителями</th>
+										        	<th>с полотенцесушителями</th>
+										        </tr>
+										    </thead>
+										    <tbody>
+										    	<tr>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    	</tr>
+										    	<tr>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    	</tr>
+										    	<tr>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    	</tr>
+										    	<tr>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
+										    		<td><input type="text" class="data-value" value="" disabled></td>
 										    	</tr>
 										    </tbody>
 										</table>
@@ -274,197 +434,385 @@
 					      	</div>
 					    </div>
 				  	</div>
+				  	<div class="border-block">
+			      		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel2" aria-expanded="false">Характеристики зданий по их назначению</button>
+					    <div id="panel2" class="accordion-collapse collapse">
+					      	<div class="accordion-body">
+					      		<div class="data-block">
+
+				      				<table id="oksParamsTable" class="display compact table-inp-stretch" style="width:100%;">
+									    <thead>
+									        <tr>
+									            <th class="dtfc-fixed-left" style="left:0; position:sticky;" colspan="2">Объект капитального строительства (ОКС)</th>
+									            <th rowspan="2">Этажность</th>
+									            <th rowspan="2">Средняя высота этажа, <span class="data-unit">м</span></th>
+									            <th rowspan="2">Средняя обеспеченность здания, <span class="data-unit">чел./м<sup>2</sup></span></th>
+									            <th rowspan="2">Нормируемая базовая характеристика (ОТ+В), <span class="data-unit">Вт/м<sup>3</sup>·°С</span></th>
+									            <th rowspan="2">Расчетная температура воздуха внутри помещения, <span class="data-unit">°С</span></th>
+									            <th rowspan="2">Нормируемый расход горячей воды, <span class="data-unit">л/сут.·чел.</span></th>
+									            <th rowspan="2">Расчетная температура горячей воды в точке водоразбора, <span class="data-unit">°С</span></th>
+									            <th rowspan="2"></th>
+									        </tr>
+									        <tr>
+									        	<th>Назначение</th>
+									        	<th class="fixed2Col" style="background-color: #ece6ff;">Тип здания</th>
+									        </tr>
+									    </thead>
+									    <tbody>
+									    	<tr class="add-row">
+									    		<td>
+									    			<select class="selectpicker data-value" data-live-search="true" placeholder="Выберите..." data-container=".workspace">
+													  	<option value="1">Назначение 1</option>
+													  	<option value="2">Назначение 2</option>
+													  	<option value="3">Назначение 3</option>
+													  	<option value="4">Назначение 4</option>
+													</select>
+									    		</td>
+									    		<td class="fixed2Col" style="background-color: #fff;">
+									    			<select class="selectpicker data-value" data-live-search="true" placeholder="Выберите..." data-container=".workspace">
+													  	<option value="1">Тип 1</option>
+													  	<option value="2">Тип 2</option>
+													  	<option value="3">Тип 3</option>
+													  	<option value="4">Тип 4</option>
+													</select>
+									    		</td>
+									    		<td>
+									    			<select class="selectpicker data-value" data-live-search="true" placeholder="Выберите..." data-container=".workspace">
+													  	<option value="1">1 этажные</option>
+													  	<option value="2">2 этажные</option>
+													  	<option value="3">3 этажные</option>
+													  	<option value="4">4-5 этажные</option>
+													  	<option value="4">6-7 этажные</option>
+													  	<option value="4">8-9 этажные</option>
+													  	<option value="4">10-11 этажные</option>
+													  	<option value="4">12 этажные и выше</option>
+													</select>
+									    		</td>
+									    		<td><input type="text" class="data-value" value=""></td>
+									    		<td><input type="text" class="data-value" value=""></td>
+									    		<td><input type="text" class="data-value" value=""></td>
+									    		<td><input type="text" class="data-value" value=""></td>
+									    		<td><input type="text" class="data-value" value=""></td>
+									    		<td><input type="text" class="data-value" value=""></td>
+									    		<td><button class="bttn bttn-square bttn-icon-save" type="button" title="Сохранить">
+												</button><button class="bttn bttn-square bttn-icon-del" type="button" title="Удалить">
+												</button></td>
+									    	</tr>
+									    </tbody>
+									</table>
+
+					      		</div>
+					      	</div>
+					    </div>
+				  	</div>
 				  	<div class=" border-block">
-		      			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel2" aria-expanded="false">Коэффициенты потерь теплоты трубопроводами систем ГВС</button>
-				    	<div id="panel2" class="accordion-collapse collapse" >
+		      			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel3" aria-expanded="false">Коэффициенты, учитываемые в расчётах</button>
+				    	<div id="panel3" class="accordion-collapse collapse" >
 				      		<div class="accordion-body">
-				        		<div class="data-table-block">
-		      						<div class="data-item">
-		      							<h5 class="data-label"></h5>
-		      							<h5 class="data-label text-center">при наличии<br>разводящих сетей<br>ГВС после ЦТП</h5>
-		      							<h5 class="data-label text-center">без разводящих<br>ГВС</h5>
-		      						</div>
-	      							<div class="data-item">
-	      								<label class="data-label">с изолированными стояками без полотенцесушителей</label>
-      									<div class="data-value"><input type="text" class="data-value"></div>
-      									<div class="data-value"><input type="text" class="data-value"></div>
-	      							</div>
-		      						<div class="data-item">
-	      								<label class="data-label">с изолированными стояками с полотенцесушителями</label>
-	      								<div class="data-value"><input type="text" class="data-value"></div>
-	      								<div class="data-value"><input type="text" class="data-value"></div>
-		      						</div>
-		      						<div class="data-item">
-	      								<label class="data-label">с неизолированными стояками с полотенцесушителями</label>
-	      								<div class="data-value"><input type="text" class="data-value"></div>
-	      								<div class="data-value"><input type="text" class="data-value"></div>
-		      						</div>
+				      			<div class="data-block">
+				      				<div class="data-row">
+				      					<div class="col-12 col-xl-6">
+					      					<div class="data-item me-xl-3">
+						      					<label class="data-label xl-stretch">Коэффициент, учитывающий увеличение расхода тепловой энергии на отопление и вентиляцию зданий в расчётном режиме при отсутствии тепловых поступлений от солнечной радиации</label>
+						      					<label class="data-label smx-fix">К<sub>рад</sub>=</label>
+						      					<input type="text" class="data-value smx-auto"></input>
+						      				</div>
+					      				</div>
+					      				<div class="col-12 col-xl-6">
+					      				<div class="data-block border-block ms-xl-3">
+					      					<h4>Коэффициенты потерь в тепловых сетях</h4>
+							      			<div class="data-table-block">
+					      						<div class="data-item">
+					      							<h5 class="data-label xl-auto"></h5>
+					      							<h5 class="data-label text-center">Водяная теплосеть</h5>
+					      							<h5 class="data-label text-center">Паропроводы</h5>
+					      						</div>
+				      							<div class="data-item">
+				      								<label class="data-label">Коэффициент тепловых потерь на тепловых сетях</label>
+			      									<div class="data-value"><input type="text" class="data-value"></div>
+			      									<div class="data-value"><input type="text" class="data-value"></div>
+				      							</div>
+							      			</div>
+					      				</div></div>
+				      				</div>
+			      					<div class="data-row">
+			      						<div class="col-12 col-xl-6">
+				      						<div class="data-block border-block me-xl-3">
+							      				<h4>Коэффициенты снижения заявленных величин тепловых нагрузок</h4>
+								      			<div class="data-table-block">
+						      						<div class="data-item">
+						      							<h5 class="data-label xl-auto"></h5>
+						      							<h5 class="data-label text-center">В горячей воде</h5>
+						      							<h5 class="data-label text-center">В паре</h5>
+						      						</div>
+					      							<div class="data-item">
+					      								<label class="data-label">Коэффициент снижения нагрузки отопления</label>
+				      									<div class="data-value"><input type="text" class="data-value"></div>
+				      									<div class="data-value"><input type="text" class="data-value"></div>
+					      							</div>
+						      						<div class="data-item">
+					      								<label class="data-label">Коэффициент снижения нагрузки вентиляции</label>
+					      								<div class="data-value"><input type="text" class="data-value"></div>
+					      								<div class="data-value"><input type="text" class="data-value"></div>
+						      						</div>
+						      						<div class="data-item">
+					      								<label class="data-label">Коэффициент снижения нагрузки ГВС</label>
+					      								<div class="data-value"><input type="text" class="data-value"></div>
+					      								<div class="data-value"><input type="text" class="data-value"></div>
+						      						</div>
+						      						<div class="data-item">
+					      								<label class="data-label">Коэффициент снижения нагрузки технологии</label>
+					      								<div class="data-value"><input type="text" class="data-value"></div>
+					      								<div class="data-value"><input type="text" class="data-value"></div>
+						      						</div>
+								      			</div>
+								      		</div>
+							      		</div>
+							      		<div class="col-12 col-xl-6">
+								      		<div class="data-block border-block ms-xl-3">
+							      				<h4>Коэффициенты потерь теплоты трубопроводами систем ГВС</h4>
+								        		<div class="data-table-block">
+						      						<div class="data-item">
+						      							<h5 class="data-label xl-auto"></h5>
+						      							<h5 class="data-label text-center">При наличии<br>разводящих сетей<br>ГВС после ЦТП</h5>
+						      							<h5 class="data-label text-center">Без разводящих<br>ГВС</h5>
+						      						</div>
+					      							<div class="data-item">
+					      								<label class="data-label">с изолированными стояками без полотенцесушителей</label>
+				      									<div class="data-value"><input type="text" class="data-value"></div>
+				      									<div class="data-value"><input type="text" class="data-value"></div>
+					      							</div>
+						      						<div class="data-item">
+					      								<label class="data-label">с изолированными стояками с полотенцесушителями</label>
+					      								<div class="data-value"><input type="text" class="data-value"></div>
+					      								<div class="data-value"><input type="text" class="data-value"></div>
+						      						</div>
+						      						<div class="data-item">
+					      								<label class="data-label">с неизолированными стояками с полотенцесушителями</label>
+					      								<div class="data-value"><input type="text" class="data-value"></div>
+					      								<div class="data-value"><input type="text" class="data-value"></div>
+						      						</div>
+								      			</div>
+								      		</div>
+							      		</div>
+			      					</div>
+
+						      		<div class="data-row">
+						      			<div class="data-item ">
+		      								<label class="data-label">Допустимое процентное отклонение удельного расхода тепла</label>
+	      									<input type="text" class="data-value smx-auto">
+	      									<span class="data-unit">%</span>
+		      							</div>
+		      							<div class="data-item-right">
+					      					<button class="bttn bttn-square bttn-icon-save"></button>
+					      				</div>
+						      		</div>
 				      			</div>
 				     		</div>
 				    	</div>
 				  	</div>
 				  	<div class="border-block">
-			      		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel4" aria-expanded="false">Коэффициенты энергоэффективности потребления тепла (снижение в % относительно базового года схемы)</button>
-				    	<div id="panel4" class="accordion-collapse collapse">
-				      		<div class="accordion-body">
-				        		<div class="scroll-table-wrapper">
-									<table  class="table-inp-stretch" style="width:100%;white-space: nowrap;">
+			      		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel4" aria-expanded="false">Коэффициенты отношения отопительно-вентиляционной тепловой нагрузки</button>
+					    <div id="panel4" class="accordion-collapse collapse">
+					      	<div class="accordion-body">
+					      		<div class="data-block">
+
+				      				<table id="loadRatioTable" class="display compact table-inp-stretch" style="width:100%;">
 									    <thead>
 									        <tr>
-									            <th>Расчётный год</th>
-									            <th>2022</th>
-									            <th>2023</th>
-									            <th>2024</th>
-									            <th>2025</th>
-									            <th>2026</th>
-									            <th>2027</th>
-									            <th>2028</th>
-									            <th>2029</th>
-									            <th>2030</th>
-									            <th>2031</th>
-									            <th>2032</th>
-									            <th>2033</th>
-									            <th>2034</th>
+									            <th>Назначение ОКС</th>
+									            <th>Коэффициент отношения нагрузки отопления к отопительно-вентиляционной нагрузке</th>
+									            <th>Коэффициент отношения нагрузки вентиляции к отопительно-вентиляционной нагрузке</th>
 									        </tr>
 									    </thead>
 									    <tbody>
 									    	<tr>
-									    		<th colspan="14">А) на нужды отопления и вентиляции</th>
+									    		<td>Жилые здания с ванными более 1500-1700 мм</td>
+									    		<td><input type="text" class="data-value" value="1"></td>
+									    		<td><input type="text" class="data-value" value="0"></td>
 									    	</tr>
-									        <tr>
-									            <td>- в жилых зданиях</td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									        </tr>
-									        <tr>
-									            <td>- в общественных зданиях</td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									        </tr>
-									        <tr>
-									            <td>- в промышленности</td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									        </tr>
-									        <tr>
-									            <td>- в зданиях ИЖС</td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									        </tr>
-									        <tr>
-									    		<th colspan="14">Б.) на нужды горячего водоснабжения</th>
+									    	<tr>
+									    		<td>Общежития с душами во всех жилых комнатах</td>
+									    		<td><input type="text" class="data-value" value="0,4"></td>
+									    		<td><input type="text" class="data-value" value="0,6"></td>
 									    	</tr>
-									        <tr>
-									            <td>- в жилых зданиях</td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									        </tr>
-									        <tr>
-									            <td>- в общественных зданиях</td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									        </tr>
-									        <tr>
-									            <td>- в промышленности</td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									        </tr>
-									        <tr>
-									            <td>- в зданиях ИЖС</td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									            <td><input type="text" class="data-value"></td>
-									        </tr>
 									    </tbody>
 									</table>
-								</div>
+
+									<div class="data-item-right">
+				      					<button class="bttn bttn-square bttn-icon-save"></button>
+				      				</div>
+					      		</div>
+					      	</div>
+					    </div>
+				  	</div>
+				  	<div class="border-block">
+			      		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel5" aria-expanded="false">Коэффициенты энергоэффективности потребления тепла (снижение в % относительно базового года схемы)</button>
+				    	<div id="panel5" class="accordion-collapse collapse">
+				      		<div class="accordion-body">
+				      			<div class="data-block">
+				      				<div class="scroll-table-wrapper">
+										<table  class="table-inp-stretch" style="width:100%;white-space: nowrap;">
+										    <thead>
+										        <tr>
+										            <th>Расчётный год</th>
+										            <th>2022</th>
+										            <th>2023</th>
+										            <th>2024</th>
+										            <th>2025</th>
+										            <th>2026</th>
+										            <th>2027</th>
+										            <th>2028</th>
+										            <th>2029</th>
+										            <th>2030</th>
+										            <th>2031</th>
+										            <th>2032</th>
+										            <th>2033</th>
+										            <th>2034</th>
+										        </tr>
+										    </thead>
+										    <tbody>
+										    	<tr>
+										    		<th colspan="14">А) на нужды отопления и вентиляции</th>
+										    	</tr>
+										        <tr>
+										            <td>- в жилых зданиях</td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										        </tr>
+										        <tr>
+										            <td>- в общественных зданиях</td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										        </tr>
+										        <tr>
+										            <td>- в промышленности</td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										        </tr>
+										        <tr>
+										            <td>- в зданиях ИЖС</td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										        </tr>
+										        <tr>
+										    		<th colspan="14">Б.) на нужды горячего водоснабжения</th>
+										    	</tr>
+										        <tr>
+										            <td>- в жилых зданиях</td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										        </tr>
+										        <tr>
+										            <td>- в общественных зданиях</td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										        </tr>
+										        <tr>
+										            <td>- в промышленности</td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										        </tr>
+										        <tr>
+										            <td>- в зданиях ИЖС</td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										            <td><input type="text" class="data-value"></td>
+										        </tr>
+										    </tbody>
+										</table>
+									</div>
+									<div class="data-item-right">
+				      					<button class="bttn bttn-square bttn-icon-save"></button>
+				      				</div>
+				      			</div>
 				      		</div>
 				    	</div>
 				  	</div>
@@ -519,6 +867,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
 
 	<script type="text/javascript" charset="utf8" src="js/main.js"></script>
+	<script type="text/javascript" charset="utf8" src="js/page2-6-7.js"></script>
 	
 </body>
 </html>

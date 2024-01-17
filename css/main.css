@@ -1424,6 +1424,12 @@ td .data-truncate-multirow {
 	white-space: pre-wrap;
 }
 
+/* Private style for fixed second column table for page 2-6-7  */
+.fixed2Col {
+	left: 134.08px;
+	position:sticky;
+	z-index: 50;
+}
 
 
 /* Table summary */
@@ -1471,10 +1477,10 @@ td .data-truncate-multirow {
 
 .data-table-block .data-unit, .data-table-block .mark-color, .data-table-block .data-value, .data-table-block .data-label {
 	display: table-cell;
+	vertical-align: middle;
 }
 
 .data-table-block input:not([class*='fix']) {width: 100%;}
-
 
 /*.table-summary .data-unit {
 	width: 100px;
